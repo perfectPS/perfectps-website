@@ -1,46 +1,18 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import { useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
-import Contact from './pages/Contact'
-import './index.css'
-
-function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
-  return null
-}
-
-function AnimatedRoutes() {
-  const location = useLocation()
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/"        element={<Home />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms"   element={<Terms />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*"        element={<Home />} />
-      </Routes>
-    </AnimatePresence>
-  )
-}
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Work } from './pages/Work'
+import { PSSecure } from './pages/PSSecure'
+import { NotFound } from './pages/NotFound'
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="site">
-        <ScrollToTop />
-        <Navbar />
-        <main>
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/ps-secure" element={<PSSecure />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   )
 }
