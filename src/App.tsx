@@ -1,43 +1,46 @@
-import './App.css'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { useEffect } from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
+import Contact from './pages/Contact'
+import './index.css'
 
-function App() {
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
+
+function AnimatedRoutes() {
+  const location = useLocation()
   return (
-    <>
-      <header className="navbar">
-        <span className="logo">perfectPS</span>
-        <nav>
-          <a href="#products">Products</a>
-          <a href="#about">About</a>
-          <a href="https://github.com/perfectPS" target="_blank" rel="noreferrer">GitHub</a>
-        </nav>
-      </header>
-
-      <main>
-        <section id="hero">
-          <h1>Secure. Fast. Private.</h1>
-          <p className="tagline">
-            Internet tools built for everyone — starting with PS Secure VPN.
-          </p>
-          <a className="cta" href="#products">Explore our products</a>
-        </section>
-
-        <section id="products">
-          <h2>Our Products</h2>
-          <div className="cards">
-            <div className="card">
-              <h3>PS Secure VPN</h3>
-              <p>A fast, private VPN with WireGuard — available on iOS, Android, and the web.</p>
-              <span className="badge">Coming soon</span>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <p>© {new Date().getFullYear()} perfectPS. All rights reserved.</p>
-      </footer>
-    </>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/"        element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms"   element={<Terms />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*"        element={<Home />} />
+      </Routes>
+    </AnimatePresence>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="site">
+        <ScrollToTop />
+        <Navbar />
+        <main>
+          <AnimatedRoutes />
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  )
+}

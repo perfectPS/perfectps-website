@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.05" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc" />
+  
+  <!-- Sidebar -->
+  <rect width="240" height="800" fill="#ffffff" filter="url(#shadow)" />
+  <circle cx="50" cy="50" r="16" fill="#6366f1" />
+  <text x="80" y="57" font-family="sans-serif" font-weight="800" font-size="20" fill="#1e1b4b">EduLearn</text>
+  
+  <g transform="translate(30, 120)" font-family="sans-serif" font-weight="600" font-size="14" fill="#64748b">
+    <text x="0" y="30" fill="#6366f1">Dashboard</text>
+    <text x="0" y="80">My Courses</text>
+    <text x="0" y="130">Live Lessons</text>
+    <text x="0" y="180">Performance</text>
+  </g>
+  
+  <!-- Header -->
+  <rect x="240" y="0" width="760" height="80" fill="#ffffff" />
+  <text x="280" y="48" font-family="sans-serif" font-weight="700" font-size="22" fill="#0f172a">Student Dashboard</text>
+  
+  <!-- Main Grid -->
+  <rect x="280" y="120" width="680" height="200" rx="16" fill="#e0e7ff" />
+  <text x="320" y="180" font-family="sans-serif" font-weight="800" font-size="24" fill="#312e81">Welcome back, Alex!</text>
+  <text x="320" y="210" font-family="sans-serif" font-size="14" fill="#4338ca">You have completed 74% of your Fullstack Web Development course.</text>
+  
+  <!-- Course Cards -->
+  <g transform="translate(280, 360)">
+    <rect width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)" />
+    <text x="20" y="40" font-family="sans-serif" font-weight="700" font-size="16" fill="#0f172a">HTML/CSS Fundamentals</text>
+    <text x="20" y="70" font-family="sans-serif" font-size="13" fill="#64748b">Completed: 100%</text>
+    <rect x="20" y="180" width="280" height="8" rx="4" fill="#e2e8f0" />
+    <rect width="280" height="8" rx="4" fill="#10b981" x="20" y="180" />
+  </g>
+
+  <g transform="translate(640, 360)">
+    <rect width="320" height="220" rx="12" fill="#ffffff" filter="url(#shadow)" />
+    <text x="20" y="40" font-family="sans-serif" font-weight="700" font-size="16" fill="#0f172a">Advanced React Native</text>
+    <text x="20" y="70" font-family="sans-serif" font-size="13" fill="#64748b">Completed: 45%</text>
+    <rect x="20" y="180" width="280" height="8" rx="4" fill="#e2e8f0" />
+    <rect width="126" height="8" rx="4" fill="#6366f1" x="20" y="180" />
+  </g>
+</svg>

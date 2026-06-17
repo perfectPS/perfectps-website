@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#f8fafc" />
+  <rect width="100%" height="70" fill="#ffffff" />
+  <text x="50" y="42" font-family="sans-serif" font-weight="800" font-size="20" fill="#0f766e">UrbanNest</text>
+  <text x="50" y="120" font-family="sans-serif" font-weight="700" font-size="24" fill="#0f172a">Property Map Finder</text>
+  <!-- Map Mockup -->
+  <rect x="50" y="160" width="550" height="580" rx="12" fill="#ccfbf1" stroke="#0f766e" stroke-width="2" />
+  <circle cx="200" cy="300" r="12" fill="#0f766e" />
+  <circle cx="400" cy="450" r="12" fill="#0f766e" />
+  <!-- Listings Grid -->
+  <rect x="620" y="160" width="330" height="270" rx="12" fill="#ffffff" />
+  <text x="640" y="200" font-family="sans-serif" font-weight="700" font-size="16" fill="#0f172a">Luxury Penthouse</text>
+  <text x="640" y="225" font-family="sans-serif" font-weight="700" font-size="18" fill="#0f766e">$1,250,000</text>
+</svg>
