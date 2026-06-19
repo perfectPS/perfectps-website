@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import { techStack } from '../../data/tech'
 import { ScrollReveal } from '../ui/ScrollReveal'
 
 export function TechStack() {
+  const { t } = useTranslation()
   const doubled = [...techStack, ...techStack]
 
   return (
@@ -37,18 +39,18 @@ export function TechStack() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 560, margin: '0 auto 56px' }}>
-            <div className="section-label" style={{ justifyContent: 'center' }}>Technology</div>
+            <div className="section-label" style={{ justifyContent: 'center' }}>{t('techstack.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(26px, 4vw, 42px)',
               fontWeight: 800, color: '#fff',
               marginBottom: '12px',
             }}>
-              We Choose the Right Tool<br />
-              <span className="gradient-text">for Every Job</span>
+              {t('techstack.h2_line1')}<br />
+              <span className="gradient-text">{t('techstack.h2_line2')}</span>
             </h2>
             <p style={{ fontSize: '16px', color: '#8fa3bc', lineHeight: 1.7 }}>
-              Modern stack, battle-tested choices. Built for performance and long-term maintainability.
+              {t('techstack.body')}
             </p>
           </div>
         </ScrollReveal>

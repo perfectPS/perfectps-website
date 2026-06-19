@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Mail, MapPin, Clock, ArrowRight, Check } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { Mail, MapPin, Clock, Check } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
@@ -21,6 +22,7 @@ const darkInputStyle: React.CSSProperties = {
 }
 
 export function Contact() {
+  const { t } = useTranslation()
   const [form, setForm] = useState({ name: '', email: '', type: '', message: '' })
   const [sent, setSent] = useState(false)
 
@@ -66,17 +68,17 @@ export function Contact() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ maxWidth: 560, marginBottom: '56px' }}>
-            <div className="section-label">Let's Work Together</div>
+            <div className="section-label">{t('contact.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800, color: '#fff',
               marginBottom: '14px',
             }}>
-              Start Your <span className="gradient-text">Project</span>
+              {t('contact.h2')}
             </h2>
             <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
-              Tell us about your idea and we'll get back to you within 24 hours.
+              {t('contact.body')}
             </p>
           </div>
         </ScrollReveal>
@@ -109,9 +111,9 @@ export function Contact() {
                   <Check size={12} />
                 </div>
                 <h3 style={{ fontFamily: "'DM Sans'", fontSize: '22px', fontWeight: 700, marginBottom: '8px', color: '#fff' }}>
-                  Message Sent!
+                  {t('contact.success_title')}
                 </h3>
-                <p style={{ color: '#8fa3bc' }}>We'll get back to you within 24 hours.</p>
+                <p style={{ color: '#8fa3bc' }}>{t('contact.success_body')}</p>
               </div>
             ) : (
               <form
@@ -128,31 +130,31 @@ export function Contact() {
               >
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-name-row">
                   <div>
-                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Name</label>
-                    <input type="text" required placeholder="Your name" value={form.name}
+                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>{t('contact.name_label')}</label>
+                    <input type="text" required placeholder={t('contact.name_placeholder')} value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
                       style={darkInputStyle} onFocus={focus} onBlur={blur} />
                   </div>
                   <div>
-                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Email</label>
-                    <input type="email" required placeholder="hello@company.com" value={form.email}
+                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>{t('contact.email_label')}</label>
+                    <input type="email" required placeholder={t('contact.email_placeholder')} value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
                       style={darkInputStyle} onFocus={focus} onBlur={blur} />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Project Type</label>
+                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>{t('contact.project_type_label')}</label>
                   <select value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}
                     style={{ ...darkInputStyle, cursor: 'pointer' }} onFocus={focus} onBlur={blur}>
-                    <option value="" style={{ background: '#0d1b2e' }}>Select a project type</option>
+                    <option value="" style={{ background: '#0d1b2e' }}>{t('contact.project_type_placeholder')}</option>
                     {projectTypes.map(t => <option key={t} value={t} style={{ background: '#0d1b2e' }}>{t}</option>)}
                   </select>
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Message</label>
-                  <textarea required rows={5} placeholder="Tell us about your project..."
+                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>{t('contact.message_label')}</label>
+                  <textarea required rows={5} placeholder={t('contact.message_placeholder')}
                     value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                     style={{ ...darkInputStyle, resize: 'vertical', minHeight: '130px' }}
                     onFocus={focus} onBlur={blur} />
@@ -173,7 +175,7 @@ export function Contact() {
                   onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-1px)' }}
                   onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
                 >
-                  Send Message <ArrowRight size={16} />
+                  {t('contact.submit')}
                 </button>
               </form>
             )}
@@ -188,9 +190,9 @@ export function Contact() {
               display: 'flex', flexDirection: 'column', gap: '0',
             }}>
               {[
-                { icon: Mail,   label: 'EMAIL',    value: 'hello@perfectps.com', href: 'mailto:hello@perfectps.com' },
-                { icon: MapPin, label: 'LOCATION', value: 'Amman, Jordan', href: undefined },
-                { icon: Clock,  label: 'HOURS',    value: 'Sun–Thu, 9 AM – 6 PM', href: undefined },
+                { icon: Mail,   label: t('contact.label_email'),    value: t('contact.info_email'),    href: 'mailto:hello@perfectps.com' },
+                { icon: MapPin, label: t('contact.label_location'), value: t('contact.info_location'), href: undefined },
+                { icon: Clock,  label: t('contact.label_hours'),    value: t('contact.info_hours'),    href: undefined },
               ].map(({ icon: Icon, label, value, href }, idx, arr) => {
                 const inner = (
                   <div style={{
@@ -226,13 +228,13 @@ export function Contact() {
                 borderRadius: '8px',
               }}>
                 <p style={{ color: '#8fa3bc', fontSize: '13px', lineHeight: 1.75, marginBottom: '12px' }}>
-                  We typically respond within a few hours during business days.
+                  {t('contact.info_note')}
                 </p>
                 <a href="mailto:hello@perfectps.com" style={{
                   color: '#c8a84b', fontSize: '13px', fontWeight: 700,
                   display: 'flex', alignItems: 'center', gap: '6px',
                 }}>
-                  hello@perfectps.com <ArrowRight size={13} />
+                  hello@perfectps.com
                 </a>
               </div>
             </div>

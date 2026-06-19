@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { portfolioItems } from '../../data/portfolio'
-import { ArrowRight } from 'lucide-react'
+import { useLang } from '../../hooks/useLang'
 
 const featured = portfolioItems.slice(0, 4)
 
 export function FeaturedWork() {
+  const { t } = useTranslation()
+  const lang = useLang()
   const [active, setActive] = useState(0)
   const item = featured[active]
   const isPhone = item.type === 'mobile'
@@ -48,7 +51,7 @@ export function FeaturedWork() {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ paddingTop: '80px', marginBottom: '56px' }}>
-          <div className="section-label">Selected Work</div>
+          <div className="section-label">{t('work.label')}</div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
@@ -57,10 +60,10 @@ export function FeaturedWork() {
               color: '#0d1b2e',
               lineHeight: 1.1,
             }}>
-              Projects We're<br />
-              <span className="gradient-text--gold">Proud Of</span>
+              {t('work.h2_line1')}<br />
+              <span className="gradient-text--gold">{t('work.h2_line2')}</span>
             </h2>
-            <a href="/work" style={{
+            <a href={`/${lang}/work`} style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               fontSize: '14px', fontWeight: 600,
               color: '#64748b',
@@ -70,7 +73,7 @@ export function FeaturedWork() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#64748b' }}
             >
-              View all 15 projects <ArrowRight size={14} />
+              {t('work.view_all')}
             </a>
           </div>
         </div>

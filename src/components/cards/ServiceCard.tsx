@@ -1,5 +1,6 @@
-import { Globe, Smartphone, Shield, Server, Palette, Cloud, ArrowRight } from 'lucide-react'
+import { Globe, Smartphone, Shield, Server, Palette, Cloud } from 'lucide-react'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { useTilt } from '../../hooks/useTilt'
 import type { ServiceItem } from '../../types'
@@ -16,6 +17,7 @@ interface ServiceCardProps {
 export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
   const Icon = iconMap[service.icon] ?? Globe
   const ref = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation()
   useTilt(ref, 8)
 
   return (
@@ -77,8 +79,8 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
           {service.description}
         </p>
 
-        <div style={{ fontSize: '13px', fontWeight: 600, color: '#c8a84b', display: 'flex', alignItems: 'center', gap: '4px' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>Learn more <ArrowRight size={13} /></span>
+        <div style={{ fontSize: '13px', fontWeight: 600, color: '#c8a84b' }}>
+          {t('services.learn_more')}
         </div>
       </div>
     </ScrollReveal>

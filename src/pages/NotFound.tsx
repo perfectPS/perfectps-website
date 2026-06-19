@@ -1,11 +1,9 @@
-import { ArrowLeft } from 'lucide-react'
-import { Navbar } from '../components/layout/Navbar'
-import { Footer } from '../components/layout/Footer'
+import { useLang } from '../hooks/useLang'
 
 export function NotFound() {
+  const lang = useLang()
   return (
     <>
-      <Navbar />
       <div style={{
         minHeight: '100vh',
         display: 'flex',
@@ -38,7 +36,7 @@ export function NotFound() {
           <p style={{ color: 'var(--text-2)', marginBottom: '32px' }}>
             The page you're looking for doesn't exist.
           </p>
-          <a href="/" style={{
+          <a href={`/${lang}`} style={{
             padding: '12px 28px',
             background: 'var(--navy)',
             color: '#fff',
@@ -46,11 +44,10 @@ export function NotFound() {
             fontWeight: 600,
             fontFamily: "'DM Sans', sans-serif",
           }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> Back Home</span>
+            Back Home
           </a>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

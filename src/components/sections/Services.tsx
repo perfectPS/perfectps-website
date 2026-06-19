@@ -1,8 +1,19 @@
-import { services } from '../../data/services'
+import { useTranslation } from 'react-i18next'
 import { ServiceCard } from '../cards/ServiceCard'
 import { ScrollReveal } from '../ui/ScrollReveal'
 
 export function Services() {
+  const { t } = useTranslation()
+
+  const services = [
+    { icon: 'Globe',      title: t('services.web_title'),     description: t('services.web_desc') },
+    { icon: 'Smartphone', title: t('services.mobile_title'),  description: t('services.mobile_desc') },
+    { icon: 'Shield',     title: t('services.vpn_title'),     description: t('services.vpn_desc') },
+    { icon: 'Server',     title: t('services.backend_title'), description: t('services.backend_desc') },
+    { icon: 'Palette',    title: t('services.design_title'),  description: t('services.design_desc') },
+    { icon: 'Cloud',      title: t('services.devops_title'),  description: t('services.devops_desc') },
+  ]
+
   return (
     <section id="services" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
       <div aria-hidden style={{
@@ -20,7 +31,7 @@ export function Services() {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
-          <div className="section-label">What We Build</div>
+          <div className="section-label">{t('services.label')}</div>
           <h2 style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(28px, 4vw, 48px)',
@@ -28,8 +39,8 @@ export function Services() {
             color: '#0d1b2e',
             marginBottom: '14px',
           }}>
-            End-to-End<br />
-            <span style={{ color: '#c8a84b' }}>Digital Products</span>
+            {t('services.h2_line1')}<br />
+            <span style={{ color: '#c8a84b' }}>{t('services.h2_line2')}</span>
           </h2>
           <p style={{
             fontSize: '17px',
@@ -38,7 +49,7 @@ export function Services() {
             lineHeight: 1.7,
             marginBottom: '56px',
           }}>
-            We cover the full stack. Pixel-perfect interfaces to secure cloud infrastructure.
+            {t('services.body')}
           </p>
         </ScrollReveal>
 

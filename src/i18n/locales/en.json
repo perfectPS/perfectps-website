@@ -18,7 +18,11 @@
     "stat_projects": "Projects Delivered",
     "stat_clients": "Clients Served",
     "stat_years": "Years Building",
-    "stat_delivery": "On-Time Delivery"
+    "stat_delivery": "On-Time Delivery",
+    "badge_projects": "+4 this year",
+    "badge_clients": "Growing",
+    "badge_years": "Since 2019",
+    "badge_delivery": "Every project"
   },
   "services": {
     "label": "What We Build",
@@ -36,7 +40,8 @@
     "design_title": "UI/UX Design",
     "design_desc": "User-centered design systems, interactive prototypes, and brand identity.",
     "devops_title": "DevOps and Cloud",
-    "devops_desc": "Docker, Oracle Cloud, automated CI/CD, and 99.9% uptime infrastructure."
+    "devops_desc": "Docker, Oracle Cloud, automated CI/CD, and 99.9% uptime infrastructure.",
+    "learn_more": "Learn more"
   },
   "whyus": {
     "label": "Why perfectPS",
@@ -68,7 +73,14 @@
     "label": "Selected Work",
     "h2_line1": "Projects We're",
     "h2_line2": "Proud Of",
-    "view_all": "View all 15 projects"
+    "view_all": "View all 15 projects",
+    "page_label": "Portfolio",
+    "page_h1": "Our Work",
+    "page_body": "Digital products built for clients across industries. Quality over quantity, always.",
+    "portfolio_desc": "A selection of products built for clients across industries. Client identities are kept confidential.",
+    "filter_all": "All Projects",
+    "filter_web": "Web Apps",
+    "filter_mobile": "Mobile Apps"
   },
   "techstack": {
     "label": "Technology",
@@ -79,6 +91,7 @@
   "about": {
     "label": "About the Studio",
     "h2": "We Are perfectPS",
+    "h2_pre": "We Are",
     "quote": "We believe in clean code, beautiful interfaces, and infrastructure that actually works.",
     "stat_founded": "Founded",
     "stat_team": "Core Team",
@@ -100,6 +113,55 @@
     "cta_learn": "Learn More",
     "cta_access": "Get Early Access"
   },
+  "pssecure": {
+    "hero_badge": "VPN Platform",
+    "hero_h1_line1": "Privacy Without",
+    "hero_h1_line2": "Compromise",
+    "hero_body": "Enterprise-grade WireGuard VPN. Zero logs. Lightning fast. Available on iOS and Android.",
+    "hero_cta_primary": "Get Early Access",
+    "hero_cta_secondary": "Learn More",
+    "features_label": "Features",
+    "features_h2_line1": "Built for Privacy.",
+    "features_h2_line2": "Built to Last.",
+    "f1_title": "WireGuard Protocol",
+    "f1_desc": "The fastest and most modern VPN protocol. Significantly faster than OpenVPN or IPSec.",
+    "f2_title": "Zero-Log Policy",
+    "f2_desc": "We never store, sell, or share your data. No traffic logs, no connection logs, ever.",
+    "f3_title": "AdGuard DNS",
+    "f3_desc": "Built-in ad and tracker blocking at the DNS level. Browse cleaner and faster.",
+    "f4_title": "Kill Switch",
+    "f4_desc": "Automatically disconnects internet if the VPN drops. Your real IP is never exposed.",
+    "f5_title": "Multi-Device",
+    "f5_desc": "iOS, Android, and desktop support from one account. All devices, one subscription.",
+    "f6_title": "Regional Servers",
+    "f6_desc": "Optimized servers across the Middle East and beyond for low-latency connections.",
+    "steps_label": "How It Works",
+    "steps_h2": "Get Protected in 3 Steps",
+    "step1_title": "Download PS Secure",
+    "step1_desc": "Available on iOS and Android. Free to download, instant setup.",
+    "step2_title": "Connect in One Tap",
+    "step2_desc": "No configuration, no complexity. Tap once to connect to the best server.",
+    "step3_title": "Browse Freely",
+    "step3_desc": "Full privacy, full speed. Your data is encrypted, your identity is protected.",
+    "cta_h2": "Ready to Protect Your Privacy?",
+    "cta_body": "Join the waitlist and be the first to get access.",
+    "cta_btn": "Get Early Access"
+  },
+  "footer": {
+    "tagline": "Building digital products that are fast, secure, and built to last.",
+    "col_products": "Products",
+    "col_company": "Company",
+    "col_legal": "Legal",
+    "link_pssecure": "PS Secure",
+    "link_early_access": "Get Early Access",
+    "link_about": "About",
+    "link_work": "Our Work",
+    "link_contact": "Contact",
+    "link_privacy": "Privacy Policy",
+    "link_terms": "Terms of Service",
+    "copyright": "© 2026 perfectPS. All rights reserved.",
+    "status": "All systems operational"
+  },
   "contact": {
     "label": "Let's Work Together",
     "h2": "Start Your Project",
@@ -116,6 +178,11 @@
     "info_email": "hello@perfectps.com",
     "info_location": "Amman, Jordan",
     "info_hours": "Sun-Thu, 9 AM to 6 PM",
-    "info_note": "We typically respond within a few hours during business days."
+    "info_note": "We typically respond within a few hours during business days.",
+    "project_type_label": "Project Type",
+    "project_type_placeholder": "Select a project type",
+    "label_email": "EMAIL",
+    "label_location": "LOCATION",
+    "label_hours": "HOURS"
   }
 }

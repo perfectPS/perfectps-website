@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next'
+import { useLang } from '../../hooks/useLang'
+
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
@@ -19,27 +22,40 @@ const XIcon = () => (
 )
 
 const socials = [
-  { label: 'GitHub',   Icon: GithubIcon,   href: 'https://github.com/perfectps' },
-  { label: 'LinkedIn', Icon: LinkedinIcon, href: 'https://linkedin.com/company/perfectps' },
   { label: 'X',        Icon: XIcon,        href: 'https://x.com/perfectps' },
-]
-
-const cols = [
-  {
-    title: 'Products',
-    links: [{ label: 'PS Secure', href: '/ps-secure' }, { label: 'Get Early Access', href: '/#contact' }],
-  },
-  {
-    title: 'Company',
-    links: [{ label: 'About', href: '/#about' }, { label: 'Our Work', href: '/work' }, { label: 'Contact', href: '/#contact' }],
-  },
-  {
-    title: 'Legal',
-    links: [{ label: 'Privacy Policy', href: '/privacy' }, { label: 'Terms of Service', href: '/terms' }],
-  },
+  { label: 'LinkedIn', Icon: LinkedinIcon, href: 'https://linkedin.com/company/perfectps' },
+  { label: 'GitHub',   Icon: GithubIcon,   href: 'https://github.com/perfectps' },
 ]
 
 export function Footer() {
+  const lang = useLang()
+  const { t } = useTranslation()
+
+  const cols = [
+    {
+      title: t('footer.col_products'),
+      links: [
+        { label: t('footer.link_pssecure'),    href: `/${lang}/ps-secure` },
+        { label: t('footer.link_early_access'), href: `/${lang}/#contact` },
+      ],
+    },
+    {
+      title: t('footer.col_company'),
+      links: [
+        { label: t('footer.link_about'),   href: `/${lang}/#about` },
+        { label: t('footer.link_work'),    href: `/${lang}/work` },
+        { label: t('footer.link_contact'), href: `/${lang}/#contact` },
+      ],
+    },
+    {
+      title: t('footer.col_legal'),
+      links: [
+        { label: t('footer.link_privacy'), href: '/privacy' },
+        { label: t('footer.link_terms'),   href: '/terms' },
+      ],
+    },
+  ]
+
   return (
     <footer style={{
       background: '#070f1a',
@@ -54,19 +70,30 @@ export function Footer() {
         }} className="footer-grid">
 
           <div>
-            <a href="/" style={{
+            <a href={`/${lang}`} dir="ltr" style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: '22px', fontWeight: 800,
-              color: '#fff', display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px',
+              fontSize: '20px', fontWeight: 800,
+              color: '#fff',
+              display: 'inline-flex', alignItems: 'center', gap: '9px',
+              marginBottom: '14px',
+              textDecoration: 'none',
             }}>
-              <svg width="24" height="28" viewBox="0 0 28 32" fill="none">
-                <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z" fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
-                <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif" fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
+              <svg width="22" height="26" viewBox="0 0 28 32" fill="none">
+                <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
+                  fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
+                <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
+                  fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
               </svg>
-              Perfect<span style={{ color: '#c8a84b' }}>PS</span>
+              perfect<span style={{ color: '#c8a84b' }}>PS</span>
             </a>
-            <p style={{ fontSize: '14px', color: 'rgba(143,163,188,0.7)', lineHeight: 1.75, maxWidth: '240px', marginBottom: '24px' }}>
-              Building digital products that are fast, secure, and built to last.
+            <p style={{
+              fontSize: '14px',
+              color: 'rgba(143,163,188,0.7)',
+              lineHeight: 1.75,
+              maxWidth: '240px',
+              marginBottom: '24px',
+            }}>
+              {t('footer.tagline')}
             </p>
             <div style={{ display: 'flex', gap: '10px' }}>
               {socials.map(s => (
@@ -121,7 +148,7 @@ export function Footer() {
           flexWrap: 'wrap', gap: '12px',
         }}>
           <span style={{ fontSize: '13px', color: 'rgba(143,163,188,0.4)' }}>
-            © 2026 perfectPS. All rights reserved.
+            {t('footer.copyright')}
           </span>
           <span style={{
             fontSize: '12px', color: '#22c55e',
@@ -129,7 +156,7 @@ export function Footer() {
             fontWeight: 500,
           }}>
             <span className="status-dot" />
-            All systems operational
+            {t('footer.status')}
           </span>
         </div>
       </div>

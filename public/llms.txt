@@ -1,0 +1,62 @@
+# perfectPS
+
+> perfectPS is a boutique digital studio based in Amman, Jordan (Middle East). Founded in 2019, we build secure web applications, cross-platform mobile apps (iOS and Android), and WireGuard-based VPN infrastructure. We have delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
+
+## What We Build
+
+- **Web Applications**: Scalable React and TypeScript platforms, SaaS dashboards, and marketing sites
+- **Mobile Apps**: Cross-platform iOS and Android apps built with Expo and React Native
+- **VPN Infrastructure**: WireGuard-based zero-log VPN systems and privacy-first backend architecture
+- **Backend and APIs**: Node.js REST APIs with Hono framework, PostgreSQL databases, cloud deployments on Oracle Cloud
+- **UI/UX Design**: User-centered design systems, interactive prototypes, and brand identity
+- **DevOps and Cloud**: Docker, Oracle Cloud, automated CI/CD pipelines, 99.9% uptime infrastructure
+
+## Products
+
+### PS Secure VPN
+
+[PS Secure](https://perfectps.com/en/ps-secure) is our flagship VPN product for iOS and Android, built and operated entirely by perfectPS.
+
+Key technical facts:
+- **Protocol**: WireGuard — approximately 4,000 lines of auditable code. Compare to OpenVPN at approximately 600,000 lines. The smaller codebase means fewer attack surfaces and dramatically faster connection speeds.
+- **Zero-log policy**: No user activity, connection timestamps, IP addresses, DNS queries, or traffic data is stored.
+- **DNS filtering**: AdGuard DNS blocks ads and malicious trackers at the network level before they reach your device.
+- **Kill switch**: Hardware kill switch ensures your real IP address is never exposed if the VPN connection drops.
+- **Availability**: Native iOS app and native Android app.
+- **Infrastructure**: Private servers on Oracle Cloud in the Middle East region. No third-party VPN backend.
+
+## Key Facts
+
+- Founded: 2019
+- Location: Amman, Jordan
+- Service area: Middle East (Saudi Arabia, UAE, Kuwait, Bahrain, Oman, Qatar, Jordan) and international clients globally
+- Team size: 5+ core members
+- Projects delivered: 15+
+- Countries served: 8+
+- On-time delivery rate: 100%
+- Contact email: hello@perfectps.com
+- Business hours: Sunday to Thursday, 9 AM to 6 PM (AST / Amman time, UTC+3)
+- Languages: English and Arabic (native Arabic interface available)
+
+## Technology Stack
+
+React 19, TypeScript, Vite, Node.js, Hono, Expo, React Native, WireGuard, PostgreSQL, Docker, Oracle Cloud
+
+## Why WireGuard
+
+WireGuard is the modern VPN protocol standard. It has approximately 4,000 lines of code versus OpenVPN's approximately 600,000 lines. Independent benchmarks consistently show WireGuard outperforms OpenVPN and IPSec in both speed and battery efficiency, especially on mobile devices. PS Secure uses WireGuard exclusively.
+
+## VPN Usage in the Middle East
+
+PS Secure is designed for users in Saudi Arabia, UAE, Jordan, Kuwait, Bahrain, Oman, and Qatar. VPN usage for personal privacy and security on public networks is the primary use case. Users should review local regulations in their country.
+
+## Site Routes
+
+- [Home (English)](https://perfectps.com/en/)
+- [Home (Arabic)](https://perfectps.com/ar/)
+- [PS Secure VPN (English)](https://perfectps.com/en/ps-secure)
+- [PS Secure VPN (Arabic)](https://perfectps.com/ar/ps-secure)
+- [Portfolio / Work (English)](https://perfectps.com/en/work)
+- [Portfolio / Work (Arabic)](https://perfectps.com/ar/work)
+- [Sitemap](https://perfectps.com/sitemap.xml)
+- [robots.txt](https://perfectps.com/robots.txt)

@@ -1,164 +1,263 @@
 import { useState } from 'react'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
-import { X, Menu, ArrowRight } from 'lucide-react'
+import { X, Menu } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
+import { useLang } from '../../hooks/useLang'
 
 export function Navbar() {
   const scrollY = useScrollPosition()
   const [open, setOpen] = useState(false)
   const scrolled = scrollY > 60
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
+  const lang = useLang()
+  const navigate = useNavigate()
+  const isArabic = lang === 'ar'
 
   const navLinks = [
-    { label: t('nav.work'),      href: '/work' },
-    { label: t('nav.services'),  href: '/#services' },
-    { label: t('nav.psSecure'),  href: '/ps-secure' },
-    { label: t('nav.about'),     href: '/#about' },
-    { label: t('nav.contact'),   href: '/#contact' },
+    { label: t('nav.work'),     href: `/${lang}/work` },
+    { label: t('nav.services'), href: `/${lang}/#services` },
+    { label: t('nav.psSecure'), href: `/${lang}/ps-secure` },
+    { label: t('nav.about'),    href: `/${lang}/#about` },
+    { label: t('nav.contact'),  href: `/${lang}/#contact` },
   ]
-
-  const isArabic = i18n.language === 'ar'
 
   function toggleLanguage() {
     const nextLang = isArabic ? 'en' : 'ar'
-    i18n.changeLanguage(nextLang)
-    document.documentElement.setAttribute('dir', nextLang === 'ar' ? 'rtl' : 'ltr')
-    document.documentElement.setAttribute('lang', nextLang)
     localStorage.setItem('lang', nextLang)
+    const newPath = window.location.pathname.replace(/^\/(en|ar)/, `/${nextLang}`)
+    navigate(newPath + window.location.search + window.location.hash)
   }
 
   return (
     <>
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        height: '72px',
-        background: scrolled ? 'rgba(13,27,46,0.94)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(14px)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(200,168,75,0.15)' : '1px solid transparent',
-        transition: 'all 300ms ease',
+        height: '68px',
+        background: scrolled ? 'rgba(7,15,26,0.96)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(24px)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(200,168,75,0.12)' : '1px solid transparent',
+        transition: 'background 300ms ease, border-bottom 300ms ease',
       }}>
         <div className="container" style={{
           height: '100%',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '24px',
         }}>
-          <a href="/" style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: '21px', fontWeight: 800,
-            color: '#fff',
-            letterSpacing: '-0.5px',
-            display: 'flex', alignItems: 'center', gap: '10px',
+
+          {/* Logo */}
+          <a href={`/${lang}`} dir="ltr" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '9px',
+            textDecoration: 'none',
+            flexShrink: 0,
           }}>
-            <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
-              <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z" fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
-              <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif" fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
+            <svg width="26" height="30" viewBox="0 0 28 32" fill="none">
+              <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
+                fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
+              <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
+                fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
             </svg>
-            Perfect<span style={{ color: '#c8a84b' }}>PS</span>
+            <span style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '18px',
+              fontWeight: 800,
+              color: '#fff',
+              letterSpacing: '-0.3px',
+            }}>
+              perfect<span style={{ color: '#c8a84b' }}>PS</span>
+            </span>
           </a>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
+          {/* Desktop nav links */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '28px',
+            flex: 1,
+            justifyContent: 'center',
+          }} className="desktop-nav-links">
             {navLinks.map(l => (
-              <a key={l.label} href={l.href} style={{
-                fontSize: '14px', fontWeight: 500,
-                color: '#8fa3bc',
+              <a key={l.label} href={l.href} className="ps-nav-link" style={{
+                fontSize: '14px',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.65)',
+                textDecoration: 'none',
                 transition: 'color 200ms',
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#fff' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
-              >
+                whiteSpace: 'nowrap',
+              }}>
                 {l.label}
               </a>
             ))}
+          </div>
+
+          {/* Right controls */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            flexShrink: 0,
+          }} className="desktop-nav-controls">
+
             <button
               onClick={toggleLanguage}
               style={{
-                fontSize: '13px', fontWeight: 700,
-                color: '#8fa3bc',
-                background: 'none',
-                border: 'none',
+                fontSize: '12px',
+                fontWeight: 700,
+                color: 'rgba(200,168,75,0.9)',
+                background: 'transparent',
+                border: '1px solid rgba(200,168,75,0.22)',
+                borderRadius: '6px',
                 cursor: 'pointer',
                 fontFamily: "'DM Sans', sans-serif",
-                letterSpacing: '0.5px',
-                padding: '4px 0',
-                transition: 'color 200ms',
+                letterSpacing: '0.8px',
+                padding: '5px 11px',
+                transition: 'border-color 200ms, background 200ms',
+                lineHeight: 1.4,
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
+              className="ps-lang-btn"
               aria-label={isArabic ? 'Switch to English' : 'Switch to Arabic'}
             >
               {isArabic ? 'EN' : 'AR'}
             </button>
-            <a href="/#contact" style={{
-              padding: '9px 22px',
+
+            <a href={`/${lang}/#contact`} style={{
+              padding: '8px 20px',
               background: '#c8a84b',
               color: '#0d1b2e',
               borderRadius: '8px',
-              fontSize: '14px', fontWeight: 700,
+              fontSize: '13px',
+              fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
+              textDecoration: 'none',
               transition: 'background 200ms',
+              whiteSpace: 'nowrap',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
+              className="ps-cta-btn"
             >
-              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{t('nav.cta')} <ArrowRight size={14} /></span>
+              {t('nav.cta')}
             </a>
           </div>
 
+          {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(!open)}
+            className="ps-hamburger"
             style={{
               display: 'none',
               padding: '8px',
               color: '#c8a84b',
-              background: 'none',
-              border: 'none',
+              background: open ? 'rgba(200,168,75,0.08)' : 'none',
+              border: open ? '1px solid rgba(200,168,75,0.2)' : '1px solid transparent',
+              borderRadius: '6px',
               cursor: 'pointer',
+              transition: 'background 200ms',
             }}
-            className="mobile-btn"
           >
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
 
+      {/* Mobile overlay */}
       {open && (
         <div style={{
-          position: 'fixed', top: '72px', left: 0, right: 0, bottom: 0, zIndex: 99,
-          background: '#0d1b2e',
-          borderTop: '1px solid rgba(200,168,75,0.15)',
-          display: 'flex', flexDirection: 'column', padding: '32px 24px',
-          gap: '4px',
+          position: 'fixed',
+          top: '68px',
+          left: 0, right: 0, bottom: 0,
+          zIndex: 99,
+          background: 'rgba(7,15,26,0.98)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          borderTop: '1px solid rgba(200,168,75,0.1)',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '24px 24px 40px',
         }}>
-          {navLinks.map(l => (
-            <a key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
-              padding: '16px 0',
-              fontSize: '20px', fontWeight: 600,
-              color: 'rgba(255,255,255,0.85)',
-              borderBottom: '1px solid rgba(200,168,75,0.1)',
-              fontFamily: "'DM Sans', sans-serif",
-            }}>
-              {l.label}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', flex: 1 }}>
+            {navLinks.map((l, i) => (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                style={{
+                  padding: '15px 4px',
+                  fontSize: '18px',
+                  fontWeight: 600,
+                  color: 'rgba(255,255,255,0.8)',
+                  borderBottom: '1px solid rgba(200,168,75,0.08)',
+                  fontFamily: "'DM Sans', sans-serif",
+                  textDecoration: 'none',
+                  animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
+                  animationDelay: `${i * 45}ms`,
+                }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '20px' }}>
+            <button
+              onClick={() => { toggleLanguage(); setOpen(false) }}
+              style={{
+                padding: '13px',
+                background: 'rgba(200,168,75,0.06)',
+                border: '1px solid rgba(200,168,75,0.18)',
+                borderRadius: '8px',
+                color: '#c8a84b',
+                fontSize: '14px',
+                fontWeight: 700,
+                fontFamily: "'DM Sans', sans-serif",
+                cursor: 'pointer',
+                animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
+                animationDelay: `${navLinks.length * 45}ms`,
+              }}
+            >
+              {isArabic ? 'Switch to English' : 'التبديل إلى العربية'}
+            </button>
+            <a
+              href={`/${lang}/#contact`}
+              onClick={() => setOpen(false)}
+              style={{
+                padding: '15px',
+                background: '#c8a84b',
+                color: '#0d1b2e',
+                borderRadius: '8px',
+                textAlign: 'center',
+                fontSize: '15px',
+                fontWeight: 700,
+                fontFamily: "'DM Sans', sans-serif",
+                textDecoration: 'none',
+                animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
+                animationDelay: `${(navLinks.length + 1) * 45}ms`,
+              }}
+            >
+              {t('nav.cta')}
             </a>
-          ))}
-          <a href="/#contact" onClick={() => setOpen(false)} style={{
-            marginTop: '24px',
-            padding: '16px',
-            background: '#c8a84b',
-            color: '#0d1b2e',
-            borderRadius: '8px',
-            textAlign: 'center',
-            fontSize: '16px', fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-          }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{t('nav.cta')} <ArrowRight size={14} /></span>
-          </a>
+          </div>
         </div>
       )}
 
       <style>{`
         @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
-          .mobile-btn { display: flex !important; }
+          .desktop-nav-links  { display: none !important; }
+          .desktop-nav-controls { display: none !important; }
+          .ps-hamburger { display: flex !important; }
+        }
+        .ps-nav-link:hover { color: #fff !important; }
+        .ps-lang-btn:hover {
+          border-color: rgba(200,168,75,0.5) !important;
+          background: rgba(200,168,75,0.08) !important;
+        }
+        .ps-cta-btn:hover { background: #e0c068 !important; }
+        @keyframes psMobileIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </>

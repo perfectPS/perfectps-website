@@ -1,5 +1,7 @@
-import { Shield, Wifi, Eye, Zap, Smartphone, Globe, Check, ArrowRight } from 'lucide-react'
+import { Shield, Wifi, Eye, Zap, Smartphone, Globe, Check } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { useLang } from '../../hooks/useLang'
 
 const features = [
   { icon: Wifi,       label: 'WireGuard Protocol' },
@@ -13,6 +15,8 @@ const features = [
 const techTags = ['WireGuard', 'Zero-Log', 'AdGuard DNS', 'Kill Switch', 'ChaCha20']
 
 export function Products() {
+  const { t } = useTranslation()
+  const lang = useLang()
   return (
     <section id="products" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
 
@@ -32,7 +36,7 @@ export function Products() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 56px' }}>
-            <div className="section-label">Our Products</div>
+            <div className="section-label">{t('products.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
@@ -40,8 +44,8 @@ export function Products() {
               color: '#0d1b2e',
               lineHeight: 1.15,
             }}>
-              Built for the<br />
-              <span className="gradient-text--gold">Real World</span>
+              {t('products.h2_line1')}<br />
+              <span className="gradient-text--gold">{t('products.h2_line2')}</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -114,7 +118,7 @@ export function Products() {
                 display: 'inline-block',
                 marginBottom: '14px',
               }}>
-                Flagship Product
+                {t('products.badge')}
               </span>
 
               <h3 style={{
@@ -123,17 +127,15 @@ export function Products() {
                 color: '#0d1b2e',
                 marginBottom: '6px',
               }}>
-                PS Secure
+                {t('products.name')}
               </h3>
               <p style={{ fontSize: '14px', color: '#c8a84b', fontWeight: 500, marginBottom: '18px' }}>
-                VPN & Privacy Platform
+                {t('products.subtitle')}
               </p>
               <p style={{
                 fontSize: '15px', color: '#4a5568', lineHeight: 1.75, marginBottom: '28px',
               }}>
-                Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy,
-                AdGuard DNS filtering, a hardware kill switch, and native iOS and Android apps.
-                All under perfectPS infrastructure.
+                {t('products.desc')}
               </p>
 
               <div style={{
@@ -159,7 +161,7 @@ export function Products() {
               </div>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a href="/ps-secure" style={{
+                <a href={`/${lang}/ps-secure`} style={{
                   padding: '11px 24px',
                   background: '#c8a84b',
                   color: '#0d1b2e',
@@ -171,9 +173,9 @@ export function Products() {
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
                 >
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Learn More <ArrowRight size={14} /></span>
+                  {t('products.cta_learn')}
                 </a>
-                <a href="/#contact" style={{
+                <a href={`/${lang}/#contact`} style={{
                   padding: '11px 24px',
                   background: 'transparent',
                   color: '#0d1b2e',
@@ -186,7 +188,7 @@ export function Products() {
                   onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b' }}
                   onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.3)'; el.style.color = '#0d1b2e' }}
                 >
-                  Get Early Access
+                  {t('products.cta_access')}
                 </a>
               </div>
             </div>

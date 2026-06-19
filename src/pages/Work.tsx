@@ -1,11 +1,10 @@
-import { Navbar } from '../components/layout/Navbar'
-import { Footer } from '../components/layout/Footer'
+import { useTranslation } from 'react-i18next'
 import { Portfolio } from '../components/sections/Portfolio'
 
 export function Work() {
+  const { t } = useTranslation()
   return (
     <>
-      <Navbar />
       <div style={{ paddingTop: '72px', background: 'var(--navy)' }}>
         <div className="container" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
           <p style={{
@@ -16,7 +15,7 @@ export function Work() {
             color: 'var(--cyan)',
             marginBottom: '16px',
           }}>
-            ── Portfolio
+            {t('work.page_label')}
           </p>
           <h1 style={{
             fontFamily: "'DM Sans', sans-serif",
@@ -26,15 +25,14 @@ export function Work() {
             letterSpacing: '-1px',
             marginBottom: '16px',
           }}>
-            Our Work
+            {t('work.page_h1')}
           </h1>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.6)', maxWidth: '500px' }}>
-            Digital products built for clients across industries. Quality over quantity, always.
+            {t('work.page_body')}
           </p>
         </div>
       </div>
       <Portfolio showCta={false} />
-      <Footer />
     </>
   )
 }

@@ -1,29 +1,13 @@
-import { Search, Layers, Code2, Rocket } from 'lucide-react'
+import { Search, Layers, Code2, Rocket, type LucideIcon } from 'lucide-react'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 import { useTilt } from '../../hooks/useTilt'
 
-const steps = [
-  {
-    n: '01', icon: Search, title: 'Discover',
-    desc: 'We start by understanding your business goals, users, and constraints. No jumping straight to code. A clear brief saves weeks of rework.',
-  },
-  {
-    n: '02', icon: Layers, title: 'Design',
-    desc: 'Architecture decisions, UI systems, and prototypes. We align on the plan before writing a single production line, so you can see it before we build it.',
-  },
-  {
-    n: '03', icon: Code2, title: 'Build',
-    desc: 'Iterative development in tight sprints. Regular check-ins, live previews, and test coverage at every stage. No black-box development.',
-  },
-  {
-    n: '04', icon: Rocket, title: 'Launch',
-    desc: "Production deploy, monitoring setup, and post-launch support. We don't hand you a zip file. We ship it, measure it, and stay on until it's stable.",
-  },
-]
+type StepItem = { n: string; icon: LucideIcon; title: string; desc: string }
 
-function StepCard({ step, delay }: { step: typeof steps[0]; delay: number }) {
+function StepCard({ step, delay }: { step: StepItem; delay: number }) {
   const ref = useRef<HTMLDivElement>(null)
   useTilt(ref, 8)
   return (
@@ -92,6 +76,27 @@ function StepCard({ step, delay }: { step: typeof steps[0]; delay: number }) {
 }
 
 export function Process() {
+  const { t } = useTranslation()
+
+  const steps: StepItem[] = [
+    {
+      n: '01', icon: Search, title: t('process.step1_title'),
+      desc: t('process.step1_desc'),
+    },
+    {
+      n: '02', icon: Layers, title: t('process.step2_title'),
+      desc: t('process.step2_desc'),
+    },
+    {
+      n: '03', icon: Code2, title: t('process.step3_title'),
+      desc: t('process.step3_desc'),
+    },
+    {
+      n: '04', icon: Rocket, title: t('process.step4_title'),
+      desc: t('process.step4_desc'),
+    },
+  ]
+
   return (
     <section
       className="section"
@@ -131,7 +136,7 @@ export function Process() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 580, margin: '0 auto 56px' }}>
-            <div className="section-label">How We Work</div>
+            <div className="section-label">{t('process.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
@@ -139,11 +144,11 @@ export function Process() {
               color: '#fff',
               marginBottom: '16px',
             }}>
-              From Idea to<br />
-              <span className="gradient-text">Shipped Product</span>
+              {t('process.h2_line1')}<br />
+              <span className="gradient-text">{t('process.h2_line2')}</span>
             </h2>
             <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
-              A proven 4-step process that keeps every project on track, on budget, and on time.
+              {t('process.body')}
             </p>
           </div>
         </ScrollReveal>

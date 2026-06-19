@@ -262,13 +262,11 @@ button { cursor: pointer; border: none; background: none; }
   }
 }
 
-/* RTL support */
-[dir="rtl"] .container {
-  direction: rtl;
+/* RTL — direction is set on <html> by LangLayout; containers inherit automatically */
+[dir="rtl"] body {
+  font-family: 'DM Sans', 'Segoe UI', -apple-system, sans-serif;
 }
-[dir="rtl"] .hero-stats {
-  direction: rtl;
-}
-[dir="rtl"] .desktop-nav {
-  flex-direction: row-reverse;
+[dir="rtl"] .section-label,
+[dir="rtl"] .section-label--cyan {
+  letter-spacing: 0;
 }

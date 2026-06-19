@@ -1,20 +1,24 @@
 import { useRef } from 'react'
-import { Shield, ArrowRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { Shield } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { useTilt } from '../../hooks/useTilt'
-
-const stats = [
-  { value: '2019', label: 'Founded' },
-  { value: '5+',   label: 'Core Team' },
-  { value: '15+',  label: 'Products Shipped' },
-  { value: '8+',   label: 'Countries' },
-]
+import { useLang } from '../../hooks/useLang'
 
 const badges = ['React', 'WireGuard', 'TypeScript', 'Oracle Cloud', 'Expo', 'Node.js']
 
 export function About() {
+  const { t } = useTranslation()
+  const lang = useLang()
   const identityRef = useRef<HTMLDivElement>(null)
   useTilt(identityRef, 6)
+
+  const stats = [
+    { value: '2019', label: t('about.stat_founded') },
+    { value: '5+',   label: t('about.stat_team') },
+    { value: '15+',  label: t('about.stat_shipped') },
+    { value: '8+',   label: t('about.stat_countries') },
+  ]
 
   return (
     <section id="about" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
@@ -35,7 +39,7 @@ export function About() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-            <div className="section-label">About the Studio</div>
+            <div className="section-label">{t('about.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
@@ -43,7 +47,7 @@ export function About() {
               color: '#0d1b2e',
               lineHeight: 1.15,
             }}>
-              We Are <span className="gradient-text--gold">perfectPS</span>
+              {t('about.h2_pre')} <span className="gradient-text--gold">perfectPS</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -93,7 +97,7 @@ export function About() {
                   borderLeft: '2px solid rgba(200,168,75,0.35)',
                   paddingLeft: '12px',
                 }}>
-                  "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
+                  {t('about.quote')}
                 </div>
 
                 <div style={{
@@ -125,7 +129,7 @@ export function About() {
                   ))}
                 </div>
 
-                <a href="/#contact" style={{
+                <a href={`/${lang}/#contact`} style={{
                   display: 'block',
                   padding: '13px',
                   background: '#c8a84b',
@@ -139,7 +143,7 @@ export function About() {
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
                 >
-                  <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>Start a Project <ArrowRight size={14} /></span>
+                  {t('about.cta')}
                 </a>
               </div>
             </div>
@@ -152,13 +156,13 @@ export function About() {
                 color: '#0d1b2e', lineHeight: 1.75,
                 marginBottom: '16px',
               }}>
-                perfectPS is a digital studio based in the Middle East. We specialize in secure, high-performance digital products.
+                {t('about.p1')}
               </p>
               <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '16px' }}>
-                We built <strong style={{ color: '#0d1b2e' }}>PS Secure</strong>, a zero-log VPN platform trusted by users across the region. We partner with businesses to design, build, and ship products that make an impact.
+                {t('about.p2')}
               </p>
               <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '32px' }}>
-                We believe in clean code, beautiful interfaces, and infrastructure that actually works.
+                {t('about.p3')}
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>

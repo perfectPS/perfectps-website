@@ -1,34 +1,13 @@
-import { Zap, Lock, HeartHandshake } from 'lucide-react'
+import { Zap, Lock, HeartHandshake, type LucideIcon } from 'lucide-react'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 import { useTilt } from '../../hooks/useTilt'
 
-const pillars = [
-  {
-    icon: Zap,
-    title: 'Fast, Predictable Delivery',
-    desc: "We run tight sprints with clear milestones. You always know what's being built, when it ships, and what comes next. No surprises.",
-    stat: '100%',
-    statLabel: 'On-Time',
-  },
-  {
-    icon: Lock,
-    title: 'Security-First Engineering',
-    desc: 'Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs, security is architecture, not an afterthought.',
-    stat: '0',
-    statLabel: 'Data Breaches',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Long-Term Partnership',
-    desc: "We're not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract.",
-    stat: '8+',
-    statLabel: 'Returning Clients',
-  },
-]
+type PillarItem = { icon: LucideIcon; title: string; desc: string; stat: string; statLabel: string }
 
-function PillarCard({ p, delay }: { p: typeof pillars[0]; delay: number }) {
+function PillarCard({ p, delay }: { p: PillarItem; delay: number }) {
   const ref = useRef<HTMLDivElement>(null)
   useTilt(ref, 9)
   return (
@@ -97,6 +76,32 @@ function PillarCard({ p, delay }: { p: typeof pillars[0]; delay: number }) {
 }
 
 export function WhyUs() {
+  const { t } = useTranslation()
+
+  const pillars = [
+    {
+      icon: Zap,
+      title: t('whyus.card1_title'),
+      desc: t('whyus.card1_desc'),
+      stat: '100%',
+      statLabel: 'On-Time',
+    },
+    {
+      icon: Lock,
+      title: t('whyus.card2_title'),
+      desc: t('whyus.card2_desc'),
+      stat: '0',
+      statLabel: 'Data Breaches',
+    },
+    {
+      icon: HeartHandshake,
+      title: t('whyus.card3_title'),
+      desc: t('whyus.card3_desc'),
+      stat: '8+',
+      statLabel: 'Returning Clients',
+    },
+  ]
+
   return (
     <section
       className="section"
@@ -127,7 +132,7 @@ export function WhyUs() {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 64px' }}>
-            <div className="section-label">Why perfectPS</div>
+            <div className="section-label">{t('whyus.label')}</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
@@ -135,11 +140,11 @@ export function WhyUs() {
               color: '#ffffff',
               marginBottom: '16px',
             }}>
-              What Makes Us<br />
-              <span className="gradient-text">Different</span>
+              {t('whyus.h2_line1')}<br />
+              <span className="gradient-text">{t('whyus.h2_line2')}</span>
             </h2>
             <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
-              We've built software products across industries, from fintech to security infrastructure. Here's what we bring to every engagement.
+              {t('whyus.body')}
             </p>
           </div>
         </ScrollReveal>

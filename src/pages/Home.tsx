@@ -1,5 +1,3 @@
-import { Navbar } from '../components/layout/Navbar'
-import { Footer } from '../components/layout/Footer'
 import { Hero } from '../components/sections/Hero'
 import { Services } from '../components/sections/Services'
 import { WhyUs } from '../components/sections/WhyUs'
@@ -13,7 +11,6 @@ import { Contact } from '../components/sections/Contact'
 export function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Services />
       <WhyUs />
@@ -23,7 +20,6 @@ export function Home() {
       <TechStack />
       <About />
       <Contact />
-      <Footer />
     </>
   )
 }

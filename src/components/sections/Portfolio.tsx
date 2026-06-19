@@ -1,16 +1,11 @@
 import { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { useLang } from '../../hooks/useLang'
 import { portfolioItems } from '../../data/portfolio'
 import { PortfolioCard } from '../cards/PortfolioCard'
 import { ScrollReveal } from '../ui/ScrollReveal'
 
 type Filter = 'all' | 'web' | 'mobile'
-
-const filters: { label: string; value: Filter }[] = [
-  { label: 'All Projects', value: 'all' },
-  { label: 'Web Apps', value: 'web' },
-  { label: 'Mobile Apps', value: 'mobile' },
-]
 
 interface PortfolioProps {
   limit?: number
@@ -19,6 +14,14 @@ interface PortfolioProps {
 
 export function Portfolio({ limit, showCta = true }: PortfolioProps) {
   const [active, setActive] = useState<Filter>('all')
+  const { t } = useTranslation()
+  const lang = useLang()
+
+  const filters: { label: string; value: Filter }[] = [
+    { label: t('work.filter_all'), value: 'all' },
+    { label: t('work.filter_web'), value: 'web' },
+    { label: t('work.filter_mobile'), value: 'mobile' },
+  ]
 
   const filtered = portfolioItems.filter(item => active === 'all' || item.type === active)
   const displayed = limit ? filtered.slice(0, limit) : filtered
@@ -27,7 +30,7 @@ export function Portfolio({ limit, showCta = true }: PortfolioProps) {
     <section id="work" className="section" style={{ background: 'var(--surface)' }}>
       <div className="container">
         <ScrollReveal>
-          <div className="section-label">Selected Work</div>
+          <div className="section-label">{t('work.label')}</div>
           <h2 style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(28px, 4vw, 42px)',
@@ -35,15 +38,14 @@ export function Portfolio({ limit, showCta = true }: PortfolioProps) {
             color: 'var(--text-1)',
             marginBottom: '14px',
           }}>
-            Projects We're Proud Of
+            {t('work.h2_line1')} <span className="gradient-text--gold">{t('work.h2_line2')}</span>
           </h2>
           <p style={{
             fontSize: '17px', color: 'var(--text-2)',
             maxWidth: '560px', lineHeight: 1.7,
             marginBottom: '36px',
           }}>
-            A selection of products built for clients across industries.
-            Client identities are kept confidential.
+            {t('work.portfolio_desc')}
           </p>
         </ScrollReveal>
 
@@ -80,7 +82,7 @@ export function Portfolio({ limit, showCta = true }: PortfolioProps) {
         {/* CTA */}
         {showCta && limit && filtered.length > limit && (
           <div style={{ textAlign: 'center' }}>
-            <a href="/work" style={{
+            <a href={`/${lang}/work`} style={{
               padding: '13px 36px',
               background: 'transparent',
               color: 'var(--navy)',
@@ -94,7 +96,7 @@ export function Portfolio({ limit, showCta = true }: PortfolioProps) {
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--navy)'; e.currentTarget.style.color = '#fff' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--navy)' }}
             >
-              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>View All 15 Projects <ArrowRight size={14} /></span>
+              {t('work.view_all')}
             </a>
           </div>
         )}

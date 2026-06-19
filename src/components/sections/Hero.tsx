@@ -1,16 +1,13 @@
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CountUp } from '../ui/CountUp'
-import { Folder, Users, Calendar, CheckCircle, ArrowLeft, ArrowUpRight, TrendingUp } from 'lucide-react'
+import { Folder, Users, Calendar, CheckCircle, TrendingUp, type LucideIcon } from 'lucide-react'
 import { useTilt } from '../../hooks/useTilt'
+import { useLang } from '../../hooks/useLang'
 
-const stats = [
-  { num: 15, suffix: '+', label: 'Projects Delivered', badge: '+4 this year',  Icon: Folder },
-  { num: 8,  suffix: '+', label: 'Clients Served',     badge: 'Growing',       Icon: Users },
-  { num: 5,  suffix: '+', label: 'Years Building',     badge: 'Since 2019',    Icon: Calendar },
-  { num: 100,suffix: '%', label: 'On-Time Delivery',   badge: 'Every project', Icon: CheckCircle },
-]
+type StatItem = { num: number; suffix: string; label: string; badge: string; Icon: LucideIcon }
 
-function StatCard({ stat }: { stat: typeof stats[0] }) {
+function StatCard({ stat }: { stat: StatItem }) {
   const ref = useRef<HTMLDivElement>(null)
   useTilt(ref, 10)
   return (
@@ -82,6 +79,16 @@ const PARTICLES = Array.from({ length: 28 }, (_, i) => ({
 }))
 
 export function Hero() {
+  const { t } = useTranslation()
+  const lang = useLang()
+
+  const stats = [
+    { num: 15, suffix: '+', label: t('hero.stat_projects'), badge: t('hero.badge_projects'), Icon: Folder },
+    { num: 8,  suffix: '+', label: t('hero.stat_clients'),  badge: t('hero.badge_clients'),  Icon: Users },
+    { num: 5,  suffix: '+', label: t('hero.stat_years'),    badge: t('hero.badge_years'),    Icon: Calendar },
+    { num: 100,suffix: '%', label: t('hero.stat_delivery'), badge: t('hero.badge_delivery'), Icon: CheckCircle },
+  ]
+
   return (
     <section
       style={{
@@ -151,7 +158,7 @@ export function Hero() {
                 textTransform: 'uppercase', color: '#c8a84b',
               }}>
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c8a84b', display: 'block', boxShadow: '0 0 6px #c8a84b' }} />
-                Digital Studio · Est. 2019
+                {t('hero.badge')}
               </span>
             </div>
 
@@ -165,9 +172,9 @@ export function Hero() {
               maxWidth: '780px',
               color: '#fff',
             }}>
-              We Build<br />
-              <span className="gradient-text">Digital Products</span><br />
-              That Matter.
+              {t('hero.h1_line1')}<br />
+              <span className="gradient-text">{t('hero.h1_line2')}</span><br />
+              {t('hero.h1_line3')}
             </h1>
 
             <p style={{
@@ -177,11 +184,11 @@ export function Hero() {
               maxWidth: '520px',
               marginBottom: '44px',
             }}>
-              We build secure VPN infrastructure, market-ready web apps, and mobile products. Fast. Beautiful. Built to last.
+              {t('hero.body')}
             </p>
 
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-              <a href="/work" style={{
+              <a href={`/${lang}/work`} style={{
                 padding: '14px 32px',
                 background: '#c8a84b',
                 color: '#0d1b2e',
@@ -195,9 +202,9 @@ export function Hero() {
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-2px)' }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
               >
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> View Our Work</span>
+                {t('hero.cta_primary')}
               </a>
-              <a href="/ps-secure" style={{
+              <a href={`/${lang}/ps-secure`} style={{
                 padding: '14px 32px',
                 background: 'rgba(255,255,255,0.04)',
                 color: '#fff',
@@ -212,7 +219,7 @@ export function Hero() {
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b'; el.style.background = 'rgba(200,168,75,0.06)' }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
               >
-                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Learn More <ArrowUpRight size={14} /></span>
+                {t('hero.cta_secondary')}
               </a>
             </div>
         </div>

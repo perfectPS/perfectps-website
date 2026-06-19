@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO -->
-    <title>perfectPS — Digital Studio</title>
-    <meta name="description" content="perfectPS is a digital studio building secure, high-performance web and mobile products. Creators of PS Secure VPN." />
+    <title>perfectPS | Web, Mobile &amp; VPN Studio | Middle East Digital Studio</title>
+    <meta name="description" content="perfectPS is a boutique digital studio in the Middle East. We build secure web apps, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Creators of PS Secure VPN for iOS and Android. Est. 2019." />
+    <meta name="keywords" content="digital studio, web development, mobile app development, VPN development, React, Node.js, Expo, WireGuard, PS Secure, Middle East, Jordan, software agency, TypeScript, Oracle Cloud" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#1B3A6B" />
-    <link rel="canonical" href="https://perfectps.com/" />
+    <meta name="theme-color" content="#0d1b2e" />
+    <link rel="canonical" href="https://perfectps.com/en/" />
+
+    <!-- Hreflang — updated dynamically per route by LangLayout; these cover the root -->
+    <link rel="alternate" hreflang="en" href="https://perfectps.com/en/" />
+    <link rel="alternate" hreflang="ar" href="https://perfectps.com/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="perfectPS" />
-    <meta property="og:title" content="perfectPS — Secure, Fast, Private Internet Tools" />
-    <meta property="og:description" content="perfectPS builds secure internet tools for everyone, starting with PS Secure VPN — powered by WireGuard, available on iOS and Android." />
-    <meta property="og:url" content="https://perfectps.com/" />
+    <meta property="og:title" content="perfectPS | Web, Mobile &amp; VPN Studio | Middle East" />
+    <meta property="og:description" content="Boutique digital studio building secure web apps, mobile apps, and WireGuard VPN infrastructure. Creators of PS Secure. Based in the Middle East. Est. 2019." />
+    <meta property="og:url" content="https://perfectps.com/en/" />
     <meta property="og:image" content="https://perfectps.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -25,15 +31,15 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="perfectPS — Secure, Fast, Private Internet Tools" />
-    <meta name="twitter:description" content="perfectPS builds secure internet tools for everyone, starting with PS Secure VPN — powered by WireGuard, available on iOS and Android." />
+    <meta name="twitter:title" content="perfectPS | Web, Mobile &amp; VPN Studio | Middle East" />
+    <meta name="twitter:description" content="Boutique digital studio building secure web apps, mobile apps, and WireGuard VPN infrastructure. Creators of PS Secure. Based in the Middle East." />
     <meta name="twitter:image" content="https://perfectps.com/og-image.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -41,15 +47,60 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": ["Organization", "ProfessionalService"],
           "@id": "https://perfectps.com/#organization",
           "name": "perfectPS",
+          "legalName": "perfectPS Digital Studio",
           "url": "https://perfectps.com",
           "logo": {
             "@type": "ImageObject",
             "url": "https://perfectps.com/favicon.svg"
           },
-          "description": "perfectPS builds secure internet tools for everyone.",
+          "description": "perfectPS is a boutique digital studio based in Amman, Jordan (Middle East) specializing in secure web applications, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Founded in 2019.",
+          "foundingDate": "2019",
+          "areaServed": [
+            "JO", "SA", "AE", "KW", "BH", "OM", "QA",
+            { "@type": "Country", "name": "Jordan" },
+            { "@type": "Country", "name": "Saudi Arabia" },
+            { "@type": "Country", "name": "United Arab Emirates" }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Amman",
+            "addressCountry": "JO",
+            "addressRegion": "Middle East"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@perfectps.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Arabic"],
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          },
+          "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 5 },
+          "knowsAbout": [
+            "Web Application Development", "Mobile App Development",
+            "VPN Infrastructure", "WireGuard Protocol",
+            "React", "TypeScript", "Node.js", "Expo", "React Native",
+            "Oracle Cloud", "Docker", "Cybersecurity", "Privacy Engineering"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Studio Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Application Development", "description": "Scalable React and TypeScript web platforms, SaaS dashboards, and marketing sites." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development", "description": "Cross-platform iOS and Android apps built with Expo and React Native." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VPN Infrastructure Development", "description": "WireGuard-based zero-log VPN systems and privacy-first architecture." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backend and API Development", "description": "Node.js REST APIs, PostgreSQL databases, and scalable cloud deployments." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design", "description": "User-centered design systems, interactive prototypes, and brand identity." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps and Cloud Deployment", "description": "Docker, Oracle Cloud, automated CI/CD, and 99.9% uptime infrastructure." } }
+            ]
+          },
           "sameAs": ["https://github.com/perfectPS"]
         },
         {
@@ -57,15 +108,189 @@
           "@id": "https://perfectps.com/#website",
           "url": "https://perfectps.com",
           "name": "perfectPS",
-          "publisher": { "@id": "https://perfectps.com/#organization" }
+          "description": "perfectPS digital studio — web, mobile, and VPN development in the Middle East",
+          "publisher": { "@id": "https://perfectps.com/#organization" },
+          "inLanguage": ["en", "ar"]
         },
         {
           "@type": "SoftwareApplication",
-          "name": "PS Secure VPN",
+          "@id": "https://perfectps.com/en/ps-secure#app",
+          "name": "PS Secure",
+          "alternateName": "PS Secure VPN",
           "applicationCategory": "Utilities",
-          "operatingSystem": "iOS, Android",
-          "description": "A fast, private VPN powered by WireGuard.",
-          "publisher": { "@id": "https://perfectps.com/#organization" }
+          "applicationSubCategory": "VPN",
+          "operatingSystem": ["iOS", "Android"],
+          "description": "PS Secure is a WireGuard-based VPN for iOS and Android built by perfectPS for users across Saudi Arabia, UAE, and Jordan. PS Secure runs on WireGuard — 4,000 lines of auditable code — with a zero-log policy and servers in the Middle East region.",
+          "featureList": [
+            "WireGuard protocol — 4,000-line codebase, auditable and fast",
+            "Strict zero-log policy — no activity, connection, or IP logs",
+            "AdGuard DNS filtering to block ads and trackers",
+            "Hardware kill switch — real IP never exposed if VPN drops",
+            "Native iOS app",
+            "Native Android app",
+            "No third-party data sharing",
+            "Servers optimized for Middle East users"
+          ],
+          "publisher": { "@id": "https://perfectps.com/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/ComingSoon",
+            "availableDeliveryMethod": "https://schema.org/DeliveryModeDirectDownload"
+          },
+          "url": "https://perfectps.com/en/ps-secure"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "perfectPS", "item": "https://perfectps.com/en/" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to set up PS Secure VPN on iPhone",
+          "description": "Install and connect PS Secure WireGuard VPN on iOS in under 2 minutes. No configuration required.",
+          "totalTime": "PT2M",
+          "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+          "supply": [{ "@type": "HowToSupply", "name": "iPhone running iOS 15 or later" }],
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Download PS Secure",
+              "text": "Open the App Store on your iPhone. Search for PS Secure. Tap Get to download. No payment required.",
+              "url": "https://perfectps.com/en/ps-secure"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Create your account",
+              "text": "Open PS Secure and tap Sign Up. Enter your email address. No phone number or payment details required to get started."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Connect to a server",
+              "text": "Tap the Connect button. PS Secure automatically selects the fastest available server using the WireGuard protocol. Your connection is fully encrypted in under one second."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://perfectps.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does perfectPS do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "perfectPS is a boutique digital studio based in Amman, Jordan (Middle East), founded in 2019. We design and build secure web applications, cross-platform mobile apps (iOS and Android), and VPN infrastructure. Our stack includes React, TypeScript, Node.js, Expo, React Native, and WireGuard. We have delivered 15+ projects for clients across 8+ countries."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is perfectPS located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "perfectPS is based in Amman, Jordan. We serve clients across the Middle East including Saudi Arabia, UAE, Kuwait, Bahrain, Oman, and Qatar, as well as international clients globally. Contact us at hello@perfectps.com."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is PS Secure?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PS Secure is a VPN and privacy platform created by perfectPS. It uses the WireGuard protocol — a modern VPN protocol with approximately 4,000 lines of code, compared to OpenVPN's 600,000 lines — making it auditable and significantly faster. PS Secure maintains a strict zero-log policy, includes AdGuard DNS filtering, and features a hardware kill switch. Available as native apps for iOS and Android."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is WireGuard and why is it better than OpenVPN?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "WireGuard is a modern VPN protocol with approximately 4,000 lines of code, compared to OpenVPN's approximately 600,000 lines. Its smaller codebase makes it significantly easier to audit for security vulnerabilities. In independent speed benchmarks, WireGuard consistently outperforms OpenVPN and IPSec, especially on mobile connections. PS Secure uses WireGuard as its sole tunneling protocol, which is why it achieves low latency even on servers in the Middle East region."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does PS Secure log user data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. PS Secure maintains a strict zero-log policy. We do not store, monitor, or sell any user activity, connection timestamps, IP addresses, DNS queries, or traffic data. The infrastructure runs on private servers owned and operated by perfectPS with no third-party data sharing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it legal to use a VPN in Saudi Arabia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Using a VPN in Saudi Arabia for personal privacy and security purposes is not inherently illegal. Saudi regulations prohibit using VPNs to access content that is unlawful under Saudi law. PS Secure is designed for privacy protection and security on public networks. Users should familiarize themselves with local laws and regulations regarding VPN usage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does PS Secure work in the UAE?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PS Secure uses the WireGuard tunneling protocol on iOS and Android. VPN legality in the UAE depends on intended use — the UAE prohibits using VPNs to access content that is illegal under UAE law. PS Secure is designed for encrypting your connection from your ISP and third parties on public and private networks. Please review your local regulations before use."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does PS Secure differ from NordVPN or ExpressVPN?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PS Secure is built specifically for users in the Middle East by a team based in the region. Unlike consumer VPNs with massive codebases and no regional focus, PS Secure uses WireGuard exclusively (the most modern and auditable VPN protocol), has servers optimized for Saudi Arabia, UAE, and Jordan, offers a native Arabic interface, and is built on infrastructure operated entirely by perfectPS — no third-party VPN backend."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does PS Secure support multiple devices?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PS Secure is available as native apps for both iOS and Android. Multiple device support is part of the roadmap. Current users can install PS Secure on any supported mobile device using their account credentials."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Has perfectPS built VPN infrastructure before?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. PS Secure, our own WireGuard-based VPN product, is built and operated entirely by perfectPS on Oracle Cloud infrastructure with server nodes in the Middle East region. We have solved the VPN infrastructure challenges — protocol implementation, mobile app networking, App Store compliance, and zero-log architecture — firsthand."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What technologies does perfectPS use to build products?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "perfectPS builds with React 19 and TypeScript for web frontends, Vite for web tooling, Node.js with the Hono framework for backend APIs, Expo and React Native for cross-platform mobile apps (iOS and Android), WireGuard for VPN infrastructure, PostgreSQL for databases, Docker for containerization, and Oracle Cloud for server deployments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to build a mobile app with perfectPS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A typical cross-platform iOS and Android app takes 8 to 16 weeks from discovery to launch, depending on complexity. Simple utility apps may take 6 to 8 weeks. Complex products with backend systems and custom infrastructure take 12 to 20 weeks. perfectPS runs tight sprints with live previews at every stage, so you see progress throughout — not just at delivery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I hire perfectPS for a project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contact perfectPS via email at hello@perfectps.com or through the contact form at perfectps.com/en/#contact. We respond within 24 hours on business days (Sunday through Thursday, 9 AM to 6 PM Amman time)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What kind of projects has perfectPS built?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "perfectPS has delivered 15+ digital products since 2019 including SaaS web applications, cross-platform mobile apps, API backends, fintech dashboards, and VPN infrastructure. We have served clients across 8+ countries in the Middle East and beyond with a 100% on-time delivery record."
+              }
+            }
+          ]
         }
       ]
     }

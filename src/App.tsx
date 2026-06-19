@@ -1,17 +1,28 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Work } from './pages/Work'
 import { PSSecure } from './pages/PSSecure'
 import { NotFound } from './pages/NotFound'
+import { LangLayout } from './components/layout/LangLayout'
+
+function getPreferredLang(): string {
+  const stored = localStorage.getItem('lang')
+  if (stored === 'ar' || stored === 'en') return stored
+  return navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en'
+}
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/ps-secure" element={<PSSecure />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
+        <Route path="/:lang" element={<LangLayout />}>
+          <Route index element={<Home />} />
+          <Route path="work" element={<Work />} />
+          <Route path="ps-secure" element={<PSSecure />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route path="*" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
       </Routes>
     </BrowserRouter>
   )
