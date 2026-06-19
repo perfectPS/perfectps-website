@@ -1,14 +1,16 @@
 import { Zap, Lock, HeartHandshake } from 'lucide-react'
+import { useRef } from 'react'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { BackgroundOrbs } from '../ui/BackgroundOrbs'
+import { useTilt } from '../../hooks/useTilt'
 
 const pillars = [
   {
     icon: Zap,
     title: 'Fast, Predictable Delivery',
-    desc: 'We run tight sprints with clear milestones. You always know what\'s being built, when it ships, and what comes next. No surprises.',
+    desc: "We run tight sprints with clear milestones. You always know what's being built, when it ships, and what comes next. No surprises.",
     stat: '100%',
     statLabel: 'On-Time',
-    gradient: 'linear-gradient(135deg, #0EA5E9, #0055A5)',
   },
   {
     icon: Lock,
@@ -16,38 +18,107 @@ const pillars = [
     desc: 'Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs — security is architecture, not an afterthought.',
     stat: '0',
     statLabel: 'Data Breaches',
-    gradient: 'linear-gradient(135deg, #10B981, #059669)',
   },
   {
     icon: HeartHandshake,
     title: 'Long-Term Partnership',
-    desc: 'We\'re not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract.',
+    desc: "We're not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract.",
     stat: '8+',
     statLabel: 'Returning Clients',
-    gradient: 'linear-gradient(135deg, #F59E0B, #D97706)',
   },
 ]
+
+function PillarCard({ p, delay }: { p: typeof pillars[0]; delay: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  useTilt(ref, 9)
+  return (
+    <ScrollReveal delay={delay}>
+      <div
+        ref={ref}
+        style={{
+          border: '1px solid rgba(200,168,75,0.18)',
+          borderRadius: '14px',
+          overflow: 'hidden',
+          height: '100%',
+          background: '#0d1b2e',
+          transition: 'border-color 200ms, box-shadow 200ms',
+          transformStyle: 'preserve-3d',
+        }}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLElement
+          el.style.borderColor = 'rgba(200,168,75,0.45)'
+          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)'
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLElement
+          el.style.borderColor = 'rgba(200,168,75,0.18)'
+          el.style.boxShadow = 'none'
+        }}
+      >
+        <div style={{
+          background: 'rgba(200,168,75,0.06)',
+          borderBottom: '1px solid rgba(200,168,75,0.12)',
+          padding: '24px 28px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}>
+          <div style={{
+            width: 48, height: 48,
+            borderRadius: '12px',
+            background: 'rgba(200,168,75,0.1)',
+            border: '1px solid rgba(200,168,75,0.25)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <p.icon size={22} color="#c8a84b" strokeWidth={1.75} />
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <div style={{ fontSize: '36px', fontWeight: 800, color: '#fff', fontFamily: "'DM Sans', sans-serif", lineHeight: 1 }}>{p.stat}</div>
+            <div style={{ fontSize: '11px', color: '#c8a84b', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', marginTop: '2px' }}>{p.statLabel}</div>
+          </div>
+        </div>
+
+        <div style={{ padding: '28px' }}>
+          <h3 style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: '18px', fontWeight: 700,
+            color: '#ffffff',
+            marginBottom: '12px',
+          }}>
+            {p.title}
+          </h3>
+          <p style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.75 }}>
+            {p.desc}
+          </p>
+        </div>
+      </div>
+    </ScrollReveal>
+  )
+}
 
 export function WhyUs() {
   return (
     <section
-      className="section dot-grid"
-      style={{ background: 'var(--surface)', overflow: 'hidden' }}
+      className="section"
+      style={{ background: '#112240', overflow: 'hidden', position: 'relative' }}
     >
-      <div className="container">
+      <BackgroundOrbs goldTop="-100px" goldRight="-60px" blueBottom="-120px" blueLeft="-40px" />
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto 64px' }}>
-            <div className="section-label" style={{ justifyContent: 'center' }}>Why perfectPS</div>
+            <div className="section-label">Why perfectPS</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(28px, 4vw, 42px)',
+              fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800,
-              color: 'var(--text-1)',
+              color: '#ffffff',
               marginBottom: '16px',
             }}>
-              What Makes Us Different
+              What Makes Us<br />
+              <span className="gradient-text">Different</span>
             </h2>
-            <p style={{ fontSize: '17px', color: 'var(--text-2)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
               We've built software products across industries, from fintech to security infrastructure. Here's what we bring to every engagement.
             </p>
           </div>
@@ -55,57 +126,7 @@ export function WhyUs() {
 
         <div className="grid-3" style={{ gap: 28 }}>
           {pillars.map((p, i) => (
-            <ScrollReveal key={p.title} delay={i * 100}>
-              <div style={{
-                border: '1px solid var(--border)',
-                borderRadius: 'var(--r-xl)',
-                overflow: 'hidden',
-                height: '100%',
-                background: 'var(--surface)',
-                boxShadow: 'var(--shadow-xs)',
-                transition: 'box-shadow 200ms, transform 200ms',
-              }}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; e.currentTarget.style.transform = 'translateY(-4px)' }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = 'var(--shadow-xs)'; e.currentTarget.style.transform = 'translateY(0)' }}
-              >
-                {/* Gradient header */}
-                <div style={{
-                  background: p.gradient,
-                  padding: '28px 32px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}>
-                  <div style={{
-                    width: 48, height: 48,
-                    borderRadius: 'var(--r-md)',
-                    background: 'rgba(255,255,255,0.2)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <p.icon size={22} color="#fff" strokeWidth={1.75} />
-                  </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <div style={{ fontSize: '32px', fontWeight: 800, color: '#fff', fontFamily: "'DM Sans', sans-serif", lineHeight: 1 }}>{p.stat}</div>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.75)', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>{p.statLabel}</div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div style={{ padding: '28px 32px' }}>
-                  <h3 style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '18px', fontWeight: 700,
-                    color: 'var(--text-1)',
-                    marginBottom: '12px',
-                  }}>
-                    {p.title}
-                  </h3>
-                  <p style={{ fontSize: '14px', color: 'var(--text-2)', lineHeight: 1.75 }}>
-                    {p.desc}
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
+            <PillarCard key={p.title} p={p} delay={i * 100} />
           ))}
         </div>
       </div>

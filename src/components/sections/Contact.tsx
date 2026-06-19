@@ -1,20 +1,21 @@
 import { useState } from 'react'
 import { Mail, MapPin, Clock, ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
 const projectTypes = [
   'Web Application', 'Mobile App', 'VPN / Security',
   'Backend / API', 'UI/UX Design', 'DevOps / Cloud', 'Other',
 ]
 
-const inputStyle: React.CSSProperties = {
+const darkInputStyle: React.CSSProperties = {
   width: '100%',
   padding: '13px 16px',
-  border: '1.5px solid var(--border)',
-  borderRadius: 'var(--r-sm)',
+  border: '1px solid rgba(200,168,75,0.2)',
+  borderRadius: '8px',
   fontSize: '15px',
-  color: 'var(--text-1)',
-  background: 'var(--bg)',
+  color: '#fff',
+  background: 'rgba(200,168,75,0.04)',
   outline: 'none',
   transition: 'border-color 200ms, box-shadow 200ms',
 }
@@ -24,11 +25,11 @@ export function Contact() {
   const [sent, setSent] = useState(false)
 
   const focus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = 'var(--cyan)'
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(0,174,239,0.12)'
+    e.currentTarget.style.borderColor = '#c8a84b'
+    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(200,168,75,0.1)'
   }
   const blur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = 'var(--border)'
+    e.currentTarget.style.borderColor = 'rgba(200,168,75,0.2)'
     e.currentTarget.style.boxShadow = 'none'
   }
 
@@ -36,15 +37,9 @@ export function Contact() {
     <section
       id="contact"
       className="section"
-      style={{ background: 'var(--surface-alt)', overflow: 'hidden', position: 'relative' }}
+      style={{ background: '#112240', overflow: 'hidden', position: 'relative' }}
     >
-      {/* Decorative bg */}
-      <div aria-hidden style={{
-        position: 'absolute', right: -100, top: -100,
-        width: 400, height: 400,
-        background: 'radial-gradient(circle, rgba(0,174,239,0.07) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
+      <BackgroundOrbs goldTop="-80px" goldRight="-60px" blueBottom="-100px" blueLeft="-40px" />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
@@ -52,13 +47,13 @@ export function Contact() {
             <div className="section-label">Let's Work Together</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(28px, 4vw, 42px)',
-              fontWeight: 800, color: 'var(--text-1)',
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 800, color: '#fff',
               marginBottom: '14px',
             }}>
-              Start Your Project
+              Start Your <span className="gradient-text">Project</span>
             </h2>
-            <p style={{ fontSize: '17px', color: 'var(--text-2)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
               Tell us about your idea and we'll get back to you within 24 hours.
             </p>
           </div>
@@ -66,95 +61,95 @@ export function Contact() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 360px',
+          gridTemplateColumns: '1fr 340px',
           gap: '48px',
           alignItems: 'start',
         }} className="contact-grid">
 
-          {/* Form */}
           <ScrollReveal>
             {sent ? (
               <div style={{
                 padding: '56px 48px',
-                background: 'var(--surface)',
-                borderRadius: 'var(--r-xl)',
-                border: '1px solid var(--border)',
+                background: '#0d1b2e',
+                borderRadius: '16px',
+                border: '1px solid rgba(200,168,75,0.2)',
                 textAlign: 'center',
-                boxShadow: 'var(--shadow-sm)',
               }}>
                 <div style={{
                   width: 64, height: 64,
                   borderRadius: '50%',
-                  background: 'rgba(16,185,129,0.12)',
+                  background: 'rgba(34,197,94,0.12)',
+                  border: '1px solid rgba(34,197,94,0.25)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   margin: '0 auto 20px',
                   fontSize: '28px',
                 }}>
                   ✓
                 </div>
-                <h3 style={{ fontFamily: "'DM Sans'", fontSize: '22px', fontWeight: 700, marginBottom: '8px', color: 'var(--navy)' }}>
+                <h3 style={{ fontFamily: "'DM Sans'", fontSize: '22px', fontWeight: 700, marginBottom: '8px', color: '#fff' }}>
                   Message Sent!
                 </h3>
-                <p style={{ color: 'var(--text-2)' }}>We'll get back to you within 24 hours.</p>
+                <p style={{ color: '#8fa3bc' }}>We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form
                 onSubmit={e => { e.preventDefault(); setSent(true) }}
                 style={{
-                  background: 'var(--surface)',
-                  borderRadius: 'var(--r-xl)',
-                  border: '1px solid var(--border)',
+                  background: '#0d1b2e',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(200,168,75,0.18)',
                   padding: '40px',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '20px',
-                  boxShadow: 'var(--shadow-sm)',
                 }}
               >
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-name-row">
                   <div>
-                    <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-2)', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Name</label>
+                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Name</label>
                     <input type="text" required placeholder="Your name" value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
-                      style={inputStyle} onFocus={focus} onBlur={blur} />
+                      style={darkInputStyle} onFocus={focus} onBlur={blur} />
                   </div>
                   <div>
-                    <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-2)', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Email</label>
+                    <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Email</label>
                     <input type="email" required placeholder="hello@company.com" value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
-                      style={inputStyle} onFocus={focus} onBlur={blur} />
+                      style={darkInputStyle} onFocus={focus} onBlur={blur} />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-2)', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Project Type</label>
+                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Project Type</label>
                   <select value={form.type} onChange={e => setForm({ ...form, type: e.target.value })}
-                    style={{ ...inputStyle, cursor: 'pointer' }} onFocus={focus} onBlur={blur}>
-                    <option value="">Select a project type</option>
-                    {projectTypes.map(t => <option key={t} value={t}>{t}</option>)}
+                    style={{ ...darkInputStyle, cursor: 'pointer' }} onFocus={focus} onBlur={blur}>
+                    <option value="" style={{ background: '#0d1b2e' }}>Select a project type</option>
+                    {projectTypes.map(t => <option key={t} value={t} style={{ background: '#0d1b2e' }}>{t}</option>)}
                   </select>
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-2)', display: 'block', marginBottom: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Message</label>
+                  <label style={{ fontSize: '11px', fontWeight: 700, color: '#8fa3bc', display: 'block', marginBottom: '6px', letterSpacing: '1px', textTransform: 'uppercase' }}>Message</label>
                   <textarea required rows={5} placeholder="Tell us about your project..."
                     value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
-                    style={{ ...inputStyle, resize: 'vertical', minHeight: '130px' }}
+                    style={{ ...darkInputStyle, resize: 'vertical', minHeight: '130px' }}
                     onFocus={focus} onBlur={blur} />
                 </div>
 
                 <button type="submit" style={{
                   padding: '15px',
-                  background: 'var(--navy)',
-                  color: '#fff',
-                  borderRadius: 'var(--r-sm)',
+                  background: '#c8a84b',
+                  color: '#0d1b2e',
+                  borderRadius: '8px',
                   fontSize: '15px', fontWeight: 700,
                   fontFamily: "'DM Sans', sans-serif",
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                  transition: 'opacity 200ms, transform 200ms',
+                  transition: 'background 200ms, transform 150ms',
+                  border: 'none',
+                  cursor: 'pointer',
                 }}
-                  onMouseEnter={e => { e.currentTarget.style.opacity = '0.88'; e.currentTarget.style.transform = 'translateY(-1px)' }}
-                  onMouseLeave={e => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'translateY(0)' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-1px)' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
                 >
                   Send Message <ArrowRight size={16} />
                 </button>
@@ -162,57 +157,57 @@ export function Contact() {
             )}
           </ScrollReveal>
 
-          {/* Info sidebar */}
           <ScrollReveal delay={150}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div style={{
+              background: '#0d1b2e',
+              border: '1px solid rgba(200,168,75,0.18)',
+              borderRadius: '16px',
+              padding: '32px 28px',
+              display: 'flex', flexDirection: 'column', gap: '0',
+            }}>
               {[
-                { icon: Mail, label: 'Email', value: 'hello@perfectps.com', href: 'mailto:hello@perfectps.com' },
-                { icon: MapPin, label: 'Location', value: 'Amman, Jordan' },
-                { icon: Clock, label: 'Hours', value: 'Sun–Thu, 9 AM – 6 PM' },
-              ].map(({ icon: Icon, label, value, href }) => {
+                { icon: Mail,   label: 'EMAIL',    value: 'hello@perfectps.com', href: 'mailto:hello@perfectps.com' },
+                { icon: MapPin, label: 'LOCATION', value: 'Amman, Jordan', href: undefined },
+                { icon: Clock,  label: 'HOURS',    value: 'Sun–Thu, 9 AM – 6 PM', href: undefined },
+              ].map(({ icon: Icon, label, value, href }, idx, arr) => {
                 const inner = (
                   <div style={{
-                    display: 'flex', alignItems: 'center', gap: '16px',
-                    padding: '18px 20px',
-                    background: 'var(--surface)',
-                    borderRadius: 'var(--r-md)',
-                    border: '1px solid var(--border)',
+                    display: 'flex', alignItems: 'flex-start', gap: '16px',
+                    padding: '20px 0',
+                    borderBottom: idx < arr.length - 1 ? '1px solid rgba(200,168,75,0.08)' : 'none',
                   }}>
                     <div style={{
                       width: 40, height: 40,
-                      borderRadius: 10,
-                      background: 'var(--cyan-dim)',
+                      borderRadius: '10px',
+                      background: 'rgba(200,168,75,0.1)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <Icon size={17} color="var(--cyan)" strokeWidth={1.75} />
+                      <Icon size={17} color="#c8a84b" strokeWidth={1.75} />
                     </div>
                     <div>
-                      <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--text-3)', marginBottom: '1px' }}>{label}</div>
-                      <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-1)' }}>{value}</div>
+                      <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#c8a84b', marginBottom: '2px' }}>{label}</div>
+                      <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff' }}>{value}</div>
                     </div>
                   </div>
                 )
                 return href
-                  ? <a key={label} href={href}>{inner}</a>
+                  ? <a key={label} href={href} style={{ display: 'block' }}>{inner}</a>
                   : <div key={label}>{inner}</div>
               })}
 
-              {/* CTA callout */}
               <div style={{
-                marginTop: '8px',
-                padding: '24px',
-                background: 'var(--navy)',
-                borderRadius: 'var(--r-lg)',
-                position: 'relative',
-                overflow: 'hidden',
+                marginTop: '20px',
+                padding: '16px',
+                background: 'rgba(200,168,75,0.05)',
+                border: '1px solid rgba(200,168,75,0.12)',
+                borderRadius: '8px',
               }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, var(--cyan), transparent)' }} />
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', lineHeight: 1.75, marginBottom: '16px' }}>
-                  We typically respond within a few hours during business days. Ready to bring your idea to life?
+                <p style={{ color: '#8fa3bc', fontSize: '13px', lineHeight: 1.75, marginBottom: '12px' }}>
+                  We typically respond within a few hours during business days.
                 </p>
                 <a href="mailto:hello@perfectps.com" style={{
-                  color: 'var(--cyan)', fontSize: '13px', fontWeight: 700,
+                  color: '#c8a84b', fontSize: '13px', fontWeight: 700,
                   display: 'flex', alignItems: 'center', gap: '6px',
                 }}>
                   hello@perfectps.com <ArrowRight size={13} />

@@ -1,4 +1,6 @@
+import { Shield } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
 const stats = [
   { value: '2019', label: 'Founded' },
@@ -11,108 +13,149 @@ const badges = ['React', 'WireGuard', 'TypeScript', 'Oracle Cloud', 'Expo', 'Nod
 
 export function About() {
   return (
-    <section className="section" style={{ background: 'var(--surface)', overflow: 'hidden' }}>
-      <div className="container">
+    <section id="about" className="section" style={{ background: '#0d1b2e', overflow: 'hidden', position: 'relative' }}>
+      <BackgroundOrbs goldTop="-100px" goldRight="-80px" blueBottom="-120px" blueLeft="-60px" />
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <ScrollReveal>
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div className="section-label">About the Studio</div>
+            <h2 style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 800,
+              color: '#fff',
+              lineHeight: 1.15,
+            }}>
+              We Are <span className="gradient-text">perfectPS</span>
+            </h2>
+          </div>
+        </ScrollReveal>
+
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          alignItems: 'center',
+          gridTemplateColumns: '380px 1fr',
+          gap: '56px',
+          alignItems: 'start',
         }} className="about-grid">
 
-          {/* Left */}
           <ScrollReveal>
-            <div>
-              <div className="section-label">About the Studio</div>
-              <h2 style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 'clamp(28px, 4vw, 42px)',
-                fontWeight: 800,
-                color: 'var(--text-1)',
-                marginBottom: '20px',
-                lineHeight: 1.15,
+            <div style={{
+              background: '#112240',
+              border: '1px solid rgba(200,168,75,0.22)',
+              borderRadius: '16px',
+              padding: '40px 32px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px',
+            }}>
+              <div style={{
+                width: 64, height: 64,
+                borderRadius: '16px',
+                background: 'rgba(200,168,75,0.1)',
+                border: '1px solid rgba(200,168,75,0.3)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}>
-                We Are<br />
-                <span className="gradient-text--dark">perfectPS</span>
-              </h2>
-              <p style={{ fontSize: '16px', color: 'var(--text-2)', lineHeight: 1.8, marginBottom: '16px' }}>
-                perfectPS is a boutique digital studio based in the Middle East, specializing in secure, high-performance digital products.
-              </p>
-              <p style={{ fontSize: '16px', color: 'var(--text-2)', lineHeight: 1.8, marginBottom: '16px' }}>
-                We built <strong style={{ color: 'var(--text-1)' }}>PS Secure</strong> — a zero-log VPN platform trusted by users across the region — and partner with businesses to design, build, and ship products that make an impact.
-              </p>
-              <p style={{ fontSize: '16px', color: 'var(--text-2)', lineHeight: 1.8, marginBottom: '36px' }}>
-                We believe in clean code, beautiful interfaces, and infrastructure that actually works.
-              </p>
+                <Shield size={30} color="#c8a84b" strokeWidth={1.5} />
+              </div>
 
-              {/* Tech badges */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '36px' }}>
-                {badges.map(b => (
-                  <span key={b} style={{
-                    padding: '5px 14px',
-                    background: 'var(--surface-alt)',
-                    border: '1px solid var(--border)',
-                    borderRadius: 'var(--r-xs)',
-                    fontSize: '12px', fontWeight: 600,
-                    color: 'var(--text-2)',
-                  }}>
-                    {b}
-                  </span>
+              <div style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '22px', fontWeight: 700,
+              }}>
+                <span style={{ color: '#fff' }}>perfect</span>
+                <span style={{ color: '#c8a84b' }}>PS</span>
+              </div>
+
+              <div style={{
+                fontSize: '13px',
+                color: '#8fa3bc',
+                lineHeight: 1.65,
+                fontStyle: 'italic',
+                borderLeft: '2px solid rgba(200,168,75,0.35)',
+                paddingLeft: '12px',
+              }}>
+                "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
+              </div>
+
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '12px',
+                background: 'rgba(13,27,46,0.5)',
+                border: '1px solid rgba(200,168,75,0.1)',
+                borderRadius: '10px',
+                padding: '18px',
+              }}>
+                {stats.map(s => (
+                  <div key={s.label}>
+                    <div style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '24px', fontWeight: 800,
+                      color: '#fff', lineHeight: 1,
+                    }}>
+                      {s.value}
+                    </div>
+                    <div style={{
+                      fontSize: '11px', fontWeight: 500,
+                      color: '#8fa3bc', textTransform: 'uppercase',
+                      letterSpacing: '0.05em', marginTop: '4px',
+                    }}>
+                      {s.label}
+                    </div>
+                  </div>
                 ))}
               </div>
 
               <a href="/#contact" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                padding: '13px 28px',
-                background: 'var(--navy)',
-                color: '#fff',
-                borderRadius: 'var(--r-sm)',
+                display: 'block',
+                padding: '13px',
+                background: '#c8a84b',
+                color: '#0d1b2e',
+                borderRadius: '8px',
                 fontSize: '14px', fontWeight: 700,
                 fontFamily: "'DM Sans', sans-serif",
-                transition: 'opacity 200ms',
+                textAlign: 'center',
+                transition: 'background 200ms',
               }}
-                onMouseEnter={e => { e.currentTarget.style.opacity = '0.85' }}
-                onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
               >
                 Start a Project →
               </a>
             </div>
           </ScrollReveal>
 
-          {/* Right: stat grid */}
           <ScrollReveal delay={150}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-              {stats.map((s, i) => (
-                <div key={s.label} style={{
-                  padding: '32px 24px',
-                  background: i % 2 === 0 ? 'var(--navy)' : 'var(--surface-alt)',
-                  borderRadius: 'var(--r-lg)',
-                  border: `1px solid ${i % 2 === 0 ? 'rgba(0,174,239,0.15)' : 'var(--border)'}`,
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}>
-                  {i % 2 === 0 && (
-                    <div style={{
-                      position: 'absolute', top: 0, left: 0, right: 0, height: '2px',
-                      background: 'linear-gradient(90deg, var(--cyan), transparent)',
-                    }} />
-                  )}
-                  <div style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '38px', fontWeight: 800,
-                    color: i % 2 === 0 ? '#fff' : 'var(--navy)',
-                    lineHeight: 1, marginBottom: '8px',
+            <div style={{ paddingTop: '8px' }}>
+              <p style={{
+                fontSize: '18px', fontWeight: 500,
+                color: '#cbd5e1', lineHeight: 1.75,
+                marginBottom: '16px',
+              }}>
+                perfectPS is a boutique digital studio based in the Middle East, specializing in secure, high-performance digital products.
+              </p>
+              <p style={{ fontSize: '15px', color: '#8fa3bc', lineHeight: 1.8, marginBottom: '16px' }}>
+                We built <strong style={{ color: '#fff' }}>PS Secure</strong> — a zero-log VPN platform trusted by users across the region — and partner with businesses to design, build, and ship products that make an impact.
+              </p>
+              <p style={{ fontSize: '15px', color: '#8fa3bc', lineHeight: 1.8, marginBottom: '32px' }}>
+                We believe in clean code, beautiful interfaces, and infrastructure that actually works.
+              </p>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {badges.map(b => (
+                  <span key={b} style={{
+                    padding: '5px 14px',
+                    background: 'rgba(200,168,75,0.07)',
+                    border: '1px solid rgba(200,168,75,0.22)',
+                    borderRadius: '6px',
+                    fontSize: '12px', fontWeight: 600,
+                    color: '#c8a84b',
                   }}>
-                    {s.value}
-                  </div>
-                  <div style={{
-                    fontSize: '13px', fontWeight: 500,
-                    color: i % 2 === 0 ? 'rgba(255,255,255,0.6)' : 'var(--text-2)',
-                  }}>
-                    {s.label}
-                  </div>
-                </div>
-              ))}
+                    {b}
+                  </span>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -120,7 +163,7 @@ export function About() {
 
       <style>{`
         @media (max-width: 900px) {
-          .about-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
         }
       `}</style>
     </section>

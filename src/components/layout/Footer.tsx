@@ -42,10 +42,9 @@ const cols = [
 export function Footer() {
   return (
     <footer style={{
-      background: 'linear-gradient(160deg, #091526 0%, #0B1D3A 100%)',
-      borderTop: '1px solid rgba(255,255,255,0.06)',
+      background: '#070f1a',
+      borderTop: '1px solid rgba(200,168,75,0.18)',
     }}>
-      {/* Main grid */}
       <div className="container" style={{ padding: '64px 32px 48px' }}>
         <div style={{
           display: 'grid',
@@ -53,30 +52,30 @@ export function Footer() {
           gap: '48px',
           marginBottom: '48px',
         }} className="footer-grid">
-          {/* Brand */}
+
           <div>
             <a href="/" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '22px', fontWeight: 800,
               color: '#fff', display: 'block', marginBottom: '14px',
             }}>
-              perfect<span style={{ color: 'var(--cyan)' }}>PS</span>
+              perfect<span style={{ color: '#c8a84b' }}>PS</span>
             </a>
-            <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.75, maxWidth: '240px', marginBottom: '24px' }}>
+            <p style={{ fontSize: '14px', color: 'rgba(143,163,188,0.7)', lineHeight: 1.75, maxWidth: '240px', marginBottom: '24px' }}>
               Building digital products that are fast, secure, and built to last.
             </p>
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '10px' }}>
               {socials.map(s => (
                 <a key={s.label} href={s.href} aria-label={s.label} style={{
                   width: 36, height: 36,
                   borderRadius: 8,
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(200,168,75,0.15)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: 'rgba(255,255,255,0.45)',
+                  color: 'rgba(143,163,188,0.5)',
                   transition: 'border-color 200ms, color 200ms',
                 }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--cyan)'; e.currentTarget.style.color = 'var(--cyan)' }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.45)' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.15)'; el.style.color = 'rgba(143,163,188,0.5)' }}
                 >
                   <s.Icon />
                 </a>
@@ -84,25 +83,24 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Link cols */}
           {cols.map(col => (
             <div key={col.title}>
               <h4 style={{
                 fontSize: '11px', fontWeight: 700,
                 letterSpacing: '2px', textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.35)',
-                marginBottom: '18px',
+                color: '#c8a84b',
+                marginBottom: '20px',
               }}>
                 {col.title}
               </h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {col.links.map(l => (
                   <a key={l.label} href={l.href} style={{
-                    fontSize: '14px', color: 'rgba(255,255,255,0.55)',
+                    fontSize: '14px', color: '#8fa3bc',
                     transition: 'color 200ms',
                   }}
-                    onMouseEnter={e => { e.currentTarget.style.color = '#fff' }}
-                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#fff' }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
                   >
                     {l.label}
                   </a>
@@ -112,21 +110,21 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
         <div style={{
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderTop: '1px solid rgba(255,255,255,0.05)',
           paddingTop: '24px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: '12px',
         }}>
-          <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
+          <span style={{ fontSize: '13px', color: 'rgba(143,163,188,0.4)' }}>
             © 2026 perfectPS. All rights reserved.
           </span>
           <span style={{
-            fontSize: '12px', color: 'rgba(255,255,255,0.2)',
-            display: 'flex', alignItems: 'center', gap: '6px',
+            fontSize: '12px', color: '#22c55e',
+            display: 'flex', alignItems: 'center', gap: '7px',
+            fontWeight: 500,
           }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22C55E', display: 'inline-block', boxShadow: '0 0 6px #22C55E' }} />
+            <span className="status-dot" />
             All systems operational
           </span>
         </div>

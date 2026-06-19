@@ -1,183 +1,203 @@
-import { Shield, Wifi, Eye, Zap, Smartphone, Globe } from 'lucide-react'
-import { Section } from '../layout/Section'
-import { SectionLabel } from '../ui/SectionLabel'
-import { Badge } from '../ui/Badge'
+import { Shield, Wifi, Eye, Zap, Smartphone, Globe, Check } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
 const features = [
-  { icon: Wifi, label: 'WireGuard Protocol' },
-  { icon: Eye, label: 'Zero-Log Policy' },
-  { icon: Shield, label: 'Kill Switch' },
-  { icon: Zap, label: 'AdGuard DNS' },
+  { icon: Wifi,       label: 'WireGuard Protocol' },
+  { icon: Eye,        label: 'Zero-Log Policy' },
+  { icon: Shield,     label: 'Kill Switch' },
+  { icon: Zap,        label: 'AdGuard DNS' },
   { icon: Smartphone, label: 'iOS & Android' },
-  { icon: Globe, label: 'Regional Servers' },
+  { icon: Globe,      label: 'Regional Servers' },
 ]
 
-const tags = ['WireGuard', 'Zero-Log', 'AdGuard DNS', 'Kill Switch', 'ChaCha20']
+const techTags = ['WireGuard', 'Zero-Log', 'AdGuard DNS', 'Kill Switch', 'ChaCha20']
 
 export function Products() {
   return (
-    <Section id="products" bg="white">
-      <div className="container">
+    <section id="products" className="section" style={{ background: '#0d1b2e', overflow: 'hidden', position: 'relative' }}>
+      <BackgroundOrbs goldTop="-120px" goldRight="-60px" blueBottom="-100px" blueLeft="-80px" />
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
-          <SectionLabel>Our Products</SectionLabel>
-          <h2 style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 'clamp(28px, 4vw, 42px)',
-            fontWeight: 800,
-            color: 'var(--text-1)',
-            marginBottom: '48px',
-            lineHeight: 1.15,
-          }}>
-            Built for the Real World
-          </h2>
+          <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 56px' }}>
+            <div className="section-label">Our Products</div>
+            <h2 style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 800,
+              color: '#fff',
+              lineHeight: 1.15,
+            }}>
+              Built for the<br />
+              <span className="gradient-text">Real World</span>
+            </h2>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div
-            className="product-card"
-            style={{
-              background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              borderRadius: '24px',
-              padding: 'clamp(32px, 4vw, 56px)',
-              display: 'grid',
-              gridTemplateColumns: '1fr auto',
-              gap: '48px',
+          <div style={{
+            background: '#112240',
+            border: '1px solid rgba(200,168,75,0.22)',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            display: 'grid',
+            gridTemplateColumns: '420px 1fr',
+          }} className="product-split">
+
+            <div style={{
+              background: '#0d1b2e',
+              borderRight: '1px solid rgba(200,168,75,0.15)',
+              padding: '56px 40px',
+              display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              boxShadow: 'var(--shadow-md)',
-            }}
-          >
-            {/* Left: content */}
-            <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'var(--navy)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  <Shield size={22} color="#fff" strokeWidth={1.75} />
-                </div>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '22px',
-                      fontWeight: 800,
-                      color: 'var(--text-1)',
-                    }}>
-                      PS Secure
-                    </span>
-                    <Badge variant="gold">Flagship Product</Badge>
-                  </div>
-                  <p style={{ fontSize: '13px', color: 'var(--text-3)', marginTop: '2px' }}>
-                    VPN & Privacy Platform
-                  </p>
-                </div>
+              justifyContent: 'center',
+              gap: '28px',
+              minHeight: '460px',
+            }}>
+              <div className="shield-glow" style={{
+                width: 88, height: 88,
+                borderRadius: '22px',
+                background: 'rgba(200,168,75,0.1)',
+                border: '1px solid rgba(200,168,75,0.3)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
+                <Shield size={40} color="#c8a84b" strokeWidth={1.5} />
               </div>
 
+              <div style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '26px', fontWeight: 800, textAlign: 'center',
+              }}>
+                <span style={{ color: '#8fa3bc' }}>PS </span>
+                <span style={{ color: '#c8a84b' }}>Secure</span>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center', maxWidth: '280px' }}>
+                {techTags.map(tag => (
+                  <span key={tag} style={{
+                    background: 'rgba(200,168,75,0.08)',
+                    border: '1px solid rgba(200,168,75,0.25)',
+                    color: '#c8a84b',
+                    fontSize: '10px', fontWeight: 700,
+                    borderRadius: '100px',
+                    padding: '4px 12px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                  }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ padding: '48px 44px' }}>
+              <span style={{
+                background: 'rgba(200,168,75,0.1)',
+                color: '#c8a84b',
+                fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em',
+                borderRadius: '100px',
+                padding: '4px 12px',
+                display: 'inline-block',
+                marginBottom: '14px',
+              }}>
+                Flagship Product
+              </span>
+
+              <h3 style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '28px', fontWeight: 800,
+                color: '#fff',
+                marginBottom: '6px',
+              }}>
+                PS Secure
+              </h3>
+              <p style={{ fontSize: '14px', color: '#c8a84b', fontWeight: 500, marginBottom: '18px' }}>
+                VPN & Privacy Platform
+              </p>
               <p style={{
-                fontSize: '16px',
-                color: 'var(--text-2)',
-                lineHeight: 1.7,
-                marginBottom: '28px',
-                maxWidth: '520px',
+                fontSize: '15px', color: '#8fa3bc', lineHeight: 1.75, marginBottom: '28px',
               }}>
                 Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy,
                 AdGuard DNS filtering, a hardware kill switch, and native iOS & Android apps —
                 all under perfectPS infrastructure.
               </p>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
-                {tags.map((tag) => (
-                  <Badge key={tag} variant="accent">{tag}</Badge>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '10px',
+                marginBottom: '32px',
+              }}>
+                {features.map(({ label }) => (
+                  <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div style={{
+                      width: 20, height: 20,
+                      borderRadius: '50%',
+                      background: 'rgba(34,197,94,0.15)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      flexShrink: 0,
+                    }}>
+                      <Check size={12} color="#22c55e" strokeWidth={2.5} />
+                    </div>
+                    <span style={{ fontSize: '13px', color: '#cbd5e1', fontWeight: 500 }}>{label}</span>
+                  </div>
                 ))}
               </div>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a
-                  href="/ps-secure"
-                  style={{
-                    padding: '11px 24px',
-                    background: 'var(--navy)',
-                    color: '#fff',
-                    borderRadius: '8px',
-                    fontSize: '14px',
-                    fontWeight: 600,
-                    fontFamily: "'DM Sans', sans-serif",
-                    transition: 'opacity 200ms',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.85' }}
-                  onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
+                <a href="/ps-secure" style={{
+                  padding: '11px 24px',
+                  background: '#c8a84b',
+                  color: '#0d1b2e',
+                  borderRadius: '8px',
+                  fontSize: '14px', fontWeight: 700,
+                  fontFamily: "'DM Sans', sans-serif",
+                  transition: 'background 200ms',
+                }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
                 >
                   Learn More →
                 </a>
-                <a
-                  href="/#contact"
-                  style={{
-                    padding: '11px 24px',
-                    background: 'transparent',
-                    color: 'var(--navy)',
-                    border: '1.5px solid var(--navy)',
-                    borderRadius: '8px',
-                    fontSize: '14px',
-                    fontWeight: 600,
-                    fontFamily: "'DM Sans', sans-serif",
-                    transition: 'background 200ms',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--surface-alt)' }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent' }}
+                <a href="/#contact" style={{
+                  padding: '11px 24px',
+                  background: 'transparent',
+                  color: '#fff',
+                  border: '1px solid rgba(200,168,75,0.3)',
+                  borderRadius: '8px',
+                  fontSize: '14px', fontWeight: 600,
+                  fontFamily: "'DM Sans', sans-serif",
+                  transition: 'border-color 200ms, color 200ms',
+                }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.3)'; el.style.color = '#fff' }}
                 >
                   Get Early Access
                 </a>
               </div>
             </div>
-
-            {/* Right: features grid */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '12px',
-                minWidth: '240px',
-              }}
-              className="product-features"
-            >
-              {features.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  style={{
-                    padding: '16px',
-                    background: 'var(--surface-alt)',
-                    borderRadius: '12px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '8px',
-                    textAlign: 'center',
-                  }}
-                >
-                  <Icon size={20} color="var(--cyan)" strokeWidth={1.75} />
-                  <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-2)', lineHeight: 1.3 }}>
-                    {label}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </ScrollReveal>
-
-        <style>{`
-          @media (max-width: 900px) {
-            .product-card { grid-template-columns: 1fr !important; }
-            .product-features { display: none !important; }
-          }
-        `}</style>
       </div>
-    </Section>
+
+      <style>{`
+        @keyframes shield-float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50%       { transform: translateY(-10px) rotate(1deg); }
+        }
+        .shield-glow {
+          animation: shield-float 4s ease-in-out infinite, glow-pulse-product 3s ease-in-out infinite;
+        }
+        @keyframes glow-pulse-product {
+          0%, 100% { box-shadow: 0 0 20px rgba(200,168,75,0.18); }
+          50%       { box-shadow: 0 0 40px rgba(200,168,75,0.45), 0 0 80px rgba(200,168,75,0.12); }
+        }
+        @media (max-width: 900px) {
+          .product-split { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </section>
   )
 }

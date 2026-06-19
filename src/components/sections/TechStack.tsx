@@ -6,16 +6,15 @@ export function TechStack() {
 
   return (
     <section style={{
-      background: 'linear-gradient(160deg, #0B1D3A 0%, #091526 100%)',
+      background: '#112240',
       padding: '96px 0',
       overflow: 'hidden',
       position: 'relative',
     }}>
-      {/* Subtle glow */}
       <div aria-hidden style={{
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
         width: '600px', height: '200px',
-        background: 'radial-gradient(ellipse, rgba(0,174,239,0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(200,168,75,0.07) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -25,22 +24,23 @@ export function TechStack() {
             <div className="section-label" style={{ justifyContent: 'center' }}>Technology</div>
             <h2 style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(26px, 4vw, 38px)',
+              fontSize: 'clamp(26px, 4vw, 42px)',
               fontWeight: 800, color: '#fff',
               marginBottom: '12px',
             }}>
               We Choose the Right Tool<br />
               <span className="gradient-text">for Every Job</span>
             </h2>
-            <p style={{ fontSize: '16px', color: 'var(--text-inv-dim)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '16px', color: '#8fa3bc', lineHeight: 1.7 }}>
               Modern stack, battle-tested choices — built for performance and long-term maintainability.
             </p>
           </div>
         </ScrollReveal>
       </div>
 
-      {/* Marquee row 1 */}
-      <div style={{ overflow: 'hidden', marginBottom: '12px' }}>
+      <div style={{ overflow: 'hidden', marginBottom: '12px', position: 'relative' }}>
+        <div aria-hidden style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to right, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+        <div aria-hidden style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to left, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div style={{
           display: 'flex', gap: '12px',
           animation: 'marquee-ltr 28s linear infinite',
@@ -49,10 +49,10 @@ export function TechStack() {
           {doubled.map((t, i) => (
             <div key={i} style={{
               padding: '10px 22px',
-              background: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              borderRadius: 'var(--r-sm)',
-              color: 'rgba(255,255,255,0.7)',
+              background: '#0d1b2e',
+              border: '1px solid rgba(200,168,75,0.18)',
+              borderRadius: '8px',
+              color: 'rgba(255,255,255,0.75)',
               fontSize: '13px', fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
               whiteSpace: 'nowrap',
@@ -64,8 +64,9 @@ export function TechStack() {
         </div>
       </div>
 
-      {/* Marquee row 2 — reversed */}
-      <div style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden', position: 'relative' }}>
+        <div aria-hidden style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to right, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+        <div aria-hidden style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to left, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div style={{
           display: 'flex', gap: '12px',
           animation: 'marquee-rtl 32s linear infinite',
@@ -74,10 +75,10 @@ export function TechStack() {
           {[...doubled].reverse().map((t, i) => (
             <div key={i} style={{
               padding: '10px 22px',
-              background: 'rgba(0,174,239,0.06)',
-              border: '1px solid rgba(0,174,239,0.12)',
-              borderRadius: 'var(--r-sm)',
-              color: 'rgba(0,174,239,0.75)',
+              background: 'rgba(200,168,75,0.06)',
+              border: '1px solid rgba(200,168,75,0.2)',
+              borderRadius: '8px',
+              color: '#c8a84b',
               fontSize: '13px', fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
               whiteSpace: 'nowrap',

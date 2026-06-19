@@ -20,77 +20,76 @@ export function Navbar() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         height: '72px',
-        background: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
+        background: scrolled ? 'rgba(13,27,46,0.94)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(14px)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(200,168,75,0.15)' : '1px solid transparent',
         transition: 'all 300ms ease',
-        boxShadow: scrolled ? 'var(--shadow-xs)' : 'none',
       }}>
         <div className="container" style={{
           height: '100%',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
-          {/* Logo */}
           <a href="/" style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: '21px', fontWeight: 800,
-            color: scrolled ? 'var(--navy)' : '#fff',
+            color: '#fff',
             letterSpacing: '-0.5px',
           }}>
-            perfect<span style={{ color: 'var(--cyan)' }}>PS</span>
+            perfect<span style={{ color: '#c8a84b' }}>PS</span>
           </a>
 
-          {/* Desktop nav */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
             {navLinks.map(l => (
               <a key={l.label} href={l.href} style={{
                 fontSize: '14px', fontWeight: 500,
-                color: scrolled ? 'var(--text-2)' : 'rgba(255,255,255,0.75)',
+                color: '#8fa3bc',
                 transition: 'color 200ms',
               }}
-                onMouseEnter={e => { e.currentTarget.style.color = scrolled ? 'var(--navy)' : '#fff' }}
-                onMouseLeave={e => { e.currentTarget.style.color = scrolled ? 'var(--text-2)' : 'rgba(255,255,255,0.75)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#fff' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
               >
                 {l.label}
               </a>
             ))}
             <a href="/#contact" style={{
               padding: '9px 22px',
-              background: 'var(--cyan)',
-              color: '#fff',
-              borderRadius: 'var(--r-sm)',
+              background: '#c8a84b',
+              color: '#0d1b2e',
+              borderRadius: '8px',
               fontSize: '14px', fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
-              boxShadow: scrolled ? 'none' : 'var(--glow-sm)',
-              transition: 'opacity 200ms',
+              transition: 'background 200ms',
             }}
-              onMouseEnter={e => { e.currentTarget.style.opacity = '0.88' }}
-              onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
             >
               Get in Touch →
             </a>
           </div>
 
-          {/* Mobile hamburger */}
           <button
-            className="mobile-btn"
             onClick={() => setOpen(!open)}
             style={{
               display: 'none',
               padding: '8px',
-              color: scrolled ? 'var(--navy)' : '#fff',
+              color: '#c8a84b',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
             }}
+            className="mobile-btn"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <div style={{
           position: 'fixed', top: '72px', left: 0, right: 0, bottom: 0, zIndex: 99,
-          background: 'var(--navy)',
+          background: '#0d1b2e',
+          borderTop: '1px solid rgba(200,168,75,0.15)',
           display: 'flex', flexDirection: 'column', padding: '32px 24px',
           gap: '4px',
         }}>
@@ -99,7 +98,7 @@ export function Navbar() {
               padding: '16px 0',
               fontSize: '20px', fontWeight: 600,
               color: 'rgba(255,255,255,0.85)',
-              borderBottom: '1px solid rgba(255,255,255,0.08)',
+              borderBottom: '1px solid rgba(200,168,75,0.1)',
               fontFamily: "'DM Sans', sans-serif",
             }}>
               {l.label}
@@ -108,9 +107,9 @@ export function Navbar() {
           <a href="/#contact" onClick={() => setOpen(false)} style={{
             marginTop: '24px',
             padding: '16px',
-            background: 'var(--cyan)',
-            color: '#fff',
-            borderRadius: 'var(--r-sm)',
+            background: '#c8a84b',
+            color: '#0d1b2e',
+            borderRadius: '8px',
             textAlign: 'center',
             fontSize: '16px', fontWeight: 700,
             fontFamily: "'DM Sans', sans-serif",
