@@ -19,6 +19,19 @@ export function About() {
   return (
     <section id="about" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
 
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '0', left: '0', bottom: '0',
+        width: '50%',
+        backgroundImage: "url('/sections/about-studio.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center left',
+        opacity: 0.1,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
@@ -129,7 +142,6 @@ export function About() {
                   <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>Start a Project <ArrowRight size={14} /></span>
                 </a>
               </div>
-              <img src="/src/assets/sections/about-studio.svg" alt="Studio location" style={{ width: '100%', maxWidth: '300px', height: 'auto', marginTop: '24px' }} />
             </div>
           </ScrollReveal>
 

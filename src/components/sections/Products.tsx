@@ -16,6 +16,19 @@ export function Products() {
   return (
     <section id="products" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
 
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '5%', left: '2%', bottom: '5%',
+        width: '38%',
+        backgroundImage: "url('/sections/products-device.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center left',
+        opacity: 0.13,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
           <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 56px' }}>
@@ -89,7 +102,6 @@ export function Products() {
                 ))}
               </div>
 
-              <img src="/src/assets/sections/products-device.svg" alt="PS Secure app" style={{ width: '100%', maxWidth: '220px', height: 'auto', marginTop: '24px' }} />
             </div>
 
             <div style={{ padding: '48px 44px' }}>

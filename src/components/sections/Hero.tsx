@@ -1,7 +1,9 @@
-import { useRef } from 'react'
+import { useRef, lazy, Suspense } from 'react'
 import { CountUp } from '../ui/CountUp'
 import { Folder, Users, Calendar, CheckCircle, ArrowLeft, TrendingUp } from 'lucide-react'
 import { useTilt } from '../../hooks/useTilt'
+
+const Hero3DScene = lazy(() => import('../3d/Hero3DScene').then(m => ({ default: m.Hero3DScene })))
 
 const stats = [
   { num: 15, suffix: '+', label: 'Projects Delivered', badge: '+4 this year',  Icon: Folder },
@@ -125,87 +127,110 @@ export function Hero() {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: '80px', paddingBottom: '80px' }}>
-        <div style={{ marginBottom: '28px' }}>
-          <span style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            padding: '7px 16px',
-            background: 'rgba(200,168,75,0.08)',
-            border: '1px solid rgba(200,168,75,0.28)',
-            borderRadius: '100px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '2px',
-            textTransform: 'uppercase', color: '#c8a84b',
-          }}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c8a84b', display: 'block', boxShadow: '0 0 6px #c8a84b' }} />
-            Digital Studio · Est. 2019
-          </span>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '40px',
+          alignItems: 'center',
+          marginBottom: '64px',
+        }} className="hero-grid">
+          {/* LEFT: text content */}
+          <div>
+            <div style={{ marginBottom: '28px' }}>
+              <span style={{
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                padding: '7px 16px',
+                background: 'rgba(200,168,75,0.08)',
+                border: '1px solid rgba(200,168,75,0.28)',
+                borderRadius: '100px',
+                fontSize: '12px', fontWeight: 700, letterSpacing: '2px',
+                textTransform: 'uppercase', color: '#c8a84b',
+              }}>
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c8a84b', display: 'block', boxShadow: '0 0 6px #c8a84b' }} />
+                Digital Studio · Est. 2019
+              </span>
+            </div>
+
+            <h1 style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 'clamp(44px, 6.5vw, 80px)',
+              fontWeight: 800,
+              letterSpacing: '-2px',
+              lineHeight: 1.06,
+              marginBottom: '28px',
+              maxWidth: '780px',
+              color: '#fff',
+            }}>
+              We Build<br />
+              <span className="gradient-text">Digital Products</span><br />
+              That Matter.
+            </h1>
+
+            <p style={{
+              fontSize: 'clamp(16px, 2vw, 19px)',
+              color: '#8fa3bc',
+              lineHeight: 1.7,
+              maxWidth: '520px',
+              marginBottom: '44px',
+            }}>
+              From secure VPN infrastructure to market-ready web and mobile
+              applications — we ship products that are fast, beautiful, and built to last.
+            </p>
+
+            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <a href="/work" style={{
+                padding: '14px 32px',
+                background: '#c8a84b',
+                color: '#0d1b2e',
+                borderRadius: '8px',
+                fontSize: '15px', fontWeight: 700,
+                fontFamily: "'DM Sans', sans-serif",
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                boxShadow: '0 0 24px rgba(200,168,75,0.35)',
+                transition: 'background 200ms, transform 200ms',
+              }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-2px)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
+              >
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> View Our Work</span>
+              </a>
+              <a href="/ps-secure" style={{
+                padding: '14px 32px',
+                background: 'rgba(255,255,255,0.04)',
+                color: '#fff',
+                border: '1px solid rgba(200,168,75,0.2)',
+                borderRadius: '8px',
+                fontSize: '15px', fontWeight: 600,
+                fontFamily: "'DM Sans', sans-serif",
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                backdropFilter: 'blur(8px)',
+                transition: 'border-color 200ms, color 200ms, background 200ms',
+              }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b'; el.style.background = 'rgba(200,168,75,0.06)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
+              >
+                Learn More ↗
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT: 3D Canvas */}
+          <div style={{ height: '480px', position: 'relative' }} className="hero-3d-col">
+            <Suspense fallback={
+              <div style={{
+                width: '100%', height: '100%',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                opacity: 0.3,
+              }}>
+                <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(200,168,75,0.3), transparent)', animation: 'hero-float 3s ease-in-out infinite' }} />
+              </div>
+            }>
+              <Hero3DScene />
+            </Suspense>
+          </div>
         </div>
 
-        <h1 style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: 'clamp(44px, 6.5vw, 80px)',
-          fontWeight: 800,
-          letterSpacing: '-2px',
-          lineHeight: 1.06,
-          marginBottom: '28px',
-          maxWidth: '780px',
-          color: '#fff',
-        }}>
-          We Build<br />
-          <span className="gradient-text">Digital Products</span><br />
-          That Matter.
-        </h1>
-
-        <p style={{
-          fontSize: 'clamp(16px, 2vw, 19px)',
-          color: '#8fa3bc',
-          lineHeight: 1.7,
-          maxWidth: '520px',
-          marginBottom: '44px',
-        }}>
-          From secure VPN infrastructure to market-ready web and mobile
-          applications — we ship products that are fast, beautiful, and built to last.
-        </p>
-
-        <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '44px' }}>
-          <a href="/work" style={{
-            padding: '14px 32px',
-            background: '#c8a84b',
-            color: '#0d1b2e',
-            borderRadius: '8px',
-            fontSize: '15px', fontWeight: 700,
-            fontFamily: "'DM Sans', sans-serif",
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            boxShadow: '0 0 24px rgba(200,168,75,0.35)',
-            transition: 'background 200ms, transform 200ms',
-          }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-2px)' }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
-          >
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> View Our Work</span>
-          </a>
-          <a href="/ps-secure" style={{
-            padding: '14px 32px',
-            background: 'rgba(255,255,255,0.04)',
-            color: '#fff',
-            border: '1px solid rgba(200,168,75,0.2)',
-            borderRadius: '8px',
-            fontSize: '15px', fontWeight: 600,
-            fontFamily: "'DM Sans', sans-serif",
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            backdropFilter: 'blur(8px)',
-            transition: 'border-color 200ms, color 200ms, background 200ms',
-          }}
-            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b'; el.style.background = 'rgba(200,168,75,0.06)' }}
-            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
-          >
-            Learn More ↗
-          </a>
-        </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
-          <img src="/src/assets/sections/hero-shield.svg" alt="" aria-hidden="true" style={{ width: '280px', height: '280px', opacity: 0.9 }} />
-        </div>
-
+        {/* STAT CARDS: full width below the grid */}
         <div className="hero-stats">
           {stats.map(s => (
             <StatCard key={s.label} stat={s} />
@@ -224,7 +249,11 @@ export function Hero() {
           33%       { transform: translateY(-18px) translateX(6px); opacity: 0.5; }
           66%       { transform: translateY(-8px) translateX(-4px); opacity: 0.35; }
         }
-        @media (max-width: 900px) { .hero-stats { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 900px) {
+          .hero-stats { grid-template-columns: repeat(2, 1fr); }
+          .hero-grid { grid-template-columns: 1fr !important; }
+          .hero-3d-col { height: 320px !important; }
+        }
         @media (max-width: 480px) { .hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; } }
       `}</style>
     </section>

@@ -100,9 +100,29 @@ export function WhyUs() {
   return (
     <section
       className="section"
-      style={{ background: '#112240', overflow: 'hidden', position: 'relative' }}
+      style={{
+        background: '#112240',
+        overflow: 'hidden',
+        position: 'relative',
+        backgroundImage: `url('/bg/whyus-bg.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <BackgroundOrbs goldTop="-100px" goldRight="-60px" blueBottom="-120px" blueLeft="-40px" />
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '10%', right: '0', bottom: '10%',
+        width: '45%',
+        backgroundImage: "url('/sections/whyus-metrics.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center right',
+        opacity: 0.13,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
@@ -123,10 +143,6 @@ export function WhyUs() {
             </p>
           </div>
         </ScrollReveal>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
-          <img src="/src/assets/sections/whyus-metrics.svg" alt="Metrics illustration" style={{ width: '100%', maxWidth: '440px', height: 'auto' }} />
-        </div>
 
         <div className="grid-3" style={{ gap: 28 }}>
           {pillars.map((p, i) => (

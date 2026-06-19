@@ -37,8 +37,30 @@ export function Contact() {
     <section
       id="contact"
       className="section"
-      style={{ background: '#112240', overflow: 'hidden', position: 'relative' }}
+      style={{
+        background: '#112240',
+        overflow: 'hidden',
+        position: 'relative',
+        backgroundImage: `url('/bg/contact-bg.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
+      <div aria-hidden style={{
+        position: 'absolute',
+        bottom: '0', right: '0',
+        width: '35%',
+        height: '70%',
+        backgroundImage: "url('/sections/contact-message.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right bottom',
+        opacity: 0.12,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <BackgroundOrbs goldTop="-80px" goldRight="-60px" blueBottom="-100px" blueLeft="-40px" />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
@@ -212,9 +234,6 @@ export function Contact() {
                 }}>
                   hello@perfectps.com <ArrowRight size={13} />
                 </a>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
-                <img src="/src/assets/sections/contact-message.svg" alt="" aria-hidden="true" style={{ width: '100%', maxWidth: '260px', height: 'auto' }} />
               </div>
             </div>
           </ScrollReveal>

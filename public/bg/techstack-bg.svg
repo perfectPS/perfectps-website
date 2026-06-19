@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <!-- Connection lines between stars -->
+  <line x1="120" y1="80" x2="300" y2="180" stroke="#c8a84b" stroke-opacity="0.07" stroke-width="0.75"/>
+  <line x1="300" y1="180" x2="520" y2="120" stroke="#c8a84b" stroke-opacity="0.07" stroke-width="0.75"/>
+  <line x1="520" y1="120" x2="740" y2="250" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.75"/>
+  <line x1="740" y1="250" x2="960" y2="140" stroke="#c8a84b" stroke-opacity="0.07" stroke-width="0.75"/>
+  <line x1="960" y1="140" x2="1180" y2="200" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.75"/>
+  <line x1="1180" y1="200" x2="1380" y2="100" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.75"/>
+  <line x1="300" y1="180" x2="220" y2="380" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="520" y1="120" x2="600" y2="340" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="740" y1="250" x2="680" y2="480" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="960" y1="140" x2="1020" y2="360" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="1180" y1="200" x2="1260" y2="420" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="220" y1="380" x2="440" y2="520" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="440" y1="520" x2="680" y2="480" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.75"/>
+  <line x1="680" y1="480" x2="880" y2="580" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="880" y1="580" x2="1020" y2="360" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="1020" y1="360" x2="1260" y2="420" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.5"/>
+  <line x1="440" y1="520" x2="340" y2="720" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <line x1="680" y1="480" x2="760" y2="700" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <line x1="1020" y1="360" x2="1100" y2="640" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <line x1="1260" y1="420" x2="1360" y2="660" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <!-- Star nodes — larger = brighter -->
+  <circle cx="120" cy="80" r="3" fill="#c8a84b" fill-opacity="0.25"/>
+  <circle cx="300" cy="180" r="4" fill="#c8a84b" fill-opacity="0.2"/>
+  <circle cx="520" cy="120" r="3.5" fill="#c8a84b" fill-opacity="0.22"/>
+  <circle cx="740" cy="250" r="4" fill="#c8a84b" fill-opacity="0.18"/>
+  <circle cx="960" cy="140" r="3" fill="#c8a84b" fill-opacity="0.2"/>
+  <circle cx="1180" cy="200" r="3.5" fill="#c8a84b" fill-opacity="0.18"/>
+  <circle cx="1380" cy="100" r="2.5" fill="#c8a84b" fill-opacity="0.15"/>
+  <circle cx="220" cy="380" r="3" fill="#c8a84b" fill-opacity="0.15"/>
+  <circle cx="600" cy="340" r="3" fill="#c8a84b" fill-opacity="0.14"/>
+  <circle cx="680" cy="480" r="3.5" fill="#c8a84b" fill-opacity="0.16"/>
+  <circle cx="1020" cy="360" r="3" fill="#c8a84b" fill-opacity="0.14"/>
+  <circle cx="1260" cy="420" r="3" fill="#c8a84b" fill-opacity="0.13"/>
+  <circle cx="440" cy="520" r="3" fill="#c8a84b" fill-opacity="0.13"/>
+  <circle cx="880" cy="580" r="2.5" fill="#c8a84b" fill-opacity="0.12"/>
+  <circle cx="340" cy="720" r="2" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="760" cy="700" r="2" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="1100" cy="640" r="2" fill="#c8a84b" fill-opacity="0.09"/>
+  <circle cx="1360" cy="660" r="2" fill="#c8a84b" fill-opacity="0.08"/>
+  <!-- Random small stars -->
+  <circle cx="80" cy="500" r="1.5" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="1400" cy="350" r="1.5" fill="#c8a84b" fill-opacity="0.09"/>
+  <circle cx="640" cy="800" r="1.5" fill="#c8a84b" fill-opacity="0.08"/>
+  <circle cx="1200" cy="780" r="1.5" fill="#c8a84b" fill-opacity="0.08"/>
+</svg>

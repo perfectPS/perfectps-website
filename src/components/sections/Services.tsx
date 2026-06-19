@@ -5,6 +5,18 @@ import { ScrollReveal } from '../ui/ScrollReveal'
 export function Services() {
   return (
     <section id="services" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '5%', right: '-2%', bottom: '5%',
+        width: '52%',
+        backgroundImage: "url('/sections/services-network.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center right',
+        opacity: 0.18,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
@@ -29,10 +41,6 @@ export function Services() {
             We cover the full stack — from pixel-perfect interfaces to secure cloud infrastructure.
           </p>
         </ScrollReveal>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
-          <img src="/src/assets/sections/services-network.svg" alt="Services network diagram" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
-        </div>
 
         <div className="grid-3">
           {services.map((service, i) => (

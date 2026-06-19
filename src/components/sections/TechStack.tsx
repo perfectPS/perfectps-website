@@ -10,7 +10,23 @@ export function TechStack() {
       padding: '96px 0',
       overflow: 'hidden',
       position: 'relative',
+      backgroundImage: `url('/bg/techstack-bg.svg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
     }}>
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '0', left: '0', right: '0', bottom: '0',
+        backgroundImage: "url('/sections/techstack-constellation.svg')",
+        backgroundSize: '70%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        opacity: 0.18,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <div aria-hidden style={{
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
         width: '600px', height: '200px',
@@ -36,12 +52,6 @@ export function TechStack() {
             </p>
           </div>
         </ScrollReveal>
-      </div>
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
-          <img src="/src/assets/sections/techstack-constellation.svg" alt="Tech stack" style={{ width: '100%', maxWidth: '560px', height: 'auto' }} />
-        </div>
       </div>
 
       <div style={{ overflow: 'hidden', marginBottom: '12px', position: 'relative', perspective: '800px' }}>

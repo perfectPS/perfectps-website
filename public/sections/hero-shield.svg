@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
+  <!-- Glow rings -->
+  <circle cx="280" cy="280" r="230" stroke="rgba(200,168,75,0.06)" stroke-width="1"/>
+  <circle cx="280" cy="280" r="185" stroke="rgba(200,168,75,0.05)" stroke-width="1"/>
+  <circle cx="280" cy="280" r="140" stroke="rgba(200,168,75,0.08)" stroke-width="1"/>
+  <circle cx="280" cy="280" r="95" stroke="rgba(200,168,75,0.06)" stroke-width="1"/>
+
+  <!-- Outer shield -->
+  <path d="M280 58 L402 118 L402 272 Q402 390 280 468 Q158 390 158 272 L158 118 Z"
+        fill="rgba(200,168,75,0.04)" stroke="#c8a84b" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Inner shield -->
+  <path d="M280 96 L372 146 L372 262 Q372 362 280 428 Q188 362 188 262 L188 146 Z"
+        fill="none" stroke="rgba(200,168,75,0.22)" stroke-width="1" stroke-linejoin="round"/>
+
+  <!-- Left circuit lines -->
+  <polyline points="158,210 88,210 88,148" stroke="rgba(200,168,75,0.22)" stroke-width="1" fill="none"/>
+  <circle cx="88" cy="148" r="3" fill="#c8a84b" opacity="0.7"/>
+  <polyline points="158,290 58,290" stroke="rgba(200,168,75,0.18)" stroke-width="1" fill="none"/>
+  <circle cx="58" cy="290" r="2" fill="#c8a84b" opacity="0.5"/>
+  <polyline points="158,360 98,360 98,420" stroke="rgba(200,168,75,0.2)" stroke-width="1" fill="none"/>
+  <circle cx="98" cy="420" r="3" fill="#c8a84b" opacity="0.6"/>
+
+  <!-- Right circuit lines -->
+  <polyline points="402,210 472,210 472,148" stroke="rgba(200,168,75,0.22)" stroke-width="1" fill="none"/>
+  <circle cx="472" cy="148" r="3" fill="#c8a84b" opacity="0.7"/>
+  <polyline points="402,290 502,290" stroke="rgba(200,168,75,0.18)" stroke-width="1" fill="none"/>
+  <circle cx="502" cy="290" r="2" fill="#c8a84b" opacity="0.5"/>
+  <polyline points="402,360 462,360 462,420" stroke="rgba(200,168,75,0.2)" stroke-width="1" fill="none"/>
+  <circle cx="462" cy="420" r="3" fill="#c8a84b" opacity="0.6"/>
+
+  <!-- Lock body -->
+  <rect x="246" y="262" width="68" height="56" rx="10" fill="rgba(200,168,75,0.1)" stroke="#c8a84b" stroke-width="1.5"/>
+
+  <!-- Lock shackle -->
+  <path d="M264 262 L264 244 Q264 222 280 222 Q296 222 296 244 L296 262"
+        stroke="#c8a84b" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+  <!-- Keyhole -->
+  <circle cx="280" cy="287" r="8" fill="#c8a84b"/>
+  <rect x="276" y="291" width="8" height="16" rx="2" fill="#c8a84b"/>
+
+  <!-- Corner hexagons -->
+  <polygon points="490,74 504,82 504,98 490,106 476,98 476,82" stroke="rgba(200,168,75,0.2)" stroke-width="1" fill="none"/>
+  <polygon points="70,200 82,207 82,221 70,228 58,221 58,207" stroke="rgba(200,168,75,0.15)" stroke-width="1" fill="none"/>
+  <polygon points="500,360 510,366 510,378 500,384 490,378 490,366" stroke="rgba(200,168,75,0.13)" stroke-width="1" fill="none"/>
+  <polygon points="52,400 62,406 62,418 52,424 42,418 42,406" stroke="rgba(200,168,75,0.13)" stroke-width="1" fill="none"/>
+
+  <!-- Floating dots -->
+  <circle cx="148" cy="96" r="2" fill="#c8a84b" opacity="0.4"/>
+  <circle cx="420" cy="96" r="2" fill="#c8a84b" opacity="0.4"/>
+  <circle cx="108" cy="470" r="1.5" fill="#c8a84b" opacity="0.35"/>
+  <circle cx="452" cy="470" r="1.5" fill="#c8a84b" opacity="0.35"/>
+  <circle cx="280" cy="510" r="2" fill="#c8a84b" opacity="0.25"/>
+  <circle cx="52" cy="158" r="1.5" fill="#c8a84b" opacity="0.3"/>
+  <circle cx="508" cy="158" r="1.5" fill="#c8a84b" opacity="0.3"/>
+</svg>

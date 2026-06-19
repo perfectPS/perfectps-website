@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <radialGradient id="pg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#c8a84b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#pg)"/>
+  <!-- Horizontal trace lines -->
+  <path d="M0 200 L200 200 L240 240 L500 240 L540 200 L800 200 L840 160 L1100 160 L1140 200 L1440 200" stroke="#c8a84b" stroke-opacity="0.09" stroke-width="1" fill="none"/>
+  <path d="M0 400 L180 400 L220 360 L480 360 L520 400 L720 400 L760 440 L1000 440 L1040 400 L1440 400" stroke="#c8a84b" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+  <path d="M0 600 L160 600 L200 560 L440 560 L480 600 L700 600 L740 640 L960 640 L1000 600 L1440 600" stroke="#c8a84b" stroke-opacity="0.07" stroke-width="0.75" fill="none"/>
+  <!-- Vertical connectors -->
+  <line x1="240" y1="160" x2="240" y2="440" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.75" stroke-dasharray="4 6"/>
+  <line x1="540" y1="160" x2="540" y2="600" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.75" stroke-dasharray="4 6"/>
+  <line x1="840" y1="120" x2="840" y2="640" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.75" stroke-dasharray="4 6"/>
+  <line x1="1140" y1="160" x2="1140" y2="600" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.75" stroke-dasharray="4 6"/>
+  <!-- Waypoint nodes -->
+  <circle cx="240" cy="240" r="5" stroke="#c8a84b" stroke-opacity="0.2" stroke-width="1" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="540" cy="200" r="5" stroke="#c8a84b" stroke-opacity="0.18" stroke-width="1" fill="#c8a84b" fill-opacity="0.08"/>
+  <circle cx="840" cy="160" r="5" stroke="#c8a84b" stroke-opacity="0.16" stroke-width="1" fill="#c8a84b" fill-opacity="0.08"/>
+  <circle cx="1140" cy="200" r="5" stroke="#c8a84b" stroke-opacity="0.14" stroke-width="1" fill="#c8a84b" fill-opacity="0.06"/>
+  <circle cx="220" cy="360" r="4" stroke="#c8a84b" stroke-opacity="0.14" stroke-width="1" fill="none"/>
+  <circle cx="760" cy="440" r="4" stroke="#c8a84b" stroke-opacity="0.12" stroke-width="1" fill="none"/>
+  <circle cx="200" cy="560" r="4" stroke="#c8a84b" stroke-opacity="0.1" stroke-width="1" fill="none"/>
+  <circle cx="740" cy="640" r="4" stroke="#c8a84b" stroke-opacity="0.09" stroke-width="1" fill="none"/>
+  <!-- Small data-flow dots along traces -->
+  <circle cx="400" cy="240" r="2" fill="#c8a84b" fill-opacity="0.15"/>
+  <circle cx="660" cy="200" r="2" fill="#c8a84b" fill-opacity="0.12"/>
+  <circle cx="960" cy="160" r="2" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="350" cy="360" r="1.5" fill="#c8a84b" fill-opacity="0.1"/>
+  <circle cx="900" cy="440" r="1.5" fill="#c8a84b" fill-opacity="0.09"/>
+</svg>

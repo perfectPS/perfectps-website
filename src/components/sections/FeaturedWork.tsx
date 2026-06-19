@@ -34,6 +34,18 @@ export function FeaturedWork() {
         borderRadius: '50%', pointerEvents: 'none',
       }} />
 
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '0', left: '0', right: '0', bottom: '0',
+        backgroundImage: "url('/sections/work-frames.svg')",
+        backgroundSize: '42%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '96% 50%',
+        opacity: 0.12,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ paddingTop: '80px', marginBottom: '56px' }}>
           <div className="section-label">Selected Work</div>
@@ -61,10 +73,6 @@ export function FeaturedWork() {
               View all 15 projects <ArrowRight size={14} />
             </a>
           </div>
-        </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
-          <img src="/src/assets/sections/work-frames.svg" alt="Featured work frames" style={{ width: '100%', maxWidth: '440px', height: 'auto' }} />
         </div>
 
         <div className="featured-work-grid" style={{

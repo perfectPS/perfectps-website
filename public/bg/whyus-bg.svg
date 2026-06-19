@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <radialGradient id="rg" cx="80%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#c8a84b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Radar backdrop glow -->
+  <ellipse cx="1150" cy="120" rx="600" ry="600" fill="url(#rg)"/>
+  <!-- Concentric circles from upper-right -->
+  <circle cx="1200" cy="80" r="120" stroke="#c8a84b" stroke-opacity="0.1" stroke-width="1" fill="none"/>
+  <circle cx="1200" cy="80" r="240" stroke="#c8a84b" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+  <circle cx="1200" cy="80" r="380" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+  <circle cx="1200" cy="80" r="540" stroke="#c8a84b" stroke-opacity="0.05" stroke-width="0.75" fill="none"/>
+  <circle cx="1200" cy="80" r="720" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.75" fill="none"/>
+  <circle cx="1200" cy="80" r="920" stroke="#c8a84b" stroke-opacity="0.03" stroke-width="0.5" fill="none"/>
+  <!-- Grid lines -->
+  <line x1="1200" y1="-900" x2="1200" y2="900" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.5"/>
+  <line x1="0" y1="80" x2="2000" y2="80" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="0.5"/>
+  <line x1="700" y1="-400" x2="1700" y2="600" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <line x1="1700" y1="-400" x2="700" y2="600" stroke="#c8a84b" stroke-opacity="0.04" stroke-width="0.5"/>
+  <!-- Nodes at intersections -->
+  <circle cx="1200" cy="80" r="5" fill="#c8a84b" fill-opacity="0.25"/>
+  <circle cx="1200" cy="200" r="3" fill="#c8a84b" fill-opacity="0.15"/>
+  <circle cx="1320" cy="80" r="3" fill="#c8a84b" fill-opacity="0.15"/>
+  <circle cx="960" cy="80" r="2" fill="#c8a84b" fill-opacity="0.12"/>
+  <circle cx="1200" cy="320" r="2" fill="#c8a84b" fill-opacity="0.1"/>
+  <!-- Scattered nodes -->
+  <circle cx="200" cy="150" r="2" fill="#c8a84b" fill-opacity="0.08"/>
+  <circle cx="450" cy="380" r="1.5" fill="#c8a84b" fill-opacity="0.07"/>
+  <circle cx="680" cy="220" r="2" fill="#c8a84b" fill-opacity="0.08"/>
+  <circle cx="320" cy="600" r="1.5" fill="#c8a84b" fill-opacity="0.06"/>
+  <circle cx="800" cy="700" r="2" fill="#c8a84b" fill-opacity="0.07"/>
+  <circle cx="100" cy="750" r="1.5" fill="#c8a84b" fill-opacity="0.05"/>
+  <!-- Shield outline bottom-left, faint -->
+  <path d="M80 750 L80 660 L200 630 L320 660 L320 750 C320 810 200 840 200 840 C200 840 80 810 80 750Z" stroke="#c8a84b" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+</svg>

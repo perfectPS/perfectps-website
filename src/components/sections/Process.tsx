@@ -95,8 +95,28 @@ export function Process() {
   return (
     <section
       className="section"
-      style={{ background: '#112240', overflow: 'hidden', position: 'relative' }}
+      style={{
+        background: '#112240',
+        overflow: 'hidden',
+        position: 'relative',
+        backgroundImage: `url('/bg/process-bg.svg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
+      <div aria-hidden style={{
+        position: 'absolute',
+        bottom: '0', left: '0', right: '0',
+        height: '60%',
+        backgroundImage: "url('/sections/process-flow.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center bottom',
+        opacity: 0.1,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
       <BackgroundOrbs goldTop="-80px" goldRight="-100px" blueBottom="-80px" blueLeft="-100px" />
 
       <div aria-hidden style={{
@@ -127,10 +147,6 @@ export function Process() {
             </p>
           </div>
         </ScrollReveal>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
-          <img src="/src/assets/sections/process-flow.svg" alt="Our process" style={{ width: '100%', maxWidth: '560px', height: 'auto' }} />
-        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }} className="process-grid">
           {steps.map((step, i) => (
