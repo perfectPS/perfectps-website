@@ -58,7 +58,7 @@ export function FeaturedWork() {
               lineHeight: 1.1,
             }}>
               Projects We're<br />
-              <span className="gradient-text">Proud Of</span>
+              <span className="gradient-text--gold">Proud Of</span>
             </h2>
             <a href="/work" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',

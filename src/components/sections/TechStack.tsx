@@ -48,7 +48,7 @@ export function TechStack() {
               <span className="gradient-text">for Every Job</span>
             </h2>
             <p style={{ fontSize: '16px', color: '#8fa3bc', lineHeight: 1.7 }}>
-              Modern stack, battle-tested choices — built for performance and long-term maintainability.
+              Modern stack, battle-tested choices. Built for performance and long-term maintainability.
             </p>
           </div>
         </ScrollReveal>

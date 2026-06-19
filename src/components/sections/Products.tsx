@@ -41,7 +41,7 @@ export function Products() {
               lineHeight: 1.15,
             }}>
               Built for the<br />
-              <span className="gradient-text">Real World</span>
+              <span className="gradient-text--gold">Real World</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -132,8 +132,8 @@ export function Products() {
                 fontSize: '15px', color: '#4a5568', lineHeight: 1.75, marginBottom: '28px',
               }}>
                 Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy,
-                AdGuard DNS filtering, a hardware kill switch, and native iOS & Android apps —
-                all under perfectPS infrastructure.
+                AdGuard DNS filtering, a hardware kill switch, and native iOS and Android apps.
+                All under perfectPS infrastructure.
               </p>
 
               <div style={{

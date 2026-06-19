@@ -38,7 +38,7 @@ export function Services() {
             lineHeight: 1.7,
             marginBottom: '56px',
           }}>
-            We cover the full stack — from pixel-perfect interfaces to secure cloud infrastructure.
+            We cover the full stack. Pixel-perfect interfaces to secure cloud infrastructure.
           </p>
         </ScrollReveal>
 

@@ -15,7 +15,7 @@ const pillars = [
   {
     icon: Lock,
     title: 'Security-First Engineering',
-    desc: 'Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs — security is architecture, not an afterthought.',
+    desc: 'Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs, security is architecture, not an afterthought.',
     stat: '0',
     statLabel: 'Data Breaches',
   },

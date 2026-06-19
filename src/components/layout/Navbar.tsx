@@ -1,19 +1,31 @@
 import { useState } from 'react'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
 import { X, Menu, ArrowRight } from 'lucide-react'
-
-const navLinks = [
-  { label: 'Work',      href: '/work' },
-  { label: 'Services',  href: '/#services' },
-  { label: 'PS Secure', href: '/ps-secure' },
-  { label: 'About',     href: '/#about' },
-  { label: 'Contact',   href: '/#contact' },
-]
+import { useTranslation } from 'react-i18next'
 
 export function Navbar() {
   const scrollY = useScrollPosition()
   const [open, setOpen] = useState(false)
   const scrolled = scrollY > 60
+  const { t, i18n } = useTranslation()
+
+  const navLinks = [
+    { label: t('nav.work'),      href: '/work' },
+    { label: t('nav.services'),  href: '/#services' },
+    { label: t('nav.psSecure'),  href: '/ps-secure' },
+    { label: t('nav.about'),     href: '/#about' },
+    { label: t('nav.contact'),   href: '/#contact' },
+  ]
+
+  const isArabic = i18n.language === 'ar'
+
+  function toggleLanguage() {
+    const nextLang = isArabic ? 'en' : 'ar'
+    i18n.changeLanguage(nextLang)
+    document.documentElement.setAttribute('dir', nextLang === 'ar' ? 'rtl' : 'ltr')
+    document.documentElement.setAttribute('lang', nextLang)
+    localStorage.setItem('lang', nextLang)
+  }
 
   return (
     <>
@@ -57,6 +69,25 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
+            <button
+              onClick={toggleLanguage}
+              style={{
+                fontSize: '13px', fontWeight: 700,
+                color: '#8fa3bc',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                fontFamily: "'DM Sans', sans-serif",
+                letterSpacing: '0.5px',
+                padding: '4px 0',
+                transition: 'color 200ms',
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
+              aria-label={isArabic ? 'Switch to English' : 'Switch to Arabic'}
+            >
+              {isArabic ? 'EN' : 'AR'}
+            </button>
             <a href="/#contact" style={{
               padding: '9px 22px',
               background: '#c8a84b',
@@ -69,7 +100,7 @@ export function Navbar() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
             >
-              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Get in Touch <ArrowRight size={14} /></span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{t('nav.cta')} <ArrowRight size={14} /></span>
             </a>
           </div>
 
@@ -119,7 +150,7 @@ export function Navbar() {
             fontSize: '16px', fontWeight: 700,
             fontFamily: "'DM Sans', sans-serif",
           }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Get in Touch <ArrowRight size={14} /></span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{t('nav.cta')} <ArrowRight size={14} /></span>
           </a>
         </div>
       )}

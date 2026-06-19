@@ -91,9 +91,17 @@ button { cursor: pointer; border: none; background: none; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 
-/* Gradient text */
+/* Gradient text — for dark backgrounds (starts white) */
 .gradient-text {
   background: linear-gradient(135deg, #FFFFFF 20%, #e0c068 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient text — for white/light backgrounds (gold tones only) */
+.gradient-text--gold {
+  background: linear-gradient(135deg, #b8882a 0%, #e8c04a 60%, #c8a84b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -252,4 +260,15 @@ button { cursor: pointer; border: none; background: none; }
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* RTL support */
+[dir="rtl"] .container {
+  direction: rtl;
+}
+[dir="rtl"] .hero-stats {
+  direction: rtl;
+}
+[dir="rtl"] .desktop-nav {
+  flex-direction: row-reverse;
 }

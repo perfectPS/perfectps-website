@@ -1,9 +1,7 @@
-import { useRef, lazy, Suspense } from 'react'
+import { useRef } from 'react'
 import { CountUp } from '../ui/CountUp'
 import { Folder, Users, Calendar, CheckCircle, ArrowLeft, ArrowUpRight, TrendingUp } from 'lucide-react'
 import { useTilt } from '../../hooks/useTilt'
-
-const Hero3DScene = lazy(() => import('../3d/Hero3DScene').then(m => ({ default: m.Hero3DScene })))
 
 const stats = [
   { num: 15, suffix: '+', label: 'Projects Delivered', badge: '+4 this year',  Icon: Folder },
@@ -110,6 +108,20 @@ export function Hero() {
         backgroundSize: '64px 64px',
       }} />
 
+      {/* Hero SVG illustration — frameless background, right side */}
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '0', right: '-2%', bottom: '0',
+        width: '52%',
+        backgroundImage: "url('/sections/hero-shield.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center right',
+        opacity: 0.09,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
       <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
         {PARTICLES.map(p => (
           <div key={p.id} style={{
@@ -126,14 +138,7 @@ export function Hero() {
         ))}
       </div>
 
-      {/* 3D Canvas — absolutely positioned, frameless, right-side background */}
-      <div style={{ position: 'absolute', top: 0, right: 0, width: '58%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
-        <Suspense fallback={null}>
-          <Hero3DScene />
-        </Suspense>
-      </div>
-
-      <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: '80px', paddingBottom: '80px' }}>
+<div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: '80px', paddingBottom: '80px' }}>
         <div style={{ marginBottom: '64px' }}>
           <div style={{ marginBottom: '28px' }}>
               <span style={{
@@ -172,8 +177,7 @@ export function Hero() {
               maxWidth: '520px',
               marginBottom: '44px',
             }}>
-              From secure VPN infrastructure to market-ready web and mobile
-              applications — we ship products that are fast, beautiful, and built to last.
+              We build secure VPN infrastructure, market-ready web apps, and mobile products. Fast. Beautiful. Built to last.
             </p>
 
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>

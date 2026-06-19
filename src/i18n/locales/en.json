@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "psSecure": "PS Secure",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get in Touch"
+  },
+  "hero": {
+    "badge": "Digital Studio · Est. 2019",
+    "h1_line1": "We Build",
+    "h1_line2": "Digital Products",
+    "h1_line3": "That Matter.",
+    "body": "We build secure VPN infrastructure, market-ready web apps, and mobile products. Fast. Beautiful. Built to last.",
+    "cta_primary": "View Our Work",
+    "cta_secondary": "Learn More",
+    "stat_projects": "Projects Delivered",
+    "stat_clients": "Clients Served",
+    "stat_years": "Years Building",
+    "stat_delivery": "On-Time Delivery"
+  },
+  "services": {
+    "label": "What We Build",
+    "h2_line1": "End-to-End",
+    "h2_line2": "Digital Products",
+    "body": "We cover the full stack. Pixel-perfect interfaces to secure cloud infrastructure.",
+    "web_title": "Web Applications",
+    "web_desc": "Scalable React and TypeScript web platforms, from SaaS dashboards to marketing sites.",
+    "mobile_title": "Mobile Apps",
+    "mobile_desc": "Cross-platform iOS and Android apps built with Expo and React Native.",
+    "vpn_title": "Security and VPN",
+    "vpn_desc": "WireGuard-based VPN infrastructure, zero-log architecture, and privacy-first systems.",
+    "backend_title": "Backend and APIs",
+    "backend_desc": "Node.js REST APIs, PostgreSQL databases, and scalable cloud deployments.",
+    "design_title": "UI/UX Design",
+    "design_desc": "User-centered design systems, interactive prototypes, and brand identity.",
+    "devops_title": "DevOps and Cloud",
+    "devops_desc": "Docker, Oracle Cloud, automated CI/CD, and 99.9% uptime infrastructure."
+  },
+  "whyus": {
+    "label": "Why perfectPS",
+    "h2_line1": "What Makes Us",
+    "h2_line2": "Different",
+    "body": "We have built software products across industries, from fintech to security infrastructure. Here is what we bring to every engagement.",
+    "card1_title": "Fast, Predictable Delivery",
+    "card1_desc": "We run tight sprints with clear milestones. You always know what is being built, when it ships, and what comes next. No surprises.",
+    "card2_title": "Security-First Engineering",
+    "card2_desc": "Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs, security is architecture, not an afterthought.",
+    "card3_title": "Long-Term Partnership",
+    "card3_desc": "We are not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract."
+  },
+  "process": {
+    "label": "How We Work",
+    "h2_line1": "From Idea to",
+    "h2_line2": "Shipped Product",
+    "body": "A proven 4-step process that keeps every project on track, on budget, and on time.",
+    "step1_title": "Discover",
+    "step1_desc": "We start by understanding your business goals, users, and constraints. No jumping straight to code. A clear brief saves weeks of rework.",
+    "step2_title": "Design",
+    "step2_desc": "Architecture decisions, UI systems, and prototypes. We align on the plan before writing a single production line, so you can see it before we build it.",
+    "step3_title": "Build",
+    "step3_desc": "Iterative development in tight sprints. Regular check-ins, live previews, and test coverage at every stage. No black-box development.",
+    "step4_title": "Launch",
+    "step4_desc": "Production deploy, monitoring setup, and post-launch support. We do not hand you a zip file. We ship it, measure it, and stay on until it is stable."
+  },
+  "work": {
+    "label": "Selected Work",
+    "h2_line1": "Projects We're",
+    "h2_line2": "Proud Of",
+    "view_all": "View all 15 projects"
+  },
+  "techstack": {
+    "label": "Technology",
+    "h2_line1": "We Choose the Right Tool",
+    "h2_line2": "for Every Job",
+    "body": "Modern stack, battle-tested choices. Built for performance and long-term maintainability."
+  },
+  "about": {
+    "label": "About the Studio",
+    "h2": "We Are perfectPS",
+    "quote": "We believe in clean code, beautiful interfaces, and infrastructure that actually works.",
+    "stat_founded": "Founded",
+    "stat_team": "Core Team",
+    "stat_shipped": "Products Shipped",
+    "stat_countries": "Countries",
+    "cta": "Start a Project",
+    "p1": "perfectPS is a digital studio based in the Middle East. We specialize in secure, high-performance digital products.",
+    "p2": "We built PS Secure, a zero-log VPN platform trusted by users across the region. We partner with businesses to design, build, and ship products that make an impact.",
+    "p3": "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
+  },
+  "products": {
+    "label": "Our Products",
+    "h2_line1": "Built for the",
+    "h2_line2": "Real World",
+    "badge": "Flagship Product",
+    "name": "PS Secure",
+    "subtitle": "VPN and Privacy Platform",
+    "desc": "Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy, AdGuard DNS filtering, a hardware kill switch, and native iOS and Android apps. All under perfectPS infrastructure.",
+    "cta_learn": "Learn More",
+    "cta_access": "Get Early Access"
+  },
+  "contact": {
+    "label": "Let's Work Together",
+    "h2": "Start Your Project",
+    "body": "Tell us about your idea and we will get back to you within 24 hours.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "hello@company.com",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your project...",
+    "submit": "Send Message",
+    "success_title": "Message Sent!",
+    "success_body": "We will get back to you within 24 hours.",
+    "info_email": "hello@perfectps.com",
+    "info_location": "Amman, Jordan",
+    "info_hours": "Sun-Thu, 9 AM to 6 PM",
+    "info_note": "We typically respond within a few hours during business days."
+  }
+}

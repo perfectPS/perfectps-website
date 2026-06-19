@@ -7,10 +7,10 @@ import { Badge } from '../components/ui/Badge'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 
 const features = [
-  { icon: Zap, title: 'WireGuard Protocol', desc: 'The fastest and most modern VPN protocol — significantly faster than OpenVPN or IPSec.' },
+  { icon: Zap, title: 'WireGuard Protocol', desc: 'The fastest and most modern VPN protocol. Significantly faster than OpenVPN or IPSec.' },
   { icon: Eye, title: 'Zero-Log Policy', desc: 'We never store, sell, or share your data. No traffic logs, no connection logs, ever.' },
-  { icon: Shield, title: 'AdGuard DNS', desc: 'Built-in ad and tracker blocking at the DNS level — browse cleaner and faster.' },
-  { icon: Lock, title: 'Kill Switch', desc: 'Automatically disconnects internet if the VPN drops — your real IP is never exposed.' },
+  { icon: Shield, title: 'AdGuard DNS', desc: 'Built-in ad and tracker blocking at the DNS level. Browse cleaner and faster.' },
+  { icon: Lock, title: 'Kill Switch', desc: 'Automatically disconnects internet if the VPN drops. Your real IP is never exposed.' },
   { icon: Smartphone, title: 'Multi-Device', desc: 'iOS, Android, and desktop support from one account. All devices, one subscription.' },
   { icon: Globe, title: 'Regional Servers', desc: 'Optimized servers across the Middle East and beyond for low-latency connections.' },
 ]

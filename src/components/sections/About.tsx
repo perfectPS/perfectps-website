@@ -43,7 +43,7 @@ export function About() {
               color: '#0d1b2e',
               lineHeight: 1.15,
             }}>
-              We Are <span className="gradient-text">perfectPS</span>
+              We Are <span className="gradient-text--gold">perfectPS</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -152,10 +152,10 @@ export function About() {
                 color: '#0d1b2e', lineHeight: 1.75,
                 marginBottom: '16px',
               }}>
-                perfectPS is a boutique digital studio based in the Middle East, specializing in secure, high-performance digital products.
+                perfectPS is a digital studio based in the Middle East. We specialize in secure, high-performance digital products.
               </p>
               <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '16px' }}>
-                We built <strong style={{ color: '#0d1b2e' }}>PS Secure</strong> — a zero-log VPN platform trusted by users across the region — and partner with businesses to design, build, and ship products that make an impact.
+                We built <strong style={{ color: '#0d1b2e' }}>PS Secure</strong>, a zero-log VPN platform trusted by users across the region. We partner with businesses to design, build, and ship products that make an impact.
               </p>
               <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '32px' }}>
                 We believe in clean code, beautiful interfaces, and infrastructure that actually works.

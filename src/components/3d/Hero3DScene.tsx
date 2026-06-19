@@ -3,39 +3,49 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Float, MeshDistortMaterial } from '@react-three/drei'
 import * as THREE from 'three'
 
-function GoldenOrb() {
+function GoldenKnot() {
   const mesh = useRef<THREE.Mesh>(null!)
-  const { mouse, viewport } = useThree()
+  const { mouse } = useThree()
 
   useFrame((state) => {
-    mesh.current.rotation.y = state.clock.elapsedTime * 0.22
-    mesh.current.rotation.x = THREE.MathUtils.lerp(
-      mesh.current.rotation.x,
-      -(mouse.y * viewport.height) / 120,
-      0.04
-    )
+    mesh.current.rotation.x = state.clock.elapsedTime * 0.16
+    mesh.current.rotation.y = state.clock.elapsedTime * 0.23
     mesh.current.rotation.z = THREE.MathUtils.lerp(
       mesh.current.rotation.z,
-      (mouse.x * viewport.width) / 240,
-      0.04
+      mouse.x * 0.22,
+      0.05
     )
   })
 
   return (
-    <Float speed={1.4} rotationIntensity={0.25} floatIntensity={0.8}>
-      <mesh ref={mesh} scale={2.1} position={[0.8, 0, 0]}>
-        <icosahedronGeometry args={[1, 3]} />
+    <Float speed={1.0} rotationIntensity={0.1} floatIntensity={0.45}>
+      <mesh ref={mesh} scale={1.42} position={[0.3, 0.1, 0]}>
+        <torusKnotGeometry args={[1.0, 0.32, 256, 20, 2, 3]} />
         <MeshDistortMaterial
           color="#e8c04a"
           emissive="#c8a84b"
-          emissiveIntensity={1.1}
-          metalness={0.45}
-          roughness={0.22}
-          distort={0.12}
-          speed={1.5}
+          emissiveIntensity={0.88}
+          metalness={0.62}
+          roughness={0.14}
+          distort={0.03}
+          speed={0.7}
         />
       </mesh>
     </Float>
+  )
+}
+
+function WireframeSphere() {
+  const mesh = useRef<THREE.Mesh>(null!)
+  useFrame((state) => {
+    mesh.current.rotation.y = state.clock.elapsedTime * 0.055
+    mesh.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.03) * 0.12
+  })
+  return (
+    <mesh ref={mesh}>
+      <icosahedronGeometry args={[3.7, 1]} />
+      <meshBasicMaterial color="#c8a84b" wireframe transparent opacity={0.065} />
+    </mesh>
   )
 }
 
@@ -45,30 +55,30 @@ function GoldRing({ radius, tube, speed, tiltX }: {
   const mesh = useRef<THREE.Mesh>(null!)
   useFrame((state) => {
     mesh.current.rotation.y = state.clock.elapsedTime * speed
-    mesh.current.rotation.x = tiltX ?? state.clock.elapsedTime * 0.18
+    mesh.current.rotation.x = tiltX ?? state.clock.elapsedTime * 0.15
   })
   return (
     <mesh ref={mesh}>
-      <torusGeometry args={[radius, tube, 8, 120]} />
+      <torusGeometry args={[radius, tube, 8, 100]} />
       <meshStandardMaterial
         color="#e8c860"
         emissive="#c8a84b"
-        emissiveIntensity={0.8}
+        emissiveIntensity={0.75}
         metalness={0.5}
-        roughness={0.2}
+        roughness={0.22}
         transparent
-        opacity={0.7}
+        opacity={0.6}
       />
     </mesh>
   )
 }
 
 function FloatingParticles() {
-  const count = 160
+  const count = 200
   const positions = useMemo(() => {
     const arr = new Float32Array(count * 3)
     for (let i = 0; i < count; i++) {
-      const r = 3.0 + Math.random() * 4
+      const r = 3.5 + Math.random() * 4.0
       const theta = Math.random() * Math.PI * 2
       const phi = Math.acos(2 * Math.random() - 1)
       arr[i * 3]     = r * Math.sin(phi) * Math.cos(theta)
@@ -80,8 +90,8 @@ function FloatingParticles() {
 
   const points = useRef<THREE.Points>(null!)
   useFrame((state) => {
-    points.current.rotation.y = state.clock.elapsedTime * 0.06
-    points.current.rotation.x = state.clock.elapsedTime * 0.03
+    points.current.rotation.y = state.clock.elapsedTime * 0.05
+    points.current.rotation.x = state.clock.elapsedTime * 0.022
   })
 
   return (
@@ -89,7 +99,7 @@ function FloatingParticles() {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial color="#ffd060" size={0.04} transparent opacity={0.9} sizeAttenuation />
+      <pointsMaterial color="#ffd060" size={0.038} transparent opacity={0.85} sizeAttenuation />
     </points>
   )
 }
@@ -97,19 +107,22 @@ function FloatingParticles() {
 function Scene() {
   return (
     <>
-      <ambientLight intensity={0.6} color="#fff8e0" />
-      {/* Key light: warm gold from upper-right */}
-      <pointLight position={[6, 5, 6]}    intensity={7}  color="#ffe0a0" />
+      <ambientLight intensity={0.4} color="#fff8e0" />
+      {/* Key: warm gold from upper-right front */}
+      <pointLight position={[5, 6, 5]}    intensity={10} color="#ffe0a0" />
       {/* Fill: gold from left */}
-      <pointLight position={[-4, 2, 5]}   intensity={4}  color="#c8a84b" />
-      {/* Rim: white highlight from above */}
-      <pointLight position={[1, 7, 3]}    intensity={5}  color="#ffffff" />
-      {/* Cool backlight */}
-      <pointLight position={[-2, -4, -5]} intensity={2}  color="#2a4a8a" />
+      <pointLight position={[-4, 2, 4]}   intensity={5}  color="#c8a84b" />
+      {/* Top white highlight */}
+      <pointLight position={[1, 8, 3]}    intensity={7}  color="#ffffff" />
+      {/* Cool backlight for depth */}
+      <pointLight position={[-1, -5, -4]} intensity={3}  color="#2a4a8a" />
+      {/* Rim from behind — creates edge separation */}
+      <pointLight position={[0, 0, -9]}   intensity={2.5} color="#c8a84b" />
 
-      <GoldenOrb />
-      <GoldRing radius={3.6} tube={0.016} speed={0.25} />
-      <GoldRing radius={3.0} tube={0.012} speed={-0.32} tiltX={1.2} />
+      <GoldenKnot />
+      <WireframeSphere />
+      <GoldRing radius={3.5} tube={0.014} speed={0.18} />
+      <GoldRing radius={2.8} tube={0.010} speed={-0.26} tiltX={1.25} />
       <FloatingParticles />
     </>
   )
@@ -119,11 +132,9 @@ export function Hero3DScene() {
   return (
     <Canvas
       dpr={[1, 2]}
-      camera={{ position: [0, 0, 8], fov: 42 }}
+      camera={{ position: [0, 0.3, 8], fov: 42 }}
       gl={{ alpha: true, antialias: true }}
-      onCreated={({ gl }) => {
-        gl.setClearColor(0x000000, 0)
-      }}
+      onCreated={({ gl }) => { gl.setClearColor(0x000000, 0) }}
       style={{ background: 'transparent', width: '100%', height: '100%' }}
     >
       <Scene />

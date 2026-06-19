@@ -7,7 +7,7 @@ import { useTilt } from '../../hooks/useTilt'
 const steps = [
   {
     n: '01', icon: Search, title: 'Discover',
-    desc: 'We start by understanding your business goals, users, and constraints — not jumping straight to code. A clear brief saves weeks of rework.',
+    desc: 'We start by understanding your business goals, users, and constraints. No jumping straight to code. A clear brief saves weeks of rework.',
   },
   {
     n: '02', icon: Layers, title: 'Design',
@@ -19,7 +19,7 @@ const steps = [
   },
   {
     n: '04', icon: Rocket, title: 'Launch',
-    desc: "Production deploy, monitoring setup, and post-launch support. We don't hand you a zip file — we ship it, measure it, and stay on until it's stable.",
+    desc: "Production deploy, monitoring setup, and post-launch support. We don't hand you a zip file. We ship it, measure it, and stay on until it's stable.",
   },
 ]
 
