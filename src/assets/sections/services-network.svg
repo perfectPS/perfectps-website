@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" fill="none">
+  <!-- Connector lines (dotted, behind nodes) -->
+  <line x1="100" y1="90" x2="250" y2="90" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="250" y1="90" x2="400" y2="90" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="100" y1="270" x2="250" y2="270" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="250" y1="270" x2="400" y2="270" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="100" y1="90" x2="100" y2="270" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="250" y1="90" x2="250" y2="270" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="400" y1="90" x2="400" y2="270" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- Center intersection node -->
+  <circle cx="250" cy="180" r="5" fill="#c8a84b" opacity="0.5"/>
+
+  <!-- Node 1: Globe / Web -->
+  <rect x="58" y="50" width="84" height="80" rx="16" fill="rgba(13,27,46,0.03)" stroke="rgba(13,27,46,0.12)" stroke-width="1.2"/>
+  <circle cx="100" cy="90" r="22" stroke="#0d1b2e" stroke-width="1.5"/>
+  <ellipse cx="100" cy="90" rx="11" ry="22" stroke="#0d1b2e" stroke-width="1.2"/>
+  <line x1="78" y1="90" x2="122" y2="90" stroke="#0d1b2e" stroke-width="1.2"/>
+  <line x1="80" y1="76" x2="120" y2="76" stroke="#0d1b2e" stroke-width="1"/>
+  <line x1="80" y1="104" x2="120" y2="104" stroke="#0d1b2e" stroke-width="1"/>
+
+  <!-- Node 2: Smartphone / Mobile (gold highlight) -->
+  <rect x="208" y="50" width="84" height="80" rx="16" fill="rgba(200,168,75,0.07)" stroke="#c8a84b" stroke-width="1.2"/>
+  <rect x="237" y="66" width="26" height="40" rx="5" stroke="#c8a84b" stroke-width="1.5" fill="none"/>
+  <line x1="245" y1="100" x2="255" y2="100" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="250" cy="72" r="2" fill="#c8a84b"/>
+
+  <!-- Node 3: Shield / Security -->
+  <rect x="358" y="50" width="84" height="80" rx="16" fill="rgba(13,27,46,0.03)" stroke="rgba(13,27,46,0.12)" stroke-width="1.2"/>
+  <path d="M400 68 L418 77 L418 96 Q418 112 400 120 Q382 112 382 96 L382 77 Z" stroke="#0d1b2e" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <path d="M393 94 L398 99 L409 87" stroke="#0d1b2e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Node 4: Server / Backend -->
+  <rect x="58" y="230" width="84" height="80" rx="16" fill="rgba(13,27,46,0.03)" stroke="rgba(13,27,46,0.12)" stroke-width="1.2"/>
+  <rect x="73" y="252" width="54" height="14" rx="4" stroke="#0d1b2e" stroke-width="1.2" fill="none"/>
+  <rect x="73" y="272" width="54" height="14" rx="4" stroke="#0d1b2e" stroke-width="1.2" fill="none"/>
+  <circle cx="116" cy="259" r="3" fill="#22c55e"/>
+  <circle cx="116" cy="279" r="3" fill="#c8a84b"/>
+
+  <!-- Node 5: Palette / Design (gold highlight) -->
+  <rect x="208" y="230" width="84" height="80" rx="16" fill="rgba(200,168,75,0.07)" stroke="#c8a84b" stroke-width="1.2"/>
+  <circle cx="250" cy="270" r="18" stroke="#c8a84b" stroke-width="1.5"/>
+  <circle cx="250" cy="256" r="3.5" fill="#c8a84b"/>
+  <circle cx="262" cy="263" r="3.5" fill="#0d1b2e" stroke="#c8a84b" stroke-width="1"/>
+  <circle cx="262" cy="277" r="3.5" fill="#c8a84b"/>
+  <circle cx="250" cy="284" r="3.5" fill="#0d1b2e" stroke="#c8a84b" stroke-width="1"/>
+  <circle cx="238" cy="277" r="3.5" fill="#c8a84b"/>
+  <circle cx="238" cy="263" r="3.5" fill="#0d1b2e" stroke="#c8a84b" stroke-width="1"/>
+
+  <!-- Node 6: Cloud / DevOps -->
+  <rect x="358" y="230" width="84" height="80" rx="16" fill="rgba(13,27,46,0.03)" stroke="rgba(13,27,46,0.12)" stroke-width="1.2"/>
+  <path d="M378 278 Q373 278 373 271 Q373 264 381 264 Q383 255 392 255 Q401 255 403 264 Q410 264 410 271 Q410 278 405 278 Z" stroke="#0d1b2e" stroke-width="1.5" fill="none"/>
+  <line x1="392" y1="278" x2="392" y2="292" stroke="#0d1b2e" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="386" y1="288" x2="392" y2="292" stroke="#0d1b2e" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="398" y1="288" x2="392" y2="292" stroke="#0d1b2e" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

@@ -128,6 +128,10 @@ export function Process() {
           </div>
         </ScrollReveal>
 
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
+          <img src="/src/assets/sections/process-flow.svg" alt="Our process" style={{ width: '100%', maxWidth: '560px', height: 'auto' }} />
+        </div>
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }} className="process-grid">
           {steps.map((step, i) => (
             <StepCard key={step.n} step={step} delay={i * 90} />

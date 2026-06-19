@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 
@@ -45,7 +46,7 @@ export function NotFound() {
             fontWeight: 600,
             fontFamily: "'DM Sans', sans-serif",
           }}>
-            ← Back Home
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> Back Home</span>
           </a>
         </div>
       </div>

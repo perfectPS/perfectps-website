@@ -1,4 +1,4 @@
-import { Globe, Smartphone, Shield, Server, Palette, Cloud } from 'lucide-react'
+import { Globe, Smartphone, Shield, Server, Palette, Cloud, ArrowRight } from 'lucide-react'
 import { useRef } from 'react'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { useTilt } from '../../hooks/useTilt'
@@ -78,7 +78,7 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
         </p>
 
         <div style={{ fontSize: '13px', fontWeight: 600, color: '#c8a84b', display: 'flex', alignItems: 'center', gap: '4px' }}>
-          Learn more →
+          <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>Learn more <ArrowRight size={13} /></span>
         </div>
       </div>
     </ScrollReveal>

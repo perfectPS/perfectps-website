@@ -124,6 +124,10 @@ export function WhyUs() {
           </div>
         </ScrollReveal>
 
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
+          <img src="/src/assets/sections/whyus-metrics.svg" alt="Metrics illustration" style={{ width: '100%', maxWidth: '440px', height: 'auto' }} />
+        </div>
+
         <div className="grid-3" style={{ gap: 28 }}>
           {pillars.map((p, i) => (
             <PillarCard key={p.title} p={p} delay={i * 100} />

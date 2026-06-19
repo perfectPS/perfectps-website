@@ -38,13 +38,20 @@ export function TechStack() {
         </ScrollReveal>
       </div>
 
-      <div style={{ overflow: 'hidden', marginBottom: '12px', position: 'relative' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
+          <img src="/src/assets/sections/techstack-constellation.svg" alt="Tech stack" style={{ width: '100%', maxWidth: '560px', height: 'auto' }} />
+        </div>
+      </div>
+
+      <div style={{ overflow: 'hidden', marginBottom: '12px', position: 'relative', perspective: '800px' }}>
         <div aria-hidden style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to right, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div aria-hidden style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to left, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div style={{
           display: 'flex', gap: '12px',
           animation: 'marquee-ltr 28s linear infinite',
           width: 'max-content',
+          transform: 'rotateX(3deg)',
         }}>
           {doubled.map((t, i) => (
             <div key={i} style={{
@@ -64,13 +71,14 @@ export function TechStack() {
         </div>
       </div>
 
-      <div style={{ overflow: 'hidden', position: 'relative' }}>
+      <div style={{ overflow: 'hidden', position: 'relative', perspective: '800px' }}>
         <div aria-hidden style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to right, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div aria-hidden style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '120px', background: 'linear-gradient(to left, #112240, transparent)', zIndex: 2, pointerEvents: 'none' }} />
         <div style={{
           display: 'flex', gap: '12px',
           animation: 'marquee-rtl 32s linear infinite',
           width: 'max-content',
+          transform: 'rotateX(-3deg)',
         }}>
           {[...doubled].reverse().map((t, i) => (
             <div key={i} style={{

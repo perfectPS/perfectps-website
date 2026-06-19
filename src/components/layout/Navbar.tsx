@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
-import { X, Menu } from 'lucide-react'
+import { X, Menu, ArrowRight } from 'lucide-react'
 
 const navLinks = [
   { label: 'Work',      href: '/work' },
@@ -35,8 +35,13 @@ export function Navbar() {
             fontSize: '21px', fontWeight: 800,
             color: '#fff',
             letterSpacing: '-0.5px',
+            display: 'flex', alignItems: 'center', gap: '10px',
           }}>
-            perfect<span style={{ color: '#c8a84b' }}>PS</span>
+            <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
+              <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z" fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
+              <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif" fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
+            </svg>
+            Perfect<span style={{ color: '#c8a84b' }}>PS</span>
           </a>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-nav">
@@ -64,7 +69,7 @@ export function Navbar() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
             >
-              Get in Touch →
+              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Get in Touch <ArrowRight size={14} /></span>
             </a>
           </div>
 
@@ -114,7 +119,7 @@ export function Navbar() {
             fontSize: '16px', fontWeight: 700,
             fontFamily: "'DM Sans', sans-serif",
           }}>
-            Get in Touch →
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Get in Touch <ArrowRight size={14} /></span>
           </a>
         </div>
       )}

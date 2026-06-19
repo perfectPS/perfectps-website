@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, MapPin, Clock, ArrowRight } from 'lucide-react'
+import { Mail, MapPin, Clock, ArrowRight, Check } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
@@ -84,7 +84,7 @@ export function Contact() {
                   margin: '0 auto 20px',
                   fontSize: '28px',
                 }}>
-                  ✓
+                  <Check size={12} />
                 </div>
                 <h3 style={{ fontFamily: "'DM Sans'", fontSize: '22px', fontWeight: 700, marginBottom: '8px', color: '#fff' }}>
                   Message Sent!
@@ -212,6 +212,9 @@ export function Contact() {
                 }}>
                   hello@perfectps.com <ArrowRight size={13} />
                 </a>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+                <img src="/src/assets/sections/contact-message.svg" alt="" aria-hidden="true" style={{ width: '100%', maxWidth: '260px', height: 'auto' }} />
               </div>
             </div>
           </ScrollReveal>

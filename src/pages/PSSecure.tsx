@@ -1,4 +1,4 @@
-import { Shield, Eye, Zap, Smartphone, Globe, Lock } from 'lucide-react'
+import { Shield, Eye, Zap, Smartphone, Globe, Lock, ArrowRight } from 'lucide-react'
 import { Navbar } from '../components/layout/Navbar'
 import { Footer } from '../components/layout/Footer'
 import { Section } from '../components/layout/Section'
@@ -202,7 +202,7 @@ export function PSSecure() {
             fontFamily: "'DM Sans'",
             display: 'inline-block',
           }}>
-            Get Early Access →
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Get Early Access <ArrowRight size={14} /></span>
           </a>
         </div>
       </Section>

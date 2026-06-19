@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { portfolioItems } from '../../data/portfolio'
 import { PortfolioCard } from '../cards/PortfolioCard'
 import { ScrollReveal } from '../ui/ScrollReveal'
@@ -93,7 +94,7 @@ export function Portfolio({ limit, showCta = true }: PortfolioProps) {
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--navy)'; e.currentTarget.style.color = '#fff' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--navy)' }}
             >
-              View All 15 Projects →
+              <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>View All 15 Projects <ArrowRight size={14} /></span>
             </a>
           </div>
         )}

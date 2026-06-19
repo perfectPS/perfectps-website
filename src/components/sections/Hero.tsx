@@ -1,5 +1,7 @@
+import { useRef } from 'react'
 import { CountUp } from '../ui/CountUp'
-import { Folder, Users, Calendar, CheckCircle } from 'lucide-react'
+import { Folder, Users, Calendar, CheckCircle, ArrowLeft, TrendingUp } from 'lucide-react'
+import { useTilt } from '../../hooks/useTilt'
 
 const stats = [
   { num: 15, suffix: '+', label: 'Projects Delivered', badge: '+4 this year',  Icon: Folder },
@@ -7,6 +9,68 @@ const stats = [
   { num: 5,  suffix: '+', label: 'Years Building',     badge: 'Since 2019',    Icon: Calendar },
   { num: 100,suffix: '%', label: 'On-Time Delivery',   badge: 'Every project', Icon: CheckCircle },
 ]
+
+function StatCard({ stat }: { stat: typeof stats[0] }) {
+  const ref = useRef<HTMLDivElement>(null)
+  useTilt(ref, 10)
+  return (
+    <div ref={ref} style={{
+      background: 'rgba(200,168,75,0.05)',
+      border: '1px solid rgba(200,168,75,0.15)',
+      borderRadius: '16px',
+      padding: '24px 20px',
+      backdropFilter: 'blur(16px)',
+      position: 'relative',
+      overflow: 'hidden',
+      transition: 'background 200ms, border-color 200ms',
+      transformStyle: 'preserve-3d',
+    }}
+      onMouseEnter={e => {
+        const el = e.currentTarget as HTMLElement
+        el.style.background = 'rgba(200,168,75,0.09)'
+        el.style.borderColor = 'rgba(200,168,75,0.4)'
+      }}
+      onMouseLeave={e => {
+        const el = e.currentTarget as HTMLElement
+        el.style.background = 'rgba(200,168,75,0.05)'
+        el.style.borderColor = 'rgba(200,168,75,0.15)'
+      }}
+    >
+      <div style={{
+        width: 44, height: 44,
+        borderRadius: '50%',
+        background: 'rgba(200,168,75,0.12)',
+        border: '1px solid rgba(200,168,75,0.25)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        marginBottom: '14px',
+      }}>
+        <stat.Icon size={20} color="#c8a84b" strokeWidth={1.75} />
+      </div>
+      <div style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: 'clamp(28px, 3.5vw, 40px)',
+        fontWeight: 800,
+        color: '#fff',
+        lineHeight: 1,
+        marginBottom: '6px',
+      }}>
+        <CountUp target={stat.num} suffix={stat.suffix} />
+      </div>
+      <div style={{ fontSize: '13px', fontWeight: 500, color: '#8fa3bc', marginBottom: '12px' }}>{stat.label}</div>
+      <div style={{
+        display: 'inline-flex', alignItems: 'center', gap: '4px',
+        padding: '3px 10px',
+        background: 'rgba(34,197,94,0.12)',
+        border: '1px solid rgba(34,197,94,0.25)',
+        borderRadius: '100px',
+        fontSize: '11px', fontWeight: 600,
+        color: '#22c55e',
+      }}>
+        <TrendingUp size={10} style={{ marginRight: '2px' }} /> {stat.badge}
+      </div>
+    </div>
+  )
+}
 
 const PARTICLES = Array.from({ length: 28 }, (_, i) => ({
   id: i,
@@ -102,7 +166,7 @@ export function Hero() {
           applications — we ship products that are fast, beautiful, and built to last.
         </p>
 
-        <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '80px' }}>
+        <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '44px' }}>
           <a href="/work" style={{
             padding: '14px 32px',
             background: '#c8a84b',
@@ -117,7 +181,7 @@ export function Hero() {
             onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-2px)' }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
           >
-            ← View Our Work
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><ArrowLeft size={14} /> View Our Work</span>
           </a>
           <a href="/ps-secure" style={{
             padding: '14px 32px',
@@ -138,64 +202,13 @@ export function Hero() {
           </a>
         </div>
 
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
+          <img src="/src/assets/sections/hero-shield.svg" alt="" aria-hidden="true" style={{ width: '280px', height: '280px', opacity: 0.9 }} />
+        </div>
+
         <div className="hero-stats">
           {stats.map(s => (
-            <div key={s.label} style={{
-              background: 'rgba(200,168,75,0.05)',
-              border: '1px solid rgba(200,168,75,0.15)',
-              borderRadius: '16px',
-              padding: '24px 20px',
-              backdropFilter: 'blur(16px)',
-              position: 'relative',
-              overflow: 'hidden',
-              transition: 'background 200ms, border-color 200ms, transform 200ms',
-            }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLElement
-                el.style.background = 'rgba(200,168,75,0.09)'
-                el.style.borderColor = 'rgba(200,168,75,0.4)'
-                el.style.transform = 'translateY(-3px)'
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLElement
-                el.style.background = 'rgba(200,168,75,0.05)'
-                el.style.borderColor = 'rgba(200,168,75,0.15)'
-                el.style.transform = 'translateY(0)'
-              }}
-            >
-              <div style={{
-                width: 44, height: 44,
-                borderRadius: '50%',
-                background: 'rgba(200,168,75,0.12)',
-                border: '1px solid rgba(200,168,75,0.25)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                marginBottom: '14px',
-              }}>
-                <s.Icon size={20} color="#c8a84b" strokeWidth={1.75} />
-              </div>
-              <div style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 'clamp(28px, 3.5vw, 40px)',
-                fontWeight: 800,
-                color: '#fff',
-                lineHeight: 1,
-                marginBottom: '6px',
-              }}>
-                <CountUp target={s.num} suffix={s.suffix} />
-              </div>
-              <div style={{ fontSize: '13px', fontWeight: 500, color: '#8fa3bc', marginBottom: '12px' }}>{s.label}</div>
-              <div style={{
-                display: 'inline-flex', alignItems: 'center', gap: '4px',
-                padding: '3px 10px',
-                background: 'rgba(34,197,94,0.12)',
-                border: '1px solid rgba(34,197,94,0.25)',
-                borderRadius: '100px',
-                fontSize: '11px', fontWeight: 600,
-                color: '#22c55e',
-              }}>
-                ↑ {s.badge}
-              </div>
-            </div>
+            <StatCard key={s.label} stat={s} />
           ))}
         </div>
       </div>

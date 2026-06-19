@@ -1,6 +1,5 @@
-import { Shield, Wifi, Eye, Zap, Smartphone, Globe, Check } from 'lucide-react'
+import { Shield, Wifi, Eye, Zap, Smartphone, Globe, Check, ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
-import { BackgroundOrbs } from '../ui/BackgroundOrbs'
 
 const features = [
   { icon: Wifi,       label: 'WireGuard Protocol' },
@@ -15,8 +14,7 @@ const techTags = ['WireGuard', 'Zero-Log', 'AdGuard DNS', 'Kill Switch', 'ChaCha
 
 export function Products() {
   return (
-    <section id="products" className="section" style={{ background: '#0d1b2e', overflow: 'hidden', position: 'relative' }}>
-      <BackgroundOrbs goldTop="-120px" goldRight="-60px" blueBottom="-100px" blueLeft="-80px" />
+    <section id="products" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
@@ -26,7 +24,7 @@ export function Products() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800,
-              color: '#fff',
+              color: '#0d1b2e',
               lineHeight: 1.15,
             }}>
               Built for the<br />
@@ -37,7 +35,7 @@ export function Products() {
 
         <ScrollReveal delay={100}>
           <div style={{
-            background: '#112240',
+            background: '#f8f9fa',
             border: '1px solid rgba(200,168,75,0.22)',
             borderRadius: '20px',
             overflow: 'hidden',
@@ -46,7 +44,7 @@ export function Products() {
           }} className="product-split">
 
             <div style={{
-              background: '#0d1b2e',
+              background: '#f8f9fa',
               borderRight: '1px solid rgba(200,168,75,0.15)',
               padding: '56px 40px',
               display: 'flex',
@@ -70,7 +68,7 @@ export function Products() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '26px', fontWeight: 800, textAlign: 'center',
               }}>
-                <span style={{ color: '#8fa3bc' }}>PS </span>
+                <span style={{ color: '#4a5568' }}>PS </span>
                 <span style={{ color: '#c8a84b' }}>Secure</span>
               </div>
 
@@ -90,6 +88,8 @@ export function Products() {
                   </span>
                 ))}
               </div>
+
+              <img src="/src/assets/sections/products-device.svg" alt="PS Secure app" style={{ width: '100%', maxWidth: '220px', height: 'auto', marginTop: '24px' }} />
             </div>
 
             <div style={{ padding: '48px 44px' }}>
@@ -108,7 +108,7 @@ export function Products() {
               <h3 style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '28px', fontWeight: 800,
-                color: '#fff',
+                color: '#0d1b2e',
                 marginBottom: '6px',
               }}>
                 PS Secure
@@ -117,7 +117,7 @@ export function Products() {
                 VPN & Privacy Platform
               </p>
               <p style={{
-                fontSize: '15px', color: '#8fa3bc', lineHeight: 1.75, marginBottom: '28px',
+                fontSize: '15px', color: '#4a5568', lineHeight: 1.75, marginBottom: '28px',
               }}>
                 Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy,
                 AdGuard DNS filtering, a hardware kill switch, and native iOS & Android apps —
@@ -141,7 +141,7 @@ export function Products() {
                     }}>
                       <Check size={12} color="#22c55e" strokeWidth={2.5} />
                     </div>
-                    <span style={{ fontSize: '13px', color: '#cbd5e1', fontWeight: 500 }}>{label}</span>
+                    <span style={{ fontSize: '13px', color: '#4a5568', fontWeight: 500 }}>{label}</span>
                   </div>
                 ))}
               </div>
@@ -159,12 +159,12 @@ export function Products() {
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
                 >
-                  Learn More →
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Learn More <ArrowRight size={14} /></span>
                 </a>
                 <a href="/#contact" style={{
                   padding: '11px 24px',
                   background: 'transparent',
-                  color: '#fff',
+                  color: '#0d1b2e',
                   border: '1px solid rgba(200,168,75,0.3)',
                   borderRadius: '8px',
                   fontSize: '14px', fontWeight: 600,
@@ -172,7 +172,7 @@ export function Products() {
                   transition: 'border-color 200ms, color 200ms',
                 }}
                   onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b' }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.3)'; el.style.color = '#fff' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.3)'; el.style.color = '#0d1b2e' }}
                 >
                   Get Early Access
                 </a>

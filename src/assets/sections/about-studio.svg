@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" fill="none">
+  <!-- Globe circle -->
+  <circle cx="200" cy="180" r="140" stroke="rgba(13,27,46,0.1)" stroke-width="1.5"/>
+  <!-- Latitude lines -->
+  <ellipse cx="200" cy="180" rx="140" ry="50" stroke="rgba(13,27,46,0.07)" stroke-width="1"/>
+  <ellipse cx="200" cy="180" rx="140" ry="100" stroke="rgba(13,27,46,0.05)" stroke-width="1"/>
+  <!-- Longitude lines -->
+  <ellipse cx="200" cy="180" rx="50" ry="140" stroke="rgba(13,27,46,0.07)" stroke-width="1"/>
+  <ellipse cx="200" cy="180" rx="100" ry="140" stroke="rgba(13,27,46,0.05)" stroke-width="1"/>
+
+  <!-- Equator -->
+  <line x1="60" y1="180" x2="340" y2="180" stroke="rgba(13,27,46,0.08)" stroke-width="1"/>
+  <!-- Prime meridian -->
+  <line x1="200" y1="40" x2="200" y2="320" stroke="rgba(13,27,46,0.08)" stroke-width="1"/>
+
+  <!-- Middle East dot (Jordan/Amman) -->
+  <circle cx="230" cy="165" r="8" fill="rgba(200,168,75,0.2)" stroke="#c8a84b" stroke-width="1.5"/>
+  <circle cx="230" cy="165" r="4" fill="#c8a84b"/>
+
+  <!-- Location pin above dot -->
+  <path d="M230 140 Q230 128 230 128 C230 120 222 113 222 113 C222 113 214 120 214 128 Q214 138 222 148 L226 155 L230 148 Q238 138 238 128 C238 120 230 113 230 113 Z"
+        stroke="#c8a84b" stroke-width="1.5" fill="rgba(200,168,75,0.12)" stroke-linejoin="round"/>
+  <circle cx="222" cy="126" r="4" fill="#c8a84b"/>
+
+  <!-- Connection lines to other cities -->
+  <line x1="230" y1="165" x2="140" y2="145" stroke="rgba(13,27,46,0.15)" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="145" r="3.5" fill="rgba(13,27,46,0.2)" stroke="rgba(13,27,46,0.3)" stroke-width="1"/>
+
+  <line x1="230" y1="165" x2="120" y2="185" stroke="rgba(13,27,46,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="120" cy="185" r="3" fill="rgba(13,27,46,0.15)" stroke="rgba(13,27,46,0.25)" stroke-width="1"/>
+
+  <line x1="230" y1="165" x2="290" y2="148" stroke="rgba(13,27,46,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="290" cy="148" r="3" fill="rgba(13,27,46,0.15)" stroke="rgba(13,27,46,0.25)" stroke-width="1"/>
+
+  <line x1="230" y1="165" x2="310" y2="175" stroke="rgba(13,27,46,0.1)" stroke-width="1" stroke-dasharray="4 3"/>
+  <circle cx="310" cy="175" r="3" fill="rgba(13,27,46,0.12)" stroke="rgba(13,27,46,0.2)" stroke-width="1"/>
+
+  <!-- Studio label -->
+  <rect x="142" y="320" width="116" height="36" rx="18" fill="rgba(13,27,46,0.05)" stroke="#c8a84b" stroke-width="1.2"/>
+  <text x="200" y="343" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#0d1b2e">perfectPS ·</text>
+  <text x="246" y="343" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#c8a84b"> JO</text>
+</svg>

@@ -13,7 +13,7 @@ export function FeaturedWork() {
     <section
       id="work"
       style={{
-        background: '#0d1b2e',
+        background: '#ffffff',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -42,7 +42,7 @@ export function FeaturedWork() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800,
-              color: '#fff',
+              color: '#0d1b2e',
               lineHeight: 1.1,
             }}>
               Projects We're<br />
@@ -51,16 +51,20 @@ export function FeaturedWork() {
             <a href="/work" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               fontSize: '14px', fontWeight: 600,
-              color: '#8fa3bc',
+              color: '#64748b',
               fontFamily: "'DM Sans', sans-serif",
               transition: 'color 200ms',
             }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#8fa3bc' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#64748b' }}
             >
               View all 15 projects <ArrowRight size={14} />
             </a>
           </div>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
+          <img src="/src/assets/sections/work-frames.svg" alt="Featured work frames" style={{ width: '100%', maxWidth: '440px', height: 'auto' }} />
         </div>
 
         <div className="featured-work-grid" style={{
@@ -104,7 +108,7 @@ export function FeaturedWork() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 'clamp(22px, 3vw, 32px)',
                 fontWeight: 800,
-                color: '#fff',
+                color: '#0d1b2e',
                 lineHeight: 1.2,
               }}>
                 {item.name}
@@ -113,7 +117,7 @@ export function FeaturedWork() {
 
             <p style={{
               fontSize: '16px',
-              color: '#8fa3bc',
+              color: '#4a5568',
               lineHeight: 1.75,
               marginBottom: '36px',
               maxWidth: '440px',
@@ -128,7 +132,7 @@ export function FeaturedWork() {
               border: '1px solid rgba(200,168,75,0.15)',
               borderRadius: '4px',
               fontSize: '11px', fontWeight: 600,
-              color: '#8fa3bc',
+              color: '#64748b',
               letterSpacing: '1px', textTransform: 'uppercase',
             }}>
               {item.type === 'mobile' ? 'Mobile App' : 'Web Application'}
@@ -244,7 +248,7 @@ export function FeaturedWork() {
               </div>
               <div style={{
                 fontSize: '14px', fontWeight: 700,
-                color: active === i ? '#fff' : '#8fa3bc',
+                color: active === i ? '#0d1b2e' : '#64748b',
                 fontFamily: "'DM Sans', sans-serif",
                 lineHeight: 1.3,
                 transition: 'color 200ms',
@@ -253,7 +257,7 @@ export function FeaturedWork() {
               </div>
               <div style={{
                 fontSize: '11px',
-                color: active === i ? '#c8a84b' : 'rgba(143,163,188,0.4)',
+                color: active === i ? '#c8a84b' : 'rgba(100,116,139,0.5)',
                 marginTop: '4px',
                 fontFamily: "'DM Sans', sans-serif",
                 transition: 'color 200ms',

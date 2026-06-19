@@ -57,9 +57,13 @@ export function Footer() {
             <a href="/" style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '22px', fontWeight: 800,
-              color: '#fff', display: 'block', marginBottom: '14px',
+              color: '#fff', display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px',
             }}>
-              perfect<span style={{ color: '#c8a84b' }}>PS</span>
+              <svg width="24" height="28" viewBox="0 0 28 32" fill="none">
+                <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z" fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
+                <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif" fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
+              </svg>
+              Perfect<span style={{ color: '#c8a84b' }}>PS</span>
             </a>
             <p style={{ fontSize: '14px', color: 'rgba(143,163,188,0.7)', lineHeight: 1.75, maxWidth: '240px', marginBottom: '24px' }}>
               Building digital products that are fast, secure, and built to last.

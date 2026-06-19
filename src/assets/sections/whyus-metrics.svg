@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 360" fill="none">
+  <!-- Grid lines -->
+  <line x1="40" y1="60" x2="40" y2="300" stroke="rgba(200,168,75,0.1)" stroke-width="1"/>
+  <line x1="40" y1="300" x2="400" y2="300" stroke="rgba(200,168,75,0.1)" stroke-width="1"/>
+  <line x1="40" y1="240" x2="400" y2="240" stroke="rgba(200,168,75,0.05)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="40" y1="180" x2="400" y2="180" stroke="rgba(200,168,75,0.05)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="40" y1="120" x2="400" y2="120" stroke="rgba(200,168,75,0.05)" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Bar 1 (100% — On-Time) -->
+  <rect x="70" y="60" width="60" height="240" rx="6" fill="rgba(200,168,75,0.12)"/>
+  <rect x="70" y="60" width="60" height="240" rx="6" fill="url(#goldGrad1)"/>
+  <text x="100" y="48" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#c8a84b">100%</text>
+
+  <!-- Bar 2 (0 Breaches) -->
+  <rect x="190" y="160" width="60" height="140" rx="6" fill="rgba(200,168,75,0.08)"/>
+  <rect x="190" y="160" width="60" height="140" rx="6" fill="url(#goldGrad2)"/>
+  <text x="220" y="148" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="rgba(200,168,75,0.7)">0</text>
+
+  <!-- Bar 3 (8+ Clients) -->
+  <rect x="310" y="110" width="60" height="190" rx="6" fill="rgba(200,168,75,0.1)"/>
+  <rect x="310" y="110" width="60" height="190" rx="6" fill="url(#goldGrad3)"/>
+  <text x="340" y="98" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="rgba(200,168,75,0.8)">8+</text>
+
+  <!-- Labels -->
+  <text x="100" y="320" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(200,168,75,0.5)" letter-spacing="0.05em">ON-TIME</text>
+  <text x="220" y="320" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(200,168,75,0.5)" letter-spacing="0.05em">BREACHES</text>
+  <text x="340" y="320" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="10" fill="rgba(200,168,75,0.5)" letter-spacing="0.05em">CLIENTS</text>
+
+  <!-- Trend line overlay -->
+  <polyline points="100,60 220,160 340,110" stroke="#c8a84b" stroke-width="1.5" stroke-dasharray="6 3" fill="none" opacity="0.4"/>
+  <circle cx="100" cy="60" r="4" fill="#c8a84b"/>
+  <circle cx="220" cy="160" r="4" fill="#c8a84b"/>
+  <circle cx="340" cy="110" r="4" fill="#c8a84b"/>
+
+  <defs>
+    <linearGradient id="goldGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="goldGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+</svg>

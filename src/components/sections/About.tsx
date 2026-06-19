@@ -1,6 +1,7 @@
-import { Shield } from 'lucide-react'
+import { useRef } from 'react'
+import { Shield, ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
-import { BackgroundOrbs } from '../ui/BackgroundOrbs'
+import { useTilt } from '../../hooks/useTilt'
 
 const stats = [
   { value: '2019', label: 'Founded' },
@@ -12,9 +13,11 @@ const stats = [
 const badges = ['React', 'WireGuard', 'TypeScript', 'Oracle Cloud', 'Expo', 'Node.js']
 
 export function About() {
+  const identityRef = useRef<HTMLDivElement>(null)
+  useTilt(identityRef, 6)
+
   return (
-    <section id="about" className="section" style={{ background: '#0d1b2e', overflow: 'hidden', position: 'relative' }}>
-      <BackgroundOrbs goldTop="-100px" goldRight="-80px" blueBottom="-120px" blueLeft="-60px" />
+    <section id="about" className="section" style={{ background: '#ffffff', overflow: 'hidden', position: 'relative' }}>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <ScrollReveal>
@@ -24,7 +27,7 @@ export function About() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800,
-              color: '#fff',
+              color: '#0d1b2e',
               lineHeight: 1.15,
             }}>
               We Are <span className="gradient-text">perfectPS</span>
@@ -40,89 +43,93 @@ export function About() {
         }} className="about-grid">
 
           <ScrollReveal>
-            <div style={{
-              background: '#112240',
-              border: '1px solid rgba(200,168,75,0.22)',
-              borderRadius: '16px',
-              padding: '40px 32px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '24px',
-            }}>
-              <div style={{
-                width: 64, height: 64,
+            <div>
+              <div ref={identityRef} style={{
+                background: '#f8f9fa',
+                border: '1px solid rgba(200,168,75,0.22)',
                 borderRadius: '16px',
-                background: 'rgba(200,168,75,0.1)',
-                border: '1px solid rgba(200,168,75,0.3)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                padding: '40px 32px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '24px',
+                transformStyle: 'preserve-3d',
               }}>
-                <Shield size={30} color="#c8a84b" strokeWidth={1.5} />
-              </div>
+                <div style={{
+                  width: 64, height: 64,
+                  borderRadius: '16px',
+                  background: 'rgba(200,168,75,0.1)',
+                  border: '1px solid rgba(200,168,75,0.3)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <Shield size={30} color="#c8a84b" strokeWidth={1.5} />
+                </div>
 
-              <div style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '22px', fontWeight: 700,
-              }}>
-                <span style={{ color: '#fff' }}>perfect</span>
-                <span style={{ color: '#c8a84b' }}>PS</span>
-              </div>
+                <div style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: '22px', fontWeight: 700,
+                }}>
+                  <span style={{ color: '#0d1b2e' }}>perfect</span>
+                  <span style={{ color: '#c8a84b' }}>PS</span>
+                </div>
 
-              <div style={{
-                fontSize: '13px',
-                color: '#8fa3bc',
-                lineHeight: 1.65,
-                fontStyle: 'italic',
-                borderLeft: '2px solid rgba(200,168,75,0.35)',
-                paddingLeft: '12px',
-              }}>
-                "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
-              </div>
+                <div style={{
+                  fontSize: '13px',
+                  color: '#4a5568',
+                  lineHeight: 1.65,
+                  fontStyle: 'italic',
+                  borderLeft: '2px solid rgba(200,168,75,0.35)',
+                  paddingLeft: '12px',
+                }}>
+                  "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
+                </div>
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '12px',
-                background: 'rgba(13,27,46,0.5)',
-                border: '1px solid rgba(200,168,75,0.1)',
-                borderRadius: '10px',
-                padding: '18px',
-              }}>
-                {stats.map(s => (
-                  <div key={s.label}>
-                    <div style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '24px', fontWeight: 800,
-                      color: '#fff', lineHeight: 1,
-                    }}>
-                      {s.value}
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '12px',
+                  background: 'rgba(0,0,0,0.04)',
+                  border: '1px solid rgba(200,168,75,0.1)',
+                  borderRadius: '10px',
+                  padding: '18px',
+                }}>
+                  {stats.map(s => (
+                    <div key={s.label}>
+                      <div style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: '24px', fontWeight: 800,
+                        color: '#0d1b2e', lineHeight: 1,
+                      }}>
+                        {s.value}
+                      </div>
+                      <div style={{
+                        fontSize: '11px', fontWeight: 500,
+                        color: '#8fa3bc', textTransform: 'uppercase',
+                        letterSpacing: '0.05em', marginTop: '4px',
+                      }}>
+                        {s.label}
+                      </div>
                     </div>
-                    <div style={{
-                      fontSize: '11px', fontWeight: 500,
-                      color: '#8fa3bc', textTransform: 'uppercase',
-                      letterSpacing: '0.05em', marginTop: '4px',
-                    }}>
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <a href="/#contact" style={{
-                display: 'block',
-                padding: '13px',
-                background: '#c8a84b',
-                color: '#0d1b2e',
-                borderRadius: '8px',
-                fontSize: '14px', fontWeight: 700,
-                fontFamily: "'DM Sans', sans-serif",
-                textAlign: 'center',
-                transition: 'background 200ms',
-              }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
-              >
-                Start a Project →
-              </a>
+                <a href="/#contact" style={{
+                  display: 'block',
+                  padding: '13px',
+                  background: '#c8a84b',
+                  color: '#0d1b2e',
+                  borderRadius: '8px',
+                  fontSize: '14px', fontWeight: 700,
+                  fontFamily: "'DM Sans', sans-serif",
+                  textAlign: 'center',
+                  transition: 'background 200ms',
+                }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
+                >
+                  <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>Start a Project <ArrowRight size={14} /></span>
+                </a>
+              </div>
+              <img src="/src/assets/sections/about-studio.svg" alt="Studio location" style={{ width: '100%', maxWidth: '300px', height: 'auto', marginTop: '24px' }} />
             </div>
           </ScrollReveal>
 
@@ -130,15 +137,15 @@ export function About() {
             <div style={{ paddingTop: '8px' }}>
               <p style={{
                 fontSize: '18px', fontWeight: 500,
-                color: '#cbd5e1', lineHeight: 1.75,
+                color: '#0d1b2e', lineHeight: 1.75,
                 marginBottom: '16px',
               }}>
                 perfectPS is a boutique digital studio based in the Middle East, specializing in secure, high-performance digital products.
               </p>
-              <p style={{ fontSize: '15px', color: '#8fa3bc', lineHeight: 1.8, marginBottom: '16px' }}>
-                We built <strong style={{ color: '#fff' }}>PS Secure</strong> — a zero-log VPN platform trusted by users across the region — and partner with businesses to design, build, and ship products that make an impact.
+              <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '16px' }}>
+                We built <strong style={{ color: '#0d1b2e' }}>PS Secure</strong> — a zero-log VPN platform trusted by users across the region — and partner with businesses to design, build, and ship products that make an impact.
               </p>
-              <p style={{ fontSize: '15px', color: '#8fa3bc', lineHeight: 1.8, marginBottom: '32px' }}>
+              <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: 1.8, marginBottom: '32px' }}>
                 We believe in clean code, beautiful interfaces, and infrastructure that actually works.
               </p>
 
