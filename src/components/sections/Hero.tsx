@@ -1,6 +1,6 @@
 import { useRef, lazy, Suspense } from 'react'
 import { CountUp } from '../ui/CountUp'
-import { Folder, Users, Calendar, CheckCircle, ArrowLeft, TrendingUp } from 'lucide-react'
+import { Folder, Users, Calendar, CheckCircle, ArrowLeft, ArrowUpRight, TrendingUp } from 'lucide-react'
 import { useTilt } from '../../hooks/useTilt'
 
 const Hero3DScene = lazy(() => import('../3d/Hero3DScene').then(m => ({ default: m.Hero3DScene })))
@@ -126,17 +126,16 @@ export function Hero() {
         ))}
       </div>
 
+      {/* 3D Canvas — absolutely positioned, frameless, right-side background */}
+      <div style={{ position: 'absolute', top: 0, right: 0, width: '58%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
+        <Suspense fallback={null}>
+          <Hero3DScene />
+        </Suspense>
+      </div>
+
       <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: '80px', paddingBottom: '80px' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '40px',
-          alignItems: 'center',
-          marginBottom: '64px',
-        }} className="hero-grid">
-          {/* LEFT: text content */}
-          <div>
-            <div style={{ marginBottom: '28px' }}>
+        <div style={{ marginBottom: '64px' }}>
+          <div style={{ marginBottom: '28px' }}>
               <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '7px 16px',
@@ -209,28 +208,12 @@ export function Hero() {
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b'; el.style.background = 'rgba(200,168,75,0.06)' }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
               >
-                Learn More ↗
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>Learn More <ArrowUpRight size={14} /></span>
               </a>
             </div>
-          </div>
-
-          {/* RIGHT: 3D Canvas */}
-          <div style={{ height: '480px', position: 'relative' }} className="hero-3d-col">
-            <Suspense fallback={
-              <div style={{
-                width: '100%', height: '100%',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                opacity: 0.3,
-              }}>
-                <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(200,168,75,0.3), transparent)', animation: 'hero-float 3s ease-in-out infinite' }} />
-              </div>
-            }>
-              <Hero3DScene />
-            </Suspense>
-          </div>
         </div>
 
-        {/* STAT CARDS: full width below the grid */}
+        {/* STAT CARDS */}
         <div className="hero-stats">
           {stats.map(s => (
             <StatCard key={s.label} stat={s} />
@@ -251,8 +234,6 @@ export function Hero() {
         }
         @media (max-width: 900px) {
           .hero-stats { grid-template-columns: repeat(2, 1fr); }
-          .hero-grid { grid-template-columns: 1fr !important; }
-          .hero-3d-col { height: 320px !important; }
         }
         @media (max-width: 480px) { .hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; } }
       `}</style>

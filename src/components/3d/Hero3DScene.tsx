@@ -26,11 +26,11 @@ function GoldenOrb() {
       <mesh ref={mesh} scale={2.1} position={[0.8, 0, 0]}>
         <icosahedronGeometry args={[1, 3]} />
         <MeshDistortMaterial
-          color="#d4a843"
-          emissive="#8a5a00"
-          emissiveIntensity={0.7}
-          metalness={0.55}
-          roughness={0.28}
+          color="#e8c04a"
+          emissive="#c8a84b"
+          emissiveIntensity={1.1}
+          metalness={0.45}
+          roughness={0.22}
           distort={0.12}
           speed={1.5}
         />
