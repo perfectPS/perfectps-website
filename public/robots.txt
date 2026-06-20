@@ -1,29 +1,83 @@
 User-agent: *
 Allow: /
 
-# AI search crawlers — perfectPS welcomes indexing and citation
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleExtended
+Allow: /
+
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: GoogleExtended
-Allow: /
-
+# Meta / Llama
 User-agent: Meta-ExternalAgent
 Allow: /
 
-User-agent: CCBot
+User-agent: facebookexternalhit
+Allow: /
+
+# Apple
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (training data for many AI models)
+User-agent: CCBot
+Allow: /
+
+# ByteDance / TikTok
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Diffbot (AI knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+# LinkedIn (link previews)
+User-agent: LinkedInBot
+Allow: /
+
+# Twitter / X (card previews)
+User-agent: Twitterbot
+Allow: /
+
+# Slack (link unfurls)
+User-agent: Slackbot
 Allow: /
 
 Sitemap: https://perfectps.com/sitemap.xml

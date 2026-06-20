@@ -4,6 +4,12 @@ import { Work } from './pages/Work'
 import { PSSecure } from './pages/PSSecure'
 import { NotFound } from './pages/NotFound'
 import { LangLayout } from './components/layout/LangLayout'
+import { AdminAuthProvider } from './contexts/AdminAuthContext'
+import { AdminLogin } from './pages/admin/AdminLogin'
+import { AdminLayout } from './pages/admin/AdminLayout'
+import { AdminDashboard } from './pages/admin/AdminDashboard'
+import { AdminContent } from './pages/admin/AdminContent'
+import { AdminPortfolio } from './pages/admin/AdminPortfolio'
 
 function getPreferredLang(): string {
   const stored = localStorage.getItem('lang')
@@ -22,6 +28,21 @@ export default function App() {
           <Route path="ps-secure" element={<PSSecure />} />
           <Route path="*" element={<NotFound />} />
         </Route>
+        <Route
+          path="/admin/*"
+          element={
+            <AdminAuthProvider>
+              <Routes>
+                <Route path="login" element={<AdminLogin />} />
+                <Route element={<AdminLayout />}>
+                  <Route index element={<AdminDashboard />} />
+                  <Route path="content" element={<AdminContent />} />
+                  <Route path="portfolio" element={<AdminPortfolio />} />
+                </Route>
+              </Routes>
+            </AdminAuthProvider>
+          }
+        />
         <Route path="*" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
       </Routes>
     </BrowserRouter>

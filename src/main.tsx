@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import './i18n'
+import { i18nReady } from './i18n'
 import App from './App'
 
 // Set dir/lang on <html> immediately to avoid RTL flash before React renders
@@ -14,8 +14,10 @@ if (initLang === 'ar') {
   document.documentElement.setAttribute('lang', initLang === 'en' ? 'en' : (localStorage.getItem('lang') ?? 'en'))
 }
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+i18nReady.then(() => {
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  )
+})

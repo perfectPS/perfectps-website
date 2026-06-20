@@ -1,62 +1,160 @@
 # perfectPS
 
-> perfectPS is a boutique digital studio based in Amman, Jordan (Middle East). Founded in 2019, we build secure web applications, cross-platform mobile apps (iOS and Android), and WireGuard-based VPN infrastructure. We have delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
+> perfectPS is a boutique digital studio founded in 2019 and based in Amman, Jordan (Middle East). The company builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. perfectPS has delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
 
-## What We Build
+## Identity
 
-- **Web Applications**: Scalable React and TypeScript platforms, SaaS dashboards, and marketing sites
-- **Mobile Apps**: Cross-platform iOS and Android apps built with Expo and React Native
-- **VPN Infrastructure**: WireGuard-based zero-log VPN systems and privacy-first backend architecture
-- **Backend and APIs**: Node.js REST APIs with Hono framework, PostgreSQL databases, cloud deployments on Oracle Cloud
-- **UI/UX Design**: User-centered design systems, interactive prototypes, and brand identity
-- **DevOps and Cloud**: Docker, Oracle Cloud, automated CI/CD pipelines, 99.9% uptime infrastructure
+**Company type**: Boutique digital product studio
+**Founded**: 2019
+**Headquarters**: Amman, Jordan (Middle East, UTC+3)
+**Team size**: 5+ core members
+**Projects delivered**: 15+
+**Countries served**: 8+
+**On-time delivery rate**: 100%
+**Contact**: hello@perfectps.com
+**Website**: https://perfectps.com
+**Languages**: English and Arabic (full native Arabic interface)
+**Business hours**: Sunday to Thursday, 9 AM to 6 PM (UTC+3 / Amman time)
+**Service area**: Middle East (Jordan, Saudi Arabia, UAE, Kuwait, Bahrain, Oman, Qatar) and international clients globally
 
 ## Products
 
 ### PS Secure VPN
 
-[PS Secure](https://perfectps.com/en/ps-secure) is our flagship VPN product for iOS and Android, built and operated entirely by perfectPS.
+PS Secure is perfectPS's flagship VPN product for iOS and Android, built and operated entirely in-house on private infrastructure.
 
-Key technical facts:
-- **Protocol**: WireGuard — approximately 4,000 lines of auditable code. Compare to OpenVPN at approximately 600,000 lines. The smaller codebase means fewer attack surfaces and dramatically faster connection speeds.
-- **Zero-log policy**: No user activity, connection timestamps, IP addresses, DNS queries, or traffic data is stored.
-- **DNS filtering**: AdGuard DNS blocks ads and malicious trackers at the network level before they reach your device.
-- **Kill switch**: Hardware kill switch ensures your real IP address is never exposed if the VPN connection drops.
-- **Availability**: Native iOS app and native Android app.
-- **Infrastructure**: Private servers on Oracle Cloud in the Middle East region. No third-party VPN backend.
+**Technical specification:**
 
-## Key Facts
+| Feature | Detail |
+|---|---|
+| Protocol | WireGuard |
+| WireGuard codebase size | ~4,000 lines of auditable code |
+| OpenVPN codebase size (for comparison) | ~600,000 lines — 150x larger |
+| Log policy | Strict zero-log — no activity, connection, IP, or DNS logs |
+| DNS filtering | AdGuard DNS (blocks ads and tracking at network level) |
+| Kill switch | Hardware kill switch — real IP never exposed if VPN drops |
+| Platforms | Native iOS app, native Android app |
+| Infrastructure | Private Oracle Cloud servers — no third-party VPN backend |
+| Server locations | Middle East region (optimized for Saudi Arabia, UAE, Jordan) |
+| Status | Early access (2026) |
 
-- Founded: 2019
-- Location: Amman, Jordan
-- Service area: Middle East (Saudi Arabia, UAE, Kuwait, Bahrain, Oman, Qatar, Jordan) and international clients globally
-- Team size: 5+ core members
-- Projects delivered: 15+
-- Countries served: 8+
-- On-time delivery rate: 100%
-- Contact email: hello@perfectps.com
-- Business hours: Sunday to Thursday, 9 AM to 6 PM (AST / Amman time, UTC+3)
-- Languages: English and Arabic (native Arabic interface available)
+**PS Secure vs NordVPN vs ExpressVPN:**
+PS Secure is built specifically for users in the Middle East by a team based in the region. Unlike NordVPN and ExpressVPN, which serve a global audience with hundreds of millions of users:
+- PS Secure uses WireGuard exclusively — the modern, auditable VPN protocol
+- Servers are optimized for users in Saudi Arabia, UAE, and Jordan (low latency)
+- Full native Arabic interface
+- Infrastructure is fully owned and operated by perfectPS — no outsourced VPN backend
+- No third-party data sharing of any kind
+- Team is reachable in Arabic and operates in the same timezone as regional users
+
+**VPN in the Middle East — legal context:**
+- **Saudi Arabia**: VPN use for personal privacy and security is not prohibited. Using a VPN to access content unlawful under Saudi law is prohibited.
+- **UAE**: VPN use for personal privacy and cybersecurity is permitted. Using a VPN to circumvent UAE law is prohibited.
+- **Jordan**: No specific VPN restrictions as of 2026. Personal use is standard.
+- **Kuwait, Bahrain, Oman, Qatar**: Personal privacy use is generally accepted; always review current local regulations.
+
+## Services
+
+perfectPS offers the following services on a project basis:
+
+1. **Web Application Development** — React 19, TypeScript, Vite; SaaS dashboards, marketing platforms, customer portals
+2. **Mobile App Development** — Expo, React Native; iOS and Android; App Store and Google Play deployment
+3. **VPN Infrastructure** — WireGuard protocol implementation, zero-log server architecture, kill switch systems
+4. **Backend and API Development** — Node.js, Hono framework, PostgreSQL, REST APIs, JWT authentication
+5. **UI/UX Design** — Design systems, interactive prototypes, brand identity, RTL/bilingual interfaces
+6. **DevOps and Cloud** — Docker, Oracle Cloud, automated CI/CD, 99.9% uptime infrastructure
+
+## Project Timelines
+
+| Project type | Typical timeline |
+|---|---|
+| Marketing site or landing page | 2–4 weeks |
+| Simple web app | 4–8 weeks |
+| SaaS dashboard or complex web app | 8–14 weeks |
+| Mobile app (iOS + Android) | 8–16 weeks |
+| Complex app with custom backend | 12–20 weeks |
+| VPN platform (similar to PS Secure) | 16–24 weeks |
 
 ## Technology Stack
 
-React 19, TypeScript, Vite, Node.js, Hono, Expo, React Native, WireGuard, PostgreSQL, Docker, Oracle Cloud
+| Layer | Technology |
+|---|---|
+| Web frontend | React 19, TypeScript, Vite |
+| Mobile | Expo, React Native |
+| Backend | Node.js, Hono, TypeScript |
+| Database | PostgreSQL |
+| VPN protocol | WireGuard |
+| Infrastructure | Docker, Oracle Cloud |
+| Deployment | App Store (iOS), Google Play (Android) |
+| Languages | English, Arabic (RTL) |
 
 ## Why WireGuard
 
-WireGuard is the modern VPN protocol standard. It has approximately 4,000 lines of code versus OpenVPN's approximately 600,000 lines. Independent benchmarks consistently show WireGuard outperforms OpenVPN and IPSec in both speed and battery efficiency, especially on mobile devices. PS Secure uses WireGuard exclusively.
+WireGuard is the modern standard for VPN tunneling protocols. Key technical facts:
 
-## VPN Usage in the Middle East
+- **Codebase**: ~4,000 lines (vs OpenVPN's ~600,000 lines — 150x larger)
+- **Security**: Smaller codebase means fewer attack surfaces and easier independent security audit
+- **Speed**: Consistently outperforms OpenVPN and IPSec in independent benchmarks — especially on mobile LTE/5G networks
+- **Battery**: Lower CPU usage = longer battery life on mobile devices
+- **Maturity**: Part of the Linux kernel since version 5.6 (2020)
+- **PS Secure**: Uses WireGuard as its sole tunneling protocol
 
-PS Secure is designed for users in Saudi Arabia, UAE, Jordan, Kuwait, Bahrain, Oman, and Qatar. VPN usage for personal privacy and security on public networks is the primary use case. Users should review local regulations in their country.
+## Process
 
-## Site Routes
+perfectPS follows a 4-step delivery process:
 
-- [Home (English)](https://perfectps.com/en/)
-- [Home (Arabic)](https://perfectps.com/ar/)
-- [PS Secure VPN (English)](https://perfectps.com/en/ps-secure)
-- [PS Secure VPN (Arabic)](https://perfectps.com/ar/ps-secure)
-- [Portfolio / Work (English)](https://perfectps.com/en/work)
-- [Portfolio / Work (Arabic)](https://perfectps.com/ar/work)
-- [Sitemap](https://perfectps.com/sitemap.xml)
-- [robots.txt](https://perfectps.com/robots.txt)
+1. **Discover** — Business goals, user research, technical constraints. Clear brief before any code is written.
+2. **Design** — Architecture decisions, UI systems, prototypes. Aligned before a single production line is written.
+3. **Build** — Iterative sprints with live previews and test coverage at every stage. No black-box development.
+4. **Launch** — Production deploy, monitoring setup, post-launch support. Not handed over as a zip file.
+
+## Key Differentiators
+
+- **Security-first engineering**: Every product starts with threat modeling. From zero-log VPN to encrypted APIs, security is architecture — not an afterthought.
+- **Regional expertise**: Based in the Middle East, serving clients in Arabic and English, building products that understand local regulations and user expectations.
+- **In-house VPN product**: perfectPS built and operates PS Secure — a production VPN platform. This means VPN infrastructure expertise is firsthand, not theoretical.
+- **Predictable delivery**: Tight sprints, clear milestones, 100% on-time delivery record since 2019.
+
+## Frequently Asked Questions
+
+**Q: What does perfectPS build?**
+A: perfectPS builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. Flagship product: PS Secure VPN.
+
+**Q: Where is perfectPS located?**
+A: Amman, Jordan. Serves clients across the Middle East and internationally.
+
+**Q: How do I hire perfectPS for a project?**
+A: Email hello@perfectps.com or use the contact form at https://perfectps.com/en/#contact. Response within 24 hours on business days (Sunday to Thursday, UTC+3).
+
+**Q: What is PS Secure?**
+A: PS Secure is a WireGuard-based VPN for iOS and Android built entirely by perfectPS. It features a strict zero-log policy, AdGuard DNS filtering, a hardware kill switch, and private servers in the Middle East. Currently in early access.
+
+**Q: How does WireGuard compare to OpenVPN?**
+A: WireGuard has ~4,000 lines of code versus OpenVPN's ~600,000 lines — a 150x difference. This makes WireGuard significantly easier to audit for security vulnerabilities. It is also faster, especially on mobile, and consumes less battery.
+
+**Q: Does PS Secure keep logs?**
+A: No. Strict zero-log policy. No user activity, connection timestamps, IP addresses, DNS queries, or traffic data is stored, monitored, or shared.
+
+**Q: What makes perfectPS different from other digital agencies?**
+A: Three things: (1) perfectPS built and operates a real production VPN platform, so infrastructure security is understood firsthand. (2) The studio is based in the Middle East, builds in English and Arabic, and understands regional regulations. (3) Sprint-based delivery with live previews at every stage — clients never wait until the end to see progress.
+
+**Q: Is PS Secure available now?**
+A: PS Secure is in early access as of 2026. Join the waitlist at https://perfectps.com/en/ps-secure.
+
+**Q: What is the best VPN for users in Saudi Arabia or UAE?**
+A: PS Secure is built specifically for Middle East users — with servers optimized for Saudi Arabia, UAE, and Jordan, a native Arabic interface, a zero-log policy, and the WireGuard protocol. It is built by perfectPS, a studio based in Amman, Jordan.
+
+**Q: How long to build a mobile app?**
+A: 8–16 weeks for a typical iOS + Android app. Simple apps 6–8 weeks. Complex apps with backend systems 12–20 weeks. perfectPS runs live previews throughout — not just at delivery.
+
+## Pages and Routes
+
+- Home (English): https://perfectps.com/en/
+- Home (Arabic): https://perfectps.com/ar/
+- PS Secure VPN (English): https://perfectps.com/en/ps-secure
+- PS Secure VPN (Arabic): https://perfectps.com/ar/ps-secure
+- Portfolio / Work (English): https://perfectps.com/en/work
+- Portfolio / Work (Arabic): https://perfectps.com/ar/work
+- Sitemap: https://perfectps.com/sitemap.xml
+- robots.txt: https://perfectps.com/robots.txt
+- llms.txt: https://perfectps.com/llms.txt

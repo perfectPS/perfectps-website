@@ -122,3 +122,19 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/portfolio/password_vault_mobile.svg',
   },
 ]
+
+/**
+ * Fetches portfolio items from the server's /content/portfolio.json endpoint.
+ * Falls back to the static bundled array if the request fails or returns invalid data.
+ */
+export async function fetchPortfolio(): Promise<PortfolioItem[]> {
+  try {
+    const res = await fetch('/content/portfolio.json')
+    if (!res.ok) return portfolioItems
+    const data: unknown = await res.json()
+    if (!Array.isArray(data)) return portfolioItems
+    return data as PortfolioItem[]
+  } catch {
+    return portfolioItems
+  }
+}

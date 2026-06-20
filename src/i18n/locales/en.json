@@ -5,7 +5,9 @@
     "psSecure": "PS Secure",
     "about": "About",
     "contact": "Contact",
-    "cta": "Get in Touch"
+    "cta": "Get in Touch",
+    "switch_to_en": "Switch to English",
+    "switch_to_ar": "Switch to Arabic"
   },
   "hero": {
     "badge": "Digital Studio · Est. 2019",

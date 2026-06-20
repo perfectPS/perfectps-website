@@ -31,7 +31,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav style={{
+      <nav dir="ltr" style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         height: '68px',
         background: scrolled ? 'rgba(7,15,26,0.96)' : 'transparent',
@@ -82,7 +82,7 @@ export function Navbar() {
             justifyContent: 'center',
           }} className="desktop-nav-links">
             {navLinks.map(l => (
-              <a key={l.label} href={l.href} className="ps-nav-link" style={{
+              <a key={l.label} href={l.href} className="ps-nav-link" dir={isArabic ? 'rtl' : 'ltr'} style={{
                 fontSize: '14px',
                 fontWeight: 500,
                 color: 'rgba(255,255,255,0.65)',
@@ -165,7 +165,7 @@ export function Navbar() {
 
       {/* Mobile overlay */}
       {open && (
-        <div style={{
+        <div dir={isArabic ? 'rtl' : 'ltr'} style={{
           position: 'fixed',
           top: '68px',
           left: 0, right: 0, bottom: 0,
@@ -218,7 +218,7 @@ export function Navbar() {
                 animationDelay: `${navLinks.length * 45}ms`,
               }}
             >
-              {isArabic ? 'Switch to English' : 'التبديل إلى العربية'}
+              {isArabic ? t('nav.switch_to_en') : t('nav.switch_to_ar')}
             </button>
             <a
               href={`/${lang}/#contact`}
