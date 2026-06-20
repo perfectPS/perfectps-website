@@ -29,10 +29,24 @@ export function About() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px)
+          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
+      }} />
+
+      {/* Frameless SVG illustration — left side */}
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '5%', left: '-3%', bottom: '5%',
+        width: '45%',
+        backgroundImage: "url('/sections/services-network.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center left',
+        opacity: 0.12,
+        pointerEvents: 'none',
+        zIndex: 0,
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
@@ -245,7 +259,7 @@ export function About() {
                     marginTop: '2px',
                     letterSpacing: '0.04em',
                   }}>
-                    Digital Studio · Est. 2019
+                    {t('about.studio_label')}
                   </div>
                 </div>
               </div>

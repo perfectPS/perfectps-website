@@ -105,12 +105,12 @@ export function PSSecure() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 42px)',
               fontWeight: 800,
-              color: '#0d1b2e',
+              color: '#fff',
               marginBottom: '48px',
               lineHeight: 1.15,
             }}>
               {t('pssecure.features_h2_line1')}<br />
-              <span className="gradient-text--gold">{t('pssecure.features_h2_line2')}</span>
+              <span className="gradient-text--dark">{t('pssecure.features_h2_line2')}</span>
             </h2>
           </ScrollReveal>
           <div className="grid-3">

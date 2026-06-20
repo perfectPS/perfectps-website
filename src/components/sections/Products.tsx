@@ -27,26 +27,59 @@ export function Products() {
       {/* Dot grid */}
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
-        backgroundImage: 'radial-gradient(circle, rgba(200,168,75,0.18) 1px, transparent 1px)',
+        backgroundImage: 'radial-gradient(circle, rgba(200,168,75,0.22) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
-        opacity: 0.35,
+        opacity: 0.45,
       }} />
 
-      {/* Gold radial glow — heading area */}
+      {/* Large shield watermark — right side */}
       <div aria-hidden style={{
-        position: 'absolute', top: '-60px', left: '50%',
+        position: 'absolute',
+        top: '50%', right: '-4%',
+        transform: 'translateY(-50%)',
+        width: '58%',
+        height: '140%',
+        backgroundImage: "url('/sections/hero-shield.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center right',
+        opacity: 0.055,
+        pointerEvents: 'none',
+        zIndex: 0,
+      }} />
+
+      {/* Primary gold radial glow — top center */}
+      <div aria-hidden style={{
+        position: 'absolute', top: '-100px', left: '50%',
         transform: 'translateX(-50%)',
-        width: 900, height: 480,
+        width: 1200, height: 700,
         borderRadius: '50%',
-        background: 'radial-gradient(ellipse, rgba(200,168,75,0.13) 0%, rgba(200,168,75,0.04) 40%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(200,168,75,0.20) 0%, rgba(200,168,75,0.07) 35%, transparent 65%)',
         pointerEvents: 'none', zIndex: 0,
       }} />
 
-      {/* Gradient fade at bottom so card doesn't bleed */}
+      {/* Secondary glow — upper left accent */}
+      <div aria-hidden style={{
+        position: 'absolute', top: '15%', left: '-8%',
+        width: 600, height: 600,
+        borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(96,165,250,0.06) 0%, transparent 60%)',
+        pointerEvents: 'none', zIndex: 0,
+      }} />
+
+      {/* Horizontal light beam — center */}
+      <div aria-hidden style={{
+        position: 'absolute', top: '22%', left: 0, right: 0,
+        height: '1px',
+        background: 'linear-gradient(90deg, transparent 0%, rgba(200,168,75,0.18) 20%, rgba(200,168,75,0.35) 50%, rgba(200,168,75,0.18) 80%, transparent 100%)',
+        pointerEvents: 'none', zIndex: 0,
+      }} />
+
+      {/* Gradient fade at bottom */}
       <div aria-hidden style={{
         position: 'absolute', bottom: 0, left: 0, right: 0,
-        height: '200px',
-        background: 'linear-gradient(to bottom, transparent, rgba(7,15,26,0.6))',
+        height: '220px',
+        background: 'linear-gradient(to bottom, transparent, rgba(7,15,26,0.7))',
         pointerEvents: 'none', zIndex: 0,
       }} />
 

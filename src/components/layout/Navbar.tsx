@@ -97,7 +97,6 @@ export function Navbar() {
       </a>
 
       <nav
-        dir="ltr"
         aria-label="Main navigation"
         style={{
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
@@ -188,8 +187,6 @@ export function Navbar() {
               ref={productsDropdownRef}
               role="listitem"
               style={{ position: 'relative' }}
-              onMouseEnter={() => setProductsOpen(true)}
-              onMouseLeave={() => setProductsOpen(false)}
             >
               <button
                 className="ps-nav-link ps-nav-dropdown-trigger"

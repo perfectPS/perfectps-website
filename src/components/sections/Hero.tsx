@@ -188,7 +188,7 @@ export function Hero() {
             </p>
 
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-              <a href={`/${lang}/work`} style={{
+              <a href={`/${lang}/#contact`} style={{
                 padding: '14px 32px',
                 background: '#c8a84b',
                 color: '#0d1b2e',

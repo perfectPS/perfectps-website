@@ -8,7 +8,8 @@
     "cta": "Get in Touch",
     "switch_to_en": "Switch to English",
     "switch_to_ar": "Switch to Arabic",
-    "logo_fullname": "Perfect Pixel Solution"
+    "logo_fullname": "Perfect Pixel Solution",
+    "back_home": "Back to Home"
   },
   "hero": {
     "badge": "Digital Studio · Est. 2019",
@@ -16,7 +17,7 @@
     "h1_line2": "Digital Products",
     "h1_line3": "That Matter.",
     "body": "We build secure VPN infrastructure, market-ready web apps, and mobile products. Fast. Beautiful. Built to last.",
-    "cta_primary": "View Our Work",
+    "cta_primary": "Start a Project",
     "cta_secondary": "Learn More",
     "stat_projects": "Projects Delivered",
     "stat_clients": "Clients Served",
@@ -56,7 +57,10 @@
     "card2_title": "Security-First Engineering",
     "card2_desc": "Every product we build starts with threat modeling. From zero-log VPN infrastructure to encrypted APIs, security is architecture, not an afterthought.",
     "card3_title": "Long-Term Partnership",
-    "card3_desc": "We are not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract."
+    "card3_desc": "We are not a factory. We invest in understanding your business and act as a technical co-founder, not just an agency on a contract.",
+    "stat1_label": "On-Time",
+    "stat2_label": "Data Breaches",
+    "stat3_label": "Returning Clients"
   },
   "process": {
     "label": "How We Work",
@@ -95,6 +99,7 @@
     "label": "About the Studio",
     "h2": "We Are perfectPS",
     "h2_pre": "We Are",
+    "studio_label": "Digital Studio · Est. 2019",
     "quote": "We believe in clean code, beautiful interfaces, and infrastructure that actually works.",
     "stat_founded": "Founded",
     "stat_team": "Core Team",

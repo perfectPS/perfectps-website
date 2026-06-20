@@ -24,7 +24,7 @@ export function TechStack() {
         backgroundSize: '70%',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
-        opacity: 0.18,
+        opacity: 0.55,
         pointerEvents: 'none',
         zIndex: 0,
       }} />

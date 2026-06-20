@@ -114,7 +114,7 @@ export function Process() {
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center bottom',
-        opacity: 0.1,
+        opacity: 0.5,
         pointerEvents: 'none',
         zIndex: 0,
       }} />
@@ -123,8 +123,8 @@ export function Process() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.025) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.025) 1px, transparent 1px)
+          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '48px 48px',
       }} />

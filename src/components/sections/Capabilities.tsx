@@ -3,13 +3,22 @@ import { useTranslation } from 'react-i18next'
 import { useLang } from '../../hooks/useLang'
 import { ScrollReveal } from '../ui/ScrollReveal'
 
-const domains = [
+const domainsEn = [
   { icon: Globe,       count: '80+',  title: 'Web Applications',  sub: 'SaaS · FinTech · E-Commerce' },
   { icon: Smartphone,  count: '60+',  title: 'Mobile Apps',       sub: 'iOS · Android · React Native' },
   { icon: Server,      count: '40+',  title: 'Backend & Server',  sub: 'Node.js · APIs · Cloud Infra' },
   { icon: Gamepad2,    count: '10+',  title: 'Game Development',  sub: 'Unity · WebGL · Casual & Hyper' },
   { icon: Shield,      count: '20+',  title: 'VPN & Security',    sub: 'WireGuard · Privacy · B2B' },
   { icon: Palette,     count: '50+',  title: 'UI/UX Design',      sub: 'Figma · Motion · Branding' },
+]
+
+const domainsAr = [
+  { icon: Globe,       count: '80+',  title: 'تطبيقات الويب',     sub: 'SaaS · التقنية المالية · التجارة الإلكترونية' },
+  { icon: Smartphone,  count: '60+',  title: 'تطبيقات الجوال',    sub: 'iOS · Android · React Native' },
+  { icon: Server,      count: '40+',  title: 'الخلفية والخوادم',  sub: 'Node.js · APIs · البنية السحابية' },
+  { icon: Gamepad2,    count: '10+',  title: 'تطوير الألعاب',     sub: 'Unity · WebGL · كاجوال وهايبر' },
+  { icon: Shield,      count: '20+',  title: 'VPN والأمن',        sub: 'WireGuard · الخصوصية · B2B' },
+  { icon: Palette,     count: '50+',  title: 'تصميم UI/UX',      sub: 'فيغما · الحركة · الهوية البصرية' },
 ]
 
 const industriesEn = ['FinTech', 'HealthTech', 'EdTech', 'E-Commerce', 'SaaS', 'Gov Tech', 'Real Estate', 'Media']
@@ -19,6 +28,7 @@ export function Capabilities() {
   const { t } = useTranslation()
   const lang = useLang()
   const industries = lang === 'ar' ? industriesAr : industriesEn
+  const domains = lang === 'ar' ? domainsAr : domainsEn
 
   return (
     <section
@@ -29,10 +39,24 @@ export function Capabilities() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px)
+          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
+      }} />
+
+      {/* Frameless SVG illustration — right side */}
+      <div aria-hidden style={{
+        position: 'absolute',
+        top: '5%', right: '-2%', bottom: '5%',
+        width: '50%',
+        backgroundImage: "url('/sections/whyus-metrics.svg')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center right',
+        opacity: 0.12,
+        pointerEvents: 'none',
+        zIndex: 0,
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>

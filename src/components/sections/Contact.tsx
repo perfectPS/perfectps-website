@@ -3,10 +3,15 @@ import { useTranslation } from 'react-i18next'
 import { Mail, MapPin, Clock, Check } from 'lucide-react'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { BackgroundOrbs } from '../ui/BackgroundOrbs'
+import { useLang } from '../../hooks/useLang'
 
-const projectTypes = [
+const projectTypesEn = [
   'Web Application', 'Mobile App', 'VPN / Security',
   'Backend / API', 'UI/UX Design', 'DevOps / Cloud', 'Other',
+]
+const projectTypesAr = [
+  'تطبيق ويب', 'تطبيق جوال', 'VPN / الأمن',
+  'الخلفية / API', 'تصميم UI/UX', 'DevOps / السحابة', 'أخرى',
 ]
 
 const darkInputStyle: React.CSSProperties = {
@@ -23,6 +28,8 @@ const darkInputStyle: React.CSSProperties = {
 
 export function Contact() {
   const { t } = useTranslation()
+  const lang = useLang()
+  const projectTypes = lang === 'ar' ? projectTypesAr : projectTypesEn
   const [form, setForm] = useState({ name: '', email: '', type: '', message: '' })
   const [sent, setSent] = useState(false)
 
@@ -58,7 +65,7 @@ export function Contact() {
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right bottom',
-        opacity: 0.12,
+        opacity: 0.45,
         pointerEvents: 'none',
         zIndex: 0,
       }} />

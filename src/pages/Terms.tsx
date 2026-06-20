@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../hooks/useLang'
 
-const sections = [
+const sectionsEn = [
   {
     heading: 'Acceptance of Terms',
     body: 'By accessing or using perfectps.com or any service provided by perfectPS ("we", "us", "our"), you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.',
@@ -48,9 +48,57 @@ const sections = [
   },
 ]
 
+const sectionsAr = [
+  {
+    heading: 'قبول الشروط',
+    body: 'بالوصول إلى perfectps.com أو استخدام أي خدمة مقدمة من perfectPS ("نحن"، "لنا"، "خاصتنا")، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق، يرجى عدم استخدام خدماتنا.',
+  },
+  {
+    heading: 'الخدمات',
+    body: 'تقدم perfectPS خدمات تطوير المنتجات الرقمية بما تشمل تطبيقات الويب وتطبيقات الجوال وبنية تحتية للـ VPN وتصميم UI/UX وهندسة الخلفية وDevOps. نحن أيضًا ندير PS Secure، منتج VPN وخصوصية متاح على iOS وAndroid.',
+  },
+  {
+    heading: 'الملكية الفكرية',
+    body: 'ما لم يُتفق على خلاف ذلك في عقد موقّع، تظل جميع منتجات العمل التي أنشأتها perfectPS للعملاء ملكًا فكريًا لـ perfectPS حتى استلام الدفعة الكاملة، وعندها تنتقل الملكية إلى العميل وفقًا لاتفاقية المشروع. تعد علامة perfectPS التجارية وشعارها ومنتج PS Secure ملكًا حصريًا لـ perfectPS.',
+  },
+  {
+    heading: 'مسؤوليات العميل',
+    body: 'يتحمل العملاء مسؤولية تقديم المتطلبات الدقيقة والتغذية الراجعة في الوقت المناسب وأي أصول أو بيانات اعتماد ضرورية لإتمام العمل المتفق عليه. قد تؤثر التأخيرات الناجمة عن العميل على جداول المشروع وتكاليفه.',
+  },
+  {
+    heading: 'شروط الدفع',
+    body: 'يتم تحديد أسعار المشاريع وجداول الدفع في اتفاقيات المشاريع الفردية. تستحق جميع المدفوعات ضمن الأطر الزمنية المحددة فيها. قد تؤدي المدفوعات المتأخرة إلى تعليق العمل ورسوم تأخير وفقًا للقانون المعمول به.',
+  },
+  {
+    heading: 'السرية',
+    body: 'تتعامل perfectPS مع جميع معلومات مشاريع العملاء باعتبارها سرية افتراضيًا. لا نكشف عن هويات العملاء أو تفاصيل المشاريع لأطراف ثالثة دون موافقة كتابية صريحة. يمكن للعملاء طلب تغطية اتفاقية سرية إضافية لأي مشاركة.',
+  },
+  {
+    heading: 'تحديد المسؤولية',
+    body: 'إلى أقصى حد يسمح به القانون، لن تكون perfectPS مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية ناجمة عن استخدام خدماتنا. لا تتجاوز مسؤوليتنا الإجمالية الرسوم التي دفعها العميل خلال الأشهر الثلاثة السابقة للمطالبة.',
+  },
+  {
+    heading: 'شروط استخدام PS Secure VPN',
+    body: 'يُقدّم PS Secure للاستخدام الشخصي القانوني فقط. لا يجوز للمستخدمين استخدام PS Secure لانتهاك أي قوانين سارية أو التعدي على حقوق الملكية الفكرية أو نقل البرامج الضارة أو الانخراط في أي نشاط يعطل البنية التحتية للشبكة. نحتفظ بحق إنهاء الحسابات المنتهكة لهذه الشروط.',
+  },
+  {
+    heading: 'القانون الحاكم',
+    body: 'تخضع هذه الشروط للقوانين المعمول بها في المملكة الأردنية الهاشمية. تخضع أي نزاعات ناشئة عن هذه الشروط للاختصاص القضائي الحصري لمحاكم عمّان، الأردن.',
+  },
+  {
+    heading: 'التغييرات على الشروط',
+    body: 'نحتفظ بحق تحديث هذه الشروط في أي وقت. يُعد استمرار استخدامك لخدماتنا عقب الإخطار بالتغييرات قبولًا منك للشروط المحدّثة. سيتم الإعلان عن التغييرات الجوهرية عبر البريد الإلكتروني للعملاء المعروفين.',
+  },
+  {
+    heading: 'التواصل',
+    body: 'يمكن توجيه الأسئلة المتعلقة بهذه الشروط إلى hello@perfectps.com.',
+  },
+]
+
 export function Terms() {
   const { t } = useTranslation()
   const lang = useLang()
+  const sections = lang === 'ar' ? sectionsAr : sectionsEn
 
   return (
     <div style={{ background: '#070f1a', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>
@@ -70,7 +118,7 @@ export function Terms() {
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
             <path d="M11 7H3M7 11L3 7l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back to Home
+          {t('nav.back_home')}
         </a>
 
         <div className="section-label">{t('terms.last_updated')}</div>
@@ -88,8 +136,8 @@ export function Terms() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
           {sections.map(s => (
             <div key={s.heading} style={{
-              borderLeft: '2px solid rgba(200,168,75,0.2)',
-              paddingLeft: '24px',
+              borderInlineStart: '2px solid rgba(200,168,75,0.2)',
+              paddingInlineStart: '24px',
             }}>
               <h2 style={{
                 fontFamily: "'DM Sans', sans-serif",

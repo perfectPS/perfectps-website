@@ -84,21 +84,21 @@ export function WhyUs() {
       title: t('whyus.card1_title'),
       desc: t('whyus.card1_desc'),
       stat: '100%',
-      statLabel: 'On-Time',
+      statLabel: t('whyus.stat1_label'),
     },
     {
       icon: Lock,
       title: t('whyus.card2_title'),
       desc: t('whyus.card2_desc'),
       stat: '0',
-      statLabel: 'Data Breaches',
+      statLabel: t('whyus.stat2_label'),
     },
     {
       icon: HeartHandshake,
       title: t('whyus.card3_title'),
       desc: t('whyus.card3_desc'),
       stat: '8+',
-      statLabel: 'Returning Clients',
+      statLabel: t('whyus.stat3_label'),
     },
   ]
 
@@ -124,7 +124,7 @@ export function WhyUs() {
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center right',
-        opacity: 0.13,
+        opacity: 0.45,
         pointerEvents: 'none',
         zIndex: 0,
       }} />

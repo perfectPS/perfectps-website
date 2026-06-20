@@ -26,7 +26,7 @@ export function Services() {
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center right',
-        opacity: 0.18,
+        opacity: 0.45,
         pointerEvents: 'none',
         zIndex: 0,
       }} />

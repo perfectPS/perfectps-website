@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../hooks/useLang'
 
-const sections = [
+const sectionsEn = [
   {
     heading: 'Information We Collect',
     body: 'When you use our website or contact us, we may collect your name, email address, and the content of your messages. For PS Secure (our VPN product), we operate a strict zero-log policy: we do not collect, store, or share your browsing activity, DNS queries, IP addresses, or connection timestamps.',
@@ -40,9 +40,49 @@ const sections = [
   },
 ]
 
+const sectionsAr = [
+  {
+    heading: 'المعلومات التي نجمعها',
+    body: 'عند استخدامك لموقعنا أو التواصل معنا، قد نجمع اسمك وعنوان بريدك الإلكتروني ومحتوى رسائلك. أما بخصوص PS Secure (منتجنا للـ VPN)، فنحن نطبق سياسة صارمة لعدم تسجيل أي بيانات: لا نجمع نشاط تصفحك أو استعلامات DNS أو عناوين IP أو طوابع الاتصال الزمنية.',
+  },
+  {
+    heading: 'كيف نستخدم معلوماتك',
+    body: 'تُستخدم معلومات الاتصال فقط للرد على استفسارك وتقديم الخدمات التي طلبتها. لا نبيع معلوماتك الشخصية أو نؤجرها أو نشاركها مع أطراف ثالثة لأغراض تسويقية.',
+  },
+  {
+    heading: 'ملفات تعريف الارتباط',
+    body: 'يستخدم موقعنا ملفات تعريف ارتباط أساسية فقط، وهي ضرورية لوظائف أساسية كتفضيلات اللغة. لا نستخدم ملفات تتبع أو تحليل أو إعلانات خارجية.',
+  },
+  {
+    heading: 'الاحتفاظ بالبيانات',
+    body: 'نحتفظ بإرسالات نموذج التواصل لمدة تصل إلى 12 شهرًا لأغراض المراسلات التجارية. يمكنك طلب حذف بياناتك في أي وقت عبر إرسال بريد إلكتروني إلى hello@perfectps.com.',
+  },
+  {
+    heading: 'خدمات الجهات الخارجية',
+    body: 'قد يرتبط موقعنا بخدمات خارجية مثل متجر Apple App Store أو Google Play Store. نحن غير مسؤولين عن ممارسات الخصوصية الخاصة بهذه الخدمات الخارجية.',
+  },
+  {
+    heading: 'الأمان',
+    body: 'تُحمى جميع البيانات المنقولة من وإلى perfectps.com بتشفير TLS. خوادمنا مستضافة على Oracle Cloud Infrastructure وDigitalOcean مع ضوابط وصول وقواعد جدار حماية.',
+  },
+  {
+    heading: 'حقوقك',
+    body: 'يحق لك الوصول إلى أي بيانات شخصية نحتفظ بها أو تصحيحها أو حذفها. لممارسة هذه الحقوق، تواصل معنا على hello@perfectps.com وسنرد خلال 5 أيام عمل.',
+  },
+  {
+    heading: 'التغييرات على هذه السياسة',
+    body: 'قد نحدّث سياسة الخصوصية هذه بشكل دوري. ستُشار التغييرات الجوهرية بتاريخ محدّث في أعلى هذه الصفحة. استمرارك في استخدام خدماتنا بعد التغييرات يعني قبولك للسياسة المحدّثة.',
+  },
+  {
+    heading: 'التواصل',
+    body: 'لأي أسئلة أو طلبات تتعلق بالخصوصية، يرجى إرسال بريد إلكتروني إلى hello@perfectps.com.',
+  },
+]
+
 export function Privacy() {
   const { t } = useTranslation()
   const lang = useLang()
+  const sections = lang === 'ar' ? sectionsAr : sectionsEn
 
   return (
     <div style={{ background: '#070f1a', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>
@@ -62,7 +102,7 @@ export function Privacy() {
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
             <path d="M11 7H3M7 11L3 7l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back to Home
+          {t('nav.back_home')}
         </a>
 
         <div className="section-label">{t('privacy.last_updated')}</div>
@@ -80,8 +120,8 @@ export function Privacy() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
           {sections.map(s => (
             <div key={s.heading} style={{
-              borderLeft: '2px solid rgba(200,168,75,0.2)',
-              paddingLeft: '24px',
+              borderInlineStart: '2px solid rgba(200,168,75,0.2)',
+              paddingInlineStart: '24px',
             }}>
               <h2 style={{
                 fontFamily: "'DM Sans', sans-serif",

@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ScrollReveal } from '../ui/ScrollReveal'
 import { useTilt } from '../../hooks/useTilt'
+import { useLang } from '../../hooks/useLang'
 import type { ServiceItem } from '../../types'
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; strokeWidth?: number; color?: string }>> = {
@@ -18,6 +19,7 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
   const Icon = iconMap[service.icon] ?? Globe
   const ref = useRef<HTMLAnchorElement>(null)
   const { t } = useTranslation()
+  const lang = useLang()
   useTilt(ref as React.RefObject<HTMLElement>, 8)
 
   const cardStyle: React.CSSProperties = {
@@ -102,7 +104,8 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
           display: 'flex', alignItems: 'center', gap: '4px',
         }}>
           {t('services.learn_more')}
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden
+            style={lang === 'ar' ? { transform: 'scaleX(-1)' } : undefined}>
             <path d="M2 6h8M6 2l4 4-4 4" stroke="#c8a84b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
