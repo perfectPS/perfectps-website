@@ -13,13 +13,6 @@ export function About() {
   const identityRef = useRef<HTMLDivElement>(null)
   useTilt(identityRef, 5)
 
-  const stats = [
-    { value: '2019', label: t('about.stat_founded') },
-    { value: '5+',   label: t('about.stat_team') },
-    { value: '15+',  label: t('about.stat_shipped') },
-    { value: '8+',   label: t('about.stat_countries') },
-  ]
-
   return (
     <section
       id="about"
@@ -89,58 +82,6 @@ export function About() {
               borderRadius: '2px',
               margin: '16px auto 0',
             }} />
-          </div>
-        </ScrollReveal>
-
-        {/* ── Stats strip ── */}
-        <ScrollReveal delay={80}>
-          <div
-            className="about-stats-row"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              background: 'rgba(200,168,75,0.04)',
-              border: '1px solid rgba(200,168,75,0.2)',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              marginBottom: '64px',
-            }}
-          >
-            {stats.map((s, i) => (
-              <div
-                key={s.label}
-                style={{
-                  padding: '32px 20px',
-                  textAlign: 'center',
-                  borderRight: i < stats.length - 1
-                    ? '1px solid rgba(200,168,75,0.1)'
-                    : 'none',
-                  background: i % 2 === 0
-                    ? 'transparent'
-                    : 'rgba(200,168,75,0.03)',
-                }}
-              >
-                <div style={{
-                  fontFamily: "'Chakra Petch', sans-serif",
-                  fontSize: 'clamp(30px, 3.5vw, 44px)',
-                  fontWeight: 700,
-                  color: '#c8a84b',
-                  lineHeight: 1,
-                  marginBottom: '8px',
-                }}>
-                  {s.value}
-                </div>
-                <div style={{
-                  fontSize: '11px',
-                  fontWeight: 600,
-                  color: '#94a3b8',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                }}>
-                  {s.label}
-                </div>
-              </div>
-            ))}
           </div>
         </ScrollReveal>
 
@@ -313,15 +254,6 @@ export function About() {
           .about-grid {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
-          }
-        }
-        @media (max-width: 600px) {
-          .about-stats-row {
-            grid-template-columns: 1fr 1fr !important;
-          }
-          .about-stats-row > div {
-            border-right: none !important;
-            border-bottom: 1px solid rgba(200,168,75,0.1);
           }
         }
       `}</style>

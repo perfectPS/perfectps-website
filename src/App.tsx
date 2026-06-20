@@ -4,6 +4,8 @@ import { PSSecure } from './pages/PSSecure'
 import { Privacy } from './pages/Privacy'
 import { Terms } from './pages/Terms'
 import { NotFound } from './pages/NotFound'
+import { VpnSaudiArabia } from './pages/VpnSaudiArabia'
+import { VpnUAE } from './pages/VpnUAE'
 import { LangLayout } from './components/layout/LangLayout'
 
 function getPreferredLang(): string {
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="ps-secure" element={<PSSecure />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
+          <Route path="vpn-saudi-arabia" element={<VpnSaudiArabia />} />
+          <Route path="vpn-uae" element={<VpnUAE />} />
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="*" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
