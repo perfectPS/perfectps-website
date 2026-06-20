@@ -103,4 +103,48 @@
     <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/terms" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/terms" />
   </url>
+
+  <!-- VPN Saudi Arabia — English -->
+  <url>
+    <loc>https://perfectps.com/en/vpn-saudi-arabia</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/vpn-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/vpn-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/vpn-saudi-arabia" />
+  </url>
+
+  <!-- VPN Saudi Arabia — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/vpn-saudi-arabia</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/vpn-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/vpn-saudi-arabia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/vpn-saudi-arabia" />
+  </url>
+
+  <!-- VPN UAE — English -->
+  <url>
+    <loc>https://perfectps.com/en/vpn-uae</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/vpn-uae" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/vpn-uae" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/vpn-uae" />
+  </url>
+
+  <!-- VPN UAE — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/vpn-uae</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/vpn-uae" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/vpn-uae" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/vpn-uae" />
+  </url>
 </urlset>
