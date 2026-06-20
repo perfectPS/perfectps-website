@@ -1,0 +1,34 @@
+{
+  "name": "perfectPS — Digital Studio",
+  "short_name": "perfectPS",
+  "description": "perfectPS builds secure web apps, mobile apps, and WireGuard VPN infrastructure for the Middle East. Creators of PS Secure VPN.",
+  "start_url": "/en/",
+  "display": "standalone",
+  "background_color": "#070f1a",
+  "theme_color": "#c8a84b",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "PS Secure VPN",
+      "short_name": "PS Secure",
+      "description": "Learn about PS Secure WireGuard VPN",
+      "url": "/en/ps-secure",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Start a project with perfectPS",
+      "url": "/en/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
