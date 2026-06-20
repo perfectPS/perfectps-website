@@ -1,6 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/500.css'
+import '@fontsource/dm-sans/700.css'
+import '@fontsource/dm-sans/800.css'
+import '@fontsource/chakra-petch/700.css'
 import { i18nReady } from './i18n'
 import App from './App'
 
