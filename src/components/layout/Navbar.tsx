@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useScrollPosition } from '../../hooks/useScrollPosition'
 import { X, Menu } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
@@ -13,6 +13,8 @@ export function Navbar() {
   const lang = useLang()
   const navigate = useNavigate()
   const isArabic = lang === 'ar'
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null)
 
   const navLinks = [
     { label: t('nav.work'),     href: `/${lang}/work` },
@@ -29,17 +31,67 @@ export function Navbar() {
     navigate(newPath + window.location.search + window.location.hash)
   }
 
+  function closeMenu() {
+    setOpen(false)
+    hamburgerRef.current?.focus()
+  }
+
+  // Trap focus inside mobile overlay when open
+  useEffect(() => {
+    if (!open) return
+    firstMenuLinkRef.current?.focus()
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') closeMenu()
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [open])
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   return (
     <>
-      <nav dir="ltr" style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        height: '68px',
-        background: scrolled ? 'rgba(7,15,26,0.96)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(24px)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(200,168,75,0.12)' : '1px solid transparent',
-        transition: 'background 300ms ease, border-bottom 300ms ease',
-      }}>
+      {/* Skip to main content */}
+      <a
+        href="#main-content"
+        style={{
+          position: 'absolute',
+          top: '-100px',
+          left: '16px',
+          zIndex: 200,
+          padding: '10px 18px',
+          background: '#c8a84b',
+          color: '#070f1a',
+          fontWeight: 700,
+          fontSize: '14px',
+          borderRadius: '8px',
+          textDecoration: 'none',
+          transition: 'top 150ms',
+        }}
+        onFocus={e => { e.currentTarget.style.top = '16px' }}
+        onBlur={e => { e.currentTarget.style.top = '-100px' }}
+      >
+        Skip to main content
+      </a>
+
+      <nav
+        dir="ltr"
+        aria-label="Main navigation"
+        style={{
+          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+          height: '68px',
+          background: scrolled ? 'rgba(7,15,26,0.96)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(24px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(200,168,75,0.12)' : '1px solid transparent',
+          transition: 'background 300ms ease, border-bottom 300ms ease',
+        }}
+      >
         <div className="container" style={{
           height: '100%',
           display: 'flex',
@@ -49,14 +101,14 @@ export function Navbar() {
         }}>
 
           {/* Logo */}
-          <a href={`/${lang}`} dir="ltr" style={{
+          <a href={`/${lang}`} dir="ltr" aria-label="perfectPS home" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '9px',
             textDecoration: 'none',
             flexShrink: 0,
           }}>
-            <svg width="26" height="30" viewBox="0 0 28 32" fill="none">
+            <svg width="26" height="30" viewBox="0 0 28 32" fill="none" aria-hidden="true">
               <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
                 fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
               <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
@@ -74,22 +126,34 @@ export function Navbar() {
           </a>
 
           {/* Desktop nav links */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '28px',
-            flex: 1,
-            justifyContent: 'center',
-          }} className="desktop-nav-links">
+          <div
+            role="list"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '28px',
+              flex: 1,
+              justifyContent: 'center',
+            }}
+            className="desktop-nav-links"
+          >
             {navLinks.map(l => (
-              <a key={l.label} href={l.href} className="ps-nav-link" dir={isArabic ? 'rtl' : 'ltr'} style={{
-                fontSize: '14px',
-                fontWeight: 500,
-                color: 'rgba(255,255,255,0.65)',
-                textDecoration: 'none',
-                transition: 'color 200ms',
-                whiteSpace: 'nowrap',
-              }}>
+              <a
+                key={l.label}
+                href={l.href}
+                role="listitem"
+                className="ps-nav-link"
+                dir={isArabic ? 'rtl' : 'ltr'}
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  color: 'rgba(255,255,255,0.65)',
+                  textDecoration: 'none',
+                  transition: 'color 200ms',
+                  whiteSpace: 'nowrap',
+                  padding: '4px 0',
+                }}
+              >
                 {l.label}
               </a>
             ))}
@@ -118,6 +182,8 @@ export function Navbar() {
                 padding: '5px 11px',
                 transition: 'border-color 200ms, background 200ms',
                 lineHeight: 1.4,
+                minWidth: '44px',
+                minHeight: '44px',
               }}
               className="ps-lang-btn"
               aria-label={isArabic ? 'Switch to English' : 'Switch to Arabic'}
@@ -125,18 +191,23 @@ export function Navbar() {
               {isArabic ? 'EN' : 'AR'}
             </button>
 
-            <a href={`/${lang}/#contact`} style={{
-              padding: '8px 20px',
-              background: '#c8a84b',
-              color: '#0d1b2e',
-              borderRadius: '8px',
-              fontSize: '13px',
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-              textDecoration: 'none',
-              transition: 'background 200ms',
-              whiteSpace: 'nowrap',
-            }}
+            <a
+              href={`/${lang}/#contact`}
+              style={{
+                padding: '10px 20px',
+                background: '#c8a84b',
+                color: '#0d1b2e',
+                borderRadius: '8px',
+                fontSize: '13px',
+                fontWeight: 700,
+                fontFamily: "'DM Sans', sans-serif",
+                textDecoration: 'none',
+                transition: 'background 200ms',
+                whiteSpace: 'nowrap',
+                display: 'inline-flex',
+                alignItems: 'center',
+                minHeight: '44px',
+              }}
               className="ps-cta-btn"
             >
               {t('nav.cta')}
@@ -145,27 +216,39 @@ export function Navbar() {
 
           {/* Mobile hamburger */}
           <button
+            ref={hamburgerRef}
             onClick={() => setOpen(!open)}
             className="ps-hamburger"
+            aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
             style={{
               display: 'none',
-              padding: '8px',
+              padding: '10px',
+              minWidth: '44px',
+              minHeight: '44px',
               color: '#c8a84b',
               background: open ? 'rgba(200,168,75,0.08)' : 'none',
               border: open ? '1px solid rgba(200,168,75,0.2)' : '1px solid transparent',
               borderRadius: '6px',
               cursor: 'pointer',
               transition: 'background 200ms',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>
         </div>
       </nav>
 
       {/* Mobile overlay */}
-      {open && (
-        <div dir={isArabic ? 'rtl' : 'ltr'} style={{
+      <nav
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        aria-hidden={!open}
+        dir={isArabic ? 'rtl' : 'ltr'}
+        style={{
           position: 'fixed',
           top: '68px',
           left: 0, right: 0, bottom: 0,
@@ -174,74 +257,84 @@ export function Navbar() {
           backdropFilter: 'blur(24px)',
           WebkitBackdropFilter: 'blur(24px)',
           borderTop: '1px solid rgba(200,168,75,0.1)',
-          display: 'flex',
+          display: open ? 'flex' : 'none',
           flexDirection: 'column',
           padding: '24px 24px 40px',
-        }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', flex: 1 }}>
-            {navLinks.map((l, i) => (
-              <a
-                key={l.label}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                style={{
-                  padding: '15px 4px',
-                  fontSize: '18px',
-                  fontWeight: 600,
-                  color: 'rgba(255,255,255,0.8)',
-                  borderBottom: '1px solid rgba(200,168,75,0.08)',
-                  fontFamily: "'DM Sans', sans-serif",
-                  textDecoration: 'none',
-                  animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
-                  animationDelay: `${i * 45}ms`,
-                }}
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '20px' }}>
-            <button
-              onClick={() => { toggleLanguage(); setOpen(false) }}
-              style={{
-                padding: '13px',
-                background: 'rgba(200,168,75,0.06)',
-                border: '1px solid rgba(200,168,75,0.18)',
-                borderRadius: '8px',
-                color: '#c8a84b',
-                fontSize: '14px',
-                fontWeight: 700,
-                fontFamily: "'DM Sans', sans-serif",
-                cursor: 'pointer',
-                animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
-                animationDelay: `${navLinks.length * 45}ms`,
-              }}
-            >
-              {isArabic ? t('nav.switch_to_en') : t('nav.switch_to_ar')}
-            </button>
+        }}
+      >
+        <div role="list" style={{ display: 'flex', flexDirection: 'column', gap: '2px', flex: 1 }}>
+          {navLinks.map((l, i) => (
             <a
-              href={`/${lang}/#contact`}
-              onClick={() => setOpen(false)}
+              key={l.label}
+              ref={i === 0 ? firstMenuLinkRef : undefined}
+              href={l.href}
+              role="listitem"
+              onClick={() => closeMenu()}
+              tabIndex={open ? 0 : -1}
               style={{
-                padding: '15px',
-                background: '#c8a84b',
-                color: '#0d1b2e',
-                borderRadius: '8px',
-                textAlign: 'center',
-                fontSize: '15px',
-                fontWeight: 700,
+                padding: '15px 4px',
+                fontSize: '18px',
+                fontWeight: 600,
+                color: 'rgba(255,255,255,0.8)',
+                borderBottom: '1px solid rgba(200,168,75,0.08)',
                 fontFamily: "'DM Sans', sans-serif",
                 textDecoration: 'none',
                 animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
-                animationDelay: `${(navLinks.length + 1) * 45}ms`,
+                animationDelay: `${i * 45}ms`,
               }}
             >
-              {t('nav.cta')}
+              {l.label}
             </a>
-          </div>
+          ))}
         </div>
-      )}
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', paddingTop: '20px' }}>
+          <button
+            onClick={() => { toggleLanguage(); closeMenu() }}
+            tabIndex={open ? 0 : -1}
+            style={{
+              padding: '13px',
+              minHeight: '48px',
+              background: 'rgba(200,168,75,0.06)',
+              border: '1px solid rgba(200,168,75,0.18)',
+              borderRadius: '8px',
+              color: '#c8a84b',
+              fontSize: '14px',
+              fontWeight: 700,
+              fontFamily: "'DM Sans', sans-serif",
+              cursor: 'pointer',
+              animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
+              animationDelay: `${navLinks.length * 45}ms`,
+            }}
+          >
+            {isArabic ? t('nav.switch_to_en') : t('nav.switch_to_ar')}
+          </button>
+          <a
+            href={`/${lang}/#contact`}
+            onClick={() => closeMenu()}
+            tabIndex={open ? 0 : -1}
+            style={{
+              padding: '15px',
+              minHeight: '48px',
+              background: '#c8a84b',
+              color: '#0d1b2e',
+              borderRadius: '8px',
+              textAlign: 'center',
+              fontSize: '15px',
+              fontWeight: 700,
+              fontFamily: "'DM Sans', sans-serif",
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
+              animationDelay: `${(navLinks.length + 1) * 45}ms`,
+            }}
+          >
+            {t('nav.cta')}
+          </a>
+        </div>
+      </nav>
 
       <style>{`
         @media (max-width: 768px) {
@@ -250,11 +343,28 @@ export function Navbar() {
           .ps-hamburger { display: flex !important; }
         }
         .ps-nav-link:hover { color: #fff !important; }
+        .ps-nav-link:focus-visible {
+          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline-offset: 3px !important;
+          border-radius: 3px !important;
+        }
         .ps-lang-btn:hover {
           border-color: rgba(200,168,75,0.5) !important;
           background: rgba(200,168,75,0.08) !important;
         }
+        .ps-lang-btn:focus-visible {
+          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline-offset: 3px !important;
+        }
         .ps-cta-btn:hover { background: #e0c068 !important; }
+        .ps-cta-btn:focus-visible {
+          outline: 2px solid #fff !important;
+          outline-offset: 3px !important;
+        }
+        .ps-hamburger:focus-visible {
+          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline-offset: 3px !important;
+        }
         @keyframes psMobileIn {
           from { opacity: 0; transform: translateY(10px); }
           to   { opacity: 1; transform: translateY(0); }

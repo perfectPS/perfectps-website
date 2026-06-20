@@ -16,36 +16,52 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
   const Icon = iconMap[service.icon] ?? Globe
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLAnchorElement>(null)
   const { t } = useTranslation()
-  useTilt(ref, 8)
+  useTilt(ref as React.RefObject<HTMLElement>, 8)
+
+  const cardStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    background: '#112240',
+    border: '1px solid rgba(200,168,75,0.18)',
+    borderRadius: '14px',
+    padding: '32px',
+    height: '100%',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    position: 'relative',
+    overflow: 'hidden',
+    transformStyle: 'preserve-3d',
+    transition: 'border-color 200ms ease, box-shadow 200ms ease, outline-offset 100ms',
+    outline: 'none',
+  }
 
   return (
     <ScrollReveal delay={delay} style={{ height: '100%' }}>
-      <div
+      <a
         ref={ref}
-        style={{
-          background: '#112240',
-          border: '1px solid rgba(200,168,75,0.18)',
-          borderRadius: '14px',
-          padding: '32px',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '16px',
-          transition: 'border-color 200ms ease, box-shadow 200ms ease',
-          cursor: 'default',
-          position: 'relative',
-          overflow: 'hidden',
-          transformStyle: 'preserve-3d',
-        }}
+        href={service.href ?? '#contact'}
+        aria-label={`${t('services.learn_more')} — ${service.title}`}
+        style={cardStyle}
         onMouseEnter={e => {
-          const el = e.currentTarget as HTMLElement
+          const el = e.currentTarget
           el.style.borderColor = 'rgba(200,168,75,0.5)'
-          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)'
+          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.1)'
         }}
         onMouseLeave={e => {
-          const el = e.currentTarget as HTMLElement
+          const el = e.currentTarget
+          el.style.borderColor = 'rgba(200,168,75,0.18)'
+          el.style.boxShadow = 'none'
+        }}
+        onFocus={e => {
+          const el = e.currentTarget
+          el.style.borderColor = 'rgba(200,168,75,0.6)'
+          el.style.boxShadow = '0 0 0 3px rgba(200,168,75,0.2)'
+        }}
+        onBlur={e => {
+          const el = e.currentTarget
           el.style.borderColor = 'rgba(200,168,75,0.18)'
           el.style.boxShadow = 'none'
         }}
@@ -72,17 +88,25 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
           fontFamily: "'DM Sans', sans-serif",
           fontSize: '18px', fontWeight: 700,
           color: '#ffffff',
+          margin: 0,
         }}>
           {service.title}
         </h3>
-        <p style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.7, flex: 1 }}>
+
+        <p style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.7, flex: 1, margin: 0 }}>
           {service.description}
         </p>
 
-        <div style={{ fontSize: '13px', fontWeight: 600, color: '#c8a84b' }}>
+        <div style={{
+          fontSize: '13px', fontWeight: 600, color: '#c8a84b',
+          display: 'flex', alignItems: 'center', gap: '4px',
+        }}>
           {t('services.learn_more')}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="#c8a84b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
-      </div>
+      </a>
     </ScrollReveal>
   )
 }

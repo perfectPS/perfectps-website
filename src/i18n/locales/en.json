@@ -2,7 +2,7 @@
   "nav": {
     "work": "Work",
     "services": "Services",
-    "psSecure": "PS Secure",
+    "psSecure": "Our Products",
     "about": "About",
     "contact": "Contact",
     "cta": "Get in Touch",
@@ -75,11 +75,11 @@
     "label": "Selected Work",
     "h2_line1": "Projects We're",
     "h2_line2": "Proud Of",
-    "view_all": "View all 15 projects",
+    "view_all": "View selected work",
     "page_label": "Portfolio",
-    "page_h1": "Our Work",
-    "page_body": "Digital products built for clients across industries. Quality over quantity, always.",
-    "portfolio_desc": "A selection of products built for clients across industries. Client identities are kept confidential.",
+    "page_h1": "Selected Work",
+    "page_body": "A curated sample of products built across industries. All client identities are kept confidential under NDA.",
+    "portfolio_desc": "A curated sample of products built across industries. Client identities are kept confidential under NDA.",
     "filter_all": "All Projects",
     "filter_web": "Web Apps",
     "filter_mobile": "Mobile Apps"
@@ -148,6 +148,27 @@
     "cta_h2": "Ready to Protect Your Privacy?",
     "cta_body": "Join the waitlist and be the first to get access.",
     "cta_btn": "Get Early Access"
+  },
+  "capabilities": {
+    "label": "Scale & Expertise",
+    "h2_line1": "Built Over 200",
+    "h2_line2": "Digital Products",
+    "body": "Across web, mobile, and infrastructure. We do not list them all — we let the scale speak for itself.",
+    "stat_products": "Products Delivered",
+    "stat_verticals": "Industry Verticals",
+    "stat_countries": "Countries Served",
+    "domains_heading": "What We Build",
+    "industries_heading": "Industries We Have Built For",
+    "cta_project": "Start a Project",
+    "cta_work": "See Selected Work"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: June 2026"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "last_updated": "Last updated: June 2026"
   },
   "footer": {
     "tagline": "Building digital products that are fast, secure, and built to last.",

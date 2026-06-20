@@ -50,8 +50,8 @@ export function Footer() {
     {
       title: t('footer.col_legal'),
       links: [
-        { label: t('footer.link_privacy'), href: '/privacy' },
-        { label: t('footer.link_terms'),   href: '/terms' },
+        { label: t('footer.link_privacy'), href: `/${lang}/privacy` },
+        { label: t('footer.link_terms'),   href: `/${lang}/terms` },
       ],
     },
   ]

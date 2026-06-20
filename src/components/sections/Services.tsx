@@ -1,17 +1,19 @@
 import { useTranslation } from 'react-i18next'
 import { ServiceCard } from '../cards/ServiceCard'
 import { ScrollReveal } from '../ui/ScrollReveal'
+import { useLang } from '../../hooks/useLang'
 
 export function Services() {
   const { t } = useTranslation()
+  const lang = useLang()
 
   const services = [
-    { icon: 'Globe',      title: t('services.web_title'),     description: t('services.web_desc') },
-    { icon: 'Smartphone', title: t('services.mobile_title'),  description: t('services.mobile_desc') },
-    { icon: 'Shield',     title: t('services.vpn_title'),     description: t('services.vpn_desc') },
-    { icon: 'Server',     title: t('services.backend_title'), description: t('services.backend_desc') },
-    { icon: 'Palette',    title: t('services.design_title'),  description: t('services.design_desc') },
-    { icon: 'Cloud',      title: t('services.devops_title'),  description: t('services.devops_desc') },
+    { icon: 'Globe',      title: t('services.web_title'),     description: t('services.web_desc'),     href: `/${lang}/#contact` },
+    { icon: 'Smartphone', title: t('services.mobile_title'),  description: t('services.mobile_desc'),  href: `/${lang}/#contact` },
+    { icon: 'Shield',     title: t('services.vpn_title'),     description: t('services.vpn_desc'),     href: `/${lang}/ps-secure` },
+    { icon: 'Server',     title: t('services.backend_title'), description: t('services.backend_desc'), href: `/${lang}/#contact` },
+    { icon: 'Palette',    title: t('services.design_title'),  description: t('services.design_desc'),  href: `/${lang}/#contact` },
+    { icon: 'Cloud',      title: t('services.devops_title'),  description: t('services.devops_desc'),  href: `/${lang}/#contact` },
   ]
 
   return (

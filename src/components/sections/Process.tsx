@@ -16,8 +16,8 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         ref={ref}
         style={{
           padding: '36px 28px',
-          background: '#0d1b2e',
-          border: '1px solid rgba(200,168,75,0.15)',
+          background: '#f8fafc',
+          border: '1px solid rgba(200,168,75,0.18)',
           borderRadius: '14px',
           height: '100%',
           position: 'relative',
@@ -41,7 +41,7 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         <div style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: '52px', fontWeight: 800,
-          color: 'rgba(200,168,75,0.12)',
+          color: 'rgba(200,168,75,0.15)',
           lineHeight: 1,
           position: 'absolute', top: 14, right: 18,
           userSelect: 'none',
@@ -63,11 +63,11 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         <h3 style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: '19px', fontWeight: 700,
-          color: '#fff', marginBottom: '12px',
+          color: '#0d1b2e', marginBottom: '12px',
         }}>
           {step.title}
         </h3>
-        <p style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.75 }}>
+        <p style={{ fontSize: '14px', color: '#64748b', lineHeight: 1.75 }}>
           {step.desc}
         </p>
       </div>
@@ -101,13 +101,9 @@ export function Process() {
     <section
       className="section"
       style={{
-        background: '#112240',
+        background: '#ffffff',
         overflow: 'hidden',
         position: 'relative',
-        backgroundImage: `url('/bg/process-bg.svg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
       }}
     >
       <div aria-hidden style={{
@@ -141,13 +137,13 @@ export function Process() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800,
-              color: '#fff',
+              color: '#0d1b2e',
               marginBottom: '16px',
             }}>
               {t('process.h2_line1')}<br />
-              <span className="gradient-text">{t('process.h2_line2')}</span>
+              <span className="gradient-text--gold">{t('process.h2_line2')}</span>
             </h2>
-            <p style={{ fontSize: '17px', color: '#8fa3bc', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '17px', color: '#64748b', lineHeight: 1.7 }}>
               {t('process.body')}
             </p>
           </div>
