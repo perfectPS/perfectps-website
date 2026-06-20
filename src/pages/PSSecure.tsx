@@ -2,13 +2,37 @@ import { Shield, Eye, Zap, Smartphone, Globe, Lock } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../components/layout/Section'
 import { useLang } from '../hooks/useLang'
+import { usePageSeo } from '../hooks/usePageSeo'
 import { SectionLabel } from '../components/ui/SectionLabel'
 import { Badge } from '../components/ui/Badge'
 import { ScrollReveal } from '../components/ui/ScrollReveal'
 
+const BASE = 'https://perfectps.com'
+
+const SEO = {
+  en: {
+    title: 'PS Secure VPN — WireGuard VPN for iOS & Android | perfectPS',
+    description:
+      'PS Secure is a WireGuard-powered VPN for iOS and Android with a strict zero-log policy, AdGuard DNS filtering, and a kill switch. Fast, private, and built for the Middle East by perfectPS.',
+  },
+  ar: {
+    title: 'PS Secure VPN — تطبيق VPN بـ WireGuard لـ iOS وAndroid | perfectPS',
+    description:
+      'PS Secure تطبيق VPN مبني على WireGuard لـ iOS وAndroid. سياسة صفرية السجلات وفلتر DNS من AdGuard ومفتاح إيقاع طارئ. سريع وخاص ومصمم للشرق الأوسط من perfectPS.',
+  },
+}
+
 export function PSSecure() {
   const lang = useLang()
   const { t } = useTranslation()
+
+  const seo = SEO[lang as 'en' | 'ar'] ?? SEO.en
+  usePageSeo({
+    title: seo.title,
+    description: seo.description,
+    canonical: `${BASE}/${lang}/ps-secure`,
+    lang,
+  })
 
   const features = [
     { icon: Zap,        title: t('pssecure.f1_title'), desc: t('pssecure.f1_desc') },

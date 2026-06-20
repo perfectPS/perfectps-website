@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../hooks/useLang'
+import { usePageSeo } from '../hooks/usePageSeo'
 
 const sectionsEn = [
   {
@@ -95,10 +96,33 @@ const sectionsAr = [
   },
 ]
 
+const BASE = 'https://perfectps.com'
+
+const SEO = {
+  en: {
+    title: 'Terms of Service | perfectPS',
+    description:
+      'Terms of Service for perfectPS and PS Secure VPN. Covers service scope, intellectual property, payment terms, confidentiality, and acceptable use of PS Secure VPN.',
+  },
+  ar: {
+    title: 'شروط الخدمة | perfectPS',
+    description:
+      'شروط الخدمة الخاصة بـ perfectPS وتطبيق PS Secure VPN. تشمل نطاق الخدمة والملكية الفكرية وشروط الدفع والسرية والاستخدام المقبول لـ PS Secure VPN.',
+  },
+}
+
 export function Terms() {
   const { t } = useTranslation()
   const lang = useLang()
   const sections = lang === 'ar' ? sectionsAr : sectionsEn
+
+  const seo = SEO[lang as 'en' | 'ar'] ?? SEO.en
+  usePageSeo({
+    title: seo.title,
+    description: seo.description,
+    canonical: `${BASE}/${lang}/terms`,
+    lang,
+  })
 
   return (
     <div style={{ background: '#070f1a', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>

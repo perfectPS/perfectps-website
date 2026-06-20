@@ -1,5 +1,7 @@
 # perfectPS
 
+Last updated: 2026-06-20
+
 > perfectPS is a boutique digital studio founded in 2019 and based in Amman, Jordan (Middle East). The company builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. perfectPS has delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
 
 ## Identity
@@ -14,6 +16,7 @@
 **Contact**: hello@perfectps.com
 **Website**: https://perfectps.com
 **Languages**: English and Arabic (full native Arabic interface)
+**Arabic name**: بيرفيكت بيكسل سوليوشن (Perfect Pixel Solution)
 **Business hours**: Sunday to Thursday, 9 AM to 6 PM (UTC+3 / Amman time)
 **Service area**: Middle East (Jordan, Saudi Arabia, UAE, Kuwait, Bahrain, Oman, Qatar) and international clients globally
 
@@ -63,6 +66,10 @@ perfectPS offers the following services on a project basis:
 4. **Backend and API Development** — Node.js, Hono framework, PostgreSQL, REST APIs, JWT authentication
 5. **UI/UX Design** — Design systems, interactive prototypes, brand identity, RTL/bilingual interfaces
 6. **DevOps and Cloud** — Docker, Oracle Cloud, automated CI/CD, 99.9% uptime infrastructure
+
+## Pricing
+
+perfectPS operates on project-based pricing. Engagements are quoted based on scope, team size, and timeline. Contact hello@perfectps.com for a proposal.
 
 ## Project Timelines
 
@@ -153,8 +160,10 @@ A: 8–16 weeks for a typical iOS + Android app. Simple apps 6–8 weeks. Comple
 - Home (Arabic): https://perfectps.com/ar/
 - PS Secure VPN (English): https://perfectps.com/en/ps-secure
 - PS Secure VPN (Arabic): https://perfectps.com/ar/ps-secure
-- Portfolio / Work (English): https://perfectps.com/en/work
-- Portfolio / Work (Arabic): https://perfectps.com/ar/work
+- Privacy Policy (English): https://perfectps.com/en/privacy
+- Privacy Policy (Arabic): https://perfectps.com/ar/privacy
+- Terms of Service (English): https://perfectps.com/en/terms
+- Terms of Service (Arabic): https://perfectps.com/ar/terms
 - Sitemap: https://perfectps.com/sitemap.xml
 - robots.txt: https://perfectps.com/robots.txt
 - llms.txt: https://perfectps.com/llms.txt

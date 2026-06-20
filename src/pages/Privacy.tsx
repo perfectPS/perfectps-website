@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../hooks/useLang'
+import { usePageSeo } from '../hooks/usePageSeo'
 
 const sectionsEn = [
   {
@@ -79,10 +80,33 @@ const sectionsAr = [
   },
 ]
 
+const BASE = 'https://perfectps.com'
+
+const SEO = {
+  en: {
+    title: 'Privacy Policy | perfectPS',
+    description:
+      'Read the perfectPS privacy policy. We operate a strict zero-log policy for PS Secure VPN and use only essential cookies on our website. Your data is never sold or shared.',
+  },
+  ar: {
+    title: 'سياسة الخصوصية | perfectPS',
+    description:
+      'اطلع على سياسة خصوصية perfectPS. نطبق سياسة صارمة لعدم تسجيل البيانات في PS Secure VPN ونستخدم ملفات تعريف ارتباط أساسية فقط. بياناتك لا تُباع ولا تُشارك.',
+  },
+}
+
 export function Privacy() {
   const { t } = useTranslation()
   const lang = useLang()
   const sections = lang === 'ar' ? sectionsAr : sectionsEn
+
+  const seo = SEO[lang as 'en' | 'ar'] ?? SEO.en
+  usePageSeo({
+    title: seo.title,
+    description: seo.description,
+    canonical: `${BASE}/${lang}/privacy`,
+    lang,
+  })
 
   return (
     <div style={{ background: '#070f1a', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>

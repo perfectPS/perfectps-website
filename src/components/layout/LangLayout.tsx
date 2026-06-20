@@ -73,38 +73,42 @@ export function LangLayout() {
       document.head.appendChild(el)
     })
 
-    // Update canonical to the current lang-specific URL
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
-    if (!canonical) {
-      canonical = document.createElement('link')
-      canonical.setAttribute('rel', 'canonical')
-      document.head.appendChild(canonical)
-    }
-    canonical.setAttribute('href', `${BASE}/${lang}${suffix}`)
-
-    // Per-page title, description, and OG meta
-    const meta = PAGE_META[suffix]?.[lang] ?? PAGE_META['/'].en
-    document.title = meta.title
-
-    const descEl = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-    if (descEl) descEl.setAttribute('content', meta.description)
-
-    const ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]')
-    if (ogTitle) ogTitle.setAttribute('content', meta.title)
-    const ogDesc = document.querySelector<HTMLMetaElement>('meta[property="og:description"]')
-    if (ogDesc) ogDesc.setAttribute('content', meta.description)
-    const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]')
-    if (ogUrl) ogUrl.setAttribute('content', `${BASE}/${lang}${suffix}`)
+    // og:locale and language meta are language-level, not page-level — always set here
     const ogLocale = document.querySelector<HTMLMetaElement>('meta[property="og:locale"]')
     if (ogLocale) ogLocale.setAttribute('content', lang === 'ar' ? 'ar_SA' : 'en_US')
 
-    const twTitle = document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]')
-    if (twTitle) twTitle.setAttribute('content', meta.title)
-    const twDesc = document.querySelector<HTMLMetaElement>('meta[name="twitter:description"]')
-    if (twDesc) twDesc.setAttribute('content', meta.description)
-
     const langMeta = document.querySelector<HTMLMetaElement>('meta[name="language"]')
     if (langMeta) langMeta.setAttribute('content', lang === 'ar' ? 'Arabic' : 'English')
+
+    // Per-page title, description, canonical, and OG meta are set by usePageSeo in each
+    // page component. Only handle them here for the home route ('/') which has no usePageSeo.
+    if (suffix === '/') {
+      const meta = PAGE_META['/'][lang as 'en' | 'ar'] ?? PAGE_META['/'].en
+      document.title = meta.title
+
+      const descEl = document.querySelector<HTMLMetaElement>('meta[name="description"]')
+      if (descEl) descEl.setAttribute('content', meta.description)
+
+      let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+      if (!canonical) {
+        canonical = document.createElement('link')
+        canonical.setAttribute('rel', 'canonical')
+        document.head.appendChild(canonical)
+      }
+      canonical.setAttribute('href', `${BASE}/${lang}${suffix}`)
+
+      const ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]')
+      if (ogTitle) ogTitle.setAttribute('content', meta.title)
+      const ogDesc = document.querySelector<HTMLMetaElement>('meta[property="og:description"]')
+      if (ogDesc) ogDesc.setAttribute('content', meta.description)
+      const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]')
+      if (ogUrl) ogUrl.setAttribute('content', `${BASE}/${lang}${suffix}`)
+
+      const twTitle = document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]')
+      if (twTitle) twTitle.setAttribute('content', meta.title)
+      const twDesc = document.querySelector<HTMLMetaElement>('meta[name="twitter:description"]')
+      if (twDesc) twDesc.setAttribute('content', meta.description)
+    }
   }, [lang, location.pathname]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
