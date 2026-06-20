@@ -43,7 +43,6 @@ export function Footer() {
       title: t('footer.col_company'),
       links: [
         { label: t('footer.link_about'),   href: `/${lang}/#about` },
-        { label: t('footer.link_work'),    href: `/${lang}/work` },
         { label: t('footer.link_contact'), href: `/${lang}/#contact` },
       ],
     },
@@ -70,21 +69,54 @@ export function Footer() {
         }} className="footer-grid">
 
           <div>
-            <a href={`/${lang}`} dir="ltr" style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '20px', fontWeight: 800,
-              color: '#fff',
+            <a href={`/${lang}`} style={{
               display: 'inline-flex', alignItems: 'center', gap: '9px',
               marginBottom: '14px',
               textDecoration: 'none',
             }}>
-              <svg width="22" height="26" viewBox="0 0 28 32" fill="none">
+              <svg width="22" height="26" viewBox="0 0 28 32" fill="none" aria-hidden="true">
                 <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
                   fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
                 <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
                   fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
               </svg>
-              perfect<span style={{ color: '#c8a84b' }}>PS</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+                {lang === 'ar' ? (
+                  <span style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: '15px',
+                    fontWeight: 700,
+                    color: '#fff',
+                    lineHeight: 1.2,
+                  }}>
+                    {t('nav.logo_fullname')}
+                  </span>
+                ) : (
+                  <>
+                    <span style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '20px',
+                      fontWeight: 800,
+                      color: '#fff',
+                      letterSpacing: '-0.3px',
+                      lineHeight: 1.1,
+                    }}>
+                      perfect<span style={{ color: '#c8a84b' }}>PS</span>
+                    </span>
+                    <span style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: '9px',
+                      fontWeight: 500,
+                      color: 'rgba(200,168,75,0.55)',
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase',
+                      lineHeight: 1,
+                    }}>
+                      {t('nav.logo_fullname')}
+                    </span>
+                  </>
+                )}
+              </div>
             </a>
             <p style={{
               fontSize: '14px',

@@ -235,7 +235,7 @@ export function Capabilities() {
               {t('capabilities.cta_project')}
             </a>
             <a
-              href={`/${lang}/work`}
+              href={`/${lang}/ps-secure`}
               style={{
                 padding: '14px 32px',
                 background: 'rgba(13,27,46,0.05)',

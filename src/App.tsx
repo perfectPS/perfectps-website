@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './pages/Home'
-import { Work } from './pages/Work'
 import { PSSecure } from './pages/PSSecure'
 import { Privacy } from './pages/Privacy'
 import { Terms } from './pages/Terms'
@@ -20,7 +19,6 @@ export default function App() {
         <Route path="/" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
         <Route path="/:lang" element={<LangLayout />}>
           <Route index element={<Home />} />
-          <Route path="work" element={<Work />} />
           <Route path="ps-secure" element={<PSSecure />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
