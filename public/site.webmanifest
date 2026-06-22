@@ -4,12 +4,15 @@
   "description": "perfectPS builds secure web apps, mobile apps, and WireGuard VPN infrastructure for the Middle East. Creators of PS Secure VPN.",
   "start_url": "/en/",
   "display": "standalone",
-  "background_color": "#070f1a",
-  "theme_color": "#c8a84b",
+  "background_color": "#0D1B2E",
+  "theme_color": "#FACC15",
   "lang": "en",
   "dir": "ltr",
   "categories": ["business", "productivity", "utilities"],
   "icons": [
+    { "src": "/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
     { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
   ],
   "shortcuts": [

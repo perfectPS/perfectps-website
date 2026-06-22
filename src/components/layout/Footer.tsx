@@ -57,8 +57,8 @@ export function Footer() {
 
   return (
     <footer style={{
-      background: '#070f1a',
-      borderTop: '1px solid rgba(200,168,75,0.18)',
+      background: 'var(--navy-deep, #070F1A)',
+      borderTop: '1px solid rgba(34,211,238,0.15)',
     }}>
       <div className="container" style={{ padding: '64px 32px 48px' }}>
         <div style={{
@@ -74,12 +74,9 @@ export function Footer() {
               marginBottom: '14px',
               textDecoration: 'none',
             }}>
-              <svg width="22" height="26" viewBox="0 0 28 32" fill="none" aria-hidden="true">
-                <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
-                  fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
-                <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
-                  fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
-              </svg>
+              <img src="/favicon.svg" width="28" height="28" alt="" aria-hidden="true"
+                style={{ borderRadius: '6px', filter: 'drop-shadow(0 0 5px rgba(34,211,238,0.3))' }}
+              />
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
                 {lang === 'ar' ? (
                   <span style={{
@@ -94,20 +91,20 @@ export function Footer() {
                 ) : (
                   <>
                     <span style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '20px',
-                      fontWeight: 800,
+                      fontFamily: "'Chakra Petch', monospace",
+                      fontSize: '18px',
+                      fontWeight: 700,
                       color: '#fff',
                       letterSpacing: '-0.3px',
                       lineHeight: 1.1,
                     }}>
-                      perfect<span style={{ color: '#c8a84b' }}>PS</span>
+                      perfect<span style={{ color: '#FACC15' }}>PS</span>
                     </span>
                     <span style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: '9px',
                       fontWeight: 500,
-                      color: 'rgba(200,168,75,0.55)',
+                      color: 'rgba(34,211,238,0.6)',
                       letterSpacing: '0.04em',
                       textTransform: 'uppercase',
                       lineHeight: 1,
@@ -132,13 +129,13 @@ export function Footer() {
                 <a key={s.label} href={s.href} aria-label={s.label} style={{
                   width: 36, height: 36,
                   borderRadius: 8,
-                  border: '1px solid rgba(200,168,75,0.15)',
+                  border: '1px solid rgba(34,211,238,0.15)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   color: 'rgba(143,163,188,0.5)',
                   transition: 'border-color 200ms, color 200ms',
                 }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b' }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.15)'; el.style.color = 'rgba(143,163,188,0.5)' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#FACC15'; el.style.color = '#FACC15' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(34,211,238,0.15)'; el.style.color = 'rgba(143,163,188,0.5)' }}
                 >
                   <s.Icon />
                 </a>
@@ -151,7 +148,7 @@ export function Footer() {
               <h4 style={{
                 fontSize: '11px', fontWeight: 700,
                 letterSpacing: '2px', textTransform: 'uppercase',
-                color: '#c8a84b',
+                color: '#FACC15',
                 marginBottom: '20px',
               }}>
                 {col.title}
