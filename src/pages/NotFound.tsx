@@ -1,7 +1,14 @@
 import { useLang } from '../hooks/useLang'
+import { usePageSeo } from '../hooks/usePageSeo'
 
 export function NotFound() {
   const lang = useLang()
+  usePageSeo({
+    title: '404 Not Found | perfectPS',
+    description: 'The page you are looking for does not exist. Return to perfectPS.',
+    canonical: `https://perfectps.com/${lang}/`,
+    lang,
+  })
   return (
     <>
       <div style={{

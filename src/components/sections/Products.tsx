@@ -27,7 +27,7 @@ export function Products() {
       {/* Dot grid */}
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
-        backgroundImage: 'radial-gradient(circle, rgba(200,168,75,0.22) 1px, transparent 1px)',
+        backgroundImage: 'radial-gradient(circle, rgba(250,204,21,0.22) 1px, transparent 1px)',
         backgroundSize: '32px 32px',
         opacity: 0.45,
       }} />
@@ -54,7 +54,7 @@ export function Products() {
         transform: 'translateX(-50%)',
         width: 1200, height: 700,
         borderRadius: '50%',
-        background: 'radial-gradient(ellipse, rgba(200,168,75,0.20) 0%, rgba(200,168,75,0.07) 35%, transparent 65%)',
+        background: 'radial-gradient(ellipse, rgba(250,204,21,0.20) 0%, rgba(250,204,21,0.07) 35%, transparent 65%)',
         pointerEvents: 'none', zIndex: 0,
       }} />
 
@@ -71,7 +71,7 @@ export function Products() {
       <div aria-hidden style={{
         position: 'absolute', top: '22%', left: 0, right: 0,
         height: '1px',
-        background: 'linear-gradient(90deg, transparent 0%, rgba(200,168,75,0.18) 20%, rgba(200,168,75,0.35) 50%, rgba(200,168,75,0.18) 80%, transparent 100%)',
+        background: 'linear-gradient(90deg, transparent 0%, rgba(250,204,21,0.18) 20%, rgba(250,204,21,0.35) 50%, rgba(250,204,21,0.18) 80%, transparent 100%)',
         pointerEvents: 'none', zIndex: 0,
       }} />
 
@@ -110,10 +110,10 @@ export function Products() {
               display: 'grid',
               gridTemplateColumns: '1fr 1.4fr',
               background: 'linear-gradient(145deg, #0d2247 0%, #091729 100%)',
-              border: '1px solid rgba(200,168,75,0.2)',
+              border: '1px solid rgba(250,204,21,0.2)',
               borderRadius: '24px',
               overflow: 'hidden',
-              boxShadow: '0 40px 100px rgba(0,0,0,0.5), inset 0 1px 0 rgba(200,168,75,0.12)',
+              boxShadow: '0 40px 100px rgba(0,0,0,0.5), inset 0 1px 0 rgba(250,204,21,0.12)',
             }}
           >
             {/* ── Left: visual panel ── */}
@@ -125,8 +125,8 @@ export function Products() {
               justifyContent: 'center',
               gap: '28px',
               padding: '56px 36px',
-              borderInlineEnd: '1px solid rgba(200,168,75,0.1)',
-              background: 'linear-gradient(180deg, rgba(200,168,75,0.04) 0%, transparent 100%)',
+              borderInlineEnd: '1px solid rgba(250,204,21,0.1)',
+              background: 'linear-gradient(180deg, rgba(250,204,21,0.04) 0%, transparent 100%)',
               overflow: 'hidden',
               minHeight: '460px',
             }}>
@@ -134,7 +134,7 @@ export function Products() {
               <div aria-hidden style={{
                 position: 'absolute', top: -60, right: -60,
                 width: 240, height: 240, borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(200,168,75,0.1) 0%, transparent 65%)',
+                background: 'radial-gradient(circle, rgba(250,204,21,0.1) 0%, transparent 65%)',
                 pointerEvents: 'none',
               }} />
               <div aria-hidden style={{
@@ -148,12 +148,12 @@ export function Products() {
               <div className="shield-glow" style={{
                 width: 96, height: 96,
                 borderRadius: '26px',
-                background: 'rgba(200,168,75,0.1)',
-                border: '1px solid rgba(200,168,75,0.28)',
+                background: 'rgba(250,204,21,0.1)',
+                border: '1px solid rgba(250,204,21,0.28)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 position: 'relative',
               }}>
-                <Shield size={44} color="#c8a84b" strokeWidth={1.4} />
+                <Shield size={44} color="#FACC15" strokeWidth={1.4} />
               </div>
 
               {/* Brand */}
@@ -163,7 +163,7 @@ export function Products() {
                   fontSize: '28px', fontWeight: 800,
                 }}>
                   <span style={{ color: '#fff' }}>PS </span>
-                  <span style={{ color: '#c8a84b' }}>Secure</span>
+                  <span style={{ color: '#FACC15' }}>Secure</span>
                 </div>
                 <div style={{
                   fontSize: '12px', color: 'rgba(255,255,255,0.35)',
@@ -180,9 +180,9 @@ export function Products() {
               }}>
                 {techTags.map(tag => (
                   <span key={tag} style={{
-                    background: 'rgba(200,168,75,0.07)',
-                    border: '1px solid rgba(200,168,75,0.2)',
-                    color: 'rgba(200,168,75,0.85)',
+                    background: 'rgba(250,204,21,0.07)',
+                    border: '1px solid rgba(250,204,21,0.2)',
+                    color: 'rgba(250,204,21,0.85)',
                     fontSize: '10px', fontWeight: 700,
                     borderRadius: '100px',
                     padding: '4px 12px',
@@ -220,9 +220,9 @@ export function Products() {
               <div>
                 <div style={{
                   display: 'inline-flex', alignItems: 'center', gap: '6px',
-                  background: 'rgba(200,168,75,0.1)',
-                  border: '1px solid rgba(200,168,75,0.25)',
-                  color: '#c8a84b',
+                  background: 'rgba(250,204,21,0.1)',
+                  border: '1px solid rgba(250,204,21,0.25)',
+                  color: '#FACC15',
                   fontSize: '11px', fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.08em',
                   borderRadius: '100px',
@@ -242,7 +242,7 @@ export function Products() {
                 }}>
                   {t('products.name')}
                 </h3>
-                <p style={{ fontSize: '14px', color: '#c8a84b', fontWeight: 500, margin: 0 }}>
+                <p style={{ fontSize: '14px', color: '#FACC15', fontWeight: 500, margin: 0 }}>
                   {t('products.subtitle')}
                 </p>
               </div>
@@ -258,7 +258,7 @@ export function Products() {
               </p>
 
               {/* Divider */}
-              <div style={{ height: 1, background: 'rgba(200,168,75,0.1)' }} />
+              <div style={{ height: 1, background: 'rgba(250,204,21,0.1)' }} />
 
               {/* Features */}
               <div style={{
@@ -277,11 +277,11 @@ export function Products() {
                     <div style={{
                       width: 28, height: 28,
                       borderRadius: '7px',
-                      background: 'rgba(200,168,75,0.1)',
+                      background: 'rgba(250,204,21,0.1)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <Icon size={14} color="#c8a84b" strokeWidth={2} />
+                      <Icon size={14} color="#FACC15" strokeWidth={2} />
                     </div>
                     <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>
                       {label}
@@ -296,7 +296,7 @@ export function Products() {
                   href={`/${lang}/ps-secure`}
                   style={{
                     padding: '13px 28px',
-                    background: 'linear-gradient(135deg, #c8a84b 0%, #a07830 100%)',
+                    background: 'linear-gradient(135deg, #FACC15 0%, #a07830 100%)',
                     color: '#070f1a',
                     borderRadius: '10px',
                     fontSize: '14px', fontWeight: 700,
@@ -326,9 +326,9 @@ export function Products() {
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.borderColor = 'rgba(200,168,75,0.4)'
-                    el.style.color = '#c8a84b'
-                    el.style.background = 'rgba(200,168,75,0.05)'
+                    el.style.borderColor = 'rgba(250,204,21,0.4)'
+                    el.style.color = '#FACC15'
+                    el.style.background = 'rgba(250,204,21,0.05)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
@@ -354,8 +354,8 @@ export function Products() {
           animation: shield-float 4s ease-in-out infinite, glow-pulse-product 3s ease-in-out infinite;
         }
         @keyframes glow-pulse-product {
-          0%, 100% { box-shadow: 0 0 24px rgba(200,168,75,0.15); }
-          50%       { box-shadow: 0 0 50px rgba(200,168,75,0.4), 0 0 90px rgba(200,168,75,0.12); }
+          0%, 100% { box-shadow: 0 0 24px rgba(250,204,21,0.15); }
+          50%       { box-shadow: 0 0 50px rgba(250,204,21,0.4), 0 0 90px rgba(250,204,21,0.12); }
         }
         @keyframes live-ping {
           0%, 100% { opacity: 1; transform: scale(1); }
@@ -363,7 +363,7 @@ export function Products() {
         }
         @media (max-width: 860px) {
           .product-split { grid-template-columns: 1fr !important; }
-          .product-split > div:first-child { border-inline-end: none !important; border-bottom: 1px solid rgba(200,168,75,0.1); min-height: 320px !important; }
+          .product-split > div:first-child { border-inline-end: none !important; border-bottom: 1px solid rgba(250,204,21,0.1); min-height: 320px !important; }
         }
       `}</style>
     </section>

@@ -105,7 +105,7 @@ export function PSSecureProtocols() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,0.07) 0%, transparent 70%)',
+              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250,204,21,0.07) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -162,14 +162,14 @@ export function PSSecureProtocols() {
                         width: '72px',
                         height: '72px',
                         borderRadius: '18px',
-                        background: 'rgba(200,168,75,0.1)',
-                        border: '1px solid rgba(200,168,75,0.25)',
+                        background: 'rgba(250,204,21,0.1)',
+                        border: '1px solid rgba(250,204,21,0.25)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                       }}
                     >
-                      <Icon size={32} color="#c8a84b" strokeWidth={1.5} />
+                      <Icon size={32} color="#FACC15" strokeWidth={1.5} />
                     </div>
                     <div>
                       <p
@@ -232,15 +232,15 @@ export function PSSecureProtocols() {
                       style={{
                         padding: '20px 24px',
                         borderRadius: '12px',
-                        border: '1px solid rgba(200,168,75,0.18)',
-                        background: 'rgba(200,168,75,0.05)',
-                        borderLeft: '3px solid #c8a84b',
+                        border: '1px solid rgba(250,204,21,0.18)',
+                        background: 'rgba(250,204,21,0.05)',
+                        borderLeft: '3px solid #FACC15',
                       }}
                     >
                       <p
                         style={{
                           fontSize: '11px',
-                          color: '#c8a84b',
+                          color: '#FACC15',
                           fontWeight: 600,
                           fontFamily: "'DM Sans', sans-serif",
                           marginBottom: '4px',
@@ -317,7 +317,7 @@ export function PSSecureProtocols() {
                       width: '100%',
                       padding: '16px 24px',
                       background: '#112240',
-                      border: '1px solid rgba(200,168,75,0.18)',
+                      border: '1px solid rgba(250,204,21,0.18)',
                       borderRadius: '12px',
                     }}
                   >
@@ -327,9 +327,9 @@ export function PSSecureProtocols() {
                         width: '40px',
                         height: '40px',
                         borderRadius: '50%',
-                        background: i === 0 ? '#c8a84b' : 'rgba(200,168,75,0.15)',
-                        border: i === 0 ? 'none' : '1px solid rgba(200,168,75,0.35)',
-                        color: i === 0 ? '#0d1b2e' : '#c8a84b',
+                        background: i === 0 ? '#FACC15' : 'rgba(250,204,21,0.15)',
+                        border: i === 0 ? 'none' : '1px solid rgba(250,204,21,0.35)',
+                        color: i === 0 ? '#0d1b2e' : '#FACC15',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -361,7 +361,7 @@ export function PSSecureProtocols() {
                       style={{
                         width: '2px',
                         height: '32px',
-                        borderLeft: '2px dashed rgba(200,168,75,0.35)',
+                        borderLeft: '2px dashed rgba(250,204,21,0.35)',
                       }}
                     />
                   )}
@@ -381,7 +381,7 @@ export function PSSecureProtocols() {
               style={{
                 display: 'inline-block',
                 padding: '16px 40px',
-                background: '#c8a84b',
+                background: '#FACC15',
                 color: '#0d1b2e',
                 borderRadius: '8px',
                 fontSize: '16px',
@@ -391,10 +391,10 @@ export function PSSecureProtocols() {
                 transition: 'background 200ms',
               }}
               onMouseEnter={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#e0c068'
+                ;(e.currentTarget as HTMLElement).style.background = '#FDE047'
               }}
               onMouseLeave={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#c8a84b'
+                ;(e.currentTarget as HTMLElement).style.background = '#FACC15'
               }}
             >
               {t('pssecure.download_cta')}

@@ -39,8 +39,8 @@ export function Capabilities() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
+          linear-gradient(rgba(250,204,21,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(250,204,21,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
       }} />
@@ -87,9 +87,9 @@ export function Capabilities() {
           <div className="cap-stats" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            border: '1px solid rgba(200,168,75,0.2)',
+            border: '1px solid rgba(250,204,21,0.2)',
             borderRadius: '16px',
-            background: 'rgba(200,168,75,0.04)',
+            background: 'rgba(250,204,21,0.04)',
             marginBottom: '48px',
             overflow: 'hidden',
           }}>
@@ -101,13 +101,13 @@ export function Capabilities() {
               <div key={s.label} style={{
                 padding: '28px 24px',
                 textAlign: 'center',
-                borderRight: i < 2 ? '1px solid rgba(200,168,75,0.14)' : 'none',
+                borderRight: i < 2 ? '1px solid rgba(250,204,21,0.14)' : 'none',
               }}>
                 <div style={{
                   fontFamily: "'Chakra Petch', sans-serif",
                   fontSize: 'clamp(28px, 4vw, 44px)',
                   fontWeight: 700,
-                  color: '#c8a84b',
+                  color: '#FACC15',
                   lineHeight: 1,
                   marginBottom: '6px',
                 }}>
@@ -131,7 +131,7 @@ export function Capabilities() {
         <ScrollReveal delay={80}>
           <div style={{
             fontSize: '11px', fontWeight: 700,
-            color: '#c8a84b',
+            color: '#FACC15',
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
             marginBottom: '16px',
@@ -157,7 +157,7 @@ export function Capabilities() {
                   gap: '16px',
                   padding: '20px 22px',
                   background: '#f8fafc',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   borderRadius: '12px',
                   transition: 'border-color 200ms, background 200ms, box-shadow 200ms',
                 }}
@@ -165,12 +165,12 @@ export function Capabilities() {
                 <div style={{
                   width: 44, height: 44,
                   borderRadius: '11px',
-                  background: 'rgba(200,168,75,0.1)',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  background: 'rgba(250,204,21,0.1)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0,
                 }}>
-                  <Icon size={20} color="#c8a84b" strokeWidth={1.75} />
+                  <Icon size={20} color="#FACC15" strokeWidth={1.75} />
                 </div>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
@@ -178,7 +178,7 @@ export function Capabilities() {
                       fontFamily: "'Chakra Petch', sans-serif",
                       fontSize: '20px',
                       fontWeight: 700,
-                      color: '#c8a84b',
+                      color: '#FACC15',
                       lineHeight: 1,
                     }}>
                       {count}
@@ -210,7 +210,7 @@ export function Capabilities() {
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <div style={{
               fontSize: '11px', fontWeight: 700,
-              color: '#c8a84b',
+              color: '#FACC15',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               marginBottom: '14px',
@@ -224,8 +224,8 @@ export function Capabilities() {
               {industries.map(ind => (
                 <span key={ind} style={{
                   padding: '6px 16px',
-                  background: 'rgba(200,168,75,0.05)',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  background: 'rgba(250,204,21,0.05)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   borderRadius: '100px',
                   fontSize: '13px',
                   fontWeight: 500,
@@ -245,7 +245,7 @@ export function Capabilities() {
               href={`/${lang}/#contact`}
               style={{
                 padding: '14px 32px',
-                background: 'linear-gradient(135deg, #c8a84b 0%, #a07830 100%)',
+                background: 'linear-gradient(135deg, #FACC15 0%, #a07830 100%)',
                 color: '#070f1a',
                 borderRadius: '10px',
                 fontSize: '14px', fontWeight: 700,
@@ -273,9 +273,9 @@ export function Capabilities() {
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement
-                el.style.borderColor = 'rgba(200,168,75,0.5)'
-                el.style.color = '#c8a84b'
-                el.style.background = 'rgba(200,168,75,0.06)'
+                el.style.borderColor = 'rgba(250,204,21,0.5)'
+                el.style.color = '#FACC15'
+                el.style.background = 'rgba(250,204,21,0.06)'
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget as HTMLElement
@@ -293,14 +293,14 @@ export function Capabilities() {
 
       <style>{`
         .cap-domain-card:hover {
-          border-color: rgba(200,168,75,0.45) !important;
-          background: rgba(200,168,75,0.05) !important;
-          box-shadow: 0 4px 20px rgba(200,168,75,0.08) !important;
+          border-color: rgba(250,204,21,0.45) !important;
+          background: rgba(250,204,21,0.05) !important;
+          box-shadow: 0 4px 20px rgba(250,204,21,0.08) !important;
         }
         @media (max-width: 760px) {
           .cap-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .cap-stats { grid-template-columns: 1fr !important; }
-          .cap-stats > div { border-right: none !important; border-bottom: 1px solid rgba(200,168,75,0.1); }
+          .cap-stats > div { border-right: none !important; border-bottom: 1px solid rgba(250,204,21,0.1); }
           .cap-stats > div:last-child { border-bottom: none; }
         }
         @media (max-width: 480px) {

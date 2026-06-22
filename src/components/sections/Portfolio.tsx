@@ -41,7 +41,7 @@ export function Portfolio({ limit }: PortfolioProps) {
         transform: 'translateX(-50%)',
         width: 900, height: 500,
         borderRadius: '50%',
-        background: 'radial-gradient(ellipse, rgba(200,168,75,0.05) 0%, transparent 65%)',
+        background: 'radial-gradient(ellipse, rgba(250,204,21,0.05) 0%, transparent 65%)',
         pointerEvents: 'none', zIndex: 0,
       }} />
 
@@ -74,7 +74,7 @@ export function Portfolio({ limit }: PortfolioProps) {
             <a
               href={`/${lang}/work`}
               style={{
-                fontSize: '13px', fontWeight: 600, color: '#c8a84b',
+                fontSize: '13px', fontWeight: 600, color: '#FACC15',
                 textDecoration: 'none', whiteSpace: 'nowrap',
                 display: 'flex', alignItems: 'center', gap: '5px',
                 opacity: 0.85, transition: 'opacity 150ms',
@@ -84,7 +84,7 @@ export function Portfolio({ limit }: PortfolioProps) {
             >
               {t('work.view_all')}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-                <path d="M3 7h8M7 3l4 4-4 4" stroke="#c8a84b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 7h8M7 3l4 4-4 4" stroke="#FACC15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
           </div>
@@ -97,8 +97,8 @@ export function Portfolio({ limit }: PortfolioProps) {
             gridTemplateColumns: '1fr auto',
             alignItems: 'center',
             gap: '32px',
-            background: 'linear-gradient(135deg, rgba(200,168,75,0.08) 0%, rgba(200,168,75,0.03) 100%)',
-            border: '1px solid rgba(200,168,75,0.16)',
+            background: 'linear-gradient(135deg, rgba(250,204,21,0.08) 0%, rgba(250,204,21,0.03) 100%)',
+            border: '1px solid rgba(250,204,21,0.16)',
             borderRadius: '16px',
             padding: '24px 32px',
             marginBottom: '48px',
@@ -108,7 +108,7 @@ export function Portfolio({ limit }: PortfolioProps) {
                 fontFamily: "'Chakra Petch', sans-serif",
                 fontSize: 'clamp(36px, 5vw, 56px)',
                 fontWeight: 700,
-                color: '#c8a84b',
+                color: '#FACC15',
                 lineHeight: 1,
                 marginBottom: '6px',
               }}>
@@ -162,10 +162,10 @@ export function Portfolio({ limit }: PortfolioProps) {
                   fontSize: '13px', fontWeight: 700,
                   fontFamily: "'DM Sans', sans-serif",
                   border: active === f.value
-                    ? '1.5px solid rgba(200,168,75,0.6)'
+                    ? '1.5px solid rgba(250,204,21,0.6)'
                     : '1.5px solid rgba(255,255,255,0.1)',
-                  background: active === f.value ? 'rgba(200,168,75,0.12)' : 'transparent',
-                  color: active === f.value ? '#c8a84b' : 'rgba(255,255,255,0.45)',
+                  background: active === f.value ? 'rgba(250,204,21,0.12)' : 'transparent',
+                  color: active === f.value ? '#FACC15' : 'rgba(255,255,255,0.45)',
                   cursor: 'pointer',
                   transition: 'all 200ms ease',
                 }}
@@ -189,7 +189,7 @@ export function Portfolio({ limit }: PortfolioProps) {
         <ScrollReveal delay={100}>
           <div style={{
             background: 'linear-gradient(135deg, #0d2247 0%, #091729 100%)',
-            border: '1px solid rgba(200,168,75,0.2)',
+            border: '1px solid rgba(250,204,21,0.2)',
             borderRadius: '16px',
             padding: '32px 40px',
             display: 'flex',
@@ -202,12 +202,12 @@ export function Portfolio({ limit }: PortfolioProps) {
             <div>
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-                background: 'rgba(200,168,75,0.1)',
-                border: '1px solid rgba(200,168,75,0.25)',
+                background: 'rgba(250,204,21,0.1)',
+                border: '1px solid rgba(250,204,21,0.25)',
                 borderRadius: '100px',
                 padding: '4px 14px',
                 fontSize: '11px', fontWeight: 700,
-                color: '#c8a84b', letterSpacing: '0.08em',
+                color: '#FACC15', letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 marginBottom: '12px',
               }}>
@@ -232,7 +232,7 @@ export function Portfolio({ limit }: PortfolioProps) {
               style={{
                 display: 'inline-block',
                 padding: '13px 28px',
-                background: 'linear-gradient(135deg, #c8a84b 0%, #a07830 100%)',
+                background: 'linear-gradient(135deg, #FACC15 0%, #a07830 100%)',
                 color: '#070f1a',
                 borderRadius: '10px',
                 fontSize: '14px', fontWeight: 700,

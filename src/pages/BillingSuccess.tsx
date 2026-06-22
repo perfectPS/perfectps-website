@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { api, type Subscription } from '../lib/api'
+import { usePageSeo } from '../hooks/usePageSeo'
 
-const GOLD = '#c8a84b'
+const GOLD = '#FACC15'
 const NAVY = '#0d1b2a'
 const CARD = '#111d2c'
 const BORDER = '#1e3047'
 
 export function BillingSuccess() {
+  usePageSeo({
+    title: 'Subscription Activated | PS Secure VPN — perfectPS',
+    description: 'Your PS Secure VPN subscription is now active. Welcome aboard.',
+    canonical: 'https://perfectps.com/en/billing/success',
+  })
   const [searchParams] = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const [sub, setSub] = useState<Subscription | null>(null)
@@ -88,7 +94,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 24,
-    fontFamily: "'Barlow', 'DM Sans', sans-serif",
+    fontFamily: "'DM Sans', sans-serif",
     color: '#fff',
   } as React.CSSProperties,
 

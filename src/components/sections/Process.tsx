@@ -17,7 +17,7 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         style={{
           padding: '36px 28px',
           background: '#f8fafc',
-          border: '1px solid rgba(200,168,75,0.18)',
+          border: '1px solid rgba(250,204,21,0.18)',
           borderRadius: '14px',
           height: '100%',
           position: 'relative',
@@ -27,21 +27,21 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         }}
         onMouseEnter={e => {
           const el = e.currentTarget as HTMLElement
-          el.style.borderColor = 'rgba(200,168,75,0.45)'
-          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)'
+          el.style.borderColor = 'rgba(250,204,21,0.45)'
+          el.style.boxShadow = '0 8px 32px rgba(250,204,21,0.08)'
         }}
         onMouseLeave={e => {
           const el = e.currentTarget as HTMLElement
-          el.style.borderColor = 'rgba(200,168,75,0.15)'
+          el.style.borderColor = 'rgba(250,204,21,0.15)'
           el.style.boxShadow = 'none'
         }}
       >
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, #c8a84b, transparent)' }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg, #FACC15, transparent)' }} />
 
         <div style={{
           fontFamily: "'DM Sans', sans-serif",
           fontSize: '52px', fontWeight: 800,
-          color: 'rgba(200,168,75,0.15)',
+          color: 'rgba(250,204,21,0.15)',
           lineHeight: 1,
           position: 'absolute', top: 14, right: 18,
           userSelect: 'none',
@@ -52,12 +52,12 @@ function StepCard({ step, delay }: { step: StepItem; delay: number }) {
         <div style={{
           width: 48, height: 48,
           borderRadius: '12px',
-          background: 'rgba(200,168,75,0.1)',
-          border: '1px solid rgba(200,168,75,0.2)',
+          background: 'rgba(250,204,21,0.1)',
+          border: '1px solid rgba(250,204,21,0.2)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           marginBottom: '20px',
         }}>
-          <step.icon size={22} color="#c8a84b" strokeWidth={1.75} />
+          <step.icon size={22} color="#FACC15" strokeWidth={1.75} />
         </div>
 
         <h3 style={{
@@ -123,8 +123,8 @@ export function Process() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
+          linear-gradient(rgba(250,204,21,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(250,204,21,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '48px 48px',
       }} />

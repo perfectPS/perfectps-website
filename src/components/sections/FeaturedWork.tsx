@@ -24,8 +24,8 @@ export function FeaturedWork() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.03) 1px, transparent 1px)
+          linear-gradient(rgba(250,204,21,0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(250,204,21,0.03) 1px, transparent 1px)
         `,
         backgroundSize: '64px 64px',
       }} />
@@ -33,7 +33,7 @@ export function FeaturedWork() {
       <div aria-hidden style={{
         position: 'absolute', top: '20%', right: '-10%',
         width: '500px', height: '500px',
-        background: 'radial-gradient(circle, rgba(200,168,75,0.06) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%)',
         borderRadius: '50%', pointerEvents: 'none',
       }} />
 
@@ -70,7 +70,7 @@ export function FeaturedWork() {
               fontFamily: "'DM Sans', sans-serif",
               transition: 'color 200ms',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#FACC15' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#64748b' }}
             >
               {t('work.view_all')}
@@ -90,12 +90,12 @@ export function FeaturedWork() {
             <span style={{
               display: 'inline-block',
               padding: '4px 12px',
-              background: 'rgba(200,168,75,0.1)',
-              border: '1px solid rgba(200,168,75,0.3)',
+              background: 'rgba(250,204,21,0.1)',
+              border: '1px solid rgba(250,204,21,0.3)',
               borderRadius: '4px',
               fontSize: '11px', fontWeight: 700,
               letterSpacing: '1.5px', textTransform: 'uppercase',
-              color: '#c8a84b',
+              color: '#FACC15',
               marginBottom: '20px',
             }}>
               {item.sector}
@@ -110,7 +110,7 @@ export function FeaturedWork() {
               <span style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '13px', fontWeight: 700,
-                color: 'rgba(200,168,75,0.45)',
+                color: 'rgba(250,204,21,0.45)',
                 letterSpacing: '2px',
               }}>
                 {String(active + 1).padStart(2, '0')}
@@ -139,8 +139,8 @@ export function FeaturedWork() {
             <span style={{
               display: 'inline-block',
               padding: '5px 14px',
-              background: 'rgba(200,168,75,0.06)',
-              border: '1px solid rgba(200,168,75,0.15)',
+              background: 'rgba(250,204,21,0.06)',
+              border: '1px solid rgba(250,204,21,0.15)',
               borderRadius: '4px',
               fontSize: '11px', fontWeight: 600,
               color: '#64748b',
@@ -154,7 +154,7 @@ export function FeaturedWork() {
             <div aria-hidden style={{
               position: 'absolute', top: '50%', left: '50%',
               width: '80%', height: '80%',
-              background: 'radial-gradient(circle, rgba(200,168,75,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(250,204,21,0.08) 0%, transparent 70%)',
               transform: 'translate(-50%, -50%)',
               pointerEvents: 'none',
             }} />
@@ -164,10 +164,10 @@ export function FeaturedWork() {
                 width: '220px',
                 margin: '0 auto',
                 background: '#1a2535',
-                border: '2px solid rgba(200,168,75,0.2)',
+                border: '2px solid rgba(250,204,21,0.2)',
                 borderRadius: '28px',
                 overflow: 'hidden',
-                boxShadow: '0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,168,75,0.08)',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(250,204,21,0.08)',
                 position: 'relative',
               }}>
                 <div style={{
@@ -175,7 +175,7 @@ export function FeaturedWork() {
                   background: '#111d2e',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
-                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'rgba(200,168,75,0.3)' }} />
+                  <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'rgba(250,204,21,0.3)' }} />
                 </div>
                 <img
                   src={item.image} alt={item.name}
@@ -186,15 +186,15 @@ export function FeaturedWork() {
             ) : (
               <div style={{
                 background: '#131e2e',
-                border: '1px solid rgba(200,168,75,0.15)',
+                border: '1px solid rgba(250,204,21,0.15)',
                 borderRadius: '12px',
                 overflow: 'hidden',
-                boxShadow: '0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,168,75,0.06)',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(250,204,21,0.06)',
               }}>
                 <div style={{
                   height: '36px',
                   background: '#0e1828',
-                  borderBottom: '1px solid rgba(200,168,75,0.08)',
+                  borderBottom: '1px solid rgba(250,204,21,0.08)',
                   display: 'flex', alignItems: 'center',
                   padding: '0 12px', gap: '8px',
                 }}>
@@ -205,7 +205,7 @@ export function FeaturedWork() {
                   </div>
                   <div style={{
                     flex: 1, maxWidth: '200px', margin: '0 auto',
-                    height: '20px', background: 'rgba(200,168,75,0.06)',
+                    height: '20px', background: 'rgba(250,204,21,0.06)',
                     borderRadius: '4px',
                   }} />
                 </div>
@@ -229,7 +229,7 @@ export function FeaturedWork() {
         <div className="featured-tabs" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
-          borderTop: '1px solid rgba(200,168,75,0.1)',
+          borderTop: '1px solid rgba(250,204,21,0.1)',
           paddingBottom: '80px',
         }}>
           {featured.map((p, i) => (
@@ -240,16 +240,16 @@ export function FeaturedWork() {
                 all: 'unset',
                 cursor: 'pointer',
                 padding: '24px 20px 28px',
-                borderTop: `2px solid ${active === i ? '#c8a84b' : 'transparent'}`,
+                borderTop: `2px solid ${active === i ? '#FACC15' : 'transparent'}`,
                 marginTop: '-1px',
                 transition: 'border-color 200ms',
                 textAlign: 'left',
-                borderRight: i < 3 ? '1px solid rgba(200,168,75,0.08)' : 'none',
+                borderRight: i < 3 ? '1px solid rgba(250,204,21,0.08)' : 'none',
               }}
             >
               <div style={{
                 fontSize: '11px', fontWeight: 700,
-                color: active === i ? '#c8a84b' : 'rgba(200,168,75,0.2)',
+                color: active === i ? '#FACC15' : 'rgba(250,204,21,0.2)',
                 letterSpacing: '2px',
                 marginBottom: '8px',
                 fontFamily: "'DM Sans', sans-serif",
@@ -268,7 +268,7 @@ export function FeaturedWork() {
               </div>
               <div style={{
                 fontSize: '11px',
-                color: active === i ? '#c8a84b' : 'rgba(100,116,139,0.5)',
+                color: active === i ? '#FACC15' : 'rgba(100,116,139,0.5)',
                 marginTop: '4px',
                 fontFamily: "'DM Sans', sans-serif",
                 transition: 'color 200ms',

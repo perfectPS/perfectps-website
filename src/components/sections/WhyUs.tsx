@@ -15,7 +15,7 @@ function PillarCard({ p, delay }: { p: PillarItem; delay: number }) {
       <div
         ref={ref}
         style={{
-          border: '1px solid rgba(200,168,75,0.18)',
+          border: '1px solid rgba(250,204,21,0.18)',
           borderRadius: '14px',
           overflow: 'hidden',
           height: '100%',
@@ -25,18 +25,18 @@ function PillarCard({ p, delay }: { p: PillarItem; delay: number }) {
         }}
         onMouseEnter={e => {
           const el = e.currentTarget as HTMLElement
-          el.style.borderColor = 'rgba(200,168,75,0.45)'
-          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)'
+          el.style.borderColor = 'rgba(250,204,21,0.45)'
+          el.style.boxShadow = '0 8px 32px rgba(250,204,21,0.08)'
         }}
         onMouseLeave={e => {
           const el = e.currentTarget as HTMLElement
-          el.style.borderColor = 'rgba(200,168,75,0.18)'
+          el.style.borderColor = 'rgba(250,204,21,0.18)'
           el.style.boxShadow = 'none'
         }}
       >
         <div style={{
-          background: 'rgba(200,168,75,0.06)',
-          borderBottom: '1px solid rgba(200,168,75,0.12)',
+          background: 'rgba(250,204,21,0.06)',
+          borderBottom: '1px solid rgba(250,204,21,0.12)',
           padding: '24px 28px',
           display: 'flex',
           alignItems: 'center',
@@ -45,15 +45,15 @@ function PillarCard({ p, delay }: { p: PillarItem; delay: number }) {
           <div style={{
             width: 48, height: 48,
             borderRadius: '12px',
-            background: 'rgba(200,168,75,0.1)',
-            border: '1px solid rgba(200,168,75,0.25)',
+            background: 'rgba(250,204,21,0.1)',
+            border: '1px solid rgba(250,204,21,0.25)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}>
-            <p.icon size={22} color="#c8a84b" strokeWidth={1.75} />
+            <p.icon size={22} color="#FACC15" strokeWidth={1.75} />
           </div>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: '36px', fontWeight: 800, color: '#fff', fontFamily: "'DM Sans', sans-serif", lineHeight: 1 }}>{p.stat}</div>
-            <div style={{ fontSize: '11px', color: '#c8a84b', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', marginTop: '2px' }}>{p.statLabel}</div>
+            <div style={{ fontSize: '11px', color: '#FACC15', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', marginTop: '2px' }}>{p.statLabel}</div>
           </div>
         </div>
 

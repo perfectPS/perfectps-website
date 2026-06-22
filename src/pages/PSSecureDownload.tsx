@@ -54,7 +54,7 @@ export function PSSecureDownload() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,0.07) 0%, transparent 70%)',
+              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250,204,21,0.07) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -112,9 +112,9 @@ export function PSSecureDownload() {
                   fontSize: '12px',
                   fontWeight: 600,
                   fontFamily: "'DM Sans', sans-serif",
-                  background: 'rgba(200,168,75,0.1)',
-                  border: '1px solid rgba(200,168,75,0.25)',
-                  color: '#c8a84b',
+                  background: 'rgba(250,204,21,0.1)',
+                  border: '1px solid rgba(250,204,21,0.25)',
+                  color: '#FACC15',
                 }}
               >
                 {pill}
@@ -285,7 +285,7 @@ export function PSSecureDownload() {
               <div
                 style={{
                   background: '#112240',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   borderRadius: '14px',
                   padding: '32px',
                 }}
@@ -304,7 +304,7 @@ export function PSSecureDownload() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {freeFeatures.map((f, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle size={16} color="#c8a84b" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
+                      <CheckCircle size={16} color="#FACC15" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
                       <span style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.5 }}>{f}</span>
                     </li>
                   ))}
@@ -317,10 +317,10 @@ export function PSSecureDownload() {
               <div
                 style={{
                   background: '#112240',
-                  border: '1px solid rgba(200,168,75,0.35)',
+                  border: '1px solid rgba(250,204,21,0.35)',
                   borderRadius: '14px',
                   padding: '32px',
-                  boxShadow: '0 0 32px rgba(200,168,75,0.1)',
+                  boxShadow: '0 0 32px rgba(250,204,21,0.1)',
                 }}
               >
                 <h3
@@ -328,7 +328,7 @@ export function PSSecureDownload() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '18px',
                     fontWeight: 800,
-                    color: '#c8a84b',
+                    color: '#FACC15',
                     marginBottom: '20px',
                   }}
                 >
@@ -337,7 +337,7 @@ export function PSSecureDownload() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {proFeatures.map((f, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle size={16} color="#c8a84b" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
+                      <CheckCircle size={16} color="#FACC15" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
                       <span style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.5 }}>{f}</span>
                     </li>
                   ))}
@@ -346,11 +346,11 @@ export function PSSecureDownload() {
                   to={`/${lang}/ps-secure/pricing`}
                   style={{
                     fontSize: '13px',
-                    color: '#c8a84b',
+                    color: '#FACC15',
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 600,
                     textDecoration: 'none',
-                    borderBottom: '1px solid rgba(200,168,75,0.35)',
+                    borderBottom: '1px solid rgba(250,204,21,0.35)',
                     paddingBottom: '1px',
                   }}
                 >
@@ -369,7 +369,7 @@ export function PSSecureDownload() {
             <div
               style={{
                 background: '#112240',
-                border: '1px solid rgba(200,168,75,0.18)',
+                border: '1px solid rgba(250,204,21,0.18)',
                 borderRadius: '14px',
                 padding: '40px 48px',
                 maxWidth: '680px',
@@ -405,8 +405,8 @@ export function PSSecureDownload() {
                   display: 'inline-block',
                   padding: '13px 32px',
                   background: 'transparent',
-                  color: '#c8a84b',
-                  border: '1.5px solid rgba(200,168,75,0.45)',
+                  color: '#FACC15',
+                  border: '1.5px solid rgba(250,204,21,0.45)',
                   borderRadius: '8px',
                   fontSize: '15px',
                   fontWeight: 700,
@@ -415,7 +415,7 @@ export function PSSecureDownload() {
                   transition: 'background 200ms',
                 }}
                 onMouseEnter={e => {
-                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(200,168,75,0.1)'
+                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(250,204,21,0.1)'
                 }}
                 onMouseLeave={e => {
                   ;(e.currentTarget as HTMLElement).style.background = 'transparent'
@@ -446,7 +446,7 @@ export function PSSecureDownload() {
                 transition: 'color 200ms',
               }}
               onMouseEnter={e => {
-                ;(e.currentTarget as HTMLElement).style.color = '#c8a84b'
+                ;(e.currentTarget as HTMLElement).style.color = '#FACC15'
               }}
               onMouseLeave={e => {
                 ;(e.currentTarget as HTMLElement).style.color = '#8fa3bc'

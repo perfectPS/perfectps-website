@@ -165,7 +165,7 @@ export function VpnUAE() {
         <div aria-hidden style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250,204,21,0.07) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
@@ -190,7 +190,7 @@ export function VpnUAE() {
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`/${lang}/ps-secure`} style={{
               padding: '14px 32px',
-              background: '#c8a84b',
+              background: '#FACC15',
               color: '#0d1b2e',
               borderRadius: '8px',
               fontSize: '15px',
@@ -199,8 +199,8 @@ export function VpnUAE() {
               textDecoration: 'none',
               transition: 'background 200ms',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#FDE047' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#FACC15' }}
             >
               {c.ctaPrimary}
             </a>
@@ -216,7 +216,7 @@ export function VpnUAE() {
               textDecoration: 'none',
               transition: 'border-color 200ms',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#c8a84b' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#FACC15' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.25)' }}
             >
               {c.ctaSecondary}
@@ -249,27 +249,27 @@ export function VpnUAE() {
                 <ScrollReveal key={f.title} delay={i * 70}>
                   <div style={{
                     padding: '32px',
-                    border: '1px solid rgba(200,168,75,0.18)',
+                    border: '1px solid rgba(250,204,21,0.18)',
                     borderRadius: '16px',
                     height: '100%',
                     background: '#f8f9fa',
                     transition: 'border-color 200ms, box-shadow 200ms',
                   }}
-                    onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.45)'; el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)' }}
-                    onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.18)'; el.style.boxShadow = 'none' }}
+                    onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(250,204,21,0.45)'; el.style.boxShadow = '0 8px 32px rgba(250,204,21,0.08)' }}
+                    onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(250,204,21,0.18)'; el.style.boxShadow = 'none' }}
                   >
                     <div style={{
                       width: '48px',
                       height: '48px',
                       borderRadius: '12px',
-                      background: 'rgba(200,168,75,0.1)',
-                      border: '1px solid rgba(200,168,75,0.25)',
+                      background: 'rgba(250,204,21,0.1)',
+                      border: '1px solid rgba(250,204,21,0.25)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       marginBottom: '18px',
                     }}>
-                      <Icon size={22} color="#c8a84b" strokeWidth={1.75} />
+                      <Icon size={22} color="#FACC15" strokeWidth={1.75} />
                     </div>
                     <h3 style={{ fontFamily: "'DM Sans'", fontSize: '17px', fontWeight: 700, marginBottom: '10px', color: '#0d1b2e' }}>
                       {f.title}
@@ -307,7 +307,7 @@ export function VpnUAE() {
                     width: '48px',
                     height: '48px',
                     borderRadius: '50%',
-                    background: '#c8a84b',
+                    background: '#FACC15',
                     color: '#0d1b2e',
                     display: 'flex',
                     alignItems: 'center',
@@ -343,7 +343,7 @@ export function VpnUAE() {
           </p>
           <a href={`/${lang}/ps-secure`} style={{
             padding: '16px 40px',
-            background: '#c8a84b',
+            background: '#FACC15',
             color: '#0d1b2e',
             borderRadius: '8px',
             fontSize: '16px',
@@ -353,8 +353,8 @@ export function VpnUAE() {
             textDecoration: 'none',
             transition: 'background 200ms',
           }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e0c068' }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#c8a84b' }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#FDE047' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#FACC15' }}
           >
             {c.ctaBtn}
           </a>

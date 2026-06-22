@@ -2,8 +2,10 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { api, type AuthUser, type Subscription } from '../lib/api'
 import { signInWithGoogle, firebaseSignOut } from '../lib/firebase'
+import { usePageSeo } from '../hooks/usePageSeo'
+import { useLang } from '../hooks/useLang'
 
-const GOLD = '#c8a84b'
+const GOLD = '#FACC15'
 const NAVY = '#0d1b2a'
 const CARD = '#111d2c'
 const CARD2 = '#0f1923'
@@ -381,6 +383,13 @@ function DashboardView({ user, onLogout }: { user: AuthUser; onLogout: () => voi
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export function Billing() {
+  const lang = useLang()
+  usePageSeo({
+    title: 'My Subscription | PS Secure VPN — perfectPS',
+    description: 'Manage your PS Secure VPN subscription, view billing history, and update your plan.',
+    canonical: `https://perfectps.com/${lang}/billing`,
+    lang,
+  })
   const [user, setUser] = useState<AuthUser | null>(null)
 
   useEffect(() => {
@@ -443,7 +452,7 @@ const ls = {
     minHeight: '100vh',
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    fontFamily: "'Barlow', 'DM Sans', sans-serif",
+    fontFamily: "'DM Sans', sans-serif",
     background: NAVY,
   } as React.CSSProperties,
 
@@ -640,7 +649,7 @@ const s = {
     minHeight: '100vh',
     background: NAVY,
     color: '#fff',
-    fontFamily: "'Barlow', 'DM Sans', sans-serif",
+    fontFamily: "'DM Sans', sans-serif",
   } as React.CSSProperties,
 
   header: {

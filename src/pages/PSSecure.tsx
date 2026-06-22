@@ -27,9 +27,9 @@ const SEO = {
 function HoverCard({
   children,
   style,
-  hoverBorderColor = 'rgba(200,168,75,0.45)',
-  hoverShadow = '0 8px 32px rgba(200,168,75,0.1)',
-  baseBorderColor = 'rgba(200,168,75,0.18)',
+  hoverBorderColor = 'rgba(250,204,21,0.45)',
+  hoverShadow = '0 8px 32px rgba(250,204,21,0.1)',
+  baseBorderColor = 'rgba(250,204,21,0.18)',
 }: {
   children: React.ReactNode
   style?: React.CSSProperties
@@ -159,14 +159,14 @@ export function PSSecure() {
         <div aria-hidden style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse 70% 60% at 50% 45%, rgba(200,168,75,0.09) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 70% 60% at 50% 45%, rgba(250,204,21,0.09) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
         {/* subtle grid texture */}
         <div aria-hidden style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(250,204,21,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(250,204,21,0.04) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
           pointerEvents: 'none',
         }} />
@@ -256,15 +256,15 @@ export function PSSecure() {
                     width: '48px',
                     height: '48px',
                     borderRadius: '12px',
-                    background: 'rgba(200,168,75,0.1)',
-                    border: '1px solid rgba(200,168,75,0.25)',
+                    background: 'rgba(250,204,21,0.1)',
+                    border: '1px solid rgba(250,204,21,0.25)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginBottom: '20px',
                     flexShrink: 0,
                   }}>
-                    <f.icon size={22} color="#c8a84b" strokeWidth={1.75} />
+                    <f.icon size={22} color="#FACC15" strokeWidth={1.75} />
                   </div>
                   <h3 style={{
                     fontFamily: "'DM Sans', sans-serif",
@@ -337,14 +337,14 @@ export function PSSecure() {
                       width: '44px',
                       height: '44px',
                       borderRadius: '10px',
-                      background: 'rgba(200,168,75,0.1)',
-                      border: '1px solid rgba(200,168,75,0.22)',
+                      background: 'rgba(250,204,21,0.1)',
+                      border: '1px solid rgba(250,204,21,0.22)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <p.icon size={20} color="#c8a84b" strokeWidth={1.75} />
+                      <p.icon size={20} color="#FACC15" strokeWidth={1.75} />
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '4px' }}>
@@ -361,9 +361,9 @@ export function PSSecure() {
                           fontWeight: 700,
                           letterSpacing: '1px',
                           textTransform: 'uppercase',
-                          color: '#c8a84b',
-                          background: 'rgba(200,168,75,0.12)',
-                          border: '1px solid rgba(200,168,75,0.28)',
+                          color: '#FACC15',
+                          background: 'rgba(250,204,21,0.12)',
+                          border: '1px solid rgba(250,204,21,0.28)',
                           borderRadius: '4px',
                           padding: '2px 7px',
                         }}>
@@ -467,14 +467,14 @@ export function PSSecure() {
             {/* Pro card */}
             <ScrollReveal delay={50}>
               <HoverCard
-                baseBorderColor="rgba(200,168,75,0.4)"
-                hoverBorderColor="rgba(200,168,75,0.7)"
-                hoverShadow="0 8px 48px rgba(200,168,75,0.18)"
+                baseBorderColor="rgba(250,204,21,0.4)"
+                hoverBorderColor="rgba(250,204,21,0.7)"
+                hoverShadow="0 8px 48px rgba(250,204,21,0.18)"
                 style={{
                   padding: '36px',
                   borderRadius: '16px',
                   background: 'linear-gradient(135deg, #112240 0%, #162d4a 100%)',
-                  boxShadow: '0 0 40px rgba(200,168,75,0.1)',
+                  boxShadow: '0 0 40px rgba(250,204,21,0.1)',
                   height: '100%',
                   boxSizing: 'border-box',
                   position: 'relative',
@@ -489,16 +489,16 @@ export function PSSecure() {
                   width: '160px',
                   height: '160px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(circle, rgba(200,168,75,0.15) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%)',
                   pointerEvents: 'none',
                 }} />
 
                 <div style={{ position: 'relative', zIndex: 1, marginBottom: '24px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#c8a84b', margin: 0 }}>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#FACC15', margin: 0 }}>
                       {t('pssecure.pricing_pro_name')}
                     </p>
-                    <Star size={13} color="#c8a84b" fill="#c8a84b" />
+                    <Star size={13} color="#FACC15" fill="#FACC15" />
                   </div>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '6px' }}>
                     <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '44px', fontWeight: 800, color: '#fff', letterSpacing: '-1px' }}>
@@ -508,7 +508,7 @@ export function PSSecure() {
                       {t('pssecure.pricing_pro_period')}
                     </span>
                   </div>
-                  <p style={{ fontSize: '12px', color: '#c8a84b', fontFamily: "'DM Sans', sans-serif", margin: 0 }}>
+                  <p style={{ fontSize: '12px', color: '#FACC15', fontFamily: "'DM Sans', sans-serif", margin: 0 }}>
                     {t('pssecure.pricing_yearly_note')}
                   </p>
                 </div>
@@ -516,7 +516,7 @@ export function PSSecure() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative', zIndex: 1 }}>
                   {proFeatures.map((feat) => (
                     <li key={feat} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <CheckCircle size={16} color="#c8a84b" strokeWidth={2} />
+                      <CheckCircle size={16} color="#FACC15" strokeWidth={2} />
                       <span style={{ fontSize: '14px', color: '#fff', fontFamily: "'DM Sans', sans-serif" }}>{feat}</span>
                     </li>
                   ))}
@@ -649,7 +649,7 @@ export function PSSecure() {
                     width: '52px',
                     height: '52px',
                     borderRadius: '50%',
-                    background: '#c8a84b',
+                    background: '#FACC15',
                     color: '#0d1b2e',
                     display: 'flex',
                     alignItems: 'center',
@@ -741,7 +741,7 @@ function HeroCta({ to, primary, children }: { to: string; primary: boolean; chil
         onMouseLeave={() => setHovered(false)}
         style={{
           padding: '14px 32px',
-          background: hovered ? '#e0c068' : '#c8a84b',
+          background: hovered ? '#FDE047' : '#FACC15',
           color: '#0d1b2e',
           borderRadius: '8px',
           fontSize: '15px',
@@ -769,7 +769,7 @@ function HeroCta({ to, primary, children }: { to: string; primary: boolean; chil
         padding: '14px 32px',
         background: 'transparent',
         color: '#fff',
-        border: `1.5px solid ${hovered ? '#c8a84b' : 'rgba(255,255,255,0.22)'}`,
+        border: `1.5px solid ${hovered ? '#FACC15' : 'rgba(255,255,255,0.22)'}`,
         borderRadius: '8px',
         fontSize: '15px',
         fontWeight: 600,
@@ -795,8 +795,8 @@ function StatPill({ value, label }: { value: string; label: string }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         padding: '12px 22px',
-        background: 'rgba(200,168,75,0.07)',
-        border: `1px solid ${hovered ? 'rgba(200,168,75,0.45)' : 'rgba(200,168,75,0.18)'}`,
+        background: 'rgba(250,204,21,0.07)',
+        border: `1px solid ${hovered ? 'rgba(250,204,21,0.45)' : 'rgba(250,204,21,0.18)'}`,
         borderRadius: '100px',
         display: 'flex',
         alignItems: 'center',
@@ -809,7 +809,7 @@ function StatPill({ value, label }: { value: string; label: string }) {
         fontFamily: "'DM Sans', sans-serif",
         fontSize: '18px',
         fontWeight: 800,
-        color: '#c8a84b',
+        color: '#FACC15',
         letterSpacing: '-0.5px',
       }}>
         {value}
@@ -833,14 +833,14 @@ function SecurityPillar({ icon: Icon, title, desc }: { icon: React.ComponentType
         width: '64px',
         height: '64px',
         borderRadius: '50%',
-        background: 'rgba(200,168,75,0.12)',
-        border: '1.5px solid rgba(200,168,75,0.3)',
+        background: 'rgba(250,204,21,0.12)',
+        border: '1.5px solid rgba(250,204,21,0.3)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         margin: '0 auto 20px',
       }}>
-        <Icon size={26} color="#c8a84b" strokeWidth={1.75} />
+        <Icon size={26} color="#FACC15" strokeWidth={1.75} />
       </div>
       <h3 style={{
         fontFamily: "'DM Sans', sans-serif",
@@ -872,8 +872,8 @@ function ServerPill({ flag, name, badge, delay }: { flag: string; name: string; 
           gap: '10px',
           padding: '10px 18px',
           borderRadius: '100px',
-          background: hovered ? 'rgba(200,168,75,0.08)' : 'rgba(17,34,64,0.6)',
-          border: `1px solid ${hovered ? 'rgba(200,168,75,0.45)' : 'rgba(200,168,75,0.18)'}`,
+          background: hovered ? 'rgba(250,204,21,0.08)' : 'rgba(17,34,64,0.6)',
+          border: `1px solid ${hovered ? 'rgba(250,204,21,0.45)' : 'rgba(250,204,21,0.18)'}`,
           transition: 'background 220ms, border-color 220ms',
           cursor: 'default',
         }}
@@ -892,9 +892,9 @@ function ServerPill({ flag, name, badge, delay }: { flag: string; name: string; 
           fontWeight: 700,
           letterSpacing: '0.8px',
           textTransform: 'uppercase',
-          color: isNew ? '#22D3EE' : '#c8a84b',
-          background: isNew ? 'rgba(34,211,238,0.1)' : 'rgba(200,168,75,0.1)',
-          border: `1px solid ${isNew ? 'rgba(34,211,238,0.25)' : 'rgba(200,168,75,0.25)'}`,
+          color: isNew ? '#22D3EE' : '#FACC15',
+          background: isNew ? 'rgba(34,211,238,0.1)' : 'rgba(250,204,21,0.1)',
+          border: `1px solid ${isNew ? 'rgba(34,211,238,0.25)' : 'rgba(250,204,21,0.25)'}`,
           borderRadius: '4px',
           padding: '2px 6px',
         }}>
@@ -916,7 +916,7 @@ function GoldTextLink({ to, children }: { to: string; children: React.ReactNode 
         fontFamily: "'DM Sans', sans-serif",
         fontSize: '15px',
         fontWeight: 700,
-        color: hovered ? '#e0c068' : '#c8a84b',
+        color: hovered ? '#FDE047' : '#FACC15',
         textDecoration: 'none',
         display: 'inline-flex',
         alignItems: 'center',
@@ -938,7 +938,7 @@ function ComingSoonPill({ label }: { label: string }) {
       padding: '12px 24px',
       borderRadius: '12px',
       background: 'rgba(17,34,64,0.8)',
-      border: '1px solid rgba(200,168,75,0.18)',
+      border: '1px solid rgba(250,204,21,0.18)',
       cursor: 'not-allowed',
       opacity: 0.7,
     }}>

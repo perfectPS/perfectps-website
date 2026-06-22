@@ -12,8 +12,8 @@ function StatCard({ stat }: { stat: StatItem }) {
   useTilt(ref, 10)
   return (
     <div ref={ref} style={{
-      background: 'rgba(200,168,75,0.05)',
-      border: '1px solid rgba(200,168,75,0.15)',
+      background: 'rgba(250,204,21,0.05)',
+      border: '1px solid rgba(250,204,21,0.15)',
       borderRadius: '16px',
       padding: '24px 20px',
       backdropFilter: 'blur(16px)',
@@ -24,24 +24,24 @@ function StatCard({ stat }: { stat: StatItem }) {
     }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.background = 'rgba(200,168,75,0.09)'
-        el.style.borderColor = 'rgba(200,168,75,0.4)'
+        el.style.background = 'rgba(250,204,21,0.09)'
+        el.style.borderColor = 'rgba(250,204,21,0.4)'
       }}
       onMouseLeave={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.background = 'rgba(200,168,75,0.05)'
-        el.style.borderColor = 'rgba(200,168,75,0.15)'
+        el.style.background = 'rgba(250,204,21,0.05)'
+        el.style.borderColor = 'rgba(250,204,21,0.15)'
       }}
     >
       <div style={{
         width: 44, height: 44,
         borderRadius: '50%',
-        background: 'rgba(200,168,75,0.12)',
-        border: '1px solid rgba(200,168,75,0.25)',
+        background: 'rgba(250,204,21,0.12)',
+        border: '1px solid rgba(250,204,21,0.25)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         marginBottom: '14px',
       }}>
-        <stat.Icon size={20} color="#c8a84b" strokeWidth={1.75} />
+        <stat.Icon size={20} color="#FACC15" strokeWidth={1.75} />
       </div>
       <div style={{
         fontFamily: "'DM Sans', sans-serif",
@@ -94,7 +94,7 @@ export function Hero() {
       style={{
         minHeight: '100vh',
         background: `
-          radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,168,75,0.08) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 60% at 50% 0%, rgba(250,204,21,0.08) 0%, transparent 60%),
           radial-gradient(ellipse 60% 80% at 90% 80%, rgba(17,34,64,0.9) 0%, transparent 60%),
           linear-gradient(160deg, #0d1b2e 0%, #091424 60%, #0d1b2e 100%)
         `,
@@ -109,8 +109,8 @@ export function Hero() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.04) 1px, transparent 1px)
+          linear-gradient(rgba(250,204,21,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(250,204,21,0.04) 1px, transparent 1px)
         `,
         backgroundSize: '64px 64px',
       }} />
@@ -138,7 +138,7 @@ export function Hero() {
             width: p.size,
             height: p.size,
             borderRadius: '50%',
-            background: '#c8a84b',
+            background: '#FACC15',
             opacity: 0.3,
             animation: `hero-float ${p.dur} ease-in-out infinite ${p.delay}`,
           }} />
@@ -151,13 +151,13 @@ export function Hero() {
               <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '7px 16px',
-                background: 'rgba(200,168,75,0.08)',
-                border: '1px solid rgba(200,168,75,0.28)',
+                background: 'rgba(250,204,21,0.08)',
+                border: '1px solid rgba(250,204,21,0.28)',
                 borderRadius: '100px',
                 fontSize: '12px', fontWeight: 700, letterSpacing: '2px',
-                textTransform: 'uppercase', color: '#c8a84b',
+                textTransform: 'uppercase', color: '#FACC15',
               }}>
-                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c8a84b', display: 'block', boxShadow: '0 0 6px #c8a84b' }} />
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#FACC15', display: 'block', boxShadow: '0 0 6px #FACC15' }} />
                 {t('hero.badge')}
               </span>
             </div>
@@ -190,17 +190,17 @@ export function Hero() {
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <a href={`/${lang}/#contact`} style={{
                 padding: '14px 32px',
-                background: '#c8a84b',
+                background: '#FACC15',
                 color: '#0d1b2e',
                 borderRadius: '8px',
                 fontSize: '15px', fontWeight: 700,
                 fontFamily: "'DM Sans', sans-serif",
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-                boxShadow: '0 0 24px rgba(200,168,75,0.35)',
+                boxShadow: '0 0 24px rgba(250,204,21,0.35)',
                 transition: 'background 200ms, transform 200ms',
               }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-2px)' }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#FDE047'; el.style.transform = 'translateY(-2px)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#FACC15'; el.style.transform = 'translateY(0)' }}
               >
                 {t('hero.cta_primary')}
               </a>
@@ -208,7 +208,7 @@ export function Hero() {
                 padding: '14px 32px',
                 background: 'rgba(255,255,255,0.04)',
                 color: '#fff',
-                border: '1px solid rgba(200,168,75,0.2)',
+                border: '1px solid rgba(250,204,21,0.2)',
                 borderRadius: '8px',
                 fontSize: '15px', fontWeight: 600,
                 fontFamily: "'DM Sans', sans-serif",
@@ -216,8 +216,8 @@ export function Hero() {
                 backdropFilter: 'blur(8px)',
                 transition: 'border-color 200ms, color 200ms, background 200ms',
               }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#c8a84b'; el.style.color = '#c8a84b'; el.style.background = 'rgba(200,168,75,0.06)' }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,168,75,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = '#FACC15'; el.style.color = '#FACC15'; el.style.background = 'rgba(250,204,21,0.06)' }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(250,204,21,0.2)'; el.style.color = '#fff'; el.style.background = 'rgba(255,255,255,0.04)' }}
               >
                 {t('hero.cta_secondary')}
               </a>

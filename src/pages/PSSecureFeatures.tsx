@@ -34,7 +34,7 @@ function FeatureCard({ icon: Icon, title, desc }: FeatureCardProps) {
     <div
       style={{
         background: '#112240',
-        border: '1px solid rgba(200,168,75,0.18)',
+        border: '1px solid rgba(250,204,21,0.18)',
         borderRadius: '14px',
         padding: '32px',
         height: '100%',
@@ -42,12 +42,12 @@ function FeatureCard({ icon: Icon, title, desc }: FeatureCardProps) {
       }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.borderColor = 'rgba(200,168,75,0.45)'
-        el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.08)'
+        el.style.borderColor = 'rgba(250,204,21,0.45)'
+        el.style.boxShadow = '0 8px 32px rgba(250,204,21,0.08)'
       }}
       onMouseLeave={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.borderColor = 'rgba(200,168,75,0.18)'
+        el.style.borderColor = 'rgba(250,204,21,0.18)'
         el.style.boxShadow = 'none'
       }}
     >
@@ -56,15 +56,15 @@ function FeatureCard({ icon: Icon, title, desc }: FeatureCardProps) {
           width: '48px',
           height: '48px',
           borderRadius: '12px',
-          background: 'rgba(200,168,75,0.1)',
-          border: '1px solid rgba(200,168,75,0.25)',
+          background: 'rgba(250,204,21,0.1)',
+          border: '1px solid rgba(250,204,21,0.25)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           marginBottom: '18px',
         }}
       >
-        <Icon size={22} color="#c8a84b" strokeWidth={1.75} />
+        <Icon size={22} color="#FACC15" strokeWidth={1.75} />
       </div>
       <h3
         style={{
@@ -137,7 +137,7 @@ export function PSSecureFeatures() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,0.07) 0%, transparent 70%)',
+              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250,204,21,0.07) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -245,7 +245,7 @@ export function PSSecureFeatures() {
               style={{
                 display: 'inline-block',
                 padding: '16px 40px',
-                background: '#c8a84b',
+                background: '#FACC15',
                 color: '#0d1b2e',
                 borderRadius: '8px',
                 fontSize: '16px',
@@ -255,10 +255,10 @@ export function PSSecureFeatures() {
                 transition: 'background 200ms',
               }}
               onMouseEnter={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#e0c068'
+                ;(e.currentTarget as HTMLElement).style.background = '#FDE047'
               }}
               onMouseLeave={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#c8a84b'
+                ;(e.currentTarget as HTMLElement).style.background = '#FACC15'
               }}
             >
               {t('pssecure.download_cta')}

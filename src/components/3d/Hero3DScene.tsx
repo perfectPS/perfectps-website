@@ -22,8 +22,8 @@ function GoldenKnot() {
       <mesh ref={mesh} scale={1.42} position={[0.3, 0.1, 0]}>
         <torusKnotGeometry args={[1.0, 0.32, 256, 20, 2, 3]} />
         <MeshDistortMaterial
-          color="#e8c04a"
-          emissive="#c8a84b"
+          color="#FDE047"
+          emissive="#FACC15"
           emissiveIntensity={0.88}
           metalness={0.62}
           roughness={0.14}
@@ -44,7 +44,7 @@ function WireframeSphere() {
   return (
     <mesh ref={mesh}>
       <icosahedronGeometry args={[3.7, 1]} />
-      <meshBasicMaterial color="#c8a84b" wireframe transparent opacity={0.065} />
+      <meshBasicMaterial color="#FACC15" wireframe transparent opacity={0.065} />
     </mesh>
   )
 }
@@ -62,7 +62,7 @@ function GoldRing({ radius, tube, speed, tiltX }: {
       <torusGeometry args={[radius, tube, 8, 100]} />
       <meshStandardMaterial
         color="#e8c860"
-        emissive="#c8a84b"
+        emissive="#FACC15"
         emissiveIntensity={0.75}
         metalness={0.5}
         roughness={0.22}
@@ -111,13 +111,13 @@ function Scene() {
       {/* Key: warm gold from upper-right front */}
       <pointLight position={[5, 6, 5]}    intensity={10} color="#ffe0a0" />
       {/* Fill: gold from left */}
-      <pointLight position={[-4, 2, 4]}   intensity={5}  color="#c8a84b" />
+      <pointLight position={[-4, 2, 4]}   intensity={5}  color="#FACC15" />
       {/* Top white highlight */}
       <pointLight position={[1, 8, 3]}    intensity={7}  color="#ffffff" />
       {/* Cool backlight for depth */}
       <pointLight position={[-1, -5, -4]} intensity={3}  color="#2a4a8a" />
       {/* Rim from behind — creates edge separation */}
-      <pointLight position={[0, 0, -9]}   intensity={2.5} color="#c8a84b" />
+      <pointLight position={[0, 0, -9]}   intensity={2.5} color="#FACC15" />
 
       <GoldenKnot />
       <WireframeSphere />

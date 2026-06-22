@@ -147,4 +147,125 @@
     <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/vpn-uae" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/vpn-uae" />
   </url>
+
+  <!-- Work / Portfolio — English -->
+  <url>
+    <loc>https://perfectps.com/en/work</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/work" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/work" />
+  </url>
+
+  <!-- Work / Portfolio — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/work</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/work" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/work" />
+  </url>
+
+  <!-- PS Secure Pricing — English -->
+  <url>
+    <loc>https://perfectps.com/en/ps-secure/pricing</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/pricing" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/pricing" />
+  </url>
+
+  <!-- PS Secure Pricing — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/ps-secure/pricing</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/pricing" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/pricing" />
+  </url>
+
+  <!-- PS Secure Features — English -->
+  <url>
+    <loc>https://perfectps.com/en/ps-secure/features</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/features" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/features" />
+  </url>
+
+  <!-- PS Secure Features — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/ps-secure/features</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/features" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/features" />
+  </url>
+
+  <!-- PS Secure Protocols — English -->
+  <url>
+    <loc>https://perfectps.com/en/ps-secure/protocols</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/protocols" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/protocols" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/protocols" />
+  </url>
+
+  <!-- PS Secure Protocols — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/ps-secure/protocols</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/protocols" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/protocols" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/protocols" />
+  </url>
+
+  <!-- PS Secure Download — English -->
+  <url>
+    <loc>https://perfectps.com/en/ps-secure/download</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/download" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/download" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/download" />
+  </url>
+
+  <!-- PS Secure Download — Arabic -->
+  <url>
+    <loc>https://perfectps.com/ar/ps-secure/download</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/ps-secure/download" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/ps-secure/download" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/ps-secure/download" />
+  </url>
+
+  <!-- Data Deletion — English -->
+  <url>
+    <loc>https://perfectps.com/en/data-deletion</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://perfectps.com/en/data-deletion" />
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://perfectps.com/ar/data-deletion" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perfectps.com/en/data-deletion" />
+  </url>
 </urlset>

@@ -32,7 +32,7 @@ export function TechStack() {
       <div aria-hidden style={{
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
         width: '600px', height: '200px',
-        background: 'radial-gradient(ellipse, rgba(200,168,75,0.07) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(250,204,21,0.07) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -69,7 +69,7 @@ export function TechStack() {
             <div key={i} style={{
               padding: '10px 22px',
               background: '#0d1b2e',
-              border: '1px solid rgba(200,168,75,0.18)',
+              border: '1px solid rgba(250,204,21,0.18)',
               borderRadius: '8px',
               color: 'rgba(255,255,255,0.75)',
               fontSize: '13px', fontWeight: 600,
@@ -95,10 +95,10 @@ export function TechStack() {
           {[...doubled].reverse().map((t, i) => (
             <div key={i} style={{
               padding: '10px 22px',
-              background: 'rgba(200,168,75,0.06)',
-              border: '1px solid rgba(200,168,75,0.2)',
+              background: 'rgba(250,204,21,0.06)',
+              border: '1px solid rgba(250,204,21,0.2)',
               borderRadius: '8px',
-              color: '#c8a84b',
+              color: '#FACC15',
               fontSize: '13px', fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
               whiteSpace: 'nowrap',

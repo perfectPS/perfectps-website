@@ -27,7 +27,7 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
     flexDirection: 'column',
     gap: '16px',
     background: '#112240',
-    border: '1px solid rgba(200,168,75,0.18)',
+    border: '1px solid rgba(250,204,21,0.18)',
     borderRadius: '14px',
     padding: '32px',
     height: '100%',
@@ -49,41 +49,41 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
         style={cardStyle}
         onMouseEnter={e => {
           const el = e.currentTarget
-          el.style.borderColor = 'rgba(200,168,75,0.5)'
-          el.style.boxShadow = '0 8px 32px rgba(200,168,75,0.1)'
+          el.style.borderColor = 'rgba(250,204,21,0.5)'
+          el.style.boxShadow = '0 8px 32px rgba(250,204,21,0.1)'
         }}
         onMouseLeave={e => {
           const el = e.currentTarget
-          el.style.borderColor = 'rgba(200,168,75,0.18)'
+          el.style.borderColor = 'rgba(250,204,21,0.18)'
           el.style.boxShadow = 'none'
         }}
         onFocus={e => {
           const el = e.currentTarget
-          el.style.borderColor = 'rgba(200,168,75,0.6)'
-          el.style.boxShadow = '0 0 0 3px rgba(200,168,75,0.2)'
+          el.style.borderColor = 'rgba(250,204,21,0.6)'
+          el.style.boxShadow = '0 0 0 3px rgba(250,204,21,0.2)'
         }}
         onBlur={e => {
           const el = e.currentTarget
-          el.style.borderColor = 'rgba(200,168,75,0.18)'
+          el.style.borderColor = 'rgba(250,204,21,0.18)'
           el.style.boxShadow = 'none'
         }}
       >
         <div aria-hidden style={{
           position: 'absolute', bottom: -30, right: -30,
           width: 120, height: 120,
-          background: 'radial-gradient(circle, rgba(200,168,75,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(250,204,21,0.06) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
         <div style={{
           width: 52, height: 52,
           borderRadius: '12px',
-          background: 'rgba(200,168,75,0.1)',
-          border: '1px solid rgba(200,168,75,0.2)',
+          background: 'rgba(250,204,21,0.1)',
+          border: '1px solid rgba(250,204,21,0.2)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           flexShrink: 0,
         }}>
-          <Icon size={24} strokeWidth={1.75} color="#c8a84b" />
+          <Icon size={24} strokeWidth={1.75} color="#FACC15" />
         </div>
 
         <h3 style={{
@@ -100,13 +100,13 @@ export function ServiceCard({ service, delay = 0 }: ServiceCardProps) {
         </p>
 
         <div style={{
-          fontSize: '13px', fontWeight: 600, color: '#c8a84b',
+          fontSize: '13px', fontWeight: 600, color: '#FACC15',
           display: 'flex', alignItems: 'center', gap: '4px',
         }}>
           {t('services.learn_more')}
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden
             style={lang === 'ar' ? { transform: 'scaleX(-1)' } : undefined}>
-            <path d="M2 6h8M6 2l4 4-4 4" stroke="#c8a84b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="#FACC15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
       </a>

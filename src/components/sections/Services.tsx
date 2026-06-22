@@ -42,7 +42,7 @@ export function Services() {
             marginBottom: '14px',
           }}>
             {t('services.h2_line1')}<br />
-            <span style={{ color: '#c8a84b' }}>{t('services.h2_line2')}</span>
+            <span style={{ color: '#FACC15' }}>{t('services.h2_line2')}</span>
           </h2>
           <p style={{
             fontSize: '17px',

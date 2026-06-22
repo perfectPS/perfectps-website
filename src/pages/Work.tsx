@@ -1,9 +1,18 @@
 import { Lock } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Portfolio } from '../components/sections/Portfolio'
+import { usePageSeo } from '../hooks/usePageSeo'
+import { useLang } from '../hooks/useLang'
 
 export function Work() {
   const { t } = useTranslation()
+  const lang = useLang()
+  usePageSeo({
+    title: 'Work & Portfolio | perfectPS — Digital Studio Middle East',
+    description: 'Browse 15+ digital products built by perfectPS — SaaS dashboards, mobile apps, VPN infrastructure, and more. Serving clients across the Middle East since 2019.',
+    canonical: `https://perfectps.com/${lang}/work`,
+    lang,
+  })
 
   return (
     <>
@@ -18,7 +27,7 @@ export function Work() {
         <div aria-hidden style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: `
-            radial-gradient(circle, rgba(200,168,75,0.2) 1px, transparent 1px)
+            radial-gradient(circle, rgba(250,204,21,0.2) 1px, transparent 1px)
           `,
           backgroundSize: '32px 32px',
           opacity: 0.3,
@@ -28,7 +37,7 @@ export function Work() {
           position: 'absolute', top: 0, left: '50%',
           transform: 'translateX(-50%)',
           width: 800, height: 400,
-          background: 'radial-gradient(ellipse, rgba(200,168,75,0.07) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse, rgba(250,204,21,0.07) 0%, transparent 60%)',
           pointerEvents: 'none',
         }} />
 
@@ -60,25 +69,25 @@ export function Work() {
             display: 'inline-flex',
             alignItems: 'flex-start',
             gap: '14px',
-            background: 'rgba(200,168,75,0.07)',
-            border: '1px solid rgba(200,168,75,0.22)',
+            background: 'rgba(250,204,21,0.07)',
+            border: '1px solid rgba(250,204,21,0.22)',
             borderRadius: '12px',
             padding: '16px 20px',
             maxWidth: '560px',
           }}>
             <div style={{
               width: 34, height: 34, borderRadius: '8px',
-              background: 'rgba(200,168,75,0.12)',
-              border: '1px solid rgba(200,168,75,0.25)',
+              background: 'rgba(250,204,21,0.12)',
+              border: '1px solid rgba(250,204,21,0.25)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               flexShrink: 0, marginTop: '1px',
             }}>
-              <Lock size={15} color="#c8a84b" strokeWidth={2} />
+              <Lock size={15} color="#FACC15" strokeWidth={2} />
             </div>
             <div>
               <div style={{
                 fontSize: '13px', fontWeight: 700,
-                color: '#c8a84b',
+                color: '#FACC15',
                 marginBottom: '4px',
                 textTransform: 'uppercase',
                 letterSpacing: '0.06em',

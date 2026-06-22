@@ -131,13 +131,13 @@ export function Terms() {
         <a href={`/${lang}`} style={{
           display: 'inline-flex', alignItems: 'center', gap: '6px',
           fontSize: '13px', fontWeight: 600,
-          color: 'rgba(200,168,75,0.7)',
+          color: 'rgba(250,204,21,0.7)',
           textDecoration: 'none',
           marginBottom: '40px',
           transition: 'color 200ms',
         }}
-          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#c8a84b' }}
-          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(200,168,75,0.7)' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#FACC15' }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(250,204,21,0.7)' }}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
             <path d="M11 7H3M7 11L3 7l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -160,14 +160,14 @@ export function Terms() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
           {sections.map(s => (
             <div key={s.heading} style={{
-              borderInlineStart: '2px solid rgba(200,168,75,0.2)',
+              borderInlineStart: '2px solid rgba(250,204,21,0.2)',
               paddingInlineStart: '24px',
             }}>
               <h2 style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '18px',
                 fontWeight: 700,
-                color: '#c8a84b',
+                color: '#FACC15',
                 marginBottom: '10px',
               }}>
                 {s.heading}

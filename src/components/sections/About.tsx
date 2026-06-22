@@ -22,8 +22,8 @@ export function About() {
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: `
-          linear-gradient(rgba(200,168,75,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(200,168,75,0.05) 1px, transparent 1px)
+          linear-gradient(rgba(250,204,21,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(250,204,21,0.05) 1px, transparent 1px)
         `,
         backgroundSize: '60px 60px',
       }} />
@@ -54,7 +54,7 @@ export function About() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '13px',
               fontWeight: 700,
-              color: '#c8a84b',
+              color: '#FACC15',
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
               marginBottom: '10px',
@@ -72,13 +72,13 @@ export function About() {
               letterSpacing: '-2px',
               margin: 0,
             }}>
-              perfect<span style={{ color: '#c8a84b' }}>PS</span>
+              perfect<span style={{ color: '#FACC15' }}>PS</span>
             </h2>
 
             {/* Gold accent bar */}
             <div style={{
               width: 56, height: 3,
-              background: 'linear-gradient(90deg, #c8a84b, #a07830)',
+              background: 'linear-gradient(90deg, #FACC15, #a07830)',
               borderRadius: '2px',
               margin: '16px auto 0',
             }} />
@@ -130,12 +130,12 @@ export function About() {
                     key={b}
                     style={{
                       padding: '6px 16px',
-                      background: 'rgba(200,168,75,0.06)',
-                      border: '1px solid rgba(200,168,75,0.18)',
+                      background: 'rgba(250,204,21,0.06)',
+                      border: '1px solid rgba(250,204,21,0.18)',
                       borderRadius: '100px',
                       fontSize: '12px',
                       fontWeight: 600,
-                      color: 'rgba(200,168,75,0.8)',
+                      color: 'rgba(250,204,21,0.8)',
                       fontFamily: "'DM Sans', sans-serif",
                       letterSpacing: '0.03em',
                     }}
@@ -153,14 +153,14 @@ export function About() {
               ref={identityRef}
               style={{
                 background: 'linear-gradient(145deg, #0d2247 0%, #091729 100%)',
-                border: '1px solid rgba(200,168,75,0.22)',
+                border: '1px solid rgba(250,204,21,0.22)',
                 borderRadius: '20px',
                 padding: '36px 32px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '28px',
                 transformStyle: 'preserve-3d',
-                boxShadow: '0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(200,168,75,0.1)',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(250,204,21,0.1)',
                 position: 'relative',
                 overflow: 'hidden',
               }}
@@ -169,7 +169,7 @@ export function About() {
               <div aria-hidden style={{
                 position: 'absolute', top: -60, right: -60,
                 width: 200, height: 200, borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(200,168,75,0.09) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(250,204,21,0.09) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }} />
 
@@ -178,12 +178,12 @@ export function About() {
                 <div style={{
                   width: 50, height: 50,
                   borderRadius: '13px',
-                  background: 'rgba(200,168,75,0.1)',
-                  border: '1px solid rgba(200,168,75,0.28)',
+                  background: 'rgba(250,204,21,0.1)',
+                  border: '1px solid rgba(250,204,21,0.28)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   flexShrink: 0,
                 }}>
-                  <Shield size={22} color="#c8a84b" strokeWidth={1.5} />
+                  <Shield size={22} color="#FACC15" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div style={{
@@ -192,7 +192,7 @@ export function About() {
                     fontWeight: 700,
                   }}>
                     <span style={{ color: '#fff' }}>perfect</span>
-                    <span style={{ color: '#c8a84b' }}>PS</span>
+                    <span style={{ color: '#FACC15' }}>PS</span>
                   </div>
                   <div style={{
                     fontSize: '11px',
@@ -211,7 +211,7 @@ export function About() {
                 color: 'rgba(255,255,255,0.58)',
                 lineHeight: 1.75,
                 fontStyle: 'italic',
-                borderInlineStart: '2px solid rgba(200,168,75,0.4)',
+                borderInlineStart: '2px solid rgba(250,204,21,0.4)',
                 paddingInlineStart: '14px',
               }}>
                 {t('about.quote')}
@@ -220,7 +220,7 @@ export function About() {
               {/* Divider */}
               <div style={{
                 height: '1px',
-                background: 'rgba(200,168,75,0.1)',
+                background: 'rgba(250,204,21,0.1)',
               }} />
 
               {/* CTA */}
@@ -229,7 +229,7 @@ export function About() {
                 style={{
                   display: 'block',
                   padding: '14px',
-                  background: 'linear-gradient(135deg, #c8a84b 0%, #a07830 100%)',
+                  background: 'linear-gradient(135deg, #FACC15 0%, #a07830 100%)',
                   color: '#070f1a',
                   borderRadius: '10px',
                   fontSize: '14px',

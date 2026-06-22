@@ -82,7 +82,7 @@ export function Navbar() {
           left: '16px',
           zIndex: 200,
           padding: '10px 18px',
-          background: '#c8a84b',
+          background: '#FACC15',
           color: '#070f1a',
           fontWeight: 700,
           fontSize: '14px',
@@ -104,7 +104,7 @@ export function Navbar() {
           background: scrolled ? 'rgba(7,15,26,0.96)' : 'transparent',
           backdropFilter: scrolled ? 'blur(24px)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(200,168,75,0.12)' : '1px solid transparent',
+          borderBottom: scrolled ? '1px solid rgba(250,204,21,0.12)' : '1px solid transparent',
           transition: 'background 300ms ease, border-bottom 300ms ease',
         }}
       >
@@ -231,7 +231,7 @@ export function Navbar() {
                   left: 0,
                   minWidth: '240px',
                   background: 'rgba(7,15,26,0.98)',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   borderRadius: '14px',
                   padding: '8px',
                   boxShadow: '0 20px 60px rgba(0,0,0,0.55)',
@@ -265,18 +265,18 @@ export function Navbar() {
                       <div style={{
                         width: 34, height: 34,
                         borderRadius: '9px',
-                        background: 'rgba(200,168,75,0.1)',
-                        border: '1px solid rgba(200,168,75,0.2)',
+                        background: 'rgba(250,204,21,0.1)',
+                        border: '1px solid rgba(250,204,21,0.2)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         flexShrink: 0,
                       }}>
-                        <Icon size={15} color="#c8a84b" strokeWidth={1.75} />
+                        <Icon size={15} color="#FACC15" strokeWidth={1.75} />
                       </div>
                       <div>
                         <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff', lineHeight: 1.3 }}>
                           {item.label}
                         </div>
-                        <div style={{ fontSize: '11px', color: 'rgba(200,168,75,0.65)', marginTop: '2px' }}>
+                        <div style={{ fontSize: '11px', color: 'rgba(250,204,21,0.65)', marginTop: '2px' }}>
                           {item.desc}
                         </div>
                       </div>
@@ -322,9 +322,9 @@ export function Navbar() {
               style={{
                 fontSize: '12px',
                 fontWeight: 700,
-                color: 'rgba(200,168,75,0.9)',
+                color: 'rgba(250,204,21,0.9)',
                 background: 'transparent',
-                border: '1px solid rgba(200,168,75,0.22)',
+                border: '1px solid rgba(250,204,21,0.22)',
                 borderRadius: '6px',
                 cursor: 'pointer',
                 fontFamily: "'DM Sans', sans-serif",
@@ -345,7 +345,7 @@ export function Navbar() {
               href={`/${lang}/#contact`}
               style={{
                 padding: '10px 20px',
-                background: '#c8a84b',
+                background: '#FACC15',
                 color: '#0d1b2e',
                 borderRadius: '8px',
                 fontSize: '13px',
@@ -377,9 +377,9 @@ export function Navbar() {
               padding: '10px',
               minWidth: '44px',
               minHeight: '44px',
-              color: '#c8a84b',
-              background: open ? 'rgba(200,168,75,0.08)' : 'none',
-              border: open ? '1px solid rgba(200,168,75,0.2)' : '1px solid transparent',
+              color: '#FACC15',
+              background: open ? 'rgba(250,204,21,0.08)' : 'none',
+              border: open ? '1px solid rgba(250,204,21,0.2)' : '1px solid transparent',
               borderRadius: '6px',
               cursor: 'pointer',
               transition: 'background 200ms',
@@ -406,7 +406,7 @@ export function Navbar() {
           background: 'rgba(7,15,26,0.98)',
           backdropFilter: 'blur(24px)',
           WebkitBackdropFilter: 'blur(24px)',
-          borderTop: '1px solid rgba(200,168,75,0.1)',
+          borderTop: '1px solid rgba(250,204,21,0.1)',
           display: open ? 'flex' : 'none',
           flexDirection: 'column',
           padding: '24px 24px 40px',
@@ -432,7 +432,7 @@ export function Navbar() {
                 fontFamily: "'DM Sans', sans-serif",
                 background: 'none',
                 border: 'none',
-                borderBottom: mobileProductsOpen ? '1px solid transparent' : '1px solid rgba(200,168,75,0.08)',
+                borderBottom: mobileProductsOpen ? '1px solid transparent' : '1px solid rgba(250,204,21,0.08)',
                 cursor: 'pointer',
                 animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
                 animationDelay: '0ms',
@@ -445,7 +445,7 @@ export function Navbar() {
                 style={{
                   transition: 'transform 200ms',
                   transform: mobileProductsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                  color: '#c8a84b',
+                  color: '#FACC15',
                   flexShrink: 0,
                 }}
               />
@@ -454,7 +454,7 @@ export function Navbar() {
             {mobileProductsOpen && (
               <div style={{
                 paddingBottom: '8px',
-                borderBottom: '1px solid rgba(200,168,75,0.08)',
+                borderBottom: '1px solid rgba(250,204,21,0.08)',
               }}>
                 {productItems.map(item => {
                   const Icon = item.icon
@@ -477,16 +477,16 @@ export function Navbar() {
                       <div style={{
                         width: 36, height: 36,
                         borderRadius: '9px',
-                        background: 'rgba(200,168,75,0.1)',
-                        border: '1px solid rgba(200,168,75,0.2)',
+                        background: 'rgba(250,204,21,0.1)',
+                        border: '1px solid rgba(250,204,21,0.2)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         flexShrink: 0,
                       }}>
-                        <Icon size={16} color="#c8a84b" strokeWidth={1.75} />
+                        <Icon size={16} color="#FACC15" strokeWidth={1.75} />
                       </div>
                       <div>
                         <div style={{ fontSize: '16px', fontWeight: 600, color: '#fff' }}>{item.label}</div>
-                        <div style={{ fontSize: '12px', color: 'rgba(200,168,75,0.65)', marginTop: '2px' }}>{item.desc}</div>
+                        <div style={{ fontSize: '12px', color: 'rgba(250,204,21,0.65)', marginTop: '2px' }}>{item.desc}</div>
                       </div>
                     </a>
                   )
@@ -508,7 +508,7 @@ export function Navbar() {
                 fontSize: '18px',
                 fontWeight: 600,
                 color: 'rgba(255,255,255,0.8)',
-                borderBottom: '1px solid rgba(200,168,75,0.08)',
+                borderBottom: '1px solid rgba(250,204,21,0.08)',
                 fontFamily: "'DM Sans', sans-serif",
                 textDecoration: 'none',
                 animation: 'psMobileIn 260ms cubic-bezier(0.4,0,0.2,1) both',
@@ -527,10 +527,10 @@ export function Navbar() {
             style={{
               padding: '13px',
               minHeight: '48px',
-              background: 'rgba(200,168,75,0.06)',
-              border: '1px solid rgba(200,168,75,0.18)',
+              background: 'rgba(250,204,21,0.06)',
+              border: '1px solid rgba(250,204,21,0.18)',
               borderRadius: '8px',
-              color: '#c8a84b',
+              color: '#FACC15',
               fontSize: '14px',
               fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
@@ -548,7 +548,7 @@ export function Navbar() {
             style={{
               padding: '15px',
               minHeight: '48px',
-              background: '#c8a84b',
+              background: '#FACC15',
               color: '#0d1b2e',
               borderRadius: '8px',
               textAlign: 'center',
@@ -577,28 +577,28 @@ export function Navbar() {
         .ps-nav-link:hover { color: #fff !important; }
         .ps-nav-dropdown-trigger:hover { color: #fff !important; }
         .ps-nav-link:focus-visible {
-          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline: 2px solid rgba(250,204,21,0.7) !important;
           outline-offset: 3px !important;
           border-radius: 3px !important;
         }
         .ps-dropdown-item:hover {
-          background: rgba(200,168,75,0.08) !important;
+          background: rgba(250,204,21,0.08) !important;
         }
         .ps-lang-btn:hover {
-          border-color: rgba(200,168,75,0.5) !important;
-          background: rgba(200,168,75,0.08) !important;
+          border-color: rgba(250,204,21,0.5) !important;
+          background: rgba(250,204,21,0.08) !important;
         }
         .ps-lang-btn:focus-visible {
-          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline: 2px solid rgba(250,204,21,0.7) !important;
           outline-offset: 3px !important;
         }
-        .ps-cta-btn:hover { background: #e0c068 !important; }
+        .ps-cta-btn:hover { background: #FDE047 !important; }
         .ps-cta-btn:focus-visible {
           outline: 2px solid #fff !important;
           outline-offset: 3px !important;
         }
         .ps-hamburger:focus-visible {
-          outline: 2px solid rgba(200,168,75,0.7) !important;
+          outline: 2px solid rgba(250,204,21,0.7) !important;
           outline-offset: 3px !important;
         }
         @keyframes psMobileIn {

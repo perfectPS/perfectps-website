@@ -17,11 +17,11 @@ const projectTypesAr = [
 const darkInputStyle: React.CSSProperties = {
   width: '100%',
   padding: '13px 16px',
-  border: '1px solid rgba(200,168,75,0.2)',
+  border: '1px solid rgba(250,204,21,0.2)',
   borderRadius: '8px',
   fontSize: '15px',
   color: '#fff',
-  background: 'rgba(200,168,75,0.04)',
+  background: 'rgba(250,204,21,0.04)',
   outline: 'none',
   transition: 'border-color 200ms, box-shadow 200ms',
 }
@@ -34,11 +34,11 @@ export function Contact() {
   const [sent, setSent] = useState(false)
 
   const focus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = '#c8a84b'
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(200,168,75,0.1)'
+    e.currentTarget.style.borderColor = '#FACC15'
+    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(250,204,21,0.1)'
   }
   const blur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = 'rgba(200,168,75,0.2)'
+    e.currentTarget.style.borderColor = 'rgba(250,204,21,0.2)'
     e.currentTarget.style.boxShadow = 'none'
   }
 
@@ -103,7 +103,7 @@ export function Contact() {
                 padding: '56px 48px',
                 background: '#0d1b2e',
                 borderRadius: '16px',
-                border: '1px solid rgba(200,168,75,0.2)',
+                border: '1px solid rgba(250,204,21,0.2)',
                 textAlign: 'center',
               }}>
                 <div style={{
@@ -128,7 +128,7 @@ export function Contact() {
                 style={{
                   background: '#0d1b2e',
                   borderRadius: '16px',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   padding: '40px',
                   display: 'flex',
                   flexDirection: 'column',
@@ -169,7 +169,7 @@ export function Contact() {
 
                 <button type="submit" style={{
                   padding: '15px',
-                  background: '#c8a84b',
+                  background: '#FACC15',
                   color: '#0d1b2e',
                   borderRadius: '8px',
                   fontSize: '15px', fontWeight: 700,
@@ -179,8 +179,8 @@ export function Contact() {
                   border: 'none',
                   cursor: 'pointer',
                 }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#e0c068'; el.style.transform = 'translateY(-1px)' }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#c8a84b'; el.style.transform = 'translateY(0)' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#FDE047'; el.style.transform = 'translateY(-1px)' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = '#FACC15'; el.style.transform = 'translateY(0)' }}
                 >
                   {t('contact.submit')}
                 </button>
@@ -191,7 +191,7 @@ export function Contact() {
           <ScrollReveal delay={150}>
             <div style={{
               background: '#0d1b2e',
-              border: '1px solid rgba(200,168,75,0.18)',
+              border: '1px solid rgba(250,204,21,0.18)',
               borderRadius: '16px',
               padding: '32px 28px',
               display: 'flex', flexDirection: 'column', gap: '0',
@@ -205,19 +205,19 @@ export function Contact() {
                   <div style={{
                     display: 'flex', alignItems: 'flex-start', gap: '16px',
                     padding: '20px 0',
-                    borderBottom: idx < arr.length - 1 ? '1px solid rgba(200,168,75,0.08)' : 'none',
+                    borderBottom: idx < arr.length - 1 ? '1px solid rgba(250,204,21,0.08)' : 'none',
                   }}>
                     <div style={{
                       width: 40, height: 40,
                       borderRadius: '10px',
-                      background: 'rgba(200,168,75,0.1)',
+                      background: 'rgba(250,204,21,0.1)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <Icon size={17} color="#c8a84b" strokeWidth={1.75} />
+                      <Icon size={17} color="#FACC15" strokeWidth={1.75} />
                     </div>
                     <div>
-                      <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#c8a84b', marginBottom: '2px' }}>{label}</div>
+                      <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#FACC15', marginBottom: '2px' }}>{label}</div>
                       <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff' }}>{value}</div>
                     </div>
                   </div>
@@ -230,15 +230,15 @@ export function Contact() {
               <div style={{
                 marginTop: '20px',
                 padding: '16px',
-                background: 'rgba(200,168,75,0.05)',
-                border: '1px solid rgba(200,168,75,0.12)',
+                background: 'rgba(250,204,21,0.05)',
+                border: '1px solid rgba(250,204,21,0.12)',
                 borderRadius: '8px',
               }}>
                 <p style={{ color: '#8fa3bc', fontSize: '13px', lineHeight: 1.75, marginBottom: '12px' }}>
                   {t('contact.info_note')}
                 </p>
                 <a href="mailto:hello@perfectps.com" style={{
-                  color: '#c8a84b', fontSize: '13px', fontWeight: 700,
+                  color: '#FACC15', fontSize: '13px', fontWeight: 700,
                   display: 'flex', alignItems: 'center', gap: '6px',
                 }}>
                   hello@perfectps.com

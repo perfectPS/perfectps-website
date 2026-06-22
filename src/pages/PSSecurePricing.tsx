@@ -63,7 +63,7 @@ export function PSSecurePricing() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,0.07) 0%, transparent 70%)',
+              'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(250,204,21,0.07) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -97,7 +97,7 @@ export function PSSecurePricing() {
             <span
               style={{
                 fontSize: '13px',
-                color: '#c8a84b',
+                color: '#FACC15',
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 600,
               }}
@@ -129,7 +129,7 @@ export function PSSecurePricing() {
               <div
                 style={{
                   background: '#112240',
-                  border: '1px solid rgba(200,168,75,0.18)',
+                  border: '1px solid rgba(250,204,21,0.18)',
                   borderRadius: '14px',
                   padding: '32px',
                   height: '100%',
@@ -138,10 +138,10 @@ export function PSSecurePricing() {
                   transition: 'border-color 200ms',
                 }}
                 onMouseEnter={e => {
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(200,168,75,0.35)'
+                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(250,204,21,0.35)'
                 }}
                 onMouseLeave={e => {
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(200,168,75,0.18)'
+                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(250,204,21,0.18)'
                 }}
               >
                 <div style={{ marginBottom: '8px' }}>
@@ -182,7 +182,7 @@ export function PSSecurePricing() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
                   {freeFeatures.map((f, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle size={16} color="#c8a84b" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
+                      <CheckCircle size={16} color="#FACC15" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
                       <span style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.5 }}>{f}</span>
                     </li>
                   ))}
@@ -194,8 +194,8 @@ export function PSSecurePricing() {
                     textAlign: 'center',
                     padding: '13px 24px',
                     background: 'transparent',
-                    color: '#c8a84b',
-                    border: '1.5px solid rgba(200,168,75,0.45)',
+                    color: '#FACC15',
+                    border: '1.5px solid rgba(250,204,21,0.45)',
                     borderRadius: '8px',
                     fontSize: '15px',
                     fontWeight: 700,
@@ -205,7 +205,7 @@ export function PSSecurePricing() {
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
-                    el.style.background = 'rgba(200,168,75,0.1)'
+                    el.style.background = 'rgba(250,204,21,0.1)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
@@ -222,21 +222,21 @@ export function PSSecurePricing() {
               <div
                 style={{
                   background: '#112240',
-                  border: '1px solid rgba(200,168,75,0.45)',
+                  border: '1px solid rgba(250,204,21,0.45)',
                   borderRadius: '14px',
                   padding: '32px',
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
-                  boxShadow: '0 0 40px rgba(200,168,75,0.15)',
+                  boxShadow: '0 0 40px rgba(250,204,21,0.15)',
                   position: 'relative',
                   transition: 'box-shadow 200ms',
                 }}
                 onMouseEnter={e => {
-                  ;(e.currentTarget as HTMLElement).style.boxShadow = '0 0 56px rgba(200,168,75,0.25)'
+                  ;(e.currentTarget as HTMLElement).style.boxShadow = '0 0 56px rgba(250,204,21,0.25)'
                 }}
                 onMouseLeave={e => {
-                  ;(e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px rgba(200,168,75,0.15)'
+                  ;(e.currentTarget as HTMLElement).style.boxShadow = '0 0 40px rgba(250,204,21,0.15)'
                 }}
               >
                 {/* Most popular badge */}
@@ -246,7 +246,7 @@ export function PSSecurePricing() {
                     top: '-13px',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    background: '#c8a84b',
+                    background: '#FACC15',
                     color: '#0d1b2e',
                     padding: '4px 14px',
                     borderRadius: '100px',
@@ -266,7 +266,7 @@ export function PSSecurePricing() {
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: '13px',
                       fontWeight: 700,
-                      color: '#c8a84b',
+                      color: '#FACC15',
                       textTransform: 'uppercase',
                       letterSpacing: '1.5px',
                     }}
@@ -298,7 +298,7 @@ export function PSSecurePricing() {
                 <p
                   style={{
                     fontSize: '13px',
-                    color: '#c8a84b',
+                    color: '#FACC15',
                     marginBottom: '24px',
                     fontFamily: "'DM Sans', sans-serif",
                   }}
@@ -308,7 +308,7 @@ export function PSSecurePricing() {
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
                   {proFeatures.map((f, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle size={16} color="#c8a84b" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
+                      <CheckCircle size={16} color="#FACC15" strokeWidth={2} style={{ flexShrink: 0, marginTop: '2px' }} />
                       <span style={{ fontSize: '14px', color: '#8fa3bc', lineHeight: 1.5 }}>{f}</span>
                     </li>
                   ))}
@@ -319,7 +319,7 @@ export function PSSecurePricing() {
                     display: 'block',
                     textAlign: 'center',
                     padding: '13px 24px',
-                    background: '#c8a84b',
+                    background: '#FACC15',
                     color: '#0d1b2e',
                     borderRadius: '8px',
                     fontSize: '15px',
@@ -329,10 +329,10 @@ export function PSSecurePricing() {
                     transition: 'background 200ms',
                   }}
                   onMouseEnter={e => {
-                    ;(e.currentTarget as HTMLElement).style.background = '#e0c068'
+                    ;(e.currentTarget as HTMLElement).style.background = '#FDE047'
                   }}
                   onMouseLeave={e => {
-                    ;(e.currentTarget as HTMLElement).style.background = '#c8a84b'
+                    ;(e.currentTarget as HTMLElement).style.background = '#FACC15'
                   }}
                 >
                   Start Pro
@@ -352,7 +352,7 @@ export function PSSecurePricing() {
               flexWrap: 'wrap',
             }}
           >
-            <span style={{ fontSize: '13px', color: '#c8a84b', fontFamily: "'DM Sans'" }}>
+            <span style={{ fontSize: '13px', color: '#FACC15', fontFamily: "'DM Sans'" }}>
               ✓ {t('pssecure.pricing_guarantee')}
             </span>
             <span style={{ fontSize: '13px', color: '#8fa3bc', fontFamily: "'DM Sans'" }}>
@@ -399,15 +399,15 @@ export function PSSecurePricing() {
                     fontWeight: 600,
                     fontFamily: "'DM Sans', sans-serif",
                     background: '#112240',
-                    border: '1px solid rgba(200,168,75,0.18)',
+                    border: '1px solid rgba(250,204,21,0.18)',
                     color: '#fff',
                     transition: 'border-color 200ms',
                   }}
                   onMouseEnter={e => {
-                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(200,168,75,0.45)'
+                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(250,204,21,0.45)'
                   }}
                   onMouseLeave={e => {
-                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(200,168,75,0.18)'
+                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(250,204,21,0.18)'
                   }}
                 >
                   {method}
@@ -445,8 +445,8 @@ export function PSSecurePricing() {
                 <div
                   style={{
                     background: '#112240',
-                    border: '1px solid rgba(200,168,75,0.18)',
-                    borderLeft: '3px solid #c8a84b',
+                    border: '1px solid rgba(250,204,21,0.18)',
+                    borderLeft: '3px solid #FACC15',
                     borderRadius: '12px',
                     padding: '24px 28px',
                   }}
@@ -481,7 +481,7 @@ export function PSSecurePricing() {
               style={{
                 display: 'inline-block',
                 padding: '16px 40px',
-                background: '#c8a84b',
+                background: '#FACC15',
                 color: '#0d1b2e',
                 borderRadius: '8px',
                 fontSize: '16px',
@@ -491,10 +491,10 @@ export function PSSecurePricing() {
                 transition: 'background 200ms',
               }}
               onMouseEnter={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#e0c068'
+                ;(e.currentTarget as HTMLElement).style.background = '#FDE047'
               }}
               onMouseLeave={e => {
-                ;(e.currentTarget as HTMLElement).style.background = '#c8a84b'
+                ;(e.currentTarget as HTMLElement).style.background = '#FACC15'
               }}
             >
               {t('pssecure.download_cta')}
