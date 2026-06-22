@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { PSSecure } from './pages/PSSecure'
+import { PSSecureFeatures } from './pages/PSSecureFeatures'
+import { PSSecureProtocols } from './pages/PSSecureProtocols'
+import { PSSecurePricing } from './pages/PSSecurePricing'
+import { PSSecureDownload } from './pages/PSSecureDownload'
 import { Privacy } from './pages/Privacy'
 import { Terms } from './pages/Terms'
 import { NotFound } from './pages/NotFound'
@@ -22,6 +26,10 @@ export default function App() {
         <Route path="/:lang" element={<LangLayout />}>
           <Route index element={<Home />} />
           <Route path="ps-secure" element={<PSSecure />} />
+          <Route path="ps-secure/features" element={<PSSecureFeatures />} />
+          <Route path="ps-secure/protocols" element={<PSSecureProtocols />} />
+          <Route path="ps-secure/pricing" element={<PSSecurePricing />} />
+          <Route path="ps-secure/download" element={<PSSecureDownload />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
           <Route path="vpn-saudi-arabia" element={<VpnSaudiArabia />} />

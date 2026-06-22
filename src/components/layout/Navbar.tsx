@@ -124,11 +124,15 @@ export function Navbar() {
             textDecoration: 'none',
             flexShrink: 0,
           }}>
-            <svg width="26" height="30" viewBox="0 0 28 32" fill="none" aria-hidden="true">
-              <path d="M14 1L2 6v10c0 7.18 5.16 13.9 12 15.92C20.84 29.9 26 23.18 26 16V6L14 1z"
-                fill="rgba(200,168,75,0.15)" stroke="#c8a84b" strokeWidth="1.5"/>
-              <text x="14" y="21" textAnchor="middle" fontFamily="'DM Sans', sans-serif"
-                fontSize="11" fontWeight="800" fill="#c8a84b">PS</text>
+            <svg width="26" height="30" viewBox="0 0 16 16" fill="none" aria-hidden="true" style={{ filter: 'drop-shadow(0 0 6px rgba(34,211,238,0.4))' }}>
+              {/* Outer cyan border path */}
+              <path d="M9,1 h2 v2 h1 v1 h1 v1 h1 v3 h-1 v2 h-1 v2 h-1 v2 h-2 v1 h-3 v-1 h-3 v-2 h3 v-1 h1 v-2 h2 v-2 h1 v-2 h1 v-2 h1 v-1 z" fill="#22D3EE" />
+              {/* Yellow inner path */}
+              <path d="M9,2 h1 v1 h1 v1 h1 v1 h1 v2 h-1 v2 h-1 v2 h-1 v2 h-2 v-1 h-2 v-1 h1 v-1 h1 v-1 h2 v-2 h1 v-2 h1 v-1 z" fill="#FACC15" />
+              {/* Stem */}
+              <rect x="9" y="1" width="1" height="1" fill="#0EA5E9" />
+              {/* Tip */}
+              <rect x="2" y="11" width="1" height="1" fill="#854D0E" />
             </svg>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
               {isArabic ? (
@@ -152,13 +156,13 @@ export function Navbar() {
                     letterSpacing: '-0.3px',
                     lineHeight: 1.1,
                   }}>
-                    perfect<span style={{ color: '#c8a84b' }}>PS</span>
+                    perfect<span style={{ color: '#FACC15' }}>PS</span>
                   </span>
                   <span style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '9px',
                     fontWeight: 500,
-                    color: 'rgba(200,168,75,0.55)',
+                    color: 'rgba(34,211,238,0.7)',
                     letterSpacing: '0.04em',
                     textTransform: 'uppercase',
                     lineHeight: 1,
