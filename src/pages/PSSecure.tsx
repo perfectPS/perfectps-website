@@ -244,7 +244,7 @@ export function PSSecure() {
 
           <div className="grid-3">
             {features.map((f, i) => (
-              <ScrollReveal key={f.title} delay={i * 70}>
+              <ScrollReveal key={f.title} delay={i * 40}>
                 <HoverCard style={{
                   padding: '32px',
                   borderRadius: '16px',
@@ -324,7 +324,7 @@ export function PSSecure() {
 
           <div className="grid-2">
             {protocols.map((p, i) => (
-              <ScrollReveal key={p.name} delay={i * 80}>
+              <ScrollReveal key={p.name} delay={i * 40}>
                 <HoverCard style={{
                   padding: '28px 32px',
                   borderRadius: '16px',
@@ -465,7 +465,7 @@ export function PSSecure() {
             </ScrollReveal>
 
             {/* Pro card */}
-            <ScrollReveal delay={100}>
+            <ScrollReveal delay={50}>
               <HoverCard
                 baseBorderColor="rgba(200,168,75,0.4)"
                 hoverBorderColor="rgba(200,168,75,0.7)"
@@ -605,7 +605,7 @@ export function PSSecure() {
               />
             </ScrollReveal>
             {/* Open Source */}
-            <ScrollReveal delay={100}>
+            <ScrollReveal delay={50}>
               <SecurityPillar
                 icon={Shield}
                 title={t('pssecure.security_open_title')}
@@ -613,7 +613,7 @@ export function PSSecure() {
               />
             </ScrollReveal>
             {/* AES-256 */}
-            <ScrollReveal delay={200}>
+            <ScrollReveal delay={100}>
               <SecurityPillar
                 icon={Lock}
                 title={t('pssecure.security_encrypt_title')}
@@ -643,7 +643,7 @@ export function PSSecure() {
 
           <div className="grid-3">
             {steps.map((step, i) => (
-              <ScrollReveal key={step.n} delay={i * 100}>
+              <ScrollReveal key={step.n} delay={i * 50}>
                 <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
                   <div style={{
                     width: '52px',

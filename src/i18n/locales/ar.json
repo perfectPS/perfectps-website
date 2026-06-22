@@ -310,7 +310,8 @@
     "download_free_includes": "الخطة المجانية تشمل",
     "download_pro_includes": "خطة Pro تشمل",
     "download_web_sub": "اشترك عبر الويب",
-    "download_web_sub_desc": "تفضّل الدفع عبر الويب؟ اشترك على perfectps.com لتجنب رسوم App Store."
+    "download_web_sub_desc": "تفضّل الدفع عبر الويب؟ اشترك على perfectps.com لتجنب رسوم App Store.",
+    "download_cta": "حمّل مجاناً"
   },
   "capabilities": {
     "label": "النطاق والخبرة",

@@ -7,10 +7,13 @@ import { PSSecurePricing } from './pages/PSSecurePricing'
 import { PSSecureDownload } from './pages/PSSecureDownload'
 import { Privacy } from './pages/Privacy'
 import { Terms } from './pages/Terms'
+import { DataDeletion } from './pages/DataDeletion'
 import { NotFound } from './pages/NotFound'
 import { VpnSaudiArabia } from './pages/VpnSaudiArabia'
 import { VpnUAE } from './pages/VpnUAE'
 import { LangLayout } from './components/layout/LangLayout'
+import { Billing } from './pages/Billing'
+import { BillingSuccess } from './pages/BillingSuccess'
 
 function getPreferredLang(): string {
   const stored = localStorage.getItem('lang')
@@ -22,6 +25,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Billing routes — no lang prefix so Stripe can redirect to /billing/success */}
+        <Route path="/billing" element={<Billing />} />
+        <Route path="/billing/success" element={<BillingSuccess />} />
+
+        {/* Marketing site */}
         <Route path="/" element={<Navigate to={`/${getPreferredLang()}`} replace />} />
         <Route path="/:lang" element={<LangLayout />}>
           <Route index element={<Home />} />
@@ -32,6 +40,7 @@ export default function App() {
           <Route path="ps-secure/download" element={<PSSecureDownload />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
+          <Route path="data-deletion" element={<DataDeletion />} />
           <Route path="vpn-saudi-arabia" element={<VpnSaudiArabia />} />
           <Route path="vpn-uae" element={<VpnUAE />} />
           <Route path="*" element={<NotFound />} />

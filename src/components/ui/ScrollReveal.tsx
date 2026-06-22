@@ -21,7 +21,7 @@ export function ScrollReveal({ children, delay = 0, className, style }: ScrollRe
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -33,8 +33,8 @@ export function ScrollReveal({ children, delay = 0, className, style }: ScrollRe
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 500ms ease, transform 500ms ease',
+        transform: visible ? 'translateY(0)' : 'translateY(16px)',
+        transition: 'opacity 350ms ease, transform 350ms ease',
         ...style,
       }}
     >

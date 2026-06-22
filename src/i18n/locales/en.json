@@ -310,7 +310,8 @@
     "download_free_includes": "Free plan includes",
     "download_pro_includes": "Pro plan includes",
     "download_web_sub": "Subscribe on the web",
-    "download_web_sub_desc": "Prefer to pay on the web? Subscribe at perfectps.com to avoid App Store fees."
+    "download_web_sub_desc": "Prefer to pay on the web? Subscribe at perfectps.com to avoid App Store fees.",
+    "download_cta": "Download Free"
   },
   "capabilities": {
     "label": "Scale & Expertise",
