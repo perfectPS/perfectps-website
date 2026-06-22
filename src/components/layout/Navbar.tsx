@@ -124,20 +124,18 @@ export function Navbar() {
             textDecoration: 'none',
             flexShrink: 0,
           }}>
-            <svg width="26" height="30" viewBox="0 0 16 16" fill="none" aria-hidden="true" style={{ filter: 'drop-shadow(0 0 6px rgba(34,211,238,0.4))' }}>
-              {/* Outer cyan border path */}
-              <path d="M9,1 h2 v2 h1 v1 h1 v1 h1 v3 h-1 v2 h-1 v2 h-1 v2 h-2 v1 h-3 v-1 h-3 v-2 h3 v-1 h1 v-2 h2 v-2 h1 v-2 h1 v-2 h1 v-1 z" fill="#22D3EE" />
-              {/* Yellow inner path */}
-              <path d="M9,2 h1 v1 h1 v1 h1 v1 h1 v2 h-1 v2 h-1 v2 h-1 v2 h-2 v-1 h-2 v-1 h1 v-1 h1 v-1 h2 v-2 h1 v-2 h1 v-1 z" fill="#FACC15" />
-              {/* Stem */}
-              <rect x="9" y="1" width="1" height="1" fill="#0EA5E9" />
-              {/* Tip */}
-              <rect x="2" y="11" width="1" height="1" fill="#854D0E" />
-            </svg>
+            <img
+              src="/favicon.svg"
+              width="30"
+              height="30"
+              alt=""
+              aria-hidden="true"
+              style={{ borderRadius: '7px', filter: 'drop-shadow(0 0 6px rgba(34,211,238,0.35))' }}
+            />
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
               {isArabic ? (
                 <span style={{
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Chakra Petch', monospace",
                   fontSize: '14px',
                   fontWeight: 700,
                   color: '#fff',
@@ -149,11 +147,11 @@ export function Navbar() {
               ) : (
                 <>
                   <span style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '18px',
-                    fontWeight: 800,
+                    fontFamily: "'Chakra Petch', monospace",
+                    fontSize: '17px',
+                    fontWeight: 700,
                     color: '#fff',
-                    letterSpacing: '-0.3px',
+                    letterSpacing: '-0.2px',
                     lineHeight: 1.1,
                   }}>
                     perfect<span style={{ color: '#FACC15' }}>PS</span>
