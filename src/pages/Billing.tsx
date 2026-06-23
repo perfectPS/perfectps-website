@@ -385,7 +385,7 @@ function DashboardView({ user, onLogout }: { user: AuthUser; onLogout: () => voi
 export function Billing() {
   const lang = useLang()
   usePageSeo({
-    title: 'My Subscription | PS Secure VPN — perfectPS',
+    title: 'My Subscription | PS Secure VPN — PerfectPS',
     description: 'Manage your PS Secure VPN subscription, view billing history, and update your plan.',
     canonical: `https://perfectps.com/${lang}/billing`,
     lang,

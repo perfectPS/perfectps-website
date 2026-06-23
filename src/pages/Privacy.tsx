@@ -84,14 +84,14 @@ const BASE = 'https://perfectps.com'
 
 const SEO = {
   en: {
-    title: 'Privacy Policy | perfectPS',
+    title: 'Privacy Policy | PerfectPS',
     description:
-      'Read the perfectPS privacy policy. We operate a strict zero-log policy for PS Secure VPN and use only essential cookies on our website. Your data is never sold or shared.',
+      'Read the PerfectPS privacy policy. We operate a strict zero-log policy for PS Secure VPN and use only essential cookies on our website. Your data is never sold or shared.',
   },
   ar: {
-    title: 'سياسة الخصوصية | perfectPS',
+    title: 'سياسة الخصوصية | PerfectPS',
     description:
-      'اطلع على سياسة خصوصية perfectPS. نطبق سياسة صارمة لعدم تسجيل البيانات في PS Secure VPN ونستخدم ملفات تعريف ارتباط أساسية فقط. بياناتك لا تُباع ولا تُشارك.',
+      'اطلع على سياسة خصوصية PerfectPS. نطبق سياسة صارمة لعدم تسجيل البيانات في PS Secure VPN ونستخدم ملفات تعريف ارتباط أساسية فقط. بياناتك لا تُباع ولا تُشارك.',
   },
 }
 

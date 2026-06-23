@@ -13,14 +13,14 @@ const BASE = 'https://perfectps.com'
 
 const SEO = {
   en: {
-    title: 'PS Secure VPN — WireGuard VPN for iOS & Android | perfectPS',
+    title: 'PS Secure VPN — WireGuard VPN for iOS & Android | PerfectPS',
     description:
-      'PS Secure is a WireGuard-powered VPN for iOS and Android with a strict zero-log policy, AdGuard DNS filtering, and a kill switch. Fast, private, and built for the Middle East by perfectPS.',
+      'PS Secure is a WireGuard-powered VPN for iOS and Android with a strict zero-log policy, AdGuard DNS filtering, and a kill switch. Fast, private, and built for the Middle East by PerfectPS.',
   },
   ar: {
-    title: 'PS Secure VPN — تطبيق VPN بـ WireGuard لـ iOS وAndroid | perfectPS',
+    title: 'PS Secure VPN — تطبيق VPN بـ WireGuard لـ iOS وAndroid | PerfectPS',
     description:
-      'PS Secure تطبيق VPN مبني على WireGuard لـ iOS وAndroid. سياسة صفرية السجلات وفلتر DNS من AdGuard ومفتاح إيقاع طارئ. سريع وخاص ومصمم للشرق الأوسط من perfectPS.',
+      'PS Secure تطبيق VPN مبني على WireGuard لـ iOS وAndroid. سياسة صفرية السجلات وفلتر DNS من AdGuard ومفتاح إيقاع طارئ. سريع وخاص ومصمم للشرق الأوسط من PerfectPS.',
   },
 }
 

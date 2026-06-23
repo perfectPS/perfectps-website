@@ -48,40 +48,6 @@ export function About() {
         <ScrollReveal>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-label">{t('about.label')}</div>
-
-            {/* "We Are / نحن" — small gold label */}
-            <div style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '13px',
-              fontWeight: 700,
-              color: '#FACC15',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              marginBottom: '10px',
-            }}>
-              {t('about.h2_pre')}
-            </div>
-
-            {/* Main wordmark */}
-            <h2 style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(44px, 7vw, 80px)',
-              fontWeight: 800,
-              color: '#0d1b2e',
-              lineHeight: 1.0,
-              letterSpacing: '-2px',
-              margin: 0,
-            }}>
-              perfect<span style={{ color: '#FACC15' }}>PS</span>
-            </h2>
-
-            {/* Gold accent bar */}
-            <div style={{
-              width: 56, height: 3,
-              background: 'linear-gradient(90deg, #FACC15, #a07830)',
-              borderRadius: '2px',
-              margin: '16px auto 0',
-            }} />
           </div>
         </ScrollReveal>
 

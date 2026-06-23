@@ -117,7 +117,7 @@ export function Navbar() {
         }}>
 
           {/* Logo */}
-          <a href={`/${lang}`} aria-label="perfectPS home" style={{
+          <a href={`/${lang}`} aria-label="PerfectPS home" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '9px',
@@ -154,7 +154,7 @@ export function Navbar() {
                     letterSpacing: '-0.2px',
                     lineHeight: 1.1,
                   }}>
-                    perfect<span style={{ color: '#FACC15' }}>PS</span>
+                    Perfect<span style={{ color: '#FACC15' }}>PS</span>
                   </span>
                   <span style={{
                     fontFamily: "'DM Sans', sans-serif",

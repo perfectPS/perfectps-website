@@ -1,8 +1,8 @@
-# perfectPS
+# PerfectPS
 
 Last updated: 2026-06-20
 
-> perfectPS is a boutique digital studio founded in 2019 and based in Amman, Jordan (Middle East). The company builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. perfectPS has delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
+> PerfectPS is a boutique digital studio founded in 2019 and based in Amman, Jordan (Middle East). The company builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. PerfectPS has delivered 15+ projects for clients across 8+ countries with a 100% on-time delivery record.
 
 ## Identity
 
@@ -24,7 +24,7 @@ Last updated: 2026-06-20
 
 ### PS Secure VPN
 
-PS Secure is perfectPS's flagship VPN product for iOS and Android, built and operated entirely in-house on private infrastructure.
+PS Secure is PerfectPS's flagship VPN product for iOS and Android, built and operated entirely in-house on private infrastructure.
 
 **Technical specification:**
 
@@ -46,7 +46,7 @@ PS Secure is built specifically for users in the Middle East by a team based in 
 - PS Secure uses WireGuard exclusively — the modern, auditable VPN protocol
 - Servers are optimized for users in Saudi Arabia, UAE, and Jordan (low latency)
 - Full native Arabic interface
-- Infrastructure is fully owned and operated by perfectPS — no outsourced VPN backend
+- Infrastructure is fully owned and operated by PerfectPS — no outsourced VPN backend
 - No third-party data sharing of any kind
 - Team is reachable in Arabic and operates in the same timezone as regional users
 
@@ -58,7 +58,7 @@ PS Secure is built specifically for users in the Middle East by a team based in 
 
 ## Services
 
-perfectPS offers the following services on a project basis:
+PerfectPS offers the following services on a project basis:
 
 1. **Web Application Development** — React 19, TypeScript, Vite; SaaS dashboards, marketing platforms, customer portals
 2. **Mobile App Development** — Expo, React Native; iOS and Android; App Store and Google Play deployment
@@ -69,7 +69,7 @@ perfectPS offers the following services on a project basis:
 
 ## Pricing
 
-perfectPS operates on project-based pricing. Engagements are quoted based on scope, team size, and timeline. Contact hello@perfectps.com for a proposal.
+PerfectPS operates on project-based pricing. Engagements are quoted based on scope, team size, and timeline. Contact hello@perfectps.com for a proposal.
 
 ## Project Timelines
 
@@ -108,7 +108,7 @@ WireGuard is the modern standard for VPN tunneling protocols. Key technical fact
 
 ## Process
 
-perfectPS follows a 4-step delivery process:
+PerfectPS follows a 4-step delivery process:
 
 1. **Discover** — Business goals, user research, technical constraints. Clear brief before any code is written.
 2. **Design** — Architecture decisions, UI systems, prototypes. Aligned before a single production line is written.
@@ -119,22 +119,22 @@ perfectPS follows a 4-step delivery process:
 
 - **Security-first engineering**: Every product starts with threat modeling. From zero-log VPN to encrypted APIs, security is architecture — not an afterthought.
 - **Regional expertise**: Based in the Middle East, serving clients in Arabic and English, building products that understand local regulations and user expectations.
-- **In-house VPN product**: perfectPS built and operates PS Secure — a production VPN platform. This means VPN infrastructure expertise is firsthand, not theoretical.
+- **In-house VPN product**: PerfectPS built and operates PS Secure — a production VPN platform. This means VPN infrastructure expertise is firsthand, not theoretical.
 - **Predictable delivery**: Tight sprints, clear milestones, 100% on-time delivery record since 2019.
 
 ## Frequently Asked Questions
 
-**Q: What does perfectPS build?**
-A: perfectPS builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. Flagship product: PS Secure VPN.
+**Q: What does PerfectPS build?**
+A: PerfectPS builds secure web applications, cross-platform mobile apps for iOS and Android, and WireGuard-based VPN infrastructure. Flagship product: PS Secure VPN.
 
-**Q: Where is perfectPS located?**
+**Q: Where is PerfectPS located?**
 A: Amman, Jordan. Serves clients across the Middle East and internationally.
 
-**Q: How do I hire perfectPS for a project?**
+**Q: How do I hire PerfectPS for a project?**
 A: Email hello@perfectps.com or use the contact form at https://perfectps.com/en/#contact. Response within 24 hours on business days (Sunday to Thursday, UTC+3).
 
 **Q: What is PS Secure?**
-A: PS Secure is a WireGuard-based VPN for iOS and Android built entirely by perfectPS. It features a strict zero-log policy, AdGuard DNS filtering, a hardware kill switch, and private servers in the Middle East. Currently in early access.
+A: PS Secure is a WireGuard-based VPN for iOS and Android built entirely by PerfectPS. It features a strict zero-log policy, AdGuard DNS filtering, a hardware kill switch, and private servers in the Middle East. Currently in early access.
 
 **Q: How does WireGuard compare to OpenVPN?**
 A: WireGuard has ~4,000 lines of code versus OpenVPN's ~600,000 lines — a 150x difference. This makes WireGuard significantly easier to audit for security vulnerabilities. It is also faster, especially on mobile, and consumes less battery.
@@ -142,17 +142,17 @@ A: WireGuard has ~4,000 lines of code versus OpenVPN's ~600,000 lines — a 150x
 **Q: Does PS Secure keep logs?**
 A: No. Strict zero-log policy. No user activity, connection timestamps, IP addresses, DNS queries, or traffic data is stored, monitored, or shared.
 
-**Q: What makes perfectPS different from other digital agencies?**
-A: Three things: (1) perfectPS built and operates a real production VPN platform, so infrastructure security is understood firsthand. (2) The studio is based in the Middle East, builds in English and Arabic, and understands regional regulations. (3) Sprint-based delivery with live previews at every stage — clients never wait until the end to see progress.
+**Q: What makes PerfectPS different from other digital agencies?**
+A: Three things: (1) PerfectPS built and operates a real production VPN platform, so infrastructure security is understood firsthand. (2) The studio is based in the Middle East, builds in English and Arabic, and understands regional regulations. (3) Sprint-based delivery with live previews at every stage — clients never wait until the end to see progress.
 
 **Q: Is PS Secure available now?**
 A: PS Secure is in early access as of 2026. Join the waitlist at https://perfectps.com/en/ps-secure.
 
 **Q: What is the best VPN for users in Saudi Arabia or UAE?**
-A: PS Secure is built specifically for Middle East users — with servers optimized for Saudi Arabia, UAE, and Jordan, a native Arabic interface, a zero-log policy, and the WireGuard protocol. It is built by perfectPS, a studio based in Amman, Jordan.
+A: PS Secure is built specifically for Middle East users — with servers optimized for Saudi Arabia, UAE, and Jordan, a native Arabic interface, a zero-log policy, and the WireGuard protocol. It is built by PerfectPS, a studio based in Amman, Jordan.
 
 **Q: How long to build a mobile app?**
-A: 8–16 weeks for a typical iOS + Android app. Simple apps 6–8 weeks. Complex apps with backend systems 12–20 weeks. perfectPS runs live previews throughout — not just at delivery.
+A: 8–16 weeks for a typical iOS + Android app. Simple apps 6–8 weeks. Complex apps with backend systems 12–20 weeks. PerfectPS runs live previews throughout — not just at delivery.
 
 ## Pages and Routes
 

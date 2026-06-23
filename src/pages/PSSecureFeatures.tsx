@@ -87,7 +87,7 @@ export function PSSecureFeatures() {
   const { t } = useTranslation()
 
   usePageSeo({
-    title: 'PS Secure Features — Privacy, Speed & Censorship Bypass | perfectPS',
+    title: 'PS Secure Features — Privacy, Speed & Censorship Bypass | PerfectPS',
     description: t('pssecure.features_page_body'),
     canonical: `${BASE}/${lang}/ps-secure/features`,
     lang,

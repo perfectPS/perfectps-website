@@ -10,12 +10,12 @@ const BASE = 'https://perfectps.com'
 
 const SEO = {
   en: {
-    title: 'Best VPN for Saudi Arabia — PS Secure | perfectPS',
+    title: 'Best VPN for Saudi Arabia — PS Secure | PerfectPS',
     description:
       'PS Secure is the best VPN for Saudi Arabia. WireGuard protocol, strict zero-log policy, AdGuard DNS filtering, Arabic UI, and Middle East servers. Fast, private, and built for KSA.',
   },
   ar: {
-    title: 'أفضل VPN للمملكة العربية السعودية — PS Secure | perfectPS',
+    title: 'أفضل VPN للمملكة العربية السعودية — PS Secure | PerfectPS',
     description:
       'PS Secure أفضل تطبيق VPN للمملكة العربية السعودية. بروتوكول WireGuard وسياسة صفرية السجلات وفلتر DNS من AdGuard وواجهة عربية وخوادم في الشرق الأوسط. سريع وخاص ومصمم للسعودية.',
   },
@@ -72,7 +72,7 @@ const content = {
       },
       {
         title: 'Transparent & Independent',
-        desc: 'perfectPS is a boutique studio based in Amman, Jordan. We are not affiliated with any telecom operator or government body.',
+        desc: 'PerfectPS is a boutique studio based in Amman, Jordan. We are not affiliated with any telecom operator or government body.',
       },
     ],
     ctaH2: 'Ready to protect your connection in Saudi Arabia?',
@@ -129,7 +129,7 @@ const content = {
       },
       {
         title: 'شفاف ومستقل',
-        desc: 'perfectPS استوديو متخصص في عمّان، الأردن. لسنا تابعين لأي مشغل اتصالات أو جهة حكومية.',
+        desc: 'PerfectPS استوديو متخصص في عمّان، الأردن. لسنا تابعين لأي مشغل اتصالات أو جهة حكومية.',
       },
     ],
     ctaH2: 'هل أنت مستعد لحماية اتصالك في السعودية؟',

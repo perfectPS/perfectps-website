@@ -10,7 +10,7 @@ const BORDER = '#1e3047'
 
 export function BillingSuccess() {
   usePageSeo({
-    title: 'Subscription Activated | PS Secure VPN — perfectPS',
+    title: 'Subscription Activated | PS Secure VPN — PerfectPS',
     description: 'Your PS Secure VPN subscription is now active. Welcome aboard.',
     canonical: 'https://perfectps.com/en/billing/success',
   })

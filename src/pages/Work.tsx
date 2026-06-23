@@ -8,8 +8,8 @@ export function Work() {
   const { t } = useTranslation()
   const lang = useLang()
   usePageSeo({
-    title: 'Work & Portfolio | perfectPS — Digital Studio Middle East',
-    description: 'Browse 15+ digital products built by perfectPS — SaaS dashboards, mobile apps, VPN infrastructure, and more. Serving clients across the Middle East since 2019.',
+    title: 'Work & Portfolio | PerfectPS — Digital Studio Middle East',
+    description: 'Browse 15+ digital products built by PerfectPS — SaaS dashboards, mobile apps, VPN infrastructure, and more. Serving clients across the Middle East since 2019.',
     canonical: `https://perfectps.com/${lang}/work`,
     lang,
   })

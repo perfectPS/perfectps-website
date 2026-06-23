@@ -98,7 +98,7 @@ export function Footer() {
                       letterSpacing: '-0.3px',
                       lineHeight: 1.1,
                     }}>
-                      perfect<span style={{ color: '#FACC15' }}>PS</span>
+                      Perfect<span style={{ color: '#FACC15' }}>PS</span>
                     </span>
                     <span style={{
                       fontFamily: "'DM Sans', sans-serif",

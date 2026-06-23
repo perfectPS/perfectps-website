@@ -10,32 +10,32 @@ const BASE = 'https://perfectps.com'
 const PAGE_META: Record<string, Record<string, { title: string; description: string }>> = {
   '/': {
     en: {
-      title: 'perfectPS | Web, Mobile & VPN Studio | Middle East Digital Studio',
-      description: 'perfectPS is a boutique digital studio in Amman, Jordan. We build secure web apps, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Creators of PS Secure VPN. Est. 2019.',
+      title: 'PerfectPS | Web, Mobile & VPN Studio | Middle East Digital Studio',
+      description: 'PerfectPS is a boutique digital studio in Amman, Jordan. We build secure web apps, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Creators of PS Secure VPN. Est. 2019.',
     },
     ar: {
-      title: 'perfectPS | استوديو ويب وجوال وVPN | الشرق الأوسط',
-      description: 'perfectPS استوديو رقمي في عمّان، الأردن. نبني تطبيقات ويب وجوال آمنة وبنية تحتية VPN مبنية على WireGuard. مبتكرو PS Secure VPN. منذ 2019.',
+      title: 'PerfectPS | استوديو ويب وجوال وVPN | الشرق الأوسط',
+      description: 'PerfectPS استوديو رقمي في عمّان، الأردن. نبني تطبيقات ويب وجوال آمنة وبنية تحتية VPN مبنية على WireGuard. مبتكرو PS Secure VPN. منذ 2019.',
     },
   },
   '/ps-secure': {
     en: {
-      title: 'PS Secure VPN | WireGuard VPN for iOS & Android | perfectPS',
-      description: 'PS Secure is a WireGuard VPN for iOS and Android with a zero-log policy, AdGuard DNS filtering, and a hardware kill switch. Built by perfectPS for privacy-first users in the Middle East.',
+      title: 'PS Secure VPN | WireGuard VPN for iOS & Android | PerfectPS',
+      description: 'PS Secure is a WireGuard VPN for iOS and Android with a zero-log policy, AdGuard DNS filtering, and a hardware kill switch. Built by PerfectPS for privacy-first users in the Middle East.',
     },
     ar: {
-      title: 'PS Secure VPN | تطبيق VPN بـ WireGuard لـ iOS وAndroid | perfectPS',
-      description: 'PS Secure تطبيق VPN مبني على WireGuard لـ iOS وAndroid. سياسة صفرية السجلات وفلتر DNS من AdGuard ومفتاح إيقاف طارئ. مبني بواسطة perfectPS للشرق الأوسط.',
+      title: 'PS Secure VPN | تطبيق VPN بـ WireGuard لـ iOS وAndroid | PerfectPS',
+      description: 'PS Secure تطبيق VPN مبني على WireGuard لـ iOS وAndroid. سياسة صفرية السجلات وفلتر DNS من AdGuard ومفتاح إيقاف طارئ. مبني بواسطة PerfectPS للشرق الأوسط.',
     },
   },
   '/work': {
     en: {
-      title: 'Portfolio | perfectPS — 15+ Digital Products Delivered Since 2019',
-      description: 'Browse 15+ web apps, mobile apps, and VPN products built by perfectPS for clients across 8+ countries. Projects spanning fintech, security, and e-commerce.',
+      title: 'Portfolio | PerfectPS — 15+ Digital Products Delivered Since 2019',
+      description: 'Browse 15+ web apps, mobile apps, and VPN products built by PerfectPS for clients across 8+ countries. Projects spanning fintech, security, and e-commerce.',
     },
     ar: {
-      title: 'أعمالنا | perfectPS — أكثر من 15 منتجاً رقمياً منذ 2019',
-      description: 'تصفح أكثر من 15 تطبيق ويب وجوال ومنتج VPN بناه perfectPS لعملاء في أكثر من 8 دول منذ 2019. مشاريع في التقنية المالية والأمن والتجارة الإلكترونية.',
+      title: 'أعمالنا | PerfectPS — أكثر من 15 منتجاً رقمياً منذ 2019',
+      description: 'تصفح أكثر من 15 تطبيق ويب وجوال ومنتج VPN بناه PerfectPS لعملاء في أكثر من 8 دول منذ 2019. مشاريع في التقنية المالية والأمن والتجارة الإلكترونية.',
     },
   },
 }

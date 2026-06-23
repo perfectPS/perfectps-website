@@ -37,6 +37,6 @@
 
   <!-- Studio label -->
   <rect x="142" y="320" width="116" height="36" rx="18" fill="rgba(13,27,46,0.05)" stroke="#c8a84b" stroke-width="1.2"/>
-  <text x="200" y="343" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#0d1b2e">perfectPS ·</text>
+  <text x="200" y="343" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#0d1b2e">PerfectPS ·</text>
   <text x="246" y="343" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#c8a84b"> JO</text>
 </svg>

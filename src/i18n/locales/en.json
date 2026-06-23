@@ -48,7 +48,7 @@
     "learn_more": "Learn more"
   },
   "whyus": {
-    "label": "Why perfectPS",
+    "label": "Why PerfectPS",
     "h2_line1": "What Makes Us",
     "h2_line2": "Different",
     "body": "We have built software products across industries, from fintech to security infrastructure. Here is what we bring to every engagement.",
@@ -97,7 +97,7 @@
   },
   "about": {
     "label": "About the Studio",
-    "h2": "We Are perfectPS",
+    "h2": "We Are PerfectPS",
     "h2_pre": "We Are",
     "studio_label": "Digital Studio · Est. 2019",
     "quote": "We believe in clean code, beautiful interfaces, and infrastructure that actually works.",
@@ -106,7 +106,7 @@
     "stat_shipped": "Products Shipped",
     "stat_countries": "Countries",
     "cta": "Start a Project",
-    "p1": "perfectPS is a digital studio based in the Middle East. We specialize in secure, high-performance digital products.",
+    "p1": "PerfectPS is a digital studio based in the Middle East. We specialize in secure, high-performance digital products.",
     "p2": "We built PS Secure, a zero-log VPN platform trusted by users across the region. We partner with businesses to design, build, and ship products that make an impact.",
     "p3": "We believe in clean code, beautiful interfaces, and infrastructure that actually works."
   },
@@ -117,7 +117,7 @@
     "badge": "Flagship Product",
     "name": "PS Secure",
     "subtitle": "VPN and Privacy Platform",
-    "desc": "Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy, AdGuard DNS filtering, a hardware kill switch, and native iOS and Android apps. All under perfectPS infrastructure.",
+    "desc": "Enterprise-grade VPN powered by WireGuard. PS Secure delivers zero-log privacy, AdGuard DNS filtering, a hardware kill switch, and native iOS and Android apps. All under PerfectPS infrastructure.",
     "cta_learn": "Learn More",
     "cta_access": "Get Early Access"
   },
@@ -346,7 +346,7 @@
     "link_contact": "Contact",
     "link_privacy": "Privacy Policy",
     "link_terms": "Terms of Service",
-    "copyright": "© 2026 perfectPS. All rights reserved.",
+    "copyright": "© 2026 PerfectPS. All rights reserved.",
     "status": "All systems operational"
   },
   "contact": {

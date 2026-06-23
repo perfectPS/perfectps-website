@@ -16,7 +16,7 @@ export function PSSecurePricing() {
   const { t } = useTranslation()
 
   usePageSeo({
-    title: 'PS Secure Pricing — Free & Pro Plans | perfectPS',
+    title: 'PS Secure Pricing — Free & Pro Plans | PerfectPS',
     description: t('pssecure.pricing_page_body'),
     canonical: `${BASE}/${lang}/ps-secure/pricing`,
     lang,

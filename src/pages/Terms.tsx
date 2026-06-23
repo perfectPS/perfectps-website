@@ -5,15 +5,15 @@ import { usePageSeo } from '../hooks/usePageSeo'
 const sectionsEn = [
   {
     heading: 'Acceptance of Terms',
-    body: 'By accessing or using perfectps.com or any service provided by perfectPS ("we", "us", "our"), you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.',
+    body: 'By accessing or using perfectps.com or any service provided by PerfectPS ("we", "us", "our"), you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.',
   },
   {
     heading: 'Services',
-    body: 'perfectPS provides digital product development services including web applications, mobile apps, VPN infrastructure, UI/UX design, backend engineering, and DevOps. We also operate PS Secure, a VPN and privacy product available on iOS and Android.',
+    body: 'PerfectPS provides digital product development services including web applications, mobile apps, VPN infrastructure, UI/UX design, backend engineering, and DevOps. We also operate PS Secure, a VPN and privacy product available on iOS and Android.',
   },
   {
     heading: 'Intellectual Property',
-    body: 'Unless otherwise agreed in a signed contract, all work product created by perfectPS for clients remains the intellectual property of perfectPS until full payment is received, at which point ownership transfers to the client as specified in the project agreement. The perfectPS brand, logo, and the PS Secure product are the sole property of perfectPS.',
+    body: 'Unless otherwise agreed in a signed contract, all work product created by PerfectPS for clients remains the intellectual property of PerfectPS until full payment is received, at which point ownership transfers to the client as specified in the project agreement. The PerfectPS brand, logo, and the PS Secure product are the sole property of PerfectPS.',
   },
   {
     heading: 'Client Responsibilities',
@@ -25,11 +25,11 @@ const sectionsEn = [
   },
   {
     heading: 'Confidentiality',
-    body: 'perfectPS treats all client project information as confidential by default. We do not disclose client identities or project details to third parties without explicit written consent. Clients may request additional NDA coverage for any engagement.',
+    body: 'PerfectPS treats all client project information as confidential by default. We do not disclose client identities or project details to third parties without explicit written consent. Clients may request additional NDA coverage for any engagement.',
   },
   {
     heading: 'Limitation of Liability',
-    body: 'To the maximum extent permitted by law, perfectPS shall not be liable for indirect, incidental, special, consequential, or punitive damages arising from the use of our services. Our total liability shall not exceed the fees paid by the client in the three months preceding the claim.',
+    body: 'To the maximum extent permitted by law, PerfectPS shall not be liable for indirect, incidental, special, consequential, or punitive damages arising from the use of our services. Our total liability shall not exceed the fees paid by the client in the three months preceding the claim.',
   },
   {
     heading: 'PS Secure VPN Terms',
@@ -52,15 +52,15 @@ const sectionsEn = [
 const sectionsAr = [
   {
     heading: 'قبول الشروط',
-    body: 'بالوصول إلى perfectps.com أو استخدام أي خدمة مقدمة من perfectPS ("نحن"، "لنا"، "خاصتنا")، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق، يرجى عدم استخدام خدماتنا.',
+    body: 'بالوصول إلى perfectps.com أو استخدام أي خدمة مقدمة من PerfectPS ("نحن"، "لنا"، "خاصتنا")، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق، يرجى عدم استخدام خدماتنا.',
   },
   {
     heading: 'الخدمات',
-    body: 'تقدم perfectPS خدمات تطوير المنتجات الرقمية بما تشمل تطبيقات الويب وتطبيقات الجوال وبنية تحتية للـ VPN وتصميم UI/UX وهندسة الخلفية وDevOps. نحن أيضًا ندير PS Secure، منتج VPN وخصوصية متاح على iOS وAndroid.',
+    body: 'تقدم PerfectPS خدمات تطوير المنتجات الرقمية بما تشمل تطبيقات الويب وتطبيقات الجوال وبنية تحتية للـ VPN وتصميم UI/UX وهندسة الخلفية وDevOps. نحن أيضًا ندير PS Secure، منتج VPN وخصوصية متاح على iOS وAndroid.',
   },
   {
     heading: 'الملكية الفكرية',
-    body: 'ما لم يُتفق على خلاف ذلك في عقد موقّع، تظل جميع منتجات العمل التي أنشأتها perfectPS للعملاء ملكًا فكريًا لـ perfectPS حتى استلام الدفعة الكاملة، وعندها تنتقل الملكية إلى العميل وفقًا لاتفاقية المشروع. تعد علامة perfectPS التجارية وشعارها ومنتج PS Secure ملكًا حصريًا لـ perfectPS.',
+    body: 'ما لم يُتفق على خلاف ذلك في عقد موقّع، تظل جميع منتجات العمل التي أنشأتها PerfectPS للعملاء ملكًا فكريًا لـ PerfectPS حتى استلام الدفعة الكاملة، وعندها تنتقل الملكية إلى العميل وفقًا لاتفاقية المشروع. تعد علامة PerfectPS التجارية وشعارها ومنتج PS Secure ملكًا حصريًا لـ PerfectPS.',
   },
   {
     heading: 'مسؤوليات العميل',
@@ -72,11 +72,11 @@ const sectionsAr = [
   },
   {
     heading: 'السرية',
-    body: 'تتعامل perfectPS مع جميع معلومات مشاريع العملاء باعتبارها سرية افتراضيًا. لا نكشف عن هويات العملاء أو تفاصيل المشاريع لأطراف ثالثة دون موافقة كتابية صريحة. يمكن للعملاء طلب تغطية اتفاقية سرية إضافية لأي مشاركة.',
+    body: 'تتعامل PerfectPS مع جميع معلومات مشاريع العملاء باعتبارها سرية افتراضيًا. لا نكشف عن هويات العملاء أو تفاصيل المشاريع لأطراف ثالثة دون موافقة كتابية صريحة. يمكن للعملاء طلب تغطية اتفاقية سرية إضافية لأي مشاركة.',
   },
   {
     heading: 'تحديد المسؤولية',
-    body: 'إلى أقصى حد يسمح به القانون، لن تكون perfectPS مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية ناجمة عن استخدام خدماتنا. لا تتجاوز مسؤوليتنا الإجمالية الرسوم التي دفعها العميل خلال الأشهر الثلاثة السابقة للمطالبة.',
+    body: 'إلى أقصى حد يسمح به القانون، لن تكون PerfectPS مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية ناجمة عن استخدام خدماتنا. لا تتجاوز مسؤوليتنا الإجمالية الرسوم التي دفعها العميل خلال الأشهر الثلاثة السابقة للمطالبة.',
   },
   {
     heading: 'شروط استخدام PS Secure VPN',
@@ -100,14 +100,14 @@ const BASE = 'https://perfectps.com'
 
 const SEO = {
   en: {
-    title: 'Terms of Service | perfectPS',
+    title: 'Terms of Service | PerfectPS',
     description:
-      'Terms of Service for perfectPS and PS Secure VPN. Covers service scope, intellectual property, payment terms, confidentiality, and acceptable use of PS Secure VPN.',
+      'Terms of Service for PerfectPS and PS Secure VPN. Covers service scope, intellectual property, payment terms, confidentiality, and acceptable use of PS Secure VPN.',
   },
   ar: {
-    title: 'شروط الخدمة | perfectPS',
+    title: 'شروط الخدمة | PerfectPS',
     description:
-      'شروط الخدمة الخاصة بـ perfectPS وتطبيق PS Secure VPN. تشمل نطاق الخدمة والملكية الفكرية وشروط الدفع والسرية والاستخدام المقبول لـ PS Secure VPN.',
+      'شروط الخدمة الخاصة بـ PerfectPS وتطبيق PS Secure VPN. تشمل نطاق الخدمة والملكية الفكرية وشروط الدفع والسرية والاستخدام المقبول لـ PS Secure VPN.',
   },
 }
 

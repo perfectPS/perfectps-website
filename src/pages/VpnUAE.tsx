@@ -10,12 +10,12 @@ const BASE = 'https://perfectps.com'
 
 const SEO = {
   en: {
-    title: 'Best VPN for UAE — PS Secure | perfectPS',
+    title: 'Best VPN for UAE — PS Secure | PerfectPS',
     description:
       'PS Secure is the best VPN for UAE. WireGuard protocol, strict zero-log policy, AdGuard DNS filtering, Arabic UI, and Middle East servers. Fast, private, and built for the United Arab Emirates.',
   },
   ar: {
-    title: 'أفضل VPN للإمارات العربية المتحدة — PS Secure | perfectPS',
+    title: 'أفضل VPN للإمارات العربية المتحدة — PS Secure | PerfectPS',
     description:
       'PS Secure أفضل تطبيق VPN للإمارات العربية المتحدة. بروتوكول WireGuard وسياسة صفرية السجلات وفلتر DNS من AdGuard وواجهة عربية وخوادم في الشرق الأوسط. سريع وخاص ومصمم للإمارات.',
   },
@@ -72,7 +72,7 @@ const content = {
       },
       {
         title: 'Transparent & Independent',
-        desc: 'perfectPS is a boutique studio based in Amman, Jordan. We are not affiliated with any telecom operator, ISP, or government body.',
+        desc: 'PerfectPS is a boutique studio based in Amman, Jordan. We are not affiliated with any telecom operator, ISP, or government body.',
       },
     ],
     ctaH2: 'Ready to protect your connection in the UAE?',
@@ -129,7 +129,7 @@ const content = {
       },
       {
         title: 'شفاف ومستقل',
-        desc: 'perfectPS استوديو متخصص في عمّان، الأردن. لسنا تابعين لأي مشغل اتصالات أو مزود خدمة إنترنت أو جهة حكومية.',
+        desc: 'PerfectPS استوديو متخصص في عمّان، الأردن. لسنا تابعين لأي مشغل اتصالات أو مزود خدمة إنترنت أو جهة حكومية.',
       },
     ],
     ctaH2: 'هل أنت مستعد لحماية اتصالك في الإمارات؟',

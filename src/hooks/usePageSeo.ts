@@ -3,9 +3,9 @@ import { useEffect } from 'react'
 const BASE = 'https://perfectps.com'
 
 const DEFAULTS = {
-  title: 'perfectPS | Web, Mobile & VPN Studio | Middle East Digital Studio',
+  title: 'PerfectPS | Web, Mobile & VPN Studio | Middle East Digital Studio',
   description:
-    'perfectPS is a boutique digital studio in Amman, Jordan. We build secure web apps, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Creators of PS Secure VPN. Est. 2019.',
+    'PerfectPS is a boutique digital studio in Amman, Jordan. We build secure web apps, cross-platform mobile apps, and WireGuard-based VPN infrastructure. Creators of PS Secure VPN. Est. 2019.',
   canonical: `${BASE}/en`,
 }
 

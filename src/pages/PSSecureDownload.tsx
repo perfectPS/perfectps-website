@@ -15,7 +15,7 @@ export function PSSecureDownload() {
   const { t } = useTranslation()
 
   usePageSeo({
-    title: 'Download PS Secure VPN — iOS & Android | perfectPS',
+    title: 'Download PS Secure VPN — iOS & Android | PerfectPS',
     description: t('pssecure.download_page_body'),
     canonical: `${BASE}/${lang}/ps-secure/download`,
     lang,
